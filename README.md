@@ -1,1 +1,2 @@
-# goteo-api-doc.github.com
+# Goteo API Documentation
+## Version 1 (Beta)
