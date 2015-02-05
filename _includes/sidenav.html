@@ -4,17 +4,17 @@
   </span>
   <ul class="nav nav-pills nav-stacked">
           {% for page in site.pages %}
-          {% if page.title and 'sections' != page.group %}
+          {% if page.title and 'endpoint' != page.group %}
           <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
           {% endif %}
         {% endfor %}
   </ul>
   <span class="nav-section-title">
-    Sections
+    ENDPOINTS
   </span>
   <ul class="nav nav-pills nav-stacked">
           {% for page in site.pages %}
-          {% if 'sections' == page.group %}
+          {% if 'endpoint' == page.group %}
           <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
           {% endif %}
         {% endfor %}

@@ -4,6 +4,7 @@ email: dev@goteo.org
 description: > # Goteo API documentation.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://developers.goteo.org" # the base hostname & protocol for your site
+apiurl: "http://api.goteo.org/v1" # the base hostname & protocol for api
 twitter_username: goteofunding
 github_username:  goteo
 
