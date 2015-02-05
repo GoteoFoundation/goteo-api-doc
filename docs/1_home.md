@@ -10,7 +10,9 @@ permalink: /
 
 This is the API for the crowdfunding platform [Goteo.org](http://goteo.org).
 
-#### API URL: [http://api.goteo.org/v1](http://api.goteo.org/v1)
+#### API URL: [{{ site.apiurl }}]({{ site.apiurl }})
+
+The API is compatible with the [Swagger](http://swagger.io/) specification. Checkout the [html interface]({{ site.apiurl }}/api/spec.html) or the [json interface]({{ site.apiurl }}/api/spec.json)
 
 
 ## Authentication

@@ -3,5 +3,14 @@ layout: default
 title: About
 permalink: /about/
 ---
+# About
 
-Goteo [goteo.org](http://goteo.org/)
+## Links
+- [Goteo, The Social Crowdfunding Platform](http://goteo.org/)
+- Feel free to contribute to this documentation in [Github]({{ site.github_url }})
+
+## Credits
+
+- **API Code**: Pablo Castellano, Ivan Vergés
+- **API Documentation**: Ivan Vergés, Javier Carrillo
+

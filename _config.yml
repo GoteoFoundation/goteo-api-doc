@@ -6,7 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://developers.goteo.org" # the base hostname & protocol for your site
 apiurl: "http://api.goteo.org/v1" # the base hostname & protocol for api
 twitter_username: goteofunding
-github_username:  goteo
+github_url: https://github.com/Goteo/goteo-api-doc
 
 # Build settings
 markdown: rdiscount
