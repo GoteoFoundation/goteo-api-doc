@@ -10,6 +10,8 @@ permalink: /
 
 This is the API for the crowdfunding platform [Goteo.org](http://goteo.org).
 
+#### API URL: [http://api.goteo.org/v1](http://api.goteo.org/v1)
+
 
 ## Authentication
 
