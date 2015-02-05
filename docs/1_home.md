@@ -3,7 +3,21 @@ layout: default
 title: API Introduction
 permalink: /
 ---
+# GOTEO API v1.0
+> Currently in **BETA** (big changes can be expected at any moment!)
+
 ## Introduction
+
+This is the API for the crowdfunding platform [Goteo.org](http://goteo.org).
+
+
+## Authentication
+
+This API uses Http authentication, please get your **user** and **password** from your activity dashboard in [http://goteo.org/dashboard/activity/apikey](http://goteo.org/dashboard/activity/apikey)
+
+## Basic usage
+
+TODO...
 
 ```bash
 curl -i {{ site.apiurl }}/reports/money

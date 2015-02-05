@@ -1,14 +1,18 @@
 ---
 layout: default
-title: Reports Endpoints
+title: Reports
 group: endpoint
 permalink: /reports/
 ---
-# Indroduction
+# Introduction
 
-This section give you information about average numbers in [Goteo.org](http://goteo.org) over a period of time.
+This section give you information about average numbers in [Goteo.org](http://goteo.org) over a period of time. 
+
+### This statistics ara available.
 
 ## /reports/money
+
+Statistics about the money collected
 
 ```bash
 curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money
