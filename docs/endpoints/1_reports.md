@@ -8,7 +8,7 @@ permalink: /reports/
 
 This section give you information about average numbers in [Goteo.org](http://goteo.org) over a period of time. 
 
-### This statistics ara available.
+### ENDPOINTS FOR REPORTS:
 
 <a name="money"></a>
 ## /reports/money
@@ -21,7 +21,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money
 
 - TODO: translate, response
 
-Descripción de los valores devueltos:
+### Response values:
 
 - **average-failed**: Recaudación media por proyectos que no alcanzaron el mínimo
 - **average-invest**: Aportación media por cofinanciador (micromecenas)
@@ -51,7 +51,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects
 
 -TODO: translate! response
 
-Descripción de los valores devueltos:
+### Response values:
 
 - **failed**: Proyectos fallidos
 - **published**: Proyectos publicados
@@ -77,7 +77,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community
 
 - TODO: translate!, response
 
-Descripción de los valores devueltos:
+### Response values:
 
 - **users**: Número total de usuarios registrados
 - **perc-bajas**: Porcentaje de usuarios que se han dado de baja
@@ -108,21 +108,64 @@ Además se añade el campo "filters"
 <a name="rewards"></a>
 ## /reports/rewards
 
+### Curl Example
+
 ```bash
 curl -i --basic --user "user:key" {{ site.apiurl }}/reports/rewards
 ```
 
-Descripción de los valores devueltos:
+### Response Body
 
-- **renuncias**: Número de cofinanciadores que renuncian a recompensa
-- **perc-renuncias**: % cofinanciadores que renuncian a recompensa
-- **favorite-rewards**: Tipo de recompensa más utilizada en proyectos exitosos. Nota: no le afecta el filtro location.
-- **rewards-between-100-400**: Recompensa elegida de 100 a 400 euros
-- **rewards-between-15-30**: Recompensa elegida de 15 a 30 euros
-- **rewards-between-30-100**: Recompensa elegida de 30 a 100 euros
-- **rewards-less-than-15**: Recompensa elegida de menos de 15 euros
-- **rewards-more-than-400**: Recompensa elegida de más de 400 euros
+```json
+{
+  "favorite-rewards": [
+    {
+      "icon": "product",
+      "uses": 1051
+    },
+    {
+      "icon": "service",
+      "uses": 531
+    },
+    {
+      "icon": "thanks",
+      "uses": 393
+    },
+    {
+      "icon": "file",
+      "uses": 139
+    },
+    {
+      "icon": "other",
+      "uses": 110
+    },
+    {
+      "icon": "money",
+      "uses": 11
+    }
+  ],
+  "filters": {},
+  "percentage-reward-refusal": 35.96,
+  "reward-refusal": 13372,
+  "rewards-per-amount": {
+    "rewards-between-100-400": 2880,
+    "rewards-between-15-30": 14203,
+    "rewards-between-30-100": 15002,
+    "rewards-less-than-15": 9294,
+    "rewards-more-than-400": 2880
+  }
+}
+```
 
-- **rewards_per_amount**:
+### Response values:
 
-Además se añade el campo "filters"
+- **reward-refusal**: Number of co-financiers who renounce reward
+- **percentage-reward-refusal**: % of co-financiers who renounce reward
+- **favorite-rewards**: Reward type used in successful projects. (__NOTE that this field is not affected by the location filter__).
+- **rewards-per-amount**: Number of rewards picked by the users in steps:
+    - **rewards-between-100-400**: Num. of users choosing rewards from 100 to 400 Euro
+    - **rewards-between-15-30**: Num. of users choosing rewards from 15 to 30 Euro
+    - **rewards-between-30-100**: Num. of users choosing rewards from 30 to 100 Euro
+    - **rewards-less-than-15**: Num. of users choosing rewards cheaper than 15 Euro
+    - **rewards-more-than-400**: Num. of users choosing rewards more expensive than 400 Euro
+- **filters**: Any given filter will be added here
