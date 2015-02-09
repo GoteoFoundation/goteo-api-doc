@@ -75,35 +75,307 @@ Además se añade el campo "filters"
 curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community
 ```
 
-- TODO: translate!, response
+### Response description:
 
-### Response values:
+| Attribute  | Type | Description |
+| ------------- | ------------- | ------------- |
+|**users** | *number* | Total number of registered users |
+|**percentage-unsubscribed-users** | *number (percentage)* | Percentage of unsubscribed users (over the  |total number of users)
+|**donors** | *number* | Number of donors (co-financiers peers) |
+|**percentage-donors-users** | *number (percentage)* | Percentage of registered user that are donors (*100 * donors / users*)
+|**donors-collaborators** | *number* | Number of donors who collaborate |
+|**multidonors** | *number* | Number of donors who donate to more than 1 project |
+|**percentage-multidonor-users** | *number (percentage)* | Percentage of multi-donors (over total users: *100 * multidonors / users*)
+|**percentage-multidonor-donors** | *number (percentage)* | Percentage of multi-donors (over total donors: *100 * multidonors / donors*)
+|**paypal-donors** | *number* | Number of donors using PayPal |
+|**paypal-multi-donors** | *number* | Number of multi-donors using PayPal |
+|**collaborators** | *number* | Number of collaborators |
+|**average-donors** | *number* | Average number of donors per successful project |
+|**average-collaborators** | *number* | Average number of collaborators per succesful  |project
+|**creators-donors** | *number* | Number of creators funding other projects |
+|**creators-collaborators** | *number* | Number of creators collaborating with other  |projects
+|**leading-category** | *number* | First category with the most number of interested users |
+|**percentage-users-leading-category** | *number (percentage)* | Percentage of users in this category |
+|**second-category** | *number* | Second category with more users |
+|**percentage-users-second-category** | *number (percentage)* | Percentage of users in this category |
+|* **top10-donors** | *array* | The top 10 donors who spend more money on projects (the most generous co-financiers) |
+|* **top10-multidonors** | *array* | Top 10 multi-donors who are contributed to more different projects (The most diversified co-financiers) |
+|* **top10-collaborators** | *array* | Top 10 collaborators |
+|* **categories** | *array* | Array of categories |
+|**filters** | *array* | If any filter is provided it will be printed here as well |
 
-- **users**: Número total de usuarios registrados
-- **perc-bajas**: Porcentaje de usuarios que se han dado de baja
-- **cofinanciadores**: Número de cofinanciadores
-- **users-cofi-perc**: % usuarios registrados que son cofinanciadores
-- **coficolaboradores**: Número de cofinanciadores que colaboran
-- **multicofi**: Número de Multi-Cofinanciadores (a más de 1 proyecto)
-- **users-multicofi-perc**: % de Multi-Cofinanciadores (a más de 1 proyecto)
-- **paypal**: Número de cofinanciadores que usan PayPal
-- **paypal-multicofi**: Número de Multi-Cofinanciadores que usan PayPal
-- **colaboradores**: Número de colaboradores
-- **media-cofi**: Media de cofinanciadores por proyecto exitoso
-- **media-colab**: Media de colaboradores por proyecto
-- **impulcofinanciadores**: Número de impulsores que cofinancian a otros
-- **impulcolaboradores**: Número de impulsores que colaboran con otros
-- **categoria1**: 1ª categoría con más usuarios interesados
-- **perc-categoria1**: % usuarios en esta 1ª categoría
-- **categoria2**: 2ª categoría con más usuarios interesados
-- **perc-categoria2**: % usuarios en esta 2ª categoría
-- **top10-investors**: Top 10 cofinanciadores
-- **top10-invests**: Top 10 cofinanciadores con más caudal (más generosos) sin incluir usuarios convocadores
-- **top10-collaborations**: Top 10 colaboradores
+#### * Array sub-fields:
+**top10-donors** and **top10-multidonors** return an array of the following object:
 
-**categorias**:
+| Attribute  | Type | Description |
+| ------------- | ------------- | ------------- |
+|**amount** | *number (currency)* | Total amount of money (Euro) spent by the user in projects |
+|**contributions** | *number* | Total number of different projects the user has contributed to |
+|**user** | *string* | User nickname |
 
-Además se añade el campo "filters"
+**top10-collaborators** returns an array of the following object:
+
+| Attribute  | Type | Description |
+| ------------- | ------------- | ------------- |
+|**interactions** | *number* | Karma number of the user collaborations |
+|**user** | *string* | User nickname |
+
+**categories** returns an array of the following object:
+
+| Attribute  | Type | Description |
+| ------------- | ------------- | ------------- |
+|**id** | *number* | Identifier of the category |
+|**name** | *string* | Name of the category (currently in Spanish) |
+|**users** | *number* | Total number of users interested in the category |
+|**percentage-users** | *number (percent)* | Percentage of users in this category over the total number of users |
+
+### Response body:
+```json
+{
+  "average-collaborators": 9.4704,
+  "average-donors": 125.1323,
+  "categories": [
+    {
+      "2": {
+        "id": 2,
+        "name": "Social",
+        "percentage-users": 8.02,
+        "users": 4533
+      }
+    },
+    {
+      "10": {
+        "id": 10,
+        "name": "Educativo",
+        "percentage-users": 6.27,
+        "users": 3544
+      }
+    },
+    {
+      "11": {
+        "id": 11,
+        "name": "Cultural",
+        "percentage-users": 6.26,
+        "users": 3537
+      }
+    },
+    {
+      "13": {
+        "id": 13,
+        "name": "Ecol\u00f3gico",
+        "percentage-users": 4.76,
+        "users": 2693
+      }
+    },
+    {
+      "7": {
+        "id": 7,
+        "name": "Tecnol\u00f3gico",
+        "percentage-users": 4.74,
+        "users": 2680
+      }
+    },
+    {
+      "6": {
+        "id": 6,
+        "name": "Comunicativo",
+        "percentage-users": 3.88,
+        "users": 2192
+      }
+    },
+    {
+      "14": {
+        "id": 14,
+        "name": "Cient\u00edfico",
+        "percentage-users": 3.17,
+        "users": 1791
+      }
+    },
+    {
+      "9": {
+        "id": 9,
+        "name": "Emprendedor",
+        "percentage-users": 2.26,
+        "users": 1275
+      }
+    },
+    {
+      "16": {
+        "id": 16,
+        "name": "Dise\u00f1o",
+        "percentage-users": 1.36,
+        "users": 767
+      }
+    }
+  ],
+  "collaborators": 4777,
+  "creators-collaborators": 26,
+  "creators-donors": 37,
+  "donors": 37183,
+  "donors-collaborators": 900,
+  "filters": {},
+  "leading-category": 2,
+  "multidonors": 4758,
+  "paypal-donors": 12160,
+  "paypal-multidonors": 894,
+  "percentage-donors-users": 65.79,
+  "percentage-multidonor-donors": 12.8,
+  "percentage-multidonor-users": 8.42,
+  "percentage-unsubscribed-users": 2.32,
+  "percentage-users-leading-category": 8.02,
+  "percentage-users-second-category": 6.27,
+  "second-category": 10,
+  "top10-collaborators": [
+    {
+      "interactions": 51,
+      "user": "afinidadrebelde"
+    },
+    {
+      "interactions": 48,
+      "user": "watsdesign"
+    },
+    {
+      "interactions": 35,
+      "user": "fablabbcn"
+    },
+    {
+      "interactions": 34,
+      "user": "dirk-eric"
+    },
+    {
+      "interactions": 33,
+      "user": "test"
+    },
+    {
+      "interactions": 33,
+      "user": "davidcabo"
+    },
+    {
+      "interactions": 30,
+      "user": "jngsax"
+    },
+    {
+      "interactions": 28,
+      "user": "reevo"
+    },
+    {
+      "interactions": 24,
+      "user": "arsgames"
+    },
+    {
+      "interactions": 23,
+      "user": "freedonia"
+    }
+  ],
+  "top10-donors": [
+    {
+      "amount": 14500,
+      "contributions": 2,
+      "user": "assembleapagesa"
+    },
+    {
+      "amount": 7500,
+      "contributions": 1,
+      "user": "ins"
+    },
+    {
+      "amount": 7000,
+      "contributions": 7,
+      "user": "focus-abengoa"
+    },
+    {
+      "amount": 6669,
+      "contributions": 4,
+      "user": "burujabetech"
+    },
+    {
+      "amount": 6530,
+      "contributions": 3,
+      "user": "mhealth"
+    },
+    {
+      "amount": 6500,
+      "contributions": 2,
+      "user": "elikaherriaaportaciones"
+    },
+    {
+      "amount": 6080,
+      "contributions": 34,
+      "user": "carmeliya"
+    },
+    {
+      "amount": 6000,
+      "contributions": 1,
+      "user": "jediupc"
+    },
+    {
+      "amount": 6000,
+      "contributions": 1,
+      "user": "aytoquintanar"
+    },
+    {
+      "amount": 5005,
+      "contributions": 1,
+      "user": "mentxuiriondo"
+    }
+  ],
+  "top10-multidonors": [
+    {
+      "amount": 4095,
+      "contributions": 152,
+      "user": "olivier"
+    },
+    {
+      "amount": 4373,
+      "contributions": 145,
+      "user": "esenabre"
+    },
+    {
+      "amount": 4655,
+      "contributions": 67,
+      "user": "olatzarra"
+    },
+    {
+      "amount": 1815,
+      "contributions": 63,
+      "user": "colaborabora"
+    },
+    {
+      "amount": 1455,
+      "contributions": 50,
+      "user": "evasaura"
+    },
+    {
+      "amount": 321,
+      "contributions": 49,
+      "user": "pablo.checadejoz"
+    },
+    {
+      "amount": 668,
+      "contributions": 49,
+      "user": "jcanaves"
+    },
+    {
+      "amount": 1670,
+      "contributions": 44,
+      "user": "arantxamendi"
+    },
+    {
+      "amount": 1930,
+      "contributions": 41,
+      "user": "amoya62"
+    },
+    {
+      "amount": 1107,
+      "contributions": 37,
+      "user": "papakorkel"
+    }
+  ],
+  "users": 56522,
+  "users-leading-category": 4533,
+  "users-second-category": 3544
+}
+```
 
 <a name="rewards"></a>
 ## /reports/rewards
@@ -113,6 +385,27 @@ Además se añade el campo "filters"
 ```bash
 curl -i --basic --user "user:key" {{ site.apiurl }}/reports/rewards
 ```
+
+### Response values:
+
+
+| Attribute  | Type | Description |
+| ------------- | ------------- | ------------- |
+|**reward-refusal** | *number* | Number of co-financiers who renounce reward |
+|**percentage-reward-refusal** | *number* | % of co-financiers who renounce reward |
+|**favorite-rewards** | *number* | Reward type used in successful projects. (__NOTE that  |this field is not affected by the location filter__).
+|* **rewards-per-amount** | *array* | Number of rewards picked by the users in steps |
+|**filters** | *array* | Any given filter will be added back here |
+
+#### * Array sub-fields
+
+| Attribute  | Type | Description |
+| ------------- | ------------- | ------------- |
+| **rewards-between-100-400** | *number* | Num. of users choosing rewards from 100 &euro; to 400 &euro; |
+| **rewards-between-15-30** | *number* | Num. of users choosing rewards from 15 &euro; to 30 &euro;
+| **rewards-between-30-100** | *number* | Num. of users choosing rewards from 30 &euro; to 100 &euro; |
+| **rewards-less-than-15** | *number* | Num. of users choosing rewards cheaper than 15 &euro; |
+| **rewards-more-than-400** | *number* | Num. of users choosing rewards more expensive than 400 &euro; |
 
 ### Response Body
 
@@ -156,16 +449,3 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/rewards
   }
 }
 ```
-
-### Response values:
-
-- **reward-refusal**: Number of co-financiers who renounce reward
-- **percentage-reward-refusal**: % of co-financiers who renounce reward
-- **favorite-rewards**: Reward type used in successful projects. (__NOTE that this field is not affected by the location filter__).
-- **rewards-per-amount**: Number of rewards picked by the users in steps:
-    - **rewards-between-100-400**: Num. of users choosing rewards from 100 to 400 Euro
-    - **rewards-between-15-30**: Num. of users choosing rewards from 15 to 30 Euro
-    - **rewards-between-30-100**: Num. of users choosing rewards from 30 to 100 Euro
-    - **rewards-less-than-15**: Num. of users choosing rewards cheaper than 15 Euro
-    - **rewards-more-than-400**: Num. of users choosing rewards more expensive than 400 Euro
-- **filters**: Any given filter will be added here
