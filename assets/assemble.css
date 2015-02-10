@@ -4562,3 +4562,13 @@ a.list-group-item.active > .badge,
 .panel hr + ul {
   padding: 0;
 }
+
+@media (max-width: 767px) {
+  .navbar.navbar-fixed-top {
+    height: 80px;
+    overflow: hidden;
+  }
+  .navbar.navbar-fixed-top.active {
+    height: auto;
+  }
+}
