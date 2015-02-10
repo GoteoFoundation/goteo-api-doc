@@ -49,25 +49,181 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money
 curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects
 ```
 
--TODO: translate! response
+### Response description:
 
-### Response values:
+| Attribute  | Type | Description |
+| ------------- | ------------- | ------------
+| **failed** | *number* | Number of failed projects (non-successful on the crowdfunding campaign) |
+| **published** | *number* | Number of published projects |
+| **received** | *number* | Number of received projects (accepted to be reviewed by Goteo administrators) |
+| **successful** | *number* | Number of successful projects (which are achieved the minimum required amount) |
+| **percentage-successful** | *number (percentage)* | Percentage of successful projects (over the total published projects that are not in campaign) |
+| **successful-complete** | *number* | Number of successful projects with completed campaign |
+| **percentage-successful-complete** | *number (percentage)* | Percentage of successful projects with completed campaign (over the total failed and completed projects: *100 * successful-complete / (successful-complete + failed)* ) |
+| **average-amount-successful** | *number (currency)* | Average amount (&euro;) of raised money in successful projects |
+| **average-posts-successful** | *number* | Average number of posts published by successful projects |
+| * **top10-collaborations** | *array* | The 10 campaigns with more collaborations |
+| * **top10-donations** | *array* | The 10 campaigns with more donors (individual contributions) |
+| * **top10-receipts** | *array* | The 10 campaigns with more raised money |
+|**filters** | *array* | If any filter is provided it will be printed here as well |
 
-- **failed**: Proyectos fallidos
-- **published**: Proyectos publicados
-- **received**: Proyectos recibidos (enviados a revisión)
-- **succesful**: Proyectos exitosos (alcanzaron el mínimo)
-- **successful-percentage**: % de proyectos exitosos
-- **successful-finished**: Número de proyectos exitosos con campaña finalizada
-- **successful-finished-perc**: % éxito campañas finalizadas
-- **top10-collaborations**: Las 10 campañas con más colaboraciones
-- **top10-investors**: Las 10 campañas con más cofinanciadores
-- **top10-invests**: Las 10 campañas que han recaudado más dinero
-- **average-success-percentage**: % de recaudación media conseguida por proyectos exitosos
-- **average-successful-posts**: Media de posts en proyectos exitosos
+#### * Array sub-fields:
 
-Además se añade el campo "filters"
+**top10-collaborations** and **top10-donations** return an array of the following object:
 
+| Attribute  | Type | Description |
+| ------------- | ------------- | ------------- |
+|**project** | *string* | Identifier for the project |
+|**total** | *number* | Total number contributions (or collaborations) |
+
+**top10-receipts** return an array of the following object:
+
+| Attribute  | Type | Description |
+| ------------- | ------------- | ------------- |
+|**project** | *string* | Identifier for the project |
+|**amount** | *number (currency)* | Total amount (&euro;) of raised money for the project |
+
+### Response body:
+```json
+{
+  "average-amount-successful": 6236.44,
+  "average-posts-successful": 11.8,
+  "failed": 145,
+  "filters": {},
+  "percentage-successful": 67.14,
+  "percentage-successful-complete": 69.15,
+  "published": 522,
+  "received": 1810,
+  "successful": 333,
+  "successful-complete": 325,
+  "top10-collaborations": [
+    {
+      "project": "rebelaos-publicacion-por-la-autogestion",
+      "total": 142
+    },
+    {
+      "project": "foldarap-peer-to-peer-edition",
+      "total": 141
+    },
+    {
+      "project": "crowdfundparato",
+      "total": 120
+    },
+    {
+      "project": "smart-citizen-sensores-ciudadanos",
+      "total": 101
+    },
+    {
+      "project": "bhoreal",
+      "total": 94
+    },
+    {
+      "project": "tuderechoasaber.es",
+      "total": 87
+    },
+    {
+      "project": "reevo",
+      "total": 84
+    },
+    {
+      "project": "infinit-loop",
+      "total": 71
+    },
+    {
+      "project": "outreach-box",
+      "total": 70
+    },
+    {
+      "project": "diagonal",
+      "total": 66
+    }
+  ],
+  "top10-donations": [
+    {
+      "project": "diagonal",
+      "total": 1802
+    },
+    {
+      "project": "gnupg-new-website-and-infrastructure",
+      "total": 1409
+    },
+    {
+      "project": "crowdfundparato",
+      "total": 1172
+    },
+    {
+      "project": "oligopolyoff",
+      "total": 731
+    },
+    {
+      "project": "d-callaos-nuevo-disco",
+      "total": 573
+    },
+    {
+      "project": "listabierta-org",
+      "total": 536
+    },
+    {
+      "project": "yo-tambien-estaba-en-el-parlament",
+      "total": 484
+    },
+    {
+      "project": "hormiga-mutantea",
+      "total": 434
+    },
+    {
+      "project": "ahotsa-behar-dugu",
+      "total": 420
+    },
+    {
+      "project": "multireferendum",
+      "total": 398
+    }
+  ],
+  "top10-receipts": [
+    {
+      "amount": 70506,
+      "project": "diagonal"
+    },
+    {
+      "amount": 52835,
+      "project": "foldarap-peer-to-peer-edition"
+    },
+    {
+      "amount": 36732,
+      "project": "gnupg-new-website-and-infrastructure"
+    },
+    {
+      "amount": 35412,
+      "project": "multireferendum"
+    },
+    {
+      "amount": 32491,
+      "project": "hormiga-mutantea"
+    },
+    {
+      "amount": 24461,
+      "project": "oligopolyoff"
+    },
+    {
+      "amount": 23098,
+      "project": "ahotsa-behar-dugu"
+    },
+    {
+      "amount": 22109,
+      "project": "ayuda-a-la-resistencia-campesina-de-Gaza"
+    },
+    {
+      "amount": 21015,
+      "project": "makusitv"
+    },
+    {
+      "amount": 19755,
+      "project": "proyecto-baraka"
+    }
+  ]
+}
+```
 <a name="community"></a>
 ## /reports/community
 
@@ -109,7 +265,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
-|**amount** | *number (currency)* | Total amount of money (Euro) spent by the user in projects |
+|**amount** | *number (currency)* | Total amount of money (&euro;) spent by the user in projects |
 |**contributions** | *number* | Total number of different projects the user has contributed to |
 |**user** | *string* | User nickname |
 
@@ -393,11 +549,20 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/rewards
 | ------------- | ------------- | ------------- |
 |**reward-refusal** | *number* | Number of co-financiers who renounce reward |
 |**percentage-reward-refusal** | *number* | % of co-financiers who renounce reward |
-|**favorite-rewards** | *number* | Reward type used in successful projects. (__NOTE that  |this field is not affected by the location filter__).
+|* **favorite-rewards** | *array* | Reward type used in successful projects. (__NOTE that  |this field is not affected by the location filter__).
 |* **rewards-per-amount** | *array* | Number of rewards picked by the users in steps |
 |**filters** | *array* | Any given filter will be added back here |
 
 #### * Array sub-fields
+
+**favorite-rewards** returns an array of this object:
+
+| Attribute  | Type | Description |
+| ------------- | ------------- | ------------- |
+| **icon** | *string* | Identifier of the reward's icon (a link to a SVG image will be provided soon) |
+| **total** | *number* | Number of uses of this reward in successful projects  |
+
+**rewards-per-amount** returns an array of this object:
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
@@ -414,27 +579,27 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/rewards
   "favorite-rewards": [
     {
       "icon": "product",
-      "uses": 1051
+      "total": 1051
     },
     {
       "icon": "service",
-      "uses": 531
+      "total": 531
     },
     {
       "icon": "thanks",
-      "uses": 393
+      "total": 393
     },
     {
       "icon": "file",
-      "uses": 139
+      "total": 139
     },
     {
       "icon": "other",
-      "uses": 110
+      "total": 110
     },
     {
       "icon": "money",
-      "uses": 11
+      "total": 11
     }
   ],
   "filters": {},
