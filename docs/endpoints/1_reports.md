@@ -19,28 +19,50 @@ Statistics about the money collected
 curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money
 ```
 
-- TODO: translate, response
-
 ### Response values:
 
-- **average-failed**: Recaudación media por proyectos que no alcanzaron el mínimo
-- **average-invest**: Aportación media por cofinanciador (micromecenas)
-- **average-invest-paypal**: Aportación media por cofinanciador (micromecenas) a través de PayPal
-- **average-mincost**: Coste medio de los proyectos exitosos. Nota: no le afecta el filtro location.
-- **average-received**: Recaudación media por proyectos exitosos (que sí alcanzaron el mínimo)
-- **average-second-round**: Recaudación media en segunda ronda
-- **call-amount**: Suma recaudada en Convocatorias (Capital riego distribuido + crowd)
-- **call-committed-amount**: Capital Riego de Goteo (fondos captados de instituciones y empresas destinados a la bolsa de [Capital Riego](https://goteo.org/service/resources))
-- **cash-amount**: Suma recaudada mediante transferencia bancaria directa
-- **committed**: Suma recaudada por la plataforma
-- **comprometido-fail**: Porcentaje de recaudación media sobre el mínimo en proyectos fallidos
-- **comprometido-success**: Porcentaje de recaudación media sobre el mínimo en proyectos exitosos
-- **devuelto**: Dinero devuelto (en proyectos archivados)
-- **fee-amount**: Total 8% recaudado por Goteo
-- **paypal-amount**: Suma recaudada mediante PayPal
-- **tpv-amount**: Suma recaudada mediante TPV
+| Attribute  | Type | Description |
+| ------------- | ------------- | ------------ |
+| **average-failed** | *number* | Average raised money for failed projects (which haven't reached the minimum required amount) |
+| **average-donation** | *number (money)* | Average amount of money (&euro;) given by a donor |
+| **average-donation-paypal** | *number (money)* | average amount of money (&euro;) given by a donor using Paypal |
+| **average-minimum** | *number (money)* | Average minimum costs (&euro;) for successful projects (NOTE: this field is not affected by the location filter) |
+| **average-received** | *number (money)* | Average raised money (&euro;) for successful projects (those which reached the minimum) |
+| **average-second-round** | *number (money)* | Average raised money in only the second round (&euro;) |
+| **matchfund-amount** | *number (money)* | Amount of money raised in calls (*Capital riego distribuido* + crowdunding money) |
+| **matchfundpledge-amount** | *number (money)* | *Capital Riego de Goteo* (funds from institutions and companies added to the [Capital Riego](https://goteo.org/service/resources)) |
+| **cash-amount** | *number (money)* | Total amount of money (&euro;) collected by direct bank transfer |
+| **pledged** | *number (money)* | Total amount of money (&euro;) rased by Goteo |
+| **pledged-failed** | *number (percentage)* | Percentage of raised money over the minimum on failed projects |
+| **pledged-successful** | *number (percentage)* | Percentage of raised money over the minimum on successful projects |
+| **refunded** | *number (money)* | Refunded money (&euro;) on failed projects |
+| **fee-amount** | *number (money)* | Total fee (%8) collected by Goteo |
+| **paypal-amount** | *number (money)* | Total amount of money (&euro;) raised using PayPal |
+| **creditcard-amount** | *number* | Total amount of money (&euro;) raised using Credit Card transactions |
+|**filters** | *array* | If any filter is provided it will be printed here as well |      Además se añade el campo "filters"
 
-        Además se añade el campo "filters"
+### Response body:
+```json
+{
+  "average-donation": 47.15,
+  "average-donation-paypal": 36.22,
+  "average-failed": 933.13,
+  "average-minimum": 4886.11,
+  "average-received": 6236.44,
+  "average-second-round": 1032.95,
+  "cash-amount": 132963,
+  "creditcard-amount": 2441427,
+  "fee-amount": 162147.36,
+  "filters": {},
+  "matchfund-amount": 57938,
+  "matchfundpledge-amount": 74000,
+  "paypal-amount": 529107,
+  "pledged": 2216778,
+  "pledged-failed": 23.11,
+  "pledged-successful": 27.12,
+  "refunded": 134819
+}
+```
 
 <a name="projects"></a>
 ## /reports/projects
@@ -52,7 +74,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects
 ### Response description:
 
 | Attribute  | Type | Description |
-| ------------- | ------------- | ------------
+| ------------- | ------------- | ------------ |
 | **failed** | *number* | Number of failed projects (non-successful on the crowdfunding campaign) |
 | **published** | *number* | Number of published projects |
 | **received** | *number* | Number of received projects (accepted to be reviewed by Goteo administrators) |
@@ -60,7 +82,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects
 | **percentage-successful** | *number (percentage)* | Percentage of successful projects (over the total published projects that are not in campaign) |
 | **successful-complete** | *number* | Number of successful projects with completed campaign |
 | **percentage-successful-complete** | *number (percentage)* | Percentage of successful projects with completed campaign (over the total failed and completed projects: *100 * successful-complete / (successful-complete + failed)* ) |
-| **average-amount-successful** | *number (currency)* | Average amount (&euro;) of raised money in successful projects |
+| **average-amount-successful** | *number (money)* | Average amount (&euro;) of raised money in successful projects |
 | **average-posts-successful** | *number* | Average number of posts published by successful projects |
 | * **top10-collaborations** | *array* | The 10 campaigns with more collaborations |
 | * **top10-donations** | *array* | The 10 campaigns with more donors (individual contributions) |
@@ -81,7 +103,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
 |**project** | *string* | Identifier for the project |
-|**amount** | *number (currency)* | Total amount (&euro;) of raised money for the project |
+|**amount** | *number (money)* | Total amount (&euro;) of raised money for the project |
 
 ### Response body:
 ```json
@@ -265,7 +287,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
-|**amount** | *number (currency)* | Total amount of money (&euro;) spent by the user in projects |
+|**amount** | *number (money)* | Total amount of money (&euro;) spent by the user in projects |
 |**contributions** | *number* | Total number of different projects the user has contributed to |
 |**user** | *string* | User nickname |
 
