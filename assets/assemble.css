@@ -231,9 +231,6 @@ body {
   position: relative;
   /* For scrollyspy */
 
-  padding-top: 50px;
-  /* Account for fixed navbar */
-
 }
 /* Top nav and header
 -------------------------------------------------- */
@@ -988,7 +985,6 @@ img {
 }
 body {
   position: relative;
-  padding-top: 80px;
 }
 @media (max-width: 979px) {
   body {
@@ -1505,6 +1501,8 @@ pre {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 2px;
+  max-height: 300px;
+  overflow: auto;
 }
 pre code {
   font-size: 14px;
@@ -3533,7 +3531,6 @@ input[type="button"].btn-block {
 .navbar-fixed-bottom,
 .navbar,
 .navbar {
-  position: fixed;
   right: 0;
   left: 0;
   z-index: 1030;
