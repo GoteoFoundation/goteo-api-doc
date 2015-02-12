@@ -80,8 +80,8 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects
 | **received** | *number* | Number of received projects (accepted to be reviewed by Goteo administrators) |
 | **successful** | *number* | Number of successful projects (which are achieved the minimum required amount) |
 | **percentage-successful** | *number (percentage)* | Percentage of successful projects (over the total published projects that are not in campaign) |
-| **successful-complete** | *number* | Number of successful projects with completed campaign |
-| **percentage-successful-complete** | *number (percentage)* | Percentage of successful projects with completed campaign (over the total failed and completed projects: *100 * successful-complete / (successful-complete + failed)* ) |
+| **successful-completed** | *number* | Number of successful projects with completed campaign |
+| **percentage-successful-completed** | *number (percentage)* | Percentage of successful projects with completed campaign (over the total failed and completed projects: *100 * successful-complete / (successful-complete + failed)* ) |
 | **average-amount-successful** | *number (money)* | Average amount (&euro;) of raised money in successful projects |
 | **average-posts-successful** | *number* | Average number of posts published by successful projects |
 | * **top10-collaborations** | *array* | The 10 campaigns with more collaborations |
@@ -273,8 +273,10 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community
 |**creators-donors** | *number* | Number of creators funding other projects |
 |**creators-collaborators** | *number* | Number of creators collaborating with other  |projects
 |**leading-category** | *number* | First category with the most number of interested users |
+|**users-leading-category** | *number* | Number of users in this category |
 |**percentage-users-leading-category** | *number (percentage)* | Percentage of users in this category |
 |**second-category** | *number* | Second category with more users |
+|**users-second-category** | *number* | Number of users in this category |
 |**percentage-users-second-category** | *number (percentage)* | Percentage of users in this category |
 |* **top10-donors** | *array* | The top 10 donors who spend more money on projects (the most generous co-financiers) |
 |* **top10-multidonors** | *array* | Top 10 multi-donors who are contributed to more different projects (The most diversified co-financiers) |
