@@ -22,6 +22,7 @@ This API uses Http authentication, please get your **user** and **password** fro
 ## Basic usage
 
 TODO...
+### CURL example from a command line:
 
 ```bash
 curl -i {{ site.apiurl }}/reports/money
@@ -30,4 +31,27 @@ curl -i -X GET -d project="diagonal" {{ site.apiurl }}/reports/money
 curl -i -X GET -d location="36.716667,-4.416667,100" {{ site.apiurl }}/reports/projects
 
 curl -i --basic --user "user:key" {{ site.apiurl }}/reports/ 
+```
+
+### JQuery example:
+
+```javascript
+API_USER = 'you api user';
+API_KEY = 'you api key';
+
+//Sets the authorization headers for ajax calls (suc as $.get or $.post)
+$.ajaxSetup({
+    headers: { 'Authorization': "Basic " + btoa(API_USER + ':' + API_KEY)},
+});
+
+//Retrieve some user information:
+$.get('http://api.goteo.org/v1/users/ivan')
+    .done(function(data){
+        console.log(data);
+        alert('User name is: ' + data.name);
+    }).error(function(){
+        alert('User not found');
+    });
+
+
 ```
