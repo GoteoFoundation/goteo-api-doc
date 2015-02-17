@@ -1,7 +1,7 @@
 ---
 layout: default
 title: API Introduction
-permalink: /
+permalink: /doc/
 ---
 # GOTEO API v1.0
 > Currently in **BETA** (big changes can be expected at any moment!)

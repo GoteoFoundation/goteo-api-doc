@@ -1,10 +1,11 @@
 <div class="sidebar">
+ {% if 'apidoc' == page.group %}
   <span class="nav-section-title">
-    Paginas
+    API DOC
   </span>
   <ul class="nav nav-pills nav-stacked">
           {% for page in site.pages %}
-          {% if page.title and 'endpoint' != page.group %}
+          {% if 'apidoc' == page.group %}
           <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
           {% endif %}
         {% endfor %}
@@ -19,4 +20,20 @@
           {% endif %}
         {% endfor %}
   </ul>
+  <span class="nav-section-title">
+    <a href="http://api.goteo.org/v1/api/spec.html" style="color:#58595B;">CONSOLE</a>
+  </span>
+  {% endif %}
+  {% if 'aboutgoteo' == page.group %}
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          {% for page in site.pages %}
+          {% if 'aboutgoteo' == page.group %}
+          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+  </ul>
+  {% endif %}
 </div>
