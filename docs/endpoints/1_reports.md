@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Reports
-group: endpoint
+group: apidoc
 permalink: /reports/
 ---
 # Introduction

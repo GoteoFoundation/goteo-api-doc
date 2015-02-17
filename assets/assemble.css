@@ -1105,6 +1105,7 @@ h6 {
 h1,
 .h1 {
   font-size: 38px;
+  color:#58595B;
 }
 h2,
 .h2 {
@@ -2336,8 +2337,8 @@ fieldset[disabled] .btn-jade.active {
   border-color: #62c98f;
 }
 .btn-inverse {
-  color: #262829;
-  background-color: #ffffff;
+  color: #FFF;
+  background-color: #149290;
   border-color: #ffffff;
 }
 .btn-inverse:hover,
@@ -2346,6 +2347,7 @@ fieldset[disabled] .btn-jade.active {
 .btn-inverse.active {
   background-color: #f2f2f2;
   border-color: #e6e6e6;
+  color:#58595B;
 }
 .btn-inverse.disabled:hover,
 .btn-inverse[disabled]:hover,
@@ -4037,6 +4039,9 @@ input[type="button"].btn-block {
   .teaser .teaser-content em {
     display: block;
     margin: 10px auto 30px;
+  }
+  h1{
+    font-size: 20px;
   }
 }
 @media all and (max-width: 600px) {

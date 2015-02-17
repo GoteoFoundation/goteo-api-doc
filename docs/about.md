@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About
+group:apidoc
 permalink: /about/
 ---
 # About
