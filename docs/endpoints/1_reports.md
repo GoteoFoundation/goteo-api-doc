@@ -23,23 +23,23 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------ |
-| **average-failed** | *number* | Average raised money for failed projects (which haven't reached the minimum required amount) |
+| **average-failed** | *number* | Average money raised for failed projects (which haven't reached the minimum required amount) |
 | **average-donation** | *number (money)* | Average amount of money (&euro;) given by a donor |
-| **average-donation-paypal** | *number (money)* | average amount of money (&euro;) given by a donor using Paypal |
-| **average-minimum** | *number (money)* | Average minimum costs (&euro;) for successful projects (NOTE: this field is not affected by the location filter) |
-| **average-received** | *number (money)* | Average raised money (&euro;) for successful projects (those which reached the minimum) |
-| **average-second-round** | *number (money)* | Average raised money in only the second round (&euro;) |
-| **matchfund-amount** | *number (money)* | Amount of money raised in calls (*Capital riego distribuido* + crowdunding money) |
+| **average-donation-paypal** | *number (money)* | Average amount of money (&euro;) given by a donor using Paypal |
+| **average-minimum** | *number (money)* | Average minimum cost (&euro;) for successful projects (NOTE: this field is not affected by the location filter) |
+| **average-received** | *number (money)* | Average money raised (&euro;) for successful projects (those which reached the minimum) |
+| **average-second-round** | *number (money)* | Average money raised only in the second round (&euro;) |
+| **matchfund-amount** | *number (money)* | Amount of money raised in calls (*Capital riego distribuido* + crowdfunding money) |
 | **matchfundpledge-amount** | *number (money)* | *Capital Riego de Goteo* (funds from institutions and companies added to the [Capital Riego](https://goteo.org/service/resources)) |
 | **cash-amount** | *number (money)* | Total amount of money (&euro;) collected by direct bank transfer |
-| **pledged** | *number (money)* | Total amount of money (&euro;) rased by Goteo |
-| **pledged-failed** | *number (percentage)* | Percentage of raised money over the minimum on failed projects |
-| **pledged-successful** | *number (percentage)* | Percentage of raised money over the minimum on successful projects |
+| **pledged** | *number (money)* | Total amount of money (&euro;) raised by Goteo |
+| **pledged-failed** | *number (percentage)* | Percentage of money raised over the minimum on failed projects |
+| **pledged-successful** | *number (percentage)* | Percentage of money raised over the minimum on successful projects |
 | **refunded** | *number (money)* | Refunded money (&euro;) on failed projects |
-| **fee-amount** | *number (money)* | Total fee (%8) collected by Goteo |
-| **paypal-amount** | *number (money)* | Total amount of money (&euro;) raised using PayPal |
+| **fee-amount** | *number (money)* | Total fee collected by Goteo |
+| **paypal-amount** | *number (money)* | Total amount of money (&euro;) raised using PayPal transactions |
 | **creditcard-amount** | *number* | Total amount of money (&euro;) raised using Credit Card transactions |
-|**filters** | *array* | If any filter is provided it will be printed here as well |      Además se añade el campo "filters"
+|**meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
 
 ### Response body:
 ```json
@@ -53,7 +53,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money
   "cash-amount": 132963,
   "creditcard-amount": 2441427,
   "fee-amount": 162147.36,
-  "filters": {},
+  "meta": {},
   "matchfund-amount": 57938,
   "matchfundpledge-amount": 74000,
   "paypal-amount": 529107,
@@ -75,19 +75,19 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------ |
-| **failed** | *number* | Number of failed projects (non-successful on the crowdfunding campaign) |
+| **failed** | *number* | Number of failed projects (unsuccessful crowdfunding campaigns) |
 | **published** | *number* | Number of published projects |
-| **received** | *number* | Number of received projects (accepted to be reviewed by Goteo administrators) |
-| **successful** | *number* | Number of successful projects (which are achieved the minimum required amount) |
-| **percentage-successful** | *number (percentage)* | Percentage of successful projects (over the total published projects that are not in campaign) |
-| **successful-complete** | *number* | Number of successful projects with completed campaign |
-| **percentage-successful-complete** | *number (percentage)* | Percentage of successful projects with completed campaign (over the total failed and completed projects: *100 * successful-complete / (successful-complete + failed)* ) |
-| **average-amount-successful** | *number (money)* | Average amount (&euro;) of raised money in successful projects |
+| **received** | *number* | Number of received projects (accepted for review by Goteo administrators) |
+| **successful** | *number* | Number of successful projects (which have achieved the minimum required amount) |
+| **percentage-successful** | *number (percentage)* | Percentage of successful projects |
+| **successful-completed** | *number* | Number of successful projects with completed campaign |
+| **percentage-successful-completed** | *number (percentage)* | Percentage of successful projects with completed campaign (over the total projects: *100 * successful-complete / (successful-complete + failed)* ) |
+| **average-amount-successful** | *number (money)* | Average amount (&euro;) of money raised in successful projects |
 | **average-posts-successful** | *number* | Average number of posts published by successful projects |
-| * **top10-collaborations** | *array* | The 10 campaigns with more collaborations |
-| * **top10-donations** | *array* | The 10 campaigns with more donors (individual contributions) |
-| * **top10-receipts** | *array* | The 10 campaigns with more raised money |
-|**filters** | *array* | If any filter is provided it will be printed here as well |
+| * **top10-collaborations** | *array* | The 10 campaigns with the most collaborations |
+| * **top10-donations** | *array* | The 10 campaigns with the most donors (individual contributions) |
+| * **top10-receipts** | *array* | The 10 campaigns with the most money raised |
+|**meta** | *array* | Additionaly, extra information will be provided here (such as pagination or paramenter filtering ) |
 
 #### * Array sub-fields:
 
@@ -103,7 +103,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
 |**project** | *string* | Identifier for the project |
-|**amount** | *number (money)* | Total amount (&euro;) of raised money for the project |
+|**amount** | *number (money)* | Total amount (&euro;) of money raised for the project |
 
 ### Response body:
 ```json
@@ -111,7 +111,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects
   "average-amount-successful": 6236.44,
   "average-posts-successful": 11.8,
   "failed": 145,
-  "filters": {},
+  "meta": {},
   "percentage-successful": 67.14,
   "percentage-successful-complete": 69.15,
   "published": 522,
@@ -258,29 +258,31 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
 |**users** | *number* | Total number of registered users |
-|**percentage-unsubscribed-users** | *number (percentage)* | Percentage of unsubscribed users (over the  |total number of users)
-|**donors** | *number* | Number of donors (co-financiers peers) |
-|**percentage-donors-users** | *number (percentage)* | Percentage of registered user that are donors (*100 * donors / users*)
+|**percentage-unsubscribed-users** | *number (percentage)* | Percentage of unsubscribed users (over the  total number of users) |
+|**donors** | *number* | Number of donors |
+|**percentage-donors-users** | *number (percentage)* | Percentage of registered users that are donors (*100 * donors / users*)
 |**donors-collaborators** | *number* | Number of donors who collaborate |
 |**multidonors** | *number* | Number of donors who donate to more than 1 project |
-|**percentage-multidonor-users** | *number (percentage)* | Percentage of multi-donors (over total users: *100 * multidonors / users*)
-|**percentage-multidonor-donors** | *number (percentage)* | Percentage of multi-donors (over total donors: *100 * multidonors / donors*)
+|**percentage-multidonor-users** | *number (percentage)* | Percentage of multidonors (over total users: *100 * multidonors / users*)
+|**percentage-multidonor-donors** | *number (percentage)* | Percentage of multidonors (over total donors: *100 * multidonors / donors*)
 |**paypal-donors** | *number* | Number of donors using PayPal |
-|**paypal-multi-donors** | *number* | Number of multi-donors using PayPal |
+|**paypal-multidonors** | *number* | Number of multidonors using PayPal |
 |**collaborators** | *number* | Number of collaborators |
 |**average-donors** | *number* | Average number of donors per successful project |
-|**average-collaborators** | *number* | Average number of collaborators per succesful  |project
+|**average-collaborators** | *number* | Average number of collaborators per succesful  project |
 |**creators-donors** | *number* | Number of creators funding other projects |
-|**creators-collaborators** | *number* | Number of creators collaborating with other  |projects
-|**leading-category** | *number* | First category with the most number of interested users |
+|**creators-collaborators** | *number* | Number of creators collaborating with other  projects |
+|**leading-category** | *number* | Category with the highest number of interested users |
+|**users-leading-category** | *number* | Number of users in this category |
 |**percentage-users-leading-category** | *number (percentage)* | Percentage of users in this category |
 |**second-category** | *number* | Second category with more users |
+|**users-second-category** | *number* | Number of users in this category |
 |**percentage-users-second-category** | *number (percentage)* | Percentage of users in this category |
 |* **top10-donors** | *array* | The top 10 donors who spend more money on projects (the most generous co-financiers) |
-|* **top10-multidonors** | *array* | Top 10 multi-donors who are contributed to more different projects (The most diversified co-financiers) |
+|* **top10-multidonors** | *array* | Top 10 multidonors who are contributed to more different projects (The most diversified co-financiers) |
 |* **top10-collaborators** | *array* | Top 10 collaborators |
 |* **categories** | *array* | Array of categories |
-|**filters** | *array* | If any filter is provided it will be printed here as well |
+|**meta** | *array* | Additionaly, extra information will be provided here (such as pagination or paramenter filtering ) |
 
 #### * Array sub-fields:
 **top10-donors** and **top10-multidonors** return an array of the following object:
@@ -391,7 +393,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community
   "creators-donors": 37,
   "donors": 37183,
   "donors-collaborators": 900,
-  "filters": {},
+  "meta": {},
   "leading-category": 2,
   "multidonors": 4758,
   "paypal-donors": 12160,
@@ -624,7 +626,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/rewards
       "total": 11
     }
   ],
-  "filters": {},
+  "meta": {},
   "percentage-reward-refusal": 35.96,
   "reward-refusal": 13372,
   "rewards-per-amount": {
