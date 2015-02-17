@@ -4,19 +4,16 @@ title: Reports
 group: endpoint
 permalink: /reports/
 ---
-# Introduction
-
-This section give you information about average numbers in [Goteo.org](http://goteo.org) over a period of time. 
-
-### ENDPOINTS FOR REPORTS:
+# Reports endpoint
+This section gives you information about average numbers in [Goteo.org](http://goteo.org). 
 
 <a name="money"></a>
-## /reports/money
+## /reports/money/
 
 Statistics about the money collected
 
 ```bash
-curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money
+curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money/
 ```
 
 ### Response values:
@@ -65,10 +62,10 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money
 ```
 
 <a name="projects"></a>
-## /reports/projects
+## /reports/projects/
 
 ```bash
-curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects
+curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects/
 ```
 
 ### Response description:
@@ -247,10 +244,10 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects
 }
 ```
 <a name="community"></a>
-## /reports/community
+## /reports/community/
 
 ```bash
-curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community
+curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community/
 ```
 
 ### Response description:
@@ -558,12 +555,12 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community
 ```
 
 <a name="rewards"></a>
-## /reports/rewards
+## /reports/rewards/
 
 ### Curl Example
 
 ```bash
-curl -i --basic --user "user:key" {{ site.apiurl }}/reports/rewards
+curl -i --basic --user "user:key" {{ site.apiurl }}/reports/rewards/
 ```
 
 ### Response values:
