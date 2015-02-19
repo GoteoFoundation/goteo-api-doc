@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body style="background: white;">
+
+    {% include home_navbar.html %}
+
+    <div class=""style="position:relative;">
+        <img width="100%" src="/assets/images/home.png">
+        <div class="info">
+            <h1 class="info-title">GOTEO LAB</h1>
+            <div class="info-description">A playground for remixing and using crowdfunding data. A place for inspiration, innovation and sharing.</div>
+        </div>
+    </div>
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-5">
+                <img src="/assets/images/key.png">
+            </div>
+            <div class="col col-lg-7 api-key">
+                <h1>BUILD YOUR OWN APP</h1>
+                <a class="btn btn-inverse custom-btn" href="https://goteo.org/dashboard/activity/apikey">GET YOUR API KEY</a>
+            </div>
+        </div>
+    </div>
+
+        {{ content }}
+    </div>
+
+    {% include footer_home.html %}
+
+  </body>
+
+</html>
