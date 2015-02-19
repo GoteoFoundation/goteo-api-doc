@@ -4046,6 +4046,13 @@ input[type="button"].btn-block {
     display: block;
     margin: 10px auto 30px;
   }
+  .info {
+  	display:none !important;
+  }
+  .custom-ul {
+  	font-size:10px !important;
+  	margin-left: 0 !important;
+  } 
 }
 @media all and (max-width: 600px) {
   .teaser .teaser-content {
@@ -4311,6 +4318,7 @@ a.list-group-item.active > .badge,
 .jumbotron .lead + .lead {
   margin-top: -25px;
 }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1) {
   .jumbotron:after {
     background-size: 150px 150px;
