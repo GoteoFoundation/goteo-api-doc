@@ -3418,8 +3418,8 @@ input[type="button"].btn-block {
   border-top-left-radius: 0;
 }
 .sidebar {
-  padding: 72px 0 1999px;
-  margin-bottom: -1999px;
+  padding: 72px 0 999px;
+  margin-bottom: -999px;
   font-family: 'proxima-nova', 'open sans', helvetica, arial, sans-serif;
   text-align: right;
   border-right: 1px solid #e5e5e5;
@@ -4032,6 +4032,12 @@ input[type="button"].btn-block {
   font-size: 32px;
   line-height: 2;
 }
+@media all and (max-width: 800px) {
+ 
+  h1{
+    font-size: 20px;
+  }
+}
 @media all and (max-width: 700px) {
   .teaser .teaser-content {
     height: auto;
@@ -4040,13 +4046,13 @@ input[type="button"].btn-block {
     display: block;
     margin: 10px auto 30px;
   }
-  h1{
-    font-size: 20px;
-  }
 }
 @media all and (max-width: 600px) {
   .teaser .teaser-content {
     display: none;
+  }
+  .col {
+    text-align: center;
   }
 }
 @media all and (max-width: 480px) {

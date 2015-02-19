@@ -1,5 +1,5 @@
 <div class="sidebar">
- {% if 'apidoc' == page.group %}
+ {% if 'aboutgoteo' != page.group %}
   <span class="nav-section-title">
     API DOC
   </span>
@@ -26,7 +26,7 @@
   {% endif %}
   {% if 'aboutgoteo' == page.group %}
   <span class="nav-section-title">
-    ENDPOINTS
+    ABOUT
   </span>
   <ul class="nav nav-pills nav-stacked">
           {% for page in site.pages %}

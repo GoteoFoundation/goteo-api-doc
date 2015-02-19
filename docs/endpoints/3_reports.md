@@ -1,11 +1,15 @@
 ---
 layout: default
 title: Reports
-group: apidoc
+group: endpoint
 permalink: /reports/
 ---
 # Reports endpoint
 This section gives you information about average numbers in [Goteo.org](http://goteo.org). 
+
+## Filters available
+* The [standard set of filters](/filters) applies to all of these endpoints
+* Parameters **page** and **limit** are not available in none of this endpoints
 
 <a name="money"></a>
 ## /reports/money/
@@ -36,7 +40,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money/
 | **fee-amount** | *number (money)* | Total fee collected by Goteo |
 | **paypal-amount** | *number (money)* | Total amount of money (&euro;) raised using PayPal transactions |
 | **creditcard-amount** | *number* | Total amount of money (&euro;) raised using Credit Card transactions |
-|**meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
+| **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
 
 ### Response body:
 ```json
@@ -84,7 +88,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects/
 | * **top10-collaborations** | *array* | The 10 campaigns with the most collaborations |
 | * **top10-donations** | *array* | The 10 campaigns with the most donors (individual contributions) |
 | * **top10-receipts** | *array* | The 10 campaigns with the most money raised |
-|**meta** | *array* | Additionaly, extra information will be provided here (such as pagination or paramenter filtering ) |
+| **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
 
 #### * Array sub-fields:
 
@@ -92,15 +96,15 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects/
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
-|**project** | *string* | Identifier for the project |
-|**total** | *number* | Total number contributions (or collaborations) |
+| **project** | *string* | Identifier for the project |
+| **total** | *number* | Total number contributions (or collaborations) |
 
 **top10-receipts** return an array of the following object:
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
-|**project** | *string* | Identifier for the project |
-|**amount** | *number (money)* | Total amount (&euro;) of money raised for the project |
+| **project** | *string* | Identifier for the project |
+| **amount** | *number (money)* | Total amount (&euro;) of money raised for the project |
 
 ### Response body:
 ```json
@@ -254,57 +258,57 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community/
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
-|**users** | *number* | Total number of registered users |
-|**percentage-unsubscribed-users** | *number (percentage)* | Percentage of unsubscribed users (over the  total number of users) |
-|**donors** | *number* | Number of donors |
-|**percentage-donors-users** | *number (percentage)* | Percentage of registered users that are donors (*100 * donors / users*)
-|**donors-collaborators** | *number* | Number of donors who collaborate |
-|**multidonors** | *number* | Number of donors who donate to more than 1 project |
-|**percentage-multidonor-users** | *number (percentage)* | Percentage of multidonors (over total users: *100 * multidonors / users*)
-|**percentage-multidonor-donors** | *number (percentage)* | Percentage of multidonors (over total donors: *100 * multidonors / donors*)
-|**paypal-donors** | *number* | Number of donors using PayPal |
-|**paypal-multidonors** | *number* | Number of multidonors using PayPal |
-|**collaborators** | *number* | Number of collaborators |
-|**average-donors** | *number* | Average number of donors per successful project |
-|**average-collaborators** | *number* | Average number of collaborators per succesful  project |
-|**creators-donors** | *number* | Number of creators funding other projects |
-|**creators-collaborators** | *number* | Number of creators collaborating with other  projects |
-|**leading-category** | *number* | Category with the highest number of interested users |
-|**users-leading-category** | *number* | Number of users in this category |
-|**percentage-users-leading-category** | *number (percentage)* | Percentage of users in this category |
-|**second-category** | *number* | Second category with more users |
-|**users-second-category** | *number* | Number of users in this category |
-|**percentage-users-second-category** | *number (percentage)* | Percentage of users in this category |
-|* **top10-donors** | *array* | The top 10 donors who spend more money on projects (the most generous co-financiers) |
-|* **top10-multidonors** | *array* | Top 10 multidonors who are contributed to more different projects (The most diversified co-financiers) |
-|* **top10-collaborators** | *array* | Top 10 collaborators |
-|* **categories** | *array* | Array of categories |
-|**meta** | *array* | Additionaly, extra information will be provided here (such as pagination or paramenter filtering ) |
+| **users** | *number* | Total number of registered users |
+| **percentage-unsubscribed-users** | *number (percentage)* | Percentage of unsubscribed users (over the  total number of users) |
+| **donors** | *number* | Number of donors |
+| **percentage-donors-users** | *number (percentage)* | Percentage of registered users that are donors (*100 * donors / users*)
+| **donors-collaborators** | *number* | Number of donors who collaborate |
+| **multidonors** | *number* | Number of donors who donate to more than 1 project |
+| **percentage-multidonor-users** | *number (percentage)* | Percentage of multidonors (over total users: *100 * multidonors / users*)
+| **percentage-multidonor-donors** | *number (percentage)* | Percentage of multidonors (over total donors: *100 * multidonors / donors*)
+| **paypal-donors** | *number* | Number of donors using PayPal |
+| **paypal-multidonors** | *number* | Number of multidonors using PayPal |
+| **collaborators** | *number* | Number of collaborators |
+| **average-donors** | *number* | Average number of donors per successful project |
+| **average-collaborators** | *number* | Average number of collaborators per succesful  project |
+| **creators-donors** | *number* | Number of creators funding other projects |
+| **creators-collaborators** | *number* | Number of creators collaborating with other  projects |
+| **leading-category** | *number* | Category with the highest number of interested users |
+| **users-leading-category** | *number* | Number of users in this category |
+| **percentage-users-leading-category** | *number (percentage)* | Percentage of users in this category |
+| **second-category** | *number* | Second category with more users |
+| **users-second-category** | *number* | Number of users in this category |
+| **percentage-users-second-category** | *number (percentage)* | Percentage of users in this category |
+| * **top10-donors** | *array* | The top 10 donors who spend more money on projects (the most generous co-financiers) |
+| * **top10-multidonors** | *array* | Top 10 multidonors who are contributed to more different projects (The most diversified co-financiers) |
+| * **top10-collaborators** | *array* | Top 10 collaborators |
+| * **categories** | *array* | Array of categories |
+| **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
 
 #### * Array sub-fields:
 **top10-donors** and **top10-multidonors** return an array of the following object:
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
-|**amount** | *number (money)* | Total amount of money (&euro;) spent by the user in projects |
-|**contributions** | *number* | Total number of different projects the user has contributed to |
-|**user** | *string* | User nickname |
+| **amount** | *number (money)* | Total amount of money (&euro;) spent by the user in projects |
+| **contributions** | *number* | Total number of different projects the user has contributed to |
+| **user** | *string* | User nickname |
 
 **top10-collaborators** returns an array of the following object:
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
-|**interactions** | *number* | Karma number of the user collaborations |
-|**user** | *string* | User nickname |
+| **interactions** | *number* | Karma number of the user collaborations |
+| **user** | *string* | User nickname |
 
 **categories** returns an array of the following object:
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
-|**id** | *number* | Identifier of the category |
-|**name** | *string* | Name of the category (currently in Spanish) |
-|**users** | *number* | Total number of users interested in the category |
-|**percentage-users** | *number (percent)* | Percentage of users in this category over the total number of users |
+| **id** | *number* | Identifier of the category |
+| **name** | *string* | Name of the category (currently in Spanish) |
+| **users** | *number* | Total number of users interested in the category |
+| **percentage-users** | *number (percent)* | Percentage of users in this category over the total number of users |
 
 ### Response body:
 ```json
@@ -568,11 +572,11 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/rewards/
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------- |
-|**reward-refusal** | *number* | Number of co-financiers who renounce reward |
-|**percentage-reward-refusal** | *number* | % of co-financiers who renounce reward |
-|* **favorite-rewards** | *array* | Reward type used in successful projects. (__NOTE that  |this field is not affected by the location filter__).
-|* **rewards-per-amount** | *array* | Number of rewards picked by the users in steps |
-|**filters** | *array* | Any given filter will be added back here |
+| **reward-refusal** | *number* | Number of co-financiers who renounce reward |
+| **percentage-reward-refusal** | *number* | % of co-financiers who renounce reward |
+| * **favorite-rewards** | *array* | Reward type used in successful projects (__NOTE that this field is not affected by the location filter__). |
+| * **rewards-per-amount** | *array* | Number of rewards picked by the users in steps |
+| **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
 
 #### * Array sub-fields
 
