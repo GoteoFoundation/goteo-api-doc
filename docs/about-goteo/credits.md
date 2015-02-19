@@ -1,9 +1,8 @@
 ---
 layout: default
 title: Credits
+permalink: /about-goteo/credits/
 group: aboutgoteo
-permalink: /credits/
-
 ---
 # About
 
