@@ -74,7 +74,7 @@ Currently, the API is in a read-only state so only GET, OPTIONS and HEAD methods
 Info about the users requests without the response:
 
 ```bash
-curl --basic --user 'user:key' -i -X HEAD http://api.goteo.org/v1/users/
+curl --basic --user 'user:key' -i --head http://api.goteo.org/v1/users/
 ```
 
 ```
