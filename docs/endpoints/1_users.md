@@ -42,8 +42,8 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/users/
 | **id** | *string* | Unique identifier for the user in Goteo |
 | **name** | *string* | Name of the user |
 | **node** | *string* | Node where the user was created originally |
-| **profile_image_url** | *string* | URL with the avatar (image) of the user |
-| **date_created** | *datetime* | Date when the user was created [RFC822 format](http://validator.w3.org/feed/docs/error/InvalidRFC2822Date.html) |
+| **profile-image-url** | *string* | URL with the avatar (image) of the user |
+| **date-created** | *datetime* | Date when the user was created [RFC822 format](http://validator.w3.org/feed/docs/error/InvalidRFC2822Date.html) |
 
 <a name="user"></a>
 ## /users/{USER_ID}
@@ -66,82 +66,82 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/users/olivier
 | **id** | *string* | Unique identifier for the user in Goteo |
 | **name** | *string* | Name of the user |
 | **node** | *string* | Node where the user was created originally |
-| **profile_image_url** | *string* | URL with the avatar (image) of the user |
-| **date_created** | *datetime* | Date when the user was created [RFC822 format](http://validator.w3.org/feed/docs/error/InvalidRFC2822Date.html) |
+| **profile-image-url** | *string* | URL with the avatar (image) of the user |
+| **date-created** | *datetime* | Date when the user was created [RFC822 format](http://validator.w3.org/feed/docs/error/InvalidRFC2822Date.html) |
 
 ### Response body:
 ```json
 {
   "items": [
     {
-      "date_created": "Fri, 30 Jan 2015 18:32:27 -0000",
+      "date-created": "Fri, 30 Jan 2015 18:32:27 -0000",
       "id": "19preguntes",
       "name": "Llu\u00eds Nacenta",
       "node": "goteo",
-      "profile_image_url": "http://goteo.org/img/512x512c/la_gota.png"
+      "profile-image-url": "http://goteo.org/img/512x512c/la_gota.png"
     },
     {
-      "date_created": "Wed, 11 Feb 2015 16:00:30 -0000",
+      "date-created": "Wed, 11 Feb 2015 16:00:30 -0000",
       "id": "aecheverri",
       "name": "Alberto Echeverri",
       "node": "goteo",
-      "profile_image_url": "http://goteo.org/img/512x512c/la_gota.png"
+      "profile-image-url": "http://goteo.org/img/512x512c/la_gota.png"
     },
     {
-      "date_created": "Thu, 12 Feb 2015 06:45:59 -0000",
+      "date-created": "Thu, 12 Feb 2015 06:45:59 -0000",
       "id": "alejandro-posada",
       "name": "Alejoposada",
       "node": "goteo",
-      "profile_image_url": "http://goteo.org/img/512x512c/la_gota.png"
+      "profile-image-url": "http://goteo.org/img/512x512c/la_gota.png"
     },
     {
-      "date_created": "Wed, 20 Jun 2012 09:16:24 -0000",
+      "date-created": "Wed, 20 Jun 2012 09:16:24 -0000",
       "id": "alfons",
       "name": "Alf",
       "node": "goteo",
-      "profile_image_url": "http://goteo.org/img/512x512c/la_gota.png"
+      "profile-image-url": "http://goteo.org/img/512x512c/la_gota.png"
     },
     {
-      "date_created": "Wed, 25 Sep 2013 15:52:39 -0000",
+      "date-created": "Wed, 25 Sep 2013 15:52:39 -0000",
       "id": "ali-ve",
       "name": "alicia vela",
       "node": "goteo",
-      "profile_image_url": "http://goteo.org/img/512x512c/la_gota.png"
+      "profile-image-url": "http://goteo.org/img/512x512c/la_gota.png"
     },
     {
-      "date_created": "Thu, 05 Feb 2015 15:07:24 -0000",
+      "date-created": "Thu, 05 Feb 2015 15:07:24 -0000",
       "id": "alicia-escobio",
       "name": "Alicia Escobio",
       "node": "goteo",
-      "profile_image_url": "http://goteo.org/img/512x512c/1511363-10203618275965842-3134443303106447142-n.jp"
+      "profile-image-url": "http://goteo.org/img/512x512c/1511363-10203618275965842-3134443303106447142-n.jp"
     },
     {
-      "date_created": "Sat, 31 Jan 2015 11:51:18 -0000",
+      "date-created": "Sat, 31 Jan 2015 11:51:18 -0000",
       "id": "aliciarosello",
       "name": "Al\u00edcia Rosell\u00f3",
       "node": "goteo",
-      "profile_image_url": "http://goteo.org/img/512x512c/aliciarosello.jpg"
+      "profile-image-url": "http://goteo.org/img/512x512c/aliciarosello.jpg"
     },
     {
-      "date_created": "Wed, 27 Feb 2013 14:26:47 -0000",
+      "date-created": "Wed, 27 Feb 2013 14:26:47 -0000",
       "id": "amoya62",
       "name": "Alvaro Moya",
       "node": "euskadi",
-      "profile_image_url": "http://goteo.org/img/512x512c/img-20140227-wa0000.jpg"
+      "profile-image-url": "http://goteo.org/img/512x512c/img-20140227-wa0000.jpg"
     },
     {
-      "date_created": "Tue, 10 Feb 2015 19:39:08 -0000",
+      "date-created": "Tue, 10 Feb 2015 19:39:08 -0000",
       "id": "ana-gale",
       "name": "3ANGLE7",
       "node": "goteo",
-      "profile_image_url": "http://goteo.org/img/512x512c/la_gota.png"
+      "profile-image-url": "http://goteo.org/img/512x512c/la_gota.png"
     },
     {
-      "date_created": "Sat, 31 Jan 2015 15:27:34 -0000",
+      "date-created": "Sat, 31 Jan 2015 15:27:34 -0000",
       "id": "ana-posada",
       "name": "Ana posada",
       "node": "goteo",
-      "profile_image_url": "http://goteo.org/img/512x512c/la_gota.png"
+      "profile-image-url": "http://goteo.org/img/512x512c/la_gota.png"
     }
   ],
   "meta": {
