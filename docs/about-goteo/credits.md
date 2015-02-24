@@ -1,7 +1,8 @@
 ---
 layout: default
-title: About
-permalink: /about/
+title: Credits
+permalink: /about-goteo/credits/
+group: aboutgoteo
 ---
 # About
 

@@ -1105,6 +1105,7 @@ h6 {
 h1,
 .h1 {
   font-size: 38px;
+  color:#58595B;
 }
 h2,
 .h2 {
@@ -2336,8 +2337,8 @@ fieldset[disabled] .btn-jade.active {
   border-color: #62c98f;
 }
 .btn-inverse {
-  color: #262829;
-  background-color: #ffffff;
+  color: #FFF;
+  background-color: #149290;
   border-color: #ffffff;
 }
 .btn-inverse:hover,
@@ -2346,6 +2347,7 @@ fieldset[disabled] .btn-jade.active {
 .btn-inverse.active {
   background-color: #f2f2f2;
   border-color: #e6e6e6;
+  color:#58595B;
 }
 .btn-inverse.disabled:hover,
 .btn-inverse[disabled]:hover,
@@ -3416,8 +3418,8 @@ input[type="button"].btn-block {
   border-top-left-radius: 0;
 }
 .sidebar {
-  padding: 72px 0 1999px;
-  margin-bottom: -1999px;
+  padding: 72px 0 999px;
+  margin-bottom: -999px;
   font-family: 'proxima-nova', 'open sans', helvetica, arial, sans-serif;
   text-align: right;
   border-right: 1px solid #e5e5e5;
@@ -4030,6 +4032,12 @@ input[type="button"].btn-block {
   font-size: 32px;
   line-height: 2;
 }
+@media all and (max-width: 800px) {
+ 
+  h1{
+    font-size: 20px;
+  }
+}
 @media all and (max-width: 700px) {
   .teaser .teaser-content {
     height: auto;
@@ -4038,10 +4046,20 @@ input[type="button"].btn-block {
     display: block;
     margin: 10px auto 30px;
   }
+  .info {
+  	display:none !important;
+  }
+  .custom-ul {
+  	font-size:10px !important;
+  	margin-left: 0 !important;
+  } 
 }
 @media all and (max-width: 600px) {
   .teaser .teaser-content {
     display: none;
+  }
+  .col {
+    text-align: center;
   }
 }
 @media all and (max-width: 480px) {
@@ -4300,6 +4318,7 @@ a.list-group-item.active > .badge,
 .jumbotron .lead + .lead {
   margin-top: -25px;
 }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1) {
   .jumbotron:after {
     background-size: 150px 150px;

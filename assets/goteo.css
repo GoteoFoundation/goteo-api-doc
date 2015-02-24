@@ -1,3 +1,54 @@
 .icon {
 	height: 20px;
 }
+
+.key{
+	max-width:100%; 
+	height:auto; 
+	padding:5%;
+}
+
+.api-key{
+	padding-top:5%; 
+	padding-left:8%;
+}
+
+.custom-btn{
+	margin-top:30px;
+}
+
+.bs-masthead-links li a{
+    color: #FFF !important;
+ }
+
+ .info{
+ 	position:absolute; 
+ 	bottom:25%; 
+ 	left:25%; 
+ 	top:25%; 
+ 	right:25%; 
+ 	background-color:rgba(32, 179, 178, 0.75); 
+ 	text-align:center; 
+ 	padding:2%; 
+ 	display:table;
+ }
+
+ .info-title{
+ 	color:#FFF; 
+ 	margin-top:0;
+ }
+
+ .info-description{
+ 	color:#BCE8E8;
+ }
+
+ .footer-custom{
+ 	background-color:#58595B; 
+ 	max-width:100%; 
+ 	margin-top:40px;
+ }
+
+ .custom-ul{
+ 	margin-left:15%; 
+ 	width:100%;
+ }
