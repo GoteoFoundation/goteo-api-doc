@@ -8,7 +8,8 @@ permalink: /doc/reports/
 This section gives you information about average numbers in [Goteo.org](http://goteo.org). 
 
 ## Filters available
-* The [standard set of filters](/filters) applies to all of these endpoints
+**The [standard set of filters](/doc/filters) applies to all of these endpoints with these particulars:**
+
 * Parameters **page** and **limit** are not available in none of this endpoints
 
 <a name="money"></a>
