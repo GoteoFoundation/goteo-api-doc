@@ -1245,7 +1245,7 @@ blockquote {
 }
 blockquote p {
   color: #a2a8a8;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.5;
 }
 blockquote p:last-child {
