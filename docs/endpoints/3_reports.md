@@ -11,6 +11,7 @@ This section gives you information about average numbers in [Goteo.org](http://g
 **The [standard set of filters](/doc/filters) applies to all of these endpoints with these particulars:**
 
 * Parameters **page** and **limit** are not available in none of this endpoints
+* Parameter **lang** is available only in the /reports/community/ endpoint
 
 <a name="money"></a>
 ## /reports/money/
