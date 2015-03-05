@@ -576,7 +576,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/rewards/
 | ------------- | ------------- | ------------- |
 | **reward-refusal** | *number* | Number of co-financiers who renounce reward |
 | **percentage-reward-refusal** | *number* | % of co-financiers who renounce reward |
-| * **favorite-rewards** | *array* | Reward type used in successful projects (__NOTE that this field is not affected by the location filter__). |
+| * **favorite-rewards** | *array* | Reward type used in successful projects. |
 | * **rewards-per-amount** | *array* | Number of rewards picked by the users in steps |
 | **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
 
