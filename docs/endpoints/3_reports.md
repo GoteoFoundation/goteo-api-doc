@@ -34,12 +34,12 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money/
 | **average-second-round** | *number (money)* | Average money raised only in the second round (&euro;) |
 | **matchfund-amount** | *number (money)* | Amount of money raised in calls (*Capital riego distribuido* + crowdfunding money) |
 | **matchfundpledge-amount** | *number (money)* | *Capital Riego de Goteo* (funds from institutions and companies added to the [Capital Riego](https://goteo.org/service/resources)) |
-| **cash-amount** | *number (money)* | Total amount of money (&euro;) collected by direct bank transfer |
 | **pledged** | *number (money)* | Total amount of money (&euro;) raised by Goteo |
 | **percentage-pledged-failed** | *number (percentage)* | Percentage of money raised over the minimum on failed projects |
 | **percentage-pledged-successful** | *number (percentage)* | Percentage of money raised over the minimum on successful projects |
 | **refunded** | *number (money)* | Refunded money (&euro;) on failed projects |
-| **fee-amount** | *number (money)* | Total fee collected by Goteo |
+| **fee-amount** | *number (money)* | Total fee keeped by Goteo |
+| **cash-amount** | *number (money)* | Total amount of money (&euro;) collected by direct bank transfer |
 | **paypal-amount** | *number (money)* | Total amount of money (&euro;) raised using PayPal transactions |
 | **creditcard-amount** | *number* | Total amount of money (&euro;) raised using Credit Card transactions |
 | **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
@@ -269,6 +269,8 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community/
 | **percentage-multidonor-users** | *number (percentage)* | Percentage of multidonors (over total users: *100 * multidonors / users*)
 | **percentage-multidonor-donors** | *number (percentage)* | Percentage of multidonors (over total donors: *100 * multidonors / donors*)
 | **paypal-donors** | *number* | Number of donors using PayPal |
+| **creditcard-donors** | *number* | Number of donors using a Credit Card |
+| **cash-donors** | *number* | Number of donors donanting to projects off-line |
 | **collaborators** | *number* | Number of collaborators |
 | **average-donors** | *number* | Average number of donors per successful project |
 | **average-collaborators** | *number* | Average number of collaborators per succesful  project |
