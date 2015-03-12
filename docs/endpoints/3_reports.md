@@ -36,8 +36,8 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money/
 | **matchfundpledge-amount** | *number (money)* | *Capital Riego de Goteo* (funds from institutions and companies added to the [Capital Riego](https://goteo.org/service/resources)) |
 | **cash-amount** | *number (money)* | Total amount of money (&euro;) collected by direct bank transfer |
 | **pledged** | *number (money)* | Total amount of money (&euro;) raised by Goteo |
-| **pledged-failed** | *number (percentage)* | Percentage of money raised over the minimum on failed projects |
-| **pledged-successful** | *number (percentage)* | Percentage of money raised over the minimum on successful projects |
+| **percentage-pledged-failed** | *number (percentage)* | Percentage of money raised over the minimum on failed projects |
+| **percentage-pledged-successful** | *number (percentage)* | Percentage of money raised over the minimum on successful projects |
 | **refunded** | *number (money)* | Refunded money (&euro;) on failed projects |
 | **fee-amount** | *number (money)* | Total fee collected by Goteo |
 | **paypal-amount** | *number (money)* | Total amount of money (&euro;) raised using PayPal transactions |
@@ -269,7 +269,6 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community/
 | **percentage-multidonor-users** | *number (percentage)* | Percentage of multidonors (over total users: *100 * multidonors / users*)
 | **percentage-multidonor-donors** | *number (percentage)* | Percentage of multidonors (over total donors: *100 * multidonors / donors*)
 | **paypal-donors** | *number* | Number of donors using PayPal |
-| **paypal-multidonors** | *number* | Number of multidonors using PayPal |
 | **collaborators** | *number* | Number of collaborators |
 | **average-donors** | *number* | Average number of donors per successful project |
 | **average-collaborators** | *number* | Average number of collaborators per succesful  project |
