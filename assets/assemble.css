@@ -850,6 +850,9 @@ input.focused {
   .highlight {
     display: none;
   }
+  .api-doc{
+    display: inline-block !important;
+  }
 }
 /* Tablets and up */
 @media screen and (min-width: 768px) {
