@@ -52,3 +52,11 @@
  	margin-left:15%; 
  	width:100%;
  }
+
+ .api-doc {
+ 	display:none;
+ 	background-color: #B5161E;
+ }
+ .apps{
+ 	display: none !important;
+ }
