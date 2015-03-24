@@ -9,7 +9,7 @@ permalink: /doc/licenses/
 This section gives you information about the licenses used by project rewards in [Goteo.org](http://goteo.org)
 
 <a name="licenses"></a>
-## /reports/licenses/
+## /licenses/
 
 Obtains a list of licenses.
 

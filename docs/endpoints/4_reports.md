@@ -10,8 +10,44 @@ This section gives you information about average numbers in [Goteo.org](http://g
 ## Filters available
 **The [standard set of filters](/doc/filters) applies to all of these endpoints with these particulars:**
 
-* Parameters **page** and **limit** are not available in none of this endpoints
+* Parameters **page** and **limit** are not available in none of these endpoints
 * Parameter **lang** is available only in the /reports/community/ endpoint
+
+<a name="summary"></a>
+## /reports/summary/
+
+Some of the data provided by the other **/reports/*/** endpoints is provided here as a summary. This allows to retrieve all the important data (choosen by the Goteo team) in one API call only.
+
+```bash
+curl -i --basic --user "user:key" {{ site.apiurl }}/reports/summary/
+```
+
+### Response values:
+
+| Attribute  | Type | Description |
+| ------------- | ------------- | ------------ |
+| **average-donation** | *number (money)* | Average amount of money (&euro;) given by a donor |
+| * **categories** | *array* | Array of categories |
+| * **favorite-rewards** | *array* | Reward type used in successful projects. |
+| **matchfund-amount** | *number (money)* | Amount of money raised in calls (*Capital riego distribuido* + crowdfunding money) |
+| **matchfundpledge-amount** | *number (money)* | *Capital Riego de Goteo* (funds from institutions and companies added to the [Capital Riego](https://goteo.org/service/resources)) |
+| **projects-pledged** | *number (money)* | Total amount of money (&euro;) raised by Goteo |
+| **projects-failed** | *number* | Number of failed projects (unsuccessful crowdfunding campaigns) |
+| **projects-published** | *number* | Number of published projects.<br>**date filters** here uses the date where the project started its campaign |
+| **projects-received** | *number* | Number of received projects (accepted for review by Goteo administrators).<br>**date filters** here uses the date where the project was sent to revision |
+| **projects-successful** | *number* | Number of successful projects (which have achieved the minimum required amount)<br>**date filters** here uses the date where the had achieved the minimum amount |
+| * **top10-collaborations** | *array* | The 10 campaigns with the most collaborations |
+| * **top10-donations** | *array* | The 10 campaigns with the most donors (individual contributions) |
+| **users** | *number* | Total number of registered users |
+
+#### * Array sub-fields:
+
+**categories** returns an array of the object specified in the [reports/community](/doc/reports#community) response.
+
+**favorite-rewards** returns an array of the object specified in the [reports/rewards](/doc/reports#rewards) response.
+
+**top10-collaborations** and **top10-donations** returns an array of the objects specified in the [reports/projects](/doc/reports#projects) response.
+
 
 <a name="money"></a>
 ## /reports/money/

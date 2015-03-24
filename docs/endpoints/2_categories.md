@@ -9,7 +9,7 @@ permalink: /doc/categories/
 This section gives you information about the categories used by projects or users in [Goteo.org](http://goteo.org)
 
 <a name="categories"></a>
-## /reports/categories/
+## /categories/
 
 Obtains a list of categories.
 
