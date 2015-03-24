@@ -29,7 +29,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money/
 | **average-failed** | *number* | Average money raised for failed projects (which haven't reached the minimum required amount) |
 | **average-donation** | *number (money)* | Average amount of money (&euro;) given by a donor |
 | **average-donation-paypal** | *number (money)* | Average amount of money (&euro;) given by a donor using Paypal |
-| **average-minimum** | *number (money)* | Average minimum cost (&euro;) for successful projects (NOTE: this field is not affected by the location filter) |
+| **average-minimum** | *number (money)* | Average minimum cost (&euro;) for successful projects |
 | **average-received** | *number (money)* | Average money raised (&euro;) for successful projects (those which reached the minimum) |
 | **average-second-round** | *number (money)* | Average money raised only in the second round (&euro;) |
 | **matchfund-amount** | *number (money)* | Amount of money raised in calls (*Capital riego distribuido* + crowdfunding money) |
@@ -79,11 +79,11 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/projects/
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------ |
 | **failed** | *number* | Number of failed projects (unsuccessful crowdfunding campaigns) |
-| **published** | *number* | Number of published projects |
-| **received** | *number* | Number of received projects (accepted for review by Goteo administrators) |
-| **successful** | *number* | Number of successful projects (which have achieved the minimum required amount) |
+| **published** | *number* | Number of published projects.<br>**date filters** here uses the date where the project started its campaign |
+| **received** | *number* | Number of received projects (accepted for review by Goteo administrators).<br>**date filters** here uses the date where the project was sent to revision |
+| **successful** | *number* | Number of successful projects (which have achieved the minimum required amount)<br>**date filters** here uses the date where the had achieved the minimum amount |
 | **percentage-successful** | *number (percentage)* | Percentage of successful projects |
-| **successful-completed** | *number* | Number of successful projects with completed campaign |
+| **successful-completed** | *number* | Number of successful projects with completed campaign.<br>**date filters** here uses the date where the project ended his campaign |
 | **percentage-successful-completed** | *number (percentage)* | Percentage of successful projects with completed campaign (over the total projects: *100 * successful-complete / (successful-complete + failed)* ) |
 | **average-amount-successful** | *number (money)* | Average amount (&euro;) of money raised in successful projects |
 | **average-posts-successful** | *number* | Average number of posts published by successful projects |
@@ -284,7 +284,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/community/
 | **percentage-users-second-category** | *number (percentage)* | Percentage of users in this category |
 | * **top10-donors** | *array* | The top 10 donors who spend more money on projects (the most generous co-financiers) |
 | * **top10-multidonors** | *array* | Top 10 multidonors who are contributed to more different projects (The most diversified co-financiers) |
-| * **top10-collaborators** | *array* | Top 10 collaborators |
+| * **top10-collaborators** | *array* | Top 10 talkers |
 | * **categories** | *array* | Array of categories |
 | **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
 
