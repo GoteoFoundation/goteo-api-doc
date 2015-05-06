@@ -6,5 +6,9 @@ group: apps
 ---
 # Apps
 
-Goteo API uses.
+##Outliers Goteo Visualization
+
+ [![Goteo Visualization](http://developers.goteo.org/assets/images/app1.png)](http://stats.goteo.org)
+
+
 
