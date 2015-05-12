@@ -35,7 +35,7 @@ This API uses Http authentication, please get your **user** and **password** fro
 
 ## Quick start: Basic usage
 
-Once you have your user/key you can make petitions, here are few examples:
+Once you have your user/key, you can make petitions. Here are few examples:
 
 ### CURL example from a command line:
 
@@ -79,8 +79,8 @@ Currently, the API is in a read-only state so only GET, OPTIONS and HEAD methods
 
 |  Method | Usage |
 | ------- | ----- |
-| GET     | This is the method that should be used to retrieve any data from the Goteo platform. The response will be  returned in to you as a JSON object.<br><br> Additionally, some endpoints accepts parameters in the URL letting you filter the result in several ways.<br><br> All requests using the GET method are read-only.    |
-| OPTIONS | This method is used mainly to retrieve the methods available (GET, OPTIONS, HEAD) in the API. Also is needed to obtain information about if CORS authorization is enabled.<br><br> Normally, this is used automatically by modern browsers before doing the requested GET petition.<br><br>**CORS** is enabled for full access in this API. |
+| GET     | This is the method that should be used to retrieve any data from the Goteo platform. The response will be  returned to you as a JSON object.<br><br> Additionally, some endpoints accept parameters in the URL letting you filter the result in several ways.<br><br> All requests using the GET method are read-only.    |
+| OPTIONS | This method is used mainly to retrieve the methods available (GET, OPTIONS, HEAD) in the API. It is also necessary to obtain information about whether CORS authorization is enabled.<br><br> Normally, this is used automatically by modern browsers before performing the requested GET petition.<br><br>**CORS** is enabled for full access in this API. |
 | HEAD    | To retrieve metadata information, the HEAD method returns the headers associated to a specific GET request.<br><br>Response headers contain some useful information about your API access and the results that are available for your request.<br><br>For instance, the headers contain your current rate-limit value and the amount of time available until the limit resets. It also contains metrics about the total number of objects found, pagination information, and the total content length.  |
 
 ### Curl example:
