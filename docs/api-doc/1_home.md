@@ -61,7 +61,7 @@ $.get('http://api.goteo.org/v1/users/ivan')
 
 ## Requests
 
-The API is accessible through both HTTP and HTTPS protocols by any tool capable to communicate using http basic user authentication.
+The API is accessible through both HTTP and HTTPS protocols by any tool that can communicate using http basic user authentication.
 
 Currently, the API is in a read-only state so only GET, OPTIONS and HEAD methods are available at this point.
 
