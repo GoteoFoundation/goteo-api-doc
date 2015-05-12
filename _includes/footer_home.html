@@ -29,3 +29,40 @@
   ga('send', 'pageview');
 
 </script>
+
+<!-- Important Owl stylesheet -->
+<link rel="stylesheet" href="{{ "/assets/carousel/owl.carousel.css" | prepend: site.baseurl }}">
+ 
+<!-- Default Theme -->
+<link rel="stylesheet" href="{{ "/assets/carousel/owl.theme.css" | prepend: site.baseurl }}">
+ 
+<!--  jQuery 1.7+  -->
+<script src="{{ "/assets/js/jquery-1.9.1.min.js" | prepend: site.baseurl }}"></script>
+ 
+<!-- Include js plugin -->
+<script src="{{ "/assets/js/owl.carousel.js" | prepend: site.baseurl }}"></script>
+
+<script>
+
+
+$(document).ready(function() {
+      $("#carousel-home").owlCarousel({
+
+      navigation : false,
+      autoPlay: true,
+      slideSpeed : 500,
+      paginationSpeed : 800,
+      singleItem : true
+
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
+      });
+    });
+
+
+</script>
