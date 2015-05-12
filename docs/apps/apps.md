@@ -6,6 +6,7 @@ group: apps
 ---
 # Apps
 
+
 In this section we would like to compile work done using our API, including our own work and that of others who have made use of our open API.  Feel free to send us examples of your work with Goteo API data to be added to this section.
 
 The types of work we envision featuring here include, but aren’t limited to:
