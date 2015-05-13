@@ -22,16 +22,15 @@
  }
 
  .info{
- 	position:absolute; 
- 	bottom:25%; 
- 	left:25%; 
- 	top:25%; 
- 	right:25%; 
- 	background-color:rgba(32, 179, 178, 0.75); 
- 	text-align:center; 
- 	padding:2%; 
- 	display:table;
- }
+ 	width: 50%;
+  	position: absolute; 	
+  	top: 32%;
+  	background-color: rgba(32, 179, 178, 0.75);
+  	text-align: center;
+  	padding: 2%;
+  	margin-right: 25%;
+  	margin-left: 25%;
+ 	}
 
  .info-title{
  	color:#FFF; 
