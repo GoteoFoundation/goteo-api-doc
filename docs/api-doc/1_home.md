@@ -10,7 +10,19 @@ permalink: /doc/
 
 ## Introduction
 
-This is the API for the crowdfunding platform [Goteo.org](http://goteo.org).
+Welcome to the API for the crowdfunding platform [Goteo.org](http://goteo.org).
+
+Fundación Goteo is pleased to present our open data API and to share our work with people interested in data, API and visualizations, specifically data on crowdfunding and our Goteo.org community. We offer you access to all of the activities and the impact of the Goteo platform. Our ultimate aim is to build new standards in the worlds of collective finance and collaborative economy, while also contributing to the open data commons.  
+
+We want to share this new development and battery of open resources with developers and experts in analysis and data visualization, as well as general researchers. If you've got ideas about new applications and uses for the data we have been gathering since 2012, and crowdfunding in general, we're ready for you!
+
+We’re open to contributions in:
+
+* Improving our API, along with the common good, in the aspect of open data.
+* Creating new applications and visualizations 
+* Comparing and finding new hypotheses about the relationships emerging between resources, needs, people and open projects looking for funding.
+
+Please contact us with any questions or comments.
 
 #### API URL: [{{ site.apiurl }}]({{ site.apiurl }})
 
@@ -23,7 +35,7 @@ This API uses Http authentication, please get your **user** and **password** fro
 
 ## Quick start: Basic usage
 
-Once you have your user/key you can make petitions, here are few examples:
+Once you have your user/key, you can make petitions. Here are few examples:
 
 ### CURL example from a command line:
 
@@ -61,14 +73,14 @@ $.get('http://api.goteo.org/v1/users/ivan')
 
 ## Requests
 
-The API is accessible through both HTTP and HTTPS protocols by any tool capable to communicate using http basic user authentication.
+The API is accessible through both HTTP and HTTPS protocols by any tool that can communicate using http basic user authentication.
 
 Currently, the API is in a read-only state so only GET, OPTIONS and HEAD methods are available at this point.
 
 |  Method | Usage |
 | ------- | ----- |
-| GET     | This is the method that should be used to retrieve any data from the Goteo platform. The response will be  returned in to you as a JSON object.<br><br> Additionally, some endpoints accepts parameters in the URL letting you filter the result in several ways.<br><br> All requests using the GET method are read-only.    |
-| OPTIONS | This method is used mainly to retrieve the methods available (GET, OPTIONS, HEAD) in the API. Also is needed to obtain information about if CORS authorization is enabled.<br><br> Normally, this is used automatically by modern browsers before doing the requested GET petition.<br><br>**CORS** is enabled for full access in this API. |
+| GET     | This is the method that should be used to retrieve any data from the Goteo platform. The response will be  returned to you as a JSON object.<br><br> Additionally, some endpoints accept parameters in the URL letting you filter the result in several ways.<br><br> All requests using the GET method are read-only.    |
+| OPTIONS | This method is used mainly to retrieve the methods available (GET, OPTIONS, HEAD) in the API. It is also necessary to obtain information about whether CORS authorization is enabled.<br><br> Normally, this is used automatically by modern browsers before performing the requested GET petition.<br><br>**CORS** is enabled for full access in this API. |
 | HEAD    | To retrieve metadata information, the HEAD method returns the headers associated to a specific GET request.<br><br>Response headers contain some useful information about your API access and the results that are available for your request.<br><br>For instance, the headers contain your current rate-limit value and the amount of time available until the limit resets. It also contains metrics about the total number of objects found, pagination information, and the total content length.  |
 
 ### Curl example:
