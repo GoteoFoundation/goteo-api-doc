@@ -1,5 +1,5 @@
 <div class="sidebar">
- {% if 'aboutgoteo' != page.group %}
+ {% if 'apidoc' == page.group %}
   <span class="nav-section-title">
     API DOC
   </span>
@@ -31,6 +31,18 @@
   <ul class="nav nav-pills nav-stacked">
           {% for page in site.pages %}
           {% if 'aboutgoteo' == page.group %}
+          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+  </ul>
+  {% endif %}
+  {% if 'apps' == page.group %}
+  <span class="nav-section-title">
+    APPS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          {% for page in site.pages %}
+          {% if 'apps' == page.group %}
           <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
           {% endif %}
         {% endfor %}
