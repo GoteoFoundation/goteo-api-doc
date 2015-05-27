@@ -24,6 +24,31 @@
     <a href="http://api.goteo.org/v1/api/spec.html" style="color:#58595B;">CONSOLE</a>
   </span>
   {% endif %}
+ {% if 'endpoint' == page.group %}
+  <span class="nav-section-title">
+    API DOC
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          {% for page in site.pages %}
+          {% if 'apidoc' == page.group %}
+          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          {% for page in site.pages %}
+          {% if 'endpoint' == page.group %}
+          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+  </ul>
+  <span class="nav-section-title">
+    <a href="http://api.goteo.org/v1/api/spec.html" style="color:#58595B;">CONSOLE</a>
+  </span>
+  {% endif %}
   {% if 'aboutgoteo' == page.group %}
   <span class="nav-section-title">
     ABOUT
