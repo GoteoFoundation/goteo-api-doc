@@ -24,7 +24,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/users/
 * **node** restricts the list to the users originally created in that node(s)
 * **category** restricts the list to the users that have interests in that category(ies)
 * **project** restricts the list to the users that have either collaborate or contributed (financially) to that project(s).
-* **location** For privacy concerns, this filter is no available in this endpoint.
+* **location** Although this filter is available, only the user that have specifically allowed to be located will be listed.
 * **lang** does not applies in this endpoint
 
 ### Response values:
@@ -149,7 +149,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/users/
 Gets information about a single user.
 
 ```bash
-curl -i --basic --user "user:key" {{ site.apiurl }}/users/olivier
+curl -i --basic --user "user:key" {{ site.apiurl }}/users/olivier/
 ```
 
 ### Filters available:
