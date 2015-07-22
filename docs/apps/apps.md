@@ -24,6 +24,12 @@ The following image is a representation of Goteo's statistics, visualizing data 
 
 [![Goteo Visualization](http://developers.goteo.org/assets/images/app1.png)](http://stats.goteo.org)
 
+##Demo ECF Labs
+
+The demo was made by the ECF Labs team at the Goteathon even in Madrid, using  AngularJS
+
+[![Goteo Visualization](http://developers.goteo.org/assets/images/ecf.jpg)](http://stats.goteo.org)
+
 ##Madrid Goteo Projects
 
 The following map is a representation of Goteo's projects in Madrid. 
