@@ -28,7 +28,7 @@ The following image is a representation of Goteo's statistics, visualizing data 
 
 The demo was made by the ECF Labs team at the Goteathon even in Madrid, using  AngularJS
 
-[![Goteo Visualization](http://developers.goteo.org/assets/images/ecf.jpg)](http://stats.goteo.org)
+[![Goteo Visualization](https://developers.goteo.org/assets/images/ecf.jpg)](http://ecflabs.org/app/lab/innovacion/goteo-api-usage-angularjs-demo-ecf-labs-team)
 
 ##Madrid Goteo Projects
 

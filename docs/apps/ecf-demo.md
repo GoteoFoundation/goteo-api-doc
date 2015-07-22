@@ -5,15 +5,16 @@ permalink: /apps/ecf-labs-demo/
 group: apps
 ---
 # ECF Labs Demo
-Developed by: [ECF Labs](http://ecflabs.or)
+Developed by: [ECF Labs](http://ecflabs.org)
 
- [![ECF Labs Demo](http://developers.goteo.org/assets/images/ecf.jpg)](https://experiments.goteo.org/GoteoApiAngularJS/angular.html)
+ [![ECF Labs Demo](https://developers.goteo.org/assets/images/ecf.jpg)](https://experiments.goteo.org/GoteoApiAngularJS/angular.html)
 
 
 ## Description
 
-The demo was made by the ECF Labs team at the Goteathon even in Madrid, using AngularJS.
+This example was developed during the Goteathon event organised by Goteo.org in MediaLab Prado in Madrid.
 
+One of the main topics was Goteo.org API so two of us being among attendees wanted to contribute in practice, to test and implement API within the specific framework that we are both in high favour as a developers - Angular JS. 
 ## Technical information
 
 - Angular JS
