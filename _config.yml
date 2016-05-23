@@ -7,6 +7,9 @@ url: "https://developers.goteo.org" # the base hostname & protocol for your site
 apiurl: "https://api.goteo.org/v1" # the base hostname & protocol for api
 twitter_username: goteofunding
 github_url: https://github.com/GoteoFoundation/goteo-api-doc
+api_console: https://api.goteo.org/v1/apidocs/index.html
 
 # Build settings
 markdown: rdiscount
+
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'rakefile.rb', 'README.md', 'generate_examples.sh']
