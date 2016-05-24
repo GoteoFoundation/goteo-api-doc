@@ -57,4 +57,9 @@ save users/ users
 save users/goteo user
 save categories/ categories
 save licenses/ licenses
+save reports/summary/ reports_summary
+save reports/projects/ reports_projects
+save reports/rewards/ reports_rewards
+save reports/community/ reports_community
+save reports/money/ reports_money
 

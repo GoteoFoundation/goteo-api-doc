@@ -23,7 +23,7 @@ module SwaggerParser
                         ref = value['items']['$ref'].split('/')[-1]
                         _key = ref.split('_')[-1]
                         value['description'] << ' &#9758;<a href="#' + _key + '">' + _key + '</a>'
-                        # puts(ref, _key)
+                        puts(ref, _key)
                         definitions[_key] = get_definitions(ref)[_key]
                     end
                 end
@@ -59,7 +59,6 @@ module SwaggerParser
                     t << "\n| Attribute  | Type | Description |\n"
                     t << "|------------|------|-------------|\n"
                     for val in parameters
-                        puts val
                         type = val['type']
                         t << "| **#{val['name']}** | *#{type}* | #{val['description']} |\n"
                     end
@@ -76,12 +75,18 @@ module SwaggerParser
                 'user' => 'api_users_user_get_UserFull',
                 'categories' => 'api_categories_categories_get_Category',
                 'licenses' => 'api_licenses_licenses_get_License',
+                'reports_summary' => 'api_reports_reports_summary_get_Summary',
+                'reports_community' => 'api_reports_reports_community_get_Community',
+                'reports_money' => 'api_reports_reports_money_get_Money',
+                'reports_rewards' => 'api_reports_reports_rewards_get_Reward',
+                'reports_projects' => 'api_reports_reports_projects_get_Project',
                 }
+                _key = key.sub('_', '/')
                 @site.data[key] = Hash.new
                 @site.data[key]['definitions'] = get_definitions(id)
                 @site.data[key]['example'] = get_example(key)
                 @site.data[key]['definitions_table'] = get_definitions_table(@site.data[key]['definitions'])
-                @site.data[key]['parameters'] = { key => @swagger['paths']['/' + key + '/']['get']['parameters'] }if @swagger['paths']['/' + key + '/'] and @swagger['paths']['/' + key + '/']['get']['parameters']
+                @site.data[key]['parameters'] = { key => @swagger['paths']['/' + _key + '/']['get']['parameters'] }if @swagger['paths']['/' + _key + '/'] and @swagger['paths']['/' + _key + '/']['get']['parameters']
                 # puts "\n--[-\n"
                 # puts @site.data[key]['parameters']
                 # puts "\n-]--\n--\n"

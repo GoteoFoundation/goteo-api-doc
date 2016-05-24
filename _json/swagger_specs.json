@@ -1,5 +1,4 @@
 {
-  "basePath": "/v1",
   "definitions": {
     "api_calls_call_get_CallFull": {
       "properties": {
@@ -409,11 +408,11 @@
           "type": "string"
         },
         "total-projects": {
-          "description": "Number of projects using this license",
+          "description": "Number of published projects in the category",
           "type": "integer"
         },
         "total-users": {
-          "description": "Number of users using this license",
+          "description": "Number of users interested in the category",
           "type": "integer"
         }
       }
@@ -607,7 +606,7 @@
     "api_licenses_licenses_get_License": {
       "properties": {
         "description": {
-          "description": "License short description",
+          "description": "License description",
           "type": "string"
         },
         "id": {
@@ -619,19 +618,19 @@
           "type": "string"
         },
         "svg-url": {
-          "description": "Icon URL for the license",
+          "description": "URL with the SVG logo of the license",
           "type": "string"
         },
         "total-projects": {
-          "description": "Number of projects using this license",
+          "description": "Number of rewards using the license for all published projects",
           "type": "integer"
         },
         "total-rewards": {
-          "description": "Number of rewards using this license",
+          "description": "Number of published projects using the license in some of its rewards",
           "type": "integer"
         },
         "url": {
-          "description": "License's URL",
+          "description": "URL where to find the license content terms",
           "type": "string"
         }
       }
@@ -1196,51 +1195,67 @@
     "api_reports_reports_money_get_Money": {
       "properties": {
         "average-donation": {
+          "description": "Average amount of money (\u20ac) given by a donor",
           "type": "number"
         },
         "average-donation-paypal": {
+          "description": "Average amount of money (\u20ac) given by a donor using Paypal",
           "type": "number"
         },
         "average-failed": {
+          "description": "Average money raised for failed projects (which haven't reached the minimum required amount)",
           "type": "number"
         },
         "average-minimum": {
+          "description": "Average minimum cost (\u20ac) for successful projects",
           "type": "number"
         },
         "average-received": {
+          "description": "Average money raised (\u20ac) for successful projects (those which reached the minimum)",
           "type": "number"
         },
         "average-second-round": {
+          "description": "Average money raised only in the second round (\u20ac)",
           "type": "number"
         },
         "cash-amount": {
+          "description": "Total amount of money (\u20ac) collected by direct bank transfer",
           "type": "integer"
         },
         "creditcard-amount": {
+          "description": "Total amount of money (\u20ac) raised using Credit Card transactions",
           "type": "integer"
         },
         "fee-amount": {
+          "description": "Total fee keeped by Goteo",
           "type": "number"
         },
         "matchfund-amount": {
+          "description": "Amount of money raised in calls (*Capital riego distribuido* + crowdfunding money)",
           "type": "integer"
         },
         "matchfundpledge-amount": {
+          "description": "*Capital Riego de Goteo* (funds from institutions and companies added to the [Capital Riego](https://goteo.org/service/resources))",
           "type": "integer"
         },
         "paypal-amount": {
+          "description": "Total amount of money (\u20ac) raised using PayPal transactions",
           "type": "integer"
         },
         "percentage-pledged-failed": {
+          "description": "Percentage of money raised over the minimum on failed projects",
           "type": "number"
         },
         "percentage-pledged-successful": {
+          "description": "Percentage of money raised over the minimum on successful projects",
           "type": "number"
         },
         "pledged": {
+          "description": "Total amount of money (\u20ac) raised by Goteo",
           "type": "integer"
         },
         "refunded": {
+          "description": "Refunded money (\u20ac) on failed projects",
           "type": "integer"
         }
       }
@@ -1413,54 +1428,67 @@
     "api_reports_reports_summary_get_Summary": {
       "properties": {
         "average-donation": {
+          "description": "Average amount of money (\u20ac) given by a donor",
           "type": "number"
         },
         "categories": {
+          "description": "Array of categories",
           "items": {
-            "$ref": "#/definitions/api_reports_community_get_Category"
+            "$ref": "#/definitions/api_reports_reports_community_get_Category"
           },
           "type": "array"
         },
         "favorite-rewards": {
+          "description": "Reward type used in successful projects",
           "items": {
-            "$ref": "#/definitions/api_reports_rewards_get_Favourite"
+            "$ref": "#/definitions/api_reports_reports_rewards_get_Favourite"
           },
           "type": "array"
         },
         "matchfund-amount": {
+          "description": "Amount of money raised in calls (Capital riego distribuido + crowdfunding money)",
           "type": "integer"
         },
         "matchfundpledge-amount": {
+          "description": "*Capital Riego de Goteo* (funds from institutions and companies added to the [Capital Riego](https://goteo.org/service/resources))",
           "type": "integer"
         },
         "pledged": {
+          "description": "Total amount of money (\u20ac) raised by Goteo",
           "type": "integer"
         },
         "projects-failed": {
+          "description": "Number of failed projects (unsuccessful crowdfunding campaigns)",
           "type": "integer"
         },
         "projects-published": {
+          "description": "Number of published projects.<br>**Date filters** here uses the date where the project started its campaign",
           "type": "integer"
         },
         "projects-received": {
+          "description": "Number of received projects (accepted for review by Goteo administrators).<br>**Date filters** here uses the date where the project was sent to revision",
           "type": "integer"
         },
         "projects-successful": {
+          "description": "Number of successful projects (which have achieved the minimum required amount).<br>**Date filters** here uses the date where the had achieved the minimum amount",
           "type": "integer"
         },
         "top10-collaborations": {
+          "description": "The 10 campaigns with the most collaborations",
           "items": {
-            "$ref": "#/definitions/api_reports_projects_get_ProjectContribution"
+            "$ref": "#/definitions/api_reports_reports_projects_get_ProjectContribution"
           },
           "type": "array"
         },
         "top10-donations": {
+          "description": "The 10 campaigns with the most donors (individual contributions)",
           "items": {
-            "$ref": "#/definitions/api_reports_projects_get_ProjectContribution"
+            "$ref": "#/definitions/api_reports_reports_projects_get_ProjectContribution"
           },
           "type": "array"
         },
         "users": {
+          "description": "Total number of registered users",
           "type": "integer"
         }
       }
@@ -1570,9 +1598,9 @@
     }
   },
   "info": {
-    "description": "Goteo.org Api",
+    "description": "Goteo.org API",
     "termsOfService": "Terms of service",
-    "title": "Goteo.org Api",
+    "title": "Goteo.org API",
     "version": "1.1"
   },
   "paths": {
@@ -2035,31 +2063,37 @@
         "parameters": [
           {
             "collectionFormat": "multi",
-            "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the licenses used in projects assigned in that nodes",
+            "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the licenses used in project rewards where the project is assigned in that nodes",
             "in": "query",
             "name": "node",
             "type": "string"
           },
           {
             "collectionFormat": "multi",
-            "description": "Filter by individual project(s). Multiple projects can be specified. Restricts the list to the licenses used in that projects",
+            "description": "Filter by individual project(s). Multiple projects can be specified. Restricts the list to the licenses used in rewards for that projects",
             "in": "query",
             "name": "project",
             "type": "string"
           },
           {
-            "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the licenses used in projects created between that dates",
+            "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the licenses used in the project rewards where the project was published after that date (included)",
             "format": "date",
             "in": "query",
             "name": "from_date",
             "type": "string"
           },
           {
-            "description": "Filter until date.. Ex. \"2014-01-01\". Restricts the list to the licenses used in projects created between that dates",
+            "description": "Filter until date.. Ex. \"2014-01-01\". Restricts the list to the licenses used in the project rewards where the project was published before that date (included)",
             "format": "date",
             "in": "query",
             "name": "to_date",
             "type": "string"
+          },
+          {
+            "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the licenses used in project rewards in that categories",
+            "in": "query",
+            "name": "category",
+            "type": "integer"
           },
           {
             "collectionFormat": "multi",
@@ -2070,7 +2104,7 @@
           },
           {
             "collectionFormat": "csv",
-            "description": "Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the licenses used in projects geolocated in that area",
+            "description": "Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the licenses used in project rewards where the project is geolocated in that area.",
             "in": "query",
             "name": "location",
             "type": "number"
@@ -2721,7 +2755,7 @@
             "type": "string"
           },
           {
-            "description": "Filter by project category. Multiple users can be specified. Restricts the list to the users that have interests in that category(ies)",
+            "description": "Filter by user categories. Multiple categories can be specified. Restricts the list to the users that have interests in that category(ies)",
             "in": "query",
             "name": "category",
             "type": "integer"

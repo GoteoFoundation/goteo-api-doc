@@ -1,0 +1,455 @@
+{
+  "average-donation": 49.32,
+  "categories": [
+    {
+      "2": {
+        "id": 2,
+        "name": "Social",
+        "percentage-users": 7.89,
+        "users": 6251
+      }
+    },
+    {
+      "10": {
+        "id": 10,
+        "name": "Educativo",
+        "percentage-users": 6.08,
+        "users": 4815
+      }
+    },
+    {
+      "11": {
+        "id": 11,
+        "name": "Cultural",
+        "percentage-users": 6.05,
+        "users": 4796
+      }
+    },
+    {
+      "13": {
+        "id": 13,
+        "name": "Ecol\u00f3gico",
+        "percentage-users": 4.66,
+        "users": 3693
+      }
+    },
+    {
+      "7": {
+        "id": 7,
+        "name": "Tecnol\u00f3gico",
+        "percentage-users": 4.39,
+        "users": 3477
+      }
+    },
+    {
+      "6": {
+        "id": 6,
+        "name": "Comunicativo",
+        "percentage-users": 3.63,
+        "users": 2874
+      }
+    },
+    {
+      "14": {
+        "id": 14,
+        "name": "Cient\u00edfico",
+        "percentage-users": 2.97,
+        "users": 2351
+      }
+    },
+    {
+      "9": {
+        "id": 9,
+        "name": "Emprendedor",
+        "percentage-users": 2.85,
+        "users": 2260
+      }
+    },
+    {
+      "16": {
+        "id": 16,
+        "name": "Dise\u00f1o",
+        "percentage-users": 1.6,
+        "users": 1265
+      }
+    }
+  ],
+  "favorite-rewards": [
+    {
+      "description": "Los productos pueden ser los que se han producido, en edici\u00f3n limitada, o fragmentos u obras derivadas del original.",
+      "icon": "product",
+      "name": "Producto",
+      "svg_url": "https://goteoassets.org/api/svg/icons/product.svg",
+      "total": 1800
+    },
+    {
+      "description": "Acciones y/o sesiones durante tiempo determinado para satisfacer una necesidad individual o de grupo: una formaci\u00f3n, una ayuda t\u00e9cnica, un asesoramiento, etc.",
+      "icon": "service",
+      "name": "Servicios",
+      "svg_url": "https://goteoassets.org/api/svg/icons/service.svg",
+      "total": 1086
+    },
+    {
+      "description": "Los archivos digitales pueden ser de m\u00fasica, v\u00eddeo, documentos de texto, etc.",
+      "icon": "file",
+      "name": "Archivos digitales",
+      "svg_url": "https://goteoassets.org/api/svg/icons/file.svg",
+      "total": 853
+    },
+    {
+      "description": "Agradecimiento o reconocimiento",
+      "icon": "thanks",
+      "name": "Reconocimiento",
+      "svg_url": "https://goteoassets.org/api/svg/icons/thanks.svg",
+      "total": 661
+    },
+    {
+      "description": "Sorpr\u00e9ndenos con esta nueva tipolog\u00eda, realmente nos interesa :) ",
+      "icon": "other",
+      "name": "Otro",
+      "svg_url": "https://goteoassets.org/api/svg/icons/other.svg",
+      "total": 369
+    },
+    {
+      "description": "Documentos pr\u00e1cticos detallando pasos, materiales formativos, bussiness plans, \u201chow tos\u201d, recetas, etc.",
+      "icon": "manual",
+      "name": "Manuales",
+      "svg_url": "https://goteoassets.org/api/svg/icons/manual.svg",
+      "total": 144
+    },
+    {
+      "description": "Por c\u00f3digo fuente entendemos programas y software en general.",
+      "icon": "code",
+      "name": "C\u00f3digo fuente",
+      "svg_url": "https://goteoassets.org/api/svg/icons/code.svg",
+      "total": 81
+    },
+    {
+      "description": "Los dise\u00f1os pueden ser de planos o patrones, esquemas, esbozos, diagramas de flujo, etc.",
+      "icon": "design",
+      "name": "Dise\u00f1o",
+      "svg_url": "https://goteoassets.org/api/svg/icons/design.svg",
+      "total": 49
+    },
+    {
+      "description": "Retornos econ\u00f3micos proporcionales a la inversi\u00f3n realizada, que se deben detallar en cantidad pero tambi\u00e9n forma de pago.",
+      "icon": "money",
+      "name": "Dinero",
+      "svg_url": "https://goteoassets.org/api/svg/icons/money.svg",
+      "total": 31
+    }
+  ],
+  "matchfund-amount": 75389,
+  "matchfundpledge-amount": 166000,
+  "pledged": 3540064,
+  "projects-failed": 202,
+  "projects-published": 699,
+  "projects-received": 860,
+  "projects-successful": 474,
+  "time-elapsed": 1.5322134494781494,
+  "top10-collaborations": [
+    {
+      "date-published": "Tue, 31 Jan 2012 23:00:00 GMT",
+      "date_published": "Wed, 01 Feb 2012 00:00:00 +0100",
+      "description-short": "Publicaci\u00f3n de distribuci\u00f3n masiva para la transformaci\u00f3n social",
+      "description_short": "Publicaci\u00f3n de distribuci\u00f3n masiva para la transformaci\u00f3n social",
+      "image-url": "https://goteo.org/img/medium/catala.pdfpagines.png",
+      "image_url": "https://goteo.org/img/big/catala.pdfpagines.png",
+      "name": "\u00a1Rebelaos! Publicaci\u00f3n por la autogesti\u00f3n",
+      "project": null,
+      "project-url": "https://goteo.org/project/rebelaos-publicacion-por-la-autogestion",
+      "project_url": "https://goteo.org/project/rebelaos-publicacion-por-la-autogestion",
+      "total": 142,
+      "video-url": "http://vimeo.com/38480271",
+      "video_url": "http://vimeo.com/38480271"
+    },
+    {
+      "date-published": "Fri, 19 Apr 2013 22:00:00 GMT",
+      "date_published": "Sat, 20 Apr 2013 00:00:00 +0200",
+      "description-short": "An experience of distributed manufacturing for the next evolution of the FoldaRap",
+      "description_short": "An experience of distributed manufacturing for the next evolution of the FoldaRap",
+      "image-url": "https://goteo.org/img/medium/below2r.jpg",
+      "image_url": "https://goteo.org/img/big/below2r.jpg",
+      "name": "FoldaRap, Peer-to-Peer Edition",
+      "project": null,
+      "project-url": "https://goteo.org/project/foldarap-peer-to-peer-edition",
+      "project_url": "https://goteo.org/project/foldarap-peer-to-peer-edition",
+      "total": 141,
+      "video-url": "https://vimeo.com/63121424",
+      "video_url": "https://vimeo.com/63121424"
+    },
+    {
+      "date-published": "Tue, 03 Apr 2012 22:00:00 GMT",
+      "date_published": "Wed, 04 Apr 2012 00:00:00 +0200",
+      "description-short": "Financiaci\u00f3n colectiva para la primera querella del pueblo contra la banca",
+      "description_short": "Financiaci\u00f3n colectiva para la primera querella del pueblo contra la banca",
+      "image-url": "https://goteo.org/img/medium/vin-eta-counter-largo_3.png",
+      "image_url": "https://goteo.org/img/big/vin-eta-counter-largo_3.png",
+      "name": "#CrowdfundPaRato",
+      "project": null,
+      "project-url": "https://goteo.org/project/crowdfundparato",
+      "project_url": "https://goteo.org/project/crowdfundparato",
+      "total": 120,
+      "video-url": "",
+      "video_url": ""
+    },
+    {
+      "date-published": "Mon, 02 Feb 2015 23:00:00 GMT",
+      "date_published": "Tue, 03 Feb 2015 00:00:00 +0100",
+      "description-short": "Un drama social sobre los desahucios, con S\u00edlvia P\u00e9rez Cruz",
+      "description_short": "Un drama social sobre los desahucios, con S\u00edlvia P\u00e9rez Cruz",
+      "image-url": "https://goteo.org/img/medium/cerca-de-tucasa-29-1b-1.jpg",
+      "image_url": "https://goteo.org/img/big/cerca-de-tucasa-29-1b-1.jpg",
+      "name": "Cerca de tu casa",
+      "project": null,
+      "project-url": "https://goteo.org/project/cercadetucasa",
+      "project_url": "https://goteo.org/project/cercadetucasa",
+      "total": 105,
+      "video-url": "https://youtu.be/rqGWOSy1Xx0",
+      "video_url": "https://youtu.be/rqGWOSy1Xx0"
+    },
+    {
+      "date-published": "Sun, 01 Jul 2012 22:00:00 GMT",
+      "date_published": "Mon, 02 Jul 2012 00:00:00 +0200",
+      "description-short": "Convi\u00e9rtete en un sensor inteligente de la ciudad, generando y compartiendo datos reales en abierto sobre contaminaci\u00f3n del aire, ac\u00fastica y muchos m\u00e1s",
+      "description_short": "Convi\u00e9rtete en un sensor inteligente de la ciudad, generando y compartiendo datos reales en abierto sobre contaminaci\u00f3n del aire, ac\u00fastica y muchos m\u00e1s",
+      "image-url": "https://goteo.org/img/medium/panorama_4.jpg",
+      "image_url": "https://goteo.org/img/big/panorama_4.jpg",
+      "name": "Smart Citizen - Sensores ciudadanos",
+      "project": null,
+      "project-url": "https://goteo.org/project/smart-citizen-sensores-ciudadanos",
+      "project_url": "https://goteo.org/project/smart-citizen-sensores-ciudadanos",
+      "total": 101,
+      "video-url": "http://vimeo.com/45432343",
+      "video_url": "http://vimeo.com/45432343"
+    },
+    {
+      "date-published": "Tue, 02 Apr 2013 22:00:00 GMT",
+      "date_published": "Wed, 03 Apr 2013 00:00:00 +0200",
+      "description-short": "Interfaz de control de c\u00f3digo abierto para aplicaciones multimedia, orientada a DJs, VJs, m\u00fasicos, hackers y creadores DIY",
+      "description_short": "Interfaz de control de c\u00f3digo abierto para aplicaciones multimedia, orientada a DJs, VJs, m\u00fasicos, hackers y creadores DIY",
+      "image-url": "https://goteo.org/img/medium/hi-top2r.jpg",
+      "image_url": "https://goteo.org/img/big/hi-top2r.jpg",
+      "name": "BHOREAL",
+      "project": null,
+      "project-url": "https://goteo.org/project/bhoreal",
+      "project_url": "https://goteo.org/project/bhoreal",
+      "total": 94,
+      "video-url": "https://vimeo.com/63156588",
+      "video_url": "https://vimeo.com/63156588"
+    },
+    {
+      "date-published": "Wed, 02 Nov 2011 23:00:00 GMT",
+      "date_published": "Thu, 03 Nov 2011 00:00:00 +0100",
+      "description-short": "Sistema para presionar, hacer cumplir y que sea efectiva la ley de acceso a la informaci\u00f3n p\u00fablica",
+      "description_short": "Sistema para presionar, hacer cumplir y que sea efectiva la ley de acceso a la informaci\u00f3n p\u00fablica",
+      "image-url": "https://goteo.org/img/medium/astheeu_1r.png",
+      "image_url": "https://goteo.org/img/big/astheeu_1r.png",
+      "name": "tuderechoasaber.es",
+      "project": null,
+      "project-url": "https://goteo.org/project/tuderechoasaber.es",
+      "project_url": "https://goteo.org/project/tuderechoasaber.es",
+      "total": 87,
+      "video-url": "http://vimeo.com/31457442",
+      "video_url": "http://vimeo.com/31457442"
+    },
+    {
+      "date-published": "Sun, 31 Mar 2013 22:00:00 GMT",
+      "date_published": "Mon, 01 Apr 2013 00:00:00 +0200",
+      "description-short": "Una plataforma colaborativa que se propone mapear, documentar y poner en red todas las personas, experiencias, organizaciones y conocimientos vinculados a la educaci\u00f3n y el aprendizaje libre, as\u00ed como modelos escolares no convencionales de habla hispana",
+      "description_short": "Una plataforma colaborativa que se propone mapear, documentar y poner en red todas las personas, experiencias, organizaciones y conocimientos vinculados a la educaci\u00f3n y el aprendizaje libre, as\u00ed como modelos escolares no convencionales de habla hispana",
+      "image-url": "https://goteo.org/img/medium/vlcsnap-2013-02-25-19h51m46s86r.png",
+      "image_url": "https://goteo.org/img/big/vlcsnap-2013-02-25-19h51m46s86r.png",
+      "name": "Reevo - Red de Educaci\u00f3n Viva",
+      "project": null,
+      "project-url": "https://goteo.org/project/reevo",
+      "project_url": "https://goteo.org/project/reevo",
+      "total": 84,
+      "video-url": "http://vimeo.com/42442845",
+      "video_url": "http://vimeo.com/42442845"
+    },
+    {
+      "date-published": "Tue, 06 Dec 2011 23:00:00 GMT",
+      "date_published": "Wed, 07 Dec 2011 00:00:00 +0100",
+      "description-short": "Sistema integral para regalos inteligentes 2.0 - Give love, not waste!",
+      "description_short": "Sistema integral para regalos inteligentes 2.0 - Give love, not waste!",
+      "image-url": "https://goteo.org/img/medium/imatge2_1r.gif",
+      "image_url": "https://goteo.org/img/big/imatge2_1r.gif",
+      "name": "INFINIT Loop",
+      "project": null,
+      "project-url": "https://goteo.org/project/infinit-loop",
+      "project_url": "https://goteo.org/project/infinit-loop",
+      "total": 71,
+      "video-url": "https://vimeo.com/33831307",
+      "video_url": "https://vimeo.com/33831307"
+    },
+    {
+      "date-published": "Wed, 20 Nov 2013 23:00:00 GMT",
+      "date_published": "Thu, 21 Nov 2013 00:00:00 +0100",
+      "description-short": "Queremos seguir haciendo periodismo independiente y situado",
+      "description_short": "Queremos seguir haciendo periodismo independiente y situado",
+      "image-url": "https://goteo.org/img/medium/cabecera-fb_1.jpg",
+      "image_url": "https://goteo.org/img/big/cabecera-fb_1.jpg",
+      "name": "S.O.S. Diagonal: Ahora o nunca",
+      "project": null,
+      "project-url": "https://goteo.org/project/diagonal",
+      "project_url": "https://goteo.org/project/diagonal",
+      "total": 66,
+      "video-url": "https://vimeo.com/79968295",
+      "video_url": "https://vimeo.com/79968295"
+    }
+  ],
+  "top10-donations": [
+    {
+      "date-published": "Sat, 13 Feb 2016 23:00:00 GMT",
+      "date_published": "Sun, 14 Feb 2016 00:00:00 +0100",
+      "description-short": "Queremos seguir informando con libertad, seleccionando cada semana los asuntos que consideramos debes conocer, haci\u00e9ndonos eco de la voz a las minor\u00edas, demostrando que hay alternativas al pensamiento \u00fanico. Hazte mecenas de CTXT",
+      "description_short": "Queremos seguir informando con libertad, seleccionando cada semana los asuntos que consideramos debes conocer, haci\u00e9ndonos eco de la voz a las minor\u00edas, demostrando que hay alternativas al pensamiento \u00fanico. Hazte mecenas de CTXT",
+      "image-url": "https://goteo.org/img/medium/goteo-malagon.jpg",
+      "image_url": "https://goteo.org/img/big/goteo-malagon.jpg",
+      "name": "#CTXT. El contexto lo es todo",
+      "project": null,
+      "project-url": "https://goteo.org/project/ctxt",
+      "project_url": "https://goteo.org/project/ctxt",
+      "total": 1835,
+      "video-url": "https://vimeo.com/155287296",
+      "video_url": "https://vimeo.com/155287296"
+    },
+    {
+      "date-published": "Wed, 20 Nov 2013 23:00:00 GMT",
+      "date_published": "Thu, 21 Nov 2013 00:00:00 +0100",
+      "description-short": "Queremos seguir haciendo periodismo independiente y situado",
+      "description_short": "Queremos seguir haciendo periodismo independiente y situado",
+      "image-url": "https://goteo.org/img/medium/cabecera-fb_1.jpg",
+      "image_url": "https://goteo.org/img/big/cabecera-fb_1.jpg",
+      "name": "S.O.S. Diagonal: Ahora o nunca",
+      "project": null,
+      "project-url": "https://goteo.org/project/diagonal",
+      "project_url": "https://goteo.org/project/diagonal",
+      "total": 1492,
+      "video-url": "https://vimeo.com/79968295",
+      "video_url": "https://vimeo.com/79968295"
+    },
+    {
+      "date-published": "Sun, 24 Apr 2016 22:00:00 GMT",
+      "date_published": "Mon, 25 Apr 2016 00:00:00 +0200",
+      "description-short": "Investigamos, informamos, transformamos",
+      "description_short": "Investigamos, informamos, transformamos",
+      "image-url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
+      "image_url": "https://goteo.org/img/big/la-marea-logo-ibextigo-logo-ok.png",
+      "name": "#YoIBEXtigo con La Marea ",
+      "project": null,
+      "project-url": "https://goteo.org/project/yoibextigo",
+      "project_url": "https://goteo.org/project/yoibextigo",
+      "total": 1330,
+      "video-url": "https://youtu.be/RSiuin6dO30",
+      "video_url": "https://youtu.be/RSiuin6dO30"
+    },
+    {
+      "date-published": "Wed, 18 Dec 2013 23:00:00 GMT",
+      "date_published": "Thu, 19 Dec 2013 00:00:00 +0100",
+      "description-short": "The world needs GnuPG encryption more than ever - a new website, new design, and new content will make strong crypto friendly.",
+      "description_short": "The world needs GnuPG encryption more than ever - a new website, new design, and new content will make strong crypto friendly.",
+      "image-url": "https://goteo.org/img/medium/seahorse_1.png",
+      "image_url": "https://goteo.org/img/big/seahorse_1.png",
+      "name": "GnuPG: new website and infrastructure",
+      "project": null,
+      "project-url": "https://goteo.org/project/gnupg-new-website-and-infrastructure",
+      "project_url": "https://goteo.org/project/gnupg-new-website-and-infrastructure",
+      "total": 1106,
+      "video-url": "https://www.youtube.com/watch?v=aEEckb-ioG4",
+      "video_url": "https://www.youtube.com/watch?v=aEEckb-ioG4"
+    },
+    {
+      "date-published": "Tue, 03 Apr 2012 22:00:00 GMT",
+      "date_published": "Wed, 04 Apr 2012 00:00:00 +0200",
+      "description-short": "Financiaci\u00f3n colectiva para la primera querella del pueblo contra la banca",
+      "description_short": "Financiaci\u00f3n colectiva para la primera querella del pueblo contra la banca",
+      "image-url": "https://goteo.org/img/medium/vin-eta-counter-largo_3.png",
+      "image_url": "https://goteo.org/img/big/vin-eta-counter-largo_3.png",
+      "name": "#CrowdfundPaRato",
+      "project": null,
+      "project-url": "https://goteo.org/project/crowdfundparato",
+      "project_url": "https://goteo.org/project/crowdfundparato",
+      "total": 971,
+      "video-url": "",
+      "video_url": ""
+    },
+    {
+      "date-published": "Tue, 04 Aug 2015 22:00:00 GMT",
+      "date_published": "Wed, 05 Aug 2015 00:00:00 +0200",
+      "description-short": "Sus multas y denuncias nos hacen fuertes. Operaci\u00f3n Lola Flores.",
+      "description_short": "Sus multas y denuncias nos hacen fuertes. Operaci\u00f3n Lola Flores.",
+      "image-url": "https://goteo.org/img/medium/loleitor-antonio.jpg",
+      "image_url": "https://goteo.org/img/big/loleitor-antonio.jpg",
+      "name": "#OpLolaFlores",
+      "project": null,
+      "project-url": "https://goteo.org/project/oplolaflores",
+      "project_url": "https://goteo.org/project/oplolaflores",
+      "total": 879,
+      "video-url": "https://youtu.be/XYyk0U-KYHo",
+      "video_url": "https://youtu.be/XYyk0U-KYHo"
+    },
+    {
+      "date-published": "Tue, 24 Mar 2015 23:00:00 GMT",
+      "date_published": "Wed, 25 Mar 2015 00:00:00 +0100",
+      "description-short": "Una radiograf\u00eda diferente de nuestras ciudades",
+      "description_short": "Una radiograf\u00eda diferente de nuestras ciudades",
+      "image-url": "https://goteo.org/img/medium/bilbao-1.jpg",
+      "image_url": "https://goteo.org/img/big/bilbao-1.jpg",
+      "name": "'Cercan\u00edas': el proyecto conjunto de La Marea y Diagonal",
+      "project": null,
+      "project-url": "https://goteo.org/project/cercanias",
+      "project_url": "https://goteo.org/project/cercanias",
+      "total": 841,
+      "video-url": "https://vimeo.com/123081321",
+      "video_url": "https://vimeo.com/123081321"
+    },
+    {
+      "date-published": "Mon, 02 Feb 2015 23:00:00 GMT",
+      "date_published": "Tue, 03 Feb 2015 00:00:00 +0100",
+      "description-short": "Un drama social sobre los desahucios, con S\u00edlvia P\u00e9rez Cruz",
+      "description_short": "Un drama social sobre los desahucios, con S\u00edlvia P\u00e9rez Cruz",
+      "image-url": "https://goteo.org/img/medium/cerca-de-tucasa-29-1b-1.jpg",
+      "image_url": "https://goteo.org/img/big/cerca-de-tucasa-29-1b-1.jpg",
+      "name": "Cerca de tu casa",
+      "project": null,
+      "project-url": "https://goteo.org/project/cercadetucasa",
+      "project_url": "https://goteo.org/project/cercadetucasa",
+      "total": 643,
+      "video-url": "https://youtu.be/rqGWOSy1Xx0",
+      "video_url": "https://youtu.be/rqGWOSy1Xx0"
+    },
+    {
+      "date-published": "Tue, 22 Dec 2015 23:00:00 GMT",
+      "date_published": "Wed, 23 Dec 2015 00:00:00 +0100",
+      "description-short": "Un trajecte per la dignitat contra la precarietat",
+      "description_short": "Un trajecte per la dignitat contra la precarietat",
+      "image-url": "https://goteo.org/img/medium/ebre.png",
+      "image_url": "https://goteo.org/img/big/ebre.png",
+      "name": "CORRESCALES 2016",
+      "project": null,
+      "project-url": "https://goteo.org/project/correscales-2016",
+      "project_url": "https://goteo.org/project/correscales-2016",
+      "total": 634,
+      "video-url": "https://vimeo.com/149844580",
+      "video_url": "https://vimeo.com/149844580"
+    },
+    {
+      "date-published": "Thu, 19 Dec 2013 23:00:00 GMT",
+      "date_published": "Fri, 20 Dec 2013 00:00:00 +0100",
+      "description-short": "Empieza la revoluci\u00f3n energ\u00e9tica ciudadana",
+      "description_short": "Empieza la revoluci\u00f3n energ\u00e9tica ciudadana",
+      "image-url": "https://goteo.org/img/medium/slide-oligopolyoff-13.jpg",
+      "image_url": "https://goteo.org/img/big/slide-oligopolyoff-13.jpg",
+      "name": "#OligopolyOFF",
+      "project": null,
+      "project-url": "https://goteo.org/project/oligopolyoff",
+      "project_url": "https://goteo.org/project/oligopolyoff",
+      "total": 628,
+      "video-url": "http://youtu.be/FsH1TDM9KwE",
+      "video_url": "http://youtu.be/FsH1TDM9KwE"
+    }
+  ],
+  "users": 79210
+}

@@ -5,9 +5,10 @@ group: endpoint
 permalink: /doc/reports/
 ---
 # Reports endpoint
-This section gives you information about average numbers in [Goteo.org](http://goteo.org). 
+This section gives you information about average numbers in [Goteo.org](http://goteo.org).
 
 ## Filters available
+
 **The [standard set of filters](/doc/filters) applies to all of these endpoints with these particulars:**
 
 * Parameters **page** and **limit** are not available in none of these endpoints
@@ -24,21 +25,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/summary/
 
 ### Response values:
 
-| Attribute  | Type | Description |
-| ------------- | ------------- | ------------ |
-| **average-donation** | *number (money)* | Average amount of money (&euro;) given by a donor |
-| * **categories** | *array* | Array of categories |
-| * **favorite-rewards** | *array* | Reward type used in successful projects. |
-| **matchfund-amount** | *number (money)* | Amount of money raised in calls (*Capital riego distribuido* + crowdfunding money) |
-| **matchfundpledge-amount** | *number (money)* | *Capital Riego de Goteo* (funds from institutions and companies added to the [Capital Riego](https://goteo.org/service/resources)) |
-| **projects-pledged** | *number (money)* | Total amount of money (&euro;) raised by Goteo |
-| **projects-failed** | *number* | Number of failed projects (unsuccessful crowdfunding campaigns) |
-| **projects-published** | *number* | Number of published projects.<br>**date filters** here uses the date where the project started its campaign |
-| **projects-received** | *number* | Number of received projects (accepted for review by Goteo administrators).<br>**date filters** here uses the date where the project was sent to revision |
-| **projects-successful** | *number* | Number of successful projects (which have achieved the minimum required amount)<br>**date filters** here uses the date where the had achieved the minimum amount |
-| * **top10-collaborations** | *array* | The 10 campaigns with the most collaborations |
-| * **top10-donations** | *array* | The 10 campaigns with the most donors (individual contributions) |
-| **users** | *number* | Total number of registered users |
+{{ site.data.reports_summary.definitions_table }}
 
 #### * Array sub-fields:
 
@@ -48,6 +35,11 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/summary/
 
 **top10-collaborations** and **top10-donations** returns an array of the objects specified in the [reports/projects](/doc/reports#projects) response.
 
+### Response body:
+
+```json
+{{ site.data.reports_summary.example }}
+```
 
 <a name="money"></a>
 ## /reports/money/
@@ -60,47 +52,12 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/reports/money/
 
 ### Response values:
 
-| Attribute  | Type | Description |
-| ------------- | ------------- | ------------ |
-| **average-failed** | *number* | Average money raised for failed projects (which haven't reached the minimum required amount) |
-| **average-donation** | *number (money)* | Average amount of money (&euro;) given by a donor |
-| **average-donation-paypal** | *number (money)* | Average amount of money (&euro;) given by a donor using Paypal |
-| **average-minimum** | *number (money)* | Average minimum cost (&euro;) for successful projects |
-| **average-received** | *number (money)* | Average money raised (&euro;) for successful projects (those which reached the minimum) |
-| **average-second-round** | *number (money)* | Average money raised only in the second round (&euro;) |
-| **matchfund-amount** | *number (money)* | Amount of money raised in calls (*Capital riego distribuido* + crowdfunding money) |
-| **matchfundpledge-amount** | *number (money)* | *Capital Riego de Goteo* (funds from institutions and companies added to the [Capital Riego](https://goteo.org/service/resources)) |
-| **pledged** | *number (money)* | Total amount of money (&euro;) raised by Goteo |
-| **percentage-pledged-failed** | *number (percentage)* | Percentage of money raised over the minimum on failed projects |
-| **percentage-pledged-successful** | *number (percentage)* | Percentage of money raised over the minimum on successful projects |
-| **refunded** | *number (money)* | Refunded money (&euro;) on failed projects |
-| **fee-amount** | *number (money)* | Total fee keeped by Goteo |
-| **cash-amount** | *number (money)* | Total amount of money (&euro;) collected by direct bank transfer |
-| **paypal-amount** | *number (money)* | Total amount of money (&euro;) raised using PayPal transactions |
-| **creditcard-amount** | *number* | Total amount of money (&euro;) raised using Credit Card transactions |
-| **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
+{{ site.data.reports_money.definitions_table }}
 
 ### Response body:
+
 ```json
-{
-  "average-donation": 47.15,
-  "average-donation-paypal": 36.22,
-  "average-failed": 933.13,
-  "average-minimum": 4886.11,
-  "average-received": 6236.44,
-  "average-second-round": 1032.95,
-  "cash-amount": 132963,
-  "creditcard-amount": 2441427,
-  "fee-amount": 162147.36,
-  "meta": {},
-  "matchfund-amount": 57938,
-  "matchfundpledge-amount": 74000,
-  "paypal-amount": 529107,
-  "pledged": 2216778,
-  "pledged-failed": 23.11,
-  "pledged-successful": 27.12,
-  "refunded": 134819
-}
+{{ site.data.reports_money.example }}
 ```
 
 <a name="projects"></a>

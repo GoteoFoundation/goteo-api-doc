@@ -5,7 +5,7 @@
       "id": "gpl",
       "name": "General Public License",
       "svg-url": "https://goteoassets.org/api/svg/licenses/gpl.svg",
-      "total-projects": 48,
+      "total-projects": 47,
       "total-rewards": 154,
       "url": "http://www.gnu.org/licenses/gpl.html"
     },
@@ -14,7 +14,7 @@
       "id": "gpl2",
       "name": "General Public License (v.2)",
       "svg-url": "https://goteoassets.org/api/svg/licenses/gpl2.svg",
-      "total-projects": 22,
+      "total-projects": 21,
       "total-rewards": 54,
       "url": "http://www.gnu.org/licenses/gpl-2.0.html"
     },
@@ -42,7 +42,7 @@
       "name": "Free Documentation License ",
       "svg-url": "https://goteoassets.org/api/svg/licenses/fdl.svg",
       "total-projects": 10,
-      "total-rewards": 50,
+      "total-rewards": 49,
       "url": "http://www.gnu.org/copyleft/fdl.html"
     },
     {
@@ -87,7 +87,7 @@
       "name": "PHP License",
       "svg-url": "https://goteoassets.org/api/svg/licenses/php.svg",
       "total-projects": 1,
-      "total-rewards": 11,
+      "total-rewards": 10,
       "url": "http://www.php.net/license/"
     },
     {
@@ -104,8 +104,8 @@
       "id": "ccby",
       "name": "CC - Reconocimiento",
       "svg-url": "https://goteoassets.org/api/svg/licenses/ccby.svg",
-      "total-projects": 77,
-      "total-rewards": 354,
+      "total-projects": 76,
+      "total-rewards": 346,
       "url": "http://creativecommons.org/licenses/by/4.0/deed.es_ES"
     },
     {
@@ -113,8 +113,8 @@
       "id": "ccbync",
       "name": "CC - Reconocimiento - NoComercial",
       "svg-url": "https://goteoassets.org/api/svg/licenses/ccbync.svg",
-      "total-projects": 122,
-      "total-rewards": 383,
+      "total-projects": 119,
+      "total-rewards": 382,
       "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.es_ES"
     },
     {
@@ -122,7 +122,7 @@
       "id": "ccbyncsa",
       "name": "CC - Reconocimiento - NoComercial - CompartirIgual",
       "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncsa.svg",
-      "total-projects": 291,
+      "total-projects": 288,
       "total-rewards": 687,
       "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
     },
@@ -132,7 +132,7 @@
       "name": "CC - Reconocimiento - NoComercial - SinObraDerivada",
       "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncnd.svg",
       "total-projects": 109,
-      "total-rewards": 313,
+      "total-rewards": 312,
       "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.es_ES"
     },
     {
@@ -140,8 +140,8 @@
       "id": "ccbysa",
       "name": "CC - Reconocimiento - CompartirIgual",
       "svg-url": "https://goteoassets.org/api/svg/licenses/ccbysa.svg",
-      "total-projects": 99,
-      "total-rewards": 239,
+      "total-projects": 98,
+      "total-rewards": 236,
       "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.es_ES"
     },
     {
@@ -150,7 +150,7 @@
       "name": "CC - Reconocimiento - SinObraDerivada",
       "svg-url": "https://goteoassets.org/api/svg/licenses/ccbynd.svg",
       "total-projects": 4,
-      "total-rewards": 28,
+      "total-rewards": 27,
       "url": "http://creativecommons.org/licenses/by-nd/2.0/deed.es_ES"
     },
     {
@@ -213,7 +213,7 @@
       "name": "Dominio p\u00fablico",
       "svg-url": "https://goteoassets.org/api/svg/licenses/pd.svg",
       "total-projects": 13,
-      "total-rewards": 68,
+      "total-rewards": 65,
       "url": "http://creativecommons.org/licenses/publicdomain/deed.es"
     },
     {
@@ -221,7 +221,7 @@
       "id": "cc0",
       "name": "CC0 Universal (Dominio P\u00fablico)",
       "svg-url": "https://goteoassets.org/api/svg/licenses/cc0.svg",
-      "total-projects": 39,
+      "total-projects": 38,
       "total-rewards": 172,
       "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.es"
     },
@@ -231,7 +231,7 @@
       "name": "Licencia de Producci\u00f3n entre Pares",
       "svg-url": "https://goteoassets.org/api/svg/licenses/ppl.svg",
       "total-projects": 1,
-      "total-rewards": 7,
+      "total-rewards": 6,
       "url": "http://p2pfoundation.net/Peer_Production_License"
     },
     {
@@ -249,12 +249,12 @@
       "name": "Free Art License",
       "svg-url": "https://goteoassets.org/api/svg/licenses/fal.svg",
       "total-projects": 12,
-      "total-rewards": 158,
+      "total-rewards": 157,
       "url": "http://artlibre.org/lal/es"
     }
   ],
   "meta": {
     "total": 28
   },
-  "time-elapsed": 1.1173851490020752
+  "time-elapsed": 0.6611237525939941
 }

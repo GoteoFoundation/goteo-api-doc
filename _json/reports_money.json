@@ -1,0 +1,19 @@
+{
+  "average-donation": 49.32,
+  "average-donation-paypal": 35.12,
+  "average-failed": 1009.91,
+  "average-minimum": 5298.16,
+  "average-received": 6794.10,
+  "average-second-round": 872.11,
+  "cash-amount": 311007,
+  "creditcard-amount": 2683695,
+  "fee-amount": 266422.32,
+  "matchfund-amount": 75389,
+  "matchfundpledge-amount": 166000,
+  "paypal-amount": 459314,
+  "percentage-pledged-failed": 22.36,
+  "percentage-pledged-successful": 129.94,
+  "pledged": 3540064,
+  "refunded": 198335,
+  "time-elapsed": 1.4374358654022217
+}
