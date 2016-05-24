@@ -1715,6 +1715,13 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
+            "type": "string"
+          },
+          {
             "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the invests created in that range",
             "format": "date",
             "in": "query",
@@ -1826,6 +1833,13 @@
             "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the users originally created in that node(s)",
             "in": "query",
             "name": "node",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
             "type": "string"
           },
           {
@@ -1974,24 +1988,17 @@
             "type": "string"
           },
           {
-            "description": "Filter from date. Ex. \"2013-01-01\"",
-            "format": "date",
-            "in": "query",
-            "name": "from_date",
-            "type": "string"
-          },
-          {
-            "description": "Filter until date.. Ex. \"2014-01-01\"",
-            "format": "date",
-            "in": "query",
-            "name": "to_date",
-            "type": "string"
-          },
-          {
-            "description": "Filter by project category. Multiple projects can be specified",
+            "description": "Filter by project category. Multiple categories can be specified",
             "in": "query",
             "name": "category",
             "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
+            "type": "string"
           },
           {
             "collectionFormat": "csv",
@@ -2001,15 +2008,9 @@
             "type": "number"
           },
           {
-            "description": "Page number (starting at 1) if the result can be paginated",
+            "description": "Groups the buckets in 12 months for the specified year",
             "in": "query",
-            "name": "page",
-            "type": "integer"
-          },
-          {
-            "description": "Page limit (maximum 50 results, defaults to 10) if the result can be paginated",
-            "in": "query",
-            "name": "limit",
+            "name": "year",
             "type": "integer"
           }
         ],
@@ -2168,6 +2169,13 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
+            "type": "string"
+          },
+          {
             "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the licenses used in the project rewards where the project was published after that date (included)",
             "format": "date",
             "in": "query",
@@ -2243,6 +2251,13 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
+            "type": "string"
+          },
+          {
             "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the projects created in that range",
             "format": "date",
             "in": "query",
@@ -2257,7 +2272,7 @@
             "type": "string"
           },
           {
-            "description": "Filter by project category. Multiple projects can be specified. Restricts the list to the projects that have interests in that category(ies)",
+            "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the projects that have interests in that category(ies)",
             "in": "query",
             "name": "category",
             "type": "integer"
@@ -2357,6 +2372,13 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
+            "type": "string"
+          },
+          {
             "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the users created in that range",
             "format": "date",
             "in": "query",
@@ -2433,6 +2455,13 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
+            "type": "string"
+          },
+          {
             "description": "Filter from date. Ex. \"2013-01-01\"",
             "format": "date",
             "in": "query",
@@ -2447,7 +2476,7 @@
             "type": "string"
           },
           {
-            "description": "Filter by project category. Multiple projects can be specified",
+            "description": "Filter by project category. Multiple categories can be specified",
             "in": "query",
             "name": "category",
             "type": "integer"
@@ -2458,18 +2487,6 @@
             "in": "query",
             "name": "location",
             "type": "number"
-          },
-          {
-            "description": "Page number (starting at 1) if the result can be paginated",
-            "in": "query",
-            "name": "page",
-            "type": "integer"
-          },
-          {
-            "description": "Page limit (maximum 50 results, defaults to 10) if the result can be paginated",
-            "in": "query",
-            "name": "limit",
-            "type": "integer"
           }
         ],
         "responses": {
@@ -2527,7 +2544,7 @@
             "type": "string"
           },
           {
-            "description": "Filter by project category. Multiple projects can be specified",
+            "description": "Filter by project category. Multiple categories can be specified",
             "in": "query",
             "name": "category",
             "type": "integer"
@@ -2538,18 +2555,6 @@
             "in": "query",
             "name": "location",
             "type": "number"
-          },
-          {
-            "description": "Page number (starting at 1) if the result can be paginated",
-            "in": "query",
-            "name": "page",
-            "type": "integer"
-          },
-          {
-            "description": "Page limit (maximum 50 results, defaults to 10) if the result can be paginated",
-            "in": "query",
-            "name": "limit",
-            "type": "integer"
           }
         ],
         "responses": {
@@ -2607,7 +2612,7 @@
             "type": "string"
           },
           {
-            "description": "Filter by project category. Multiple projects can be specified",
+            "description": "Filter by project category. Multiple categories can be specified",
             "in": "query",
             "name": "category",
             "type": "integer"
@@ -2618,18 +2623,6 @@
             "in": "query",
             "name": "location",
             "type": "number"
-          },
-          {
-            "description": "Page number (starting at 1) if the result can be paginated",
-            "in": "query",
-            "name": "page",
-            "type": "integer"
-          },
-          {
-            "description": "Page limit (maximum 50 results, defaults to 10) if the result can be paginated",
-            "in": "query",
-            "name": "limit",
-            "type": "integer"
           }
         ],
         "responses": {
@@ -2687,7 +2680,7 @@
             "type": "string"
           },
           {
-            "description": "Filter by project category. Multiple projects can be specified",
+            "description": "Filter by project category. Multiple categories can be specified",
             "in": "query",
             "name": "category",
             "type": "integer"
@@ -2698,18 +2691,6 @@
             "in": "query",
             "name": "location",
             "type": "number"
-          },
-          {
-            "description": "Page number (starting at 1) if the result can be paginated",
-            "in": "query",
-            "name": "page",
-            "type": "integer"
-          },
-          {
-            "description": "Page limit (maximum 50 results, defaults to 10) if the result can be paginated",
-            "in": "query",
-            "name": "limit",
-            "type": "integer"
           }
         ],
         "responses": {
@@ -2767,7 +2748,7 @@
             "type": "string"
           },
           {
-            "description": "Filter by project category. Multiple projects can be specified",
+            "description": "Filter by project category. Multiple categories can be specified",
             "in": "query",
             "name": "category",
             "type": "integer"
@@ -2778,18 +2759,6 @@
             "in": "query",
             "name": "location",
             "type": "number"
-          },
-          {
-            "description": "Page number (starting at 1) if the result can be paginated",
-            "in": "query",
-            "name": "page",
-            "type": "integer"
-          },
-          {
-            "description": "Page limit (maximum 50 results, defaults to 10) if the result can be paginated",
-            "in": "query",
-            "name": "limit",
-            "type": "integer"
           }
         ],
         "responses": {
@@ -2830,6 +2799,13 @@
             "description": "Filter by individual project(s). Multiple projects can be specified. Restricts the list to the users that have either collaborate or contributed (financially) to that project(s).",
             "in": "query",
             "name": "project",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
             "type": "string"
           },
           {

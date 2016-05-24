@@ -92,7 +92,7 @@
   "percentage-users-leading-category": 7.89,
   "percentage-users-second-category": 6.08,
   "second-category": 10,
-  "time-elapsed": 2.3732171058654785,
+  "time-elapsed": 2.487851858139038,
   "top10-collaborators": [
     {
       "interactions": 46,
@@ -152,16 +152,16 @@
     },
     {
       "interactions": 16,
-      "name": "Freedonia",
-      "profile-image-url": "https://goteo.org/img/medium/1385988-10151821557898425-1933888924-n.jpg",
-      "profile-url": "https://goteo.org/user/profile/freedonia",
+      "name": "Nxtmdia",
+      "profile-image-url": "https://goteo.org/img/medium/nxtmdia-avatar-tw.jpg",
+      "profile-url": "https://goteo.org/user/profile/nxtmdia",
       "user": null
     },
     {
       "interactions": 16,
-      "name": "Alberto Ecoherencia",
-      "profile-image-url": "https://goteo.org/img/medium/alberto-4.png",
-      "profile-url": "https://goteo.org/user/profile/alberto-ecohere",
+      "name": "Vlax",
+      "profile-image-url": "https://goteo.org/img/medium/meuv0x-.jpg",
+      "profile-url": "https://goteo.org/user/profile/vlax",
       "user": null
     }
   ],

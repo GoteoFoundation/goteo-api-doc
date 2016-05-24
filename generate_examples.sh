@@ -53,6 +53,7 @@ function save {
 save spec swagger_specs
 save projects/ projects
 save projects/llevamealhuerto project
+save projects/llevamealhuerto/donors/ project_donors
 save users/ users
 save users/goteo user
 save categories/ categories

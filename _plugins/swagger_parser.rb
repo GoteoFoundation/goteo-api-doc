@@ -77,27 +77,29 @@ module SwaggerParser
             end
 
             # @site.data['swagger'] = swagger
-            for key,id in {
-                'projects' => 'api_projects_projects_get_Project',
-                'project' => 'api_projects_project_get_ProjectFull',
-                'users' => 'api_users_users_get_User',
-                'user' => 'api_users_user_get_UserFull',
-                'categories' => 'api_categories_categories_get_Category',
-                'licenses' => 'api_licenses_licenses_get_License',
-                'reports_summary' => 'api_reports_reports_summary_get_Summary',
-                'reports_community' => 'api_reports_reports_community_get_Community',
-                'reports_money' => 'api_reports_reports_money_get_Money',
-                'reports_rewards' => 'api_reports_reports_rewards_get_Reward',
-                'reports_projects' => 'api_reports_reports_projects_get_Project',
-                'digests' => 'api_digests_get_Digest',
-                'digests1' => 'api_digests_get_Digest',
+            for key,ob in {
+                'projects' => { 'id' => 'api_projects_projects_get_Project' },
+                'project' => { 'id' => 'api_projects_project_get_ProjectFull' },
+                'project_donors' => { 'id' => 'api_projects_project_donors_get_ProjectDonor', 'endpoint' => '/project/{project}/donors/' },
+                'users' => { 'id' => 'api_users_users_get_User' },
+                'user' => { 'id' => 'api_users_user_get_UserFull' },
+                'categories' => { 'id' => 'api_categories_categories_get_Category' },
+                'licenses' => { 'id' => 'api_licenses_licenses_get_License' },
+                'reports_summary' => { 'id' => 'api_reports_reports_summary_get_Summary', 'endpoint' => '/reports/summary/' },
+                'reports_community' => { 'id' => 'api_reports_reports_community_get_Community', 'endpoint' => '/reports/community/' },
+                'reports_money' => { 'id' => 'api_reports_reports_money_get_Money', 'endpoint' => '/reports/money/' },
+                'reports_rewards' => { 'id' => 'api_reports_reports_rewards_get_Reward', 'endpoint' => '/reports/rewards/' },
+                'reports_projects' => { 'id' => 'api_reports_reports_projects_get_Project', 'endpoint' => '/reports/projects/' },
+                'digests' => { 'id' => 'api_digests_get_Digest', 'endpoint' => '/digests/{endpoint}' },
+                'digests1' => { 'id' => 'api_digests_get_Digest' },
                 }
-                _key = key.sub('_', '/')
+                _id = ob['id']
+                _key = if ob['endpoint'] then ob['endpoint'] else '/' + key + '/' end
                 @site.data[key] = Hash.new
-                @site.data[key]['definitions'] = get_definitions(id)
+                @site.data[key]['definitions'] = get_definitions(_id)
                 @site.data[key]['example'] = get_example(key)
                 @site.data[key]['definitions_table'] = get_definitions_table(@site.data[key]['definitions'])
-                @site.data[key]['parameters'] = { key => @swagger['paths']['/' + _key + '/']['get']['parameters'] }if @swagger['paths']['/' + _key + '/'] and @swagger['paths']['/' + _key + '/']['get']['parameters']
+                @site.data[key]['parameters'] = { key => @swagger['paths'][_key]['get']['parameters'] }if @swagger['paths'][_key] and @swagger['paths'][_key]['get']['parameters']
                 # puts "\n--[-\n"
                 # puts @site.data[key]['parameters']
                 # puts "\n-]--\n--\n"

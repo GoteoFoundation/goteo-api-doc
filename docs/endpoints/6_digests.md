@@ -21,13 +21,12 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/digests/reports/money/?year=
 
 
 ### Filters available
-**The [standard set of filters](/doc/filters) applies to this endpoint with these particulars:**
+**Some of the [standard set of filters](/doc/filters) plues some more applies to this endpoint:**
+
+{{ site.data.digests.parameters_table }}
 
 * **page** and **limit** are not available in this endpoint
 * **from_date** and **to_date** are not available in this endpoint
-
-**Additionally, these filters are added to this endpoint:**
-
 * Parameter **year** allows to specify witch year you want the digest from. Data will return in 12 buckets, one for each month of the year.
 * If the parameter **year** is not specified, then the information will be chunked in buckets of one year duration. Starting at the year 2011 (when the platform Goteo started).
 
