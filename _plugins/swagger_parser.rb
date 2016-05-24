@@ -19,6 +19,14 @@ module SwaggerParser
                 for key,value in definitions[key]
                     value['description'] = '...' if not value['description']
 
+                    if value['$ref']
+                        ref = value['$ref'].split('/')[-1]
+                        _key = ref.split('_')[-1]
+                        value['description'] << ' &#9758;<a href="#' + _key + '">' + _key + '</a>'
+                        puts(ref, _key)
+                        definitions[_key] = get_definitions(ref)[_key]
+                    end
+
                     if(value['items'].respond_to? :each and value['items']['$ref'])
                         ref = value['items']['$ref'].split('/')[-1]
                         _key = ref.split('_')[-1]
@@ -32,7 +40,8 @@ module SwaggerParser
 
             # obtains the example from a json file in _json
             def get_example(id)
-                File.read(File.join(@site.source, @dir, id + '.json'))
+                f = File.join(@site.source, @dir, id + '.json')
+                File.read(f) if File.exists?(f)
             end
 
             # Markdown table
@@ -80,6 +89,8 @@ module SwaggerParser
                 'reports_money' => 'api_reports_reports_money_get_Money',
                 'reports_rewards' => 'api_reports_reports_rewards_get_Reward',
                 'reports_projects' => 'api_reports_reports_projects_get_Project',
+                'digests' => 'api_digests_get_Digest',
+                'digests1' => 'api_digests_get_Digest',
                 }
                 _key = key.sub('_', '/')
                 @site.data[key] = Hash.new

@@ -423,23 +423,32 @@
       },
       "type": "array"
     },
+    "api_digests_get_Bucket": {
+      "properties": {
+        "*month/year*": {
+          "description": "The name of this field depends on the type of buckets generated, could be a month number or a year. The value will be the same object of the endpoint being requested"
+        }
+      }
+    },
     "api_digests_get_Digest": {
       "properties": {
         "buckets": {
+          "description": "An associative array where the key is an identifier of the period and the value is the content of the endpoint.<br>A digest generated for a whole year will return 12 buckets correspondig to each month of the year.<br>A digest generated without a year will return one buecket per each year of the Goteo's history",
           "items": {
-            "$ref": "#/definitions/api_digests_get_Group"
+            "$ref": "#/definitions/api_digests_get_Bucket"
           },
           "type": "array"
         },
         "endpoint": {
+          "description": "The name of the endpoint used to digest",
           "type": "string"
         },
         "global": {
-          "$ref": "#/definitions/api_digests_get_Group"
+          "$ref": "#/definitions/api_digests_get_Bucket",
+          "description": "The content of the endpoint with the summarized data for all the buckets together"
         }
       }
     },
-    "api_digests_get_Group": {},
     "api_invests_invest_get_InvestFull": {
       "properties": {
         "amount": {
@@ -1044,15 +1053,19 @@
     "api_reports_reports_community_get_Category": {
       "properties": {
         "id": {
+          "description": "Category unique identifier",
           "type": "integer"
         },
         "name": {
+          "description": "Category name",
           "type": "string"
         },
         "percentage-users": {
+          "description": "Percentage of users in this category over the total number of users",
           "type": "number"
         },
         "users": {
+          "description": "Total number of users interested in the category",
           "type": "integer"
         }
       }
@@ -1060,18 +1073,23 @@
     "api_reports_reports_community_get_Collaboration": {
       "properties": {
         "interactions": {
+          "description": "Karma number of the user collaborations",
           "type": "integer"
         },
         "name": {
+          "description": "Name of the user",
           "type": "string"
         },
         "profile-image-url": {
+          "description": "URL with the avatar (image) of the user",
           "type": "string"
         },
         "profile-url": {
+          "description": "URL for the user profile",
           "type": "string"
         },
         "user": {
+          "description": "User unique identifier",
           "type": "string"
         }
       }
@@ -1079,93 +1097,119 @@
     "api_reports_reports_community_get_Community": {
       "properties": {
         "average-collaborators": {
+          "description": "Average number of collaborators per succesful  project",
           "type": "integer"
         },
         "average-donors": {
+          "description": "Average number of donors per successful project",
           "type": "integer"
         },
         "cash-donors": {
+          "description": "Number of donors donanting to projects off-line",
           "type": "integer"
         },
         "categories": {
+          "description": "Array of categories",
           "items": {
             "$ref": "#/definitions/api_reports_reports_community_get_Category"
           },
           "type": "array"
         },
         "collaborators": {
+          "description": "Number of collaborators",
           "type": "integer"
         },
         "creators-collaborators": {
+          "description": "Number of creators collaborating with other  projects |",
           "type": "integer"
         },
         "creators-donors": {
+          "description": "Number of creators funding other projects",
           "type": "integer"
         },
         "creditcard-donors": {
+          "description": "Number of donors using a Credit Card",
           "type": "integer"
         },
         "donors": {
+          "description": "Number of donors",
           "type": "integer"
         },
         "donors-collaborators": {
+          "description": "Number of donors who collaborate",
           "type": "integer"
         },
         "leading-category": {
+          "description": "Category with the highest number of interested users",
           "type": "integer"
         },
         "multidonors": {
+          "description": null,
           "type": "integer"
         },
         "paypal-donors": {
+          "description": "Number of donors using PayPal",
           "type": "integer"
         },
         "percentage-donors-users": {
+          "description": "Percentage of registered users that are donors (*100 * donors / users*)",
           "type": "number"
         },
         "percentage-multidonor-donors": {
+          "description": "Percentage of multidonors (over total donors: *100 * multidonors / donors*)",
           "type": "number"
         },
         "percentage-multidonor-users": {
+          "description": "Percentage of multidonors (over total users: *100 * multidonors / users*)",
           "type": "number"
         },
         "percentage-unsubscribed-users": {
+          "description": "Percentage of unsubscribed users (over the  total number of users)",
           "type": "number"
         },
         "percentage-users-leading-category": {
+          "description": "Percentage of users in the leading category",
           "type": "number"
         },
         "percentage-users-second-category": {
+          "description": "Percentage of users in this category",
           "type": "number"
         },
         "second-category": {
+          "description": "Second category with more users",
           "type": "integer"
         },
         "top10-collaborators": {
+          "description": "Top 10 talkers",
           "items": {
             "$ref": "#/definitions/api_reports_reports_community_get_Collaboration"
           },
           "type": "array"
         },
         "top10-donors": {
+          "description": "The top 10 donors who spend more money on projects (the most generous co-financiers)",
           "items": {
             "$ref": "#/definitions/api_reports_reports_community_get_Donation"
           },
           "type": "array"
         },
         "top10-multidonors": {
+          "description": "Top 10 multidonors who are contributed to more different projects (The most diversified co-financiers)",
           "items": {
             "$ref": "#/definitions/api_reports_reports_community_get_Donation"
           },
           "type": "array"
         },
         "users": {
+          "description": "Total number of registered users",
           "type": "integer"
         },
         "users-leading-category": {
+          "description": "Number of users in this category",
           "type": "integer"
         },
         "users-second-category": {
+          "description": "Number of users in this category",
           "type": "integer"
         }
       }
@@ -1173,21 +1217,27 @@
     "api_reports_reports_community_get_Donation": {
       "properties": {
         "amount": {
+          "description": "Total amount of money (\u20ac) spent by the user in projects",
           "type": "number"
         },
         "contributions": {
+          "description": "Total number of different projects the user has contributed to",
           "type": "integer"
         },
         "name": {
+          "description": "Name of the user",
           "type": "string"
         },
         "profile-image-url": {
+          "description": "URL with the avatar (image) of the user",
           "type": "string"
         },
         "profile-url": {
+          "description": "URL for the user profile",
           "type": "string"
         },
         "user": {
+          "description": "User unique identifier",
           "type": "string"
         }
       }
@@ -1263,45 +1313,57 @@
     "api_reports_reports_projects_get_Project": {
       "properties": {
         "average-amount-successful": {
+          "description": "Average amount (&euro;) of money raised in successful projects",
           "type": "number"
         },
         "average-posts-successful": {
+          "description": "Average number of posts published by successful projects",
           "type": "number"
         },
         "failed": {
+          "description": "Number of failed projects (unsuccessful crowdfunding campaigns)",
           "type": "integer"
         },
         "percentage-successful": {
+          "description": "Percentage of successful projects",
           "type": "integer"
         },
         "percentage-successful-completed": {
+          "description": "Percentage of successful projects with completed campaign (over the total projects: *100 * successful-complete / (successful-complete + failed)* ",
           "type": "number"
         },
         "published": {
+          "description": "Number of published projects.<br>**Date filters** here uses the date where the project started its campaign",
           "type": "integer"
         },
         "received": {
+          "description": "Number of received projects (accepted for review by Goteo administrators).<br>**Date filters** here uses the date where the project was sent to revision",
           "type": "integer"
         },
         "successful": {
+          "description": "Number of successful projects (which have achieved the minimum required amount)<br>**Date filters** here uses the date where the had achieved the minimum amount",
           "type": "integer"
         },
         "successful-completed": {
+          "description": "Number of successful projects with completed campaign.<br>**Date filters** here uses the date where the project ended his campaign",
           "type": "integer"
         },
         "top10-collaborations": {
+          "description": "The 10 campaigns with the most collaborations",
           "items": {
             "$ref": "#/definitions/api_reports_reports_projects_get_ProjectContribution"
           },
           "type": "array"
         },
         "top10-donations": {
+          "description": "The 10 campaigns with the most donors (individual contributions)",
           "items": {
             "$ref": "#/definitions/api_reports_reports_projects_get_ProjectContribution"
           },
           "type": "array"
         },
         "top10-receipts": {
+          "description": "The 10 campaigns with the most money raised",
           "items": {
             "$ref": "#/definitions/api_reports_reports_projects_get_ProjectAmount"
           },
@@ -1312,27 +1374,35 @@
     "api_reports_reports_projects_get_ProjectAmount": {
       "properties": {
         "date-published": {
+          "description": "Date when the project was published RFC822 format",
           "type": "string"
         },
         "description-short": {
+          "description": "Short description of the project",
           "type": "string"
         },
         "image-url": {
+          "description": "URL with the main image of the project",
           "type": "string"
         },
         "name": {
+          "description": "Name of the project",
           "type": "string"
         },
         "project": {
+          "description": "Project's unique ID",
           "type": "string"
         },
         "project-url": {
+          "description": "Project's original URL (crowd-funding web page)",
           "type": "string"
         },
         "total": {
+          "description": "Total amount (\u20ac) of money raised for the project",
           "type": "integer"
         },
         "video-url": {
+          "description": "URL with the main video of the project",
           "type": "string"
         }
       }
@@ -1340,27 +1410,35 @@
     "api_reports_reports_projects_get_ProjectContribution": {
       "properties": {
         "date-published": {
+          "description": "Date when the project was published RFC822 format",
           "type": "string"
         },
         "description-short": {
+          "description": "Short description of the project",
           "type": "string"
         },
         "image-url": {
+          "description": "URL with the main image of the project",
           "type": "string"
         },
         "name": {
+          "description": "Name of the project",
           "type": "string"
         },
         "project": {
+          "description": "Project's unique ID",
           "type": "string"
         },
         "project-url": {
+          "description": "Project's original URL (crowd-funding web page)",
           "type": "string"
         },
         "total": {
+          "description": "Total number contributions (or collaborations)",
           "type": "integer"
         },
         "video-url": {
+          "description": "URL with the main video of the project",
           "type": "string"
         }
       }
@@ -1368,18 +1446,23 @@
     "api_reports_reports_rewards_get_Favourite": {
       "properties": {
         "description": {
+          "description": "Reward's description",
           "type": "string"
         },
         "icon": {
+          "description": "Identifier of the reward's icon",
           "type": "string"
         },
         "name": {
+          "description": "Reward's name",
           "type": "string"
         },
         "svg-url": {
+          "description": "URL where to find the reward's icon",
           "type": "string"
         },
         "total": {
+          "description": "Number of uses of this reward in successful projects",
           "type": "integer"
         }
       }
@@ -1387,18 +1470,23 @@
     "api_reports_reports_rewards_get_PerAmount": {
       "properties": {
         "rewards-between-100-400": {
+          "description": "Num. of users choosing rewards from 100 \u20ac to 400 \u20ac",
           "type": "integer"
         },
         "rewards-between-15-30": {
+          "description": "Num. of users choosing rewards from 15 \u20ac to 30 \u20ac",
           "type": "integer"
         },
         "rewards-between-30-100": {
+          "description": "Num. of users choosing rewards from 30 \u20ac to 100 \u20ac",
           "type": "integer"
         },
         "rewards-less-than-15": {
+          "description": "Num. of users choosing rewards cheaper than 15 \u20ac",
           "type": "integer"
         },
         "rewards-more-than-400": {
+          "description": "Num. of users choosing rewards more expensive than 400 \u20ac",
           "type": "integer"
         }
       }
@@ -1406,18 +1494,22 @@
     "api_reports_reports_rewards_get_Reward": {
       "properties": {
         "favorite-rewards": {
+          "description": "Reward type used in successful projects",
           "items": {
             "$ref": "#/definitions/api_reports_reports_rewards_get_Favourite"
           },
           "type": "array"
         },
         "percentage-reward-refusal": {
+          "description": "Pertentage of co-financiers who renounce reward",
           "type": "number"
         },
         "reward-refusal": {
+          "description": "Number of co-financiers who renounce reward",
           "type": "integer"
         },
         "rewards-per-amount": {
+          "description": "Number of rewards picked by the users in steps",
           "items": {
             "$ref": "#/definitions/api_reports_reports_rewards_get_PerAmount"
           },

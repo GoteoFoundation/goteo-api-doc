@@ -62,4 +62,6 @@ save reports/projects/ reports_projects
 save reports/rewards/ reports_rewards
 save reports/community/ reports_community
 save reports/money/ reports_money
+save digests/reports/money/ digests
+save "digests/licenses/?year=2014&location=41.38879,2.15899,100" digests1
 
