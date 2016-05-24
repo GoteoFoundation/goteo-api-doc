@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "description": "Proyectos que promueven el cambio social, la resoluci\u00f3n de problemas en las relaciones humanas y/o su fortalecimiento para conseguir un mayor bienestar.",
+      "id": 2,
+      "name": "Social",
+      "total-projects": 463,
+      "total-users": 6218
+    },
+    {
+      "description": "Desarrollos t\u00e9cnicos de software, hardware, herramientas etc. para solucionar problemas o necesidades concretas. ",
+      "id": 7,
+      "name": "Tecnol\u00f3gico",
+      "total-projects": 174,
+      "total-users": 3433
+    },
+    {
+      "description": "Proyectos que aspiran a convertirse en una iniciativa empresarial o de emprendimiento social, generando beneficios econ\u00f3micos. ",
+      "id": 9,
+      "name": "Emprendedor",
+      "total-projects": 114,
+      "total-users": 2268
+    },
+    {
+      "description": "",
+      "id": 16,
+      "name": "Dise\u00f1o",
+      "total-projects": 72,
+      "total-users": 1264
+    },
+    {
+      "description": "Proyectos con el objetivo de informar, denunciar, comunicar (por ejemplo periodismo ciudadano, documentales, blogs, programas de radio).",
+      "id": 6,
+      "name": "Comunicativo",
+      "total-projects": 228,
+      "total-users": 2849
+    },
+    {
+      "description": "Proyectos donde el objetivo primordial es la formaci\u00f3n o el aprendizaje. ",
+      "id": 10,
+      "name": "Educativo",
+      "total-projects": 370,
+      "total-users": 4786
+    },
+    {
+      "description": "Proyectos con objetivos art\u00edsticos y culturales en un sentido amplio.",
+      "id": 11,
+      "name": "Cultural",
+      "total-projects": 340,
+      "total-users": 4781
+    },
+    {
+      "description": "Proyectos relacionados con el cuidado del medio ambiente, la sostenibilidad y/o la diversidad biol\u00f3gica.\r\n",
+      "id": 13,
+      "name": "Ecol\u00f3gico",
+      "total-projects": 206,
+      "total-users": 3682
+    },
+    {
+      "description": "Estudios o investigaciones de alguna materia, proyectos que buscan respuestas, soluciones, explicaciones nuevas.",
+      "id": 14,
+      "name": "Cient\u00edfico",
+      "total-projects": 90,
+      "total-users": 2334
+    }
+  ],
+  "meta": {
+    "total": 9
+  },
+  "time-elapsed": 0.3393070697784424
+}

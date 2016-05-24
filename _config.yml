@@ -1,5 +1,5 @@
 # Site settings
-title: Goteo Api Documentation (beta)
+title: Goteo Api Documentation
 email: dev@goteo.org
 description: > # Goteo API documentation.
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -7,7 +7,8 @@ url: "https://developers.goteo.org" # the base hostname & protocol for your site
 apiurl: "https://api.goteo.org/v1" # the base hostname & protocol for api
 twitter_username: goteofunding
 github_url: https://github.com/GoteoFoundation/goteo-api-doc
-api_console: https://api.goteo.org/v1/apidocs/index.html
+# api_spec: http://localhost:5000/spec
+api_spec: https://api.goteo.org/v1/spec
 
 # Build settings
 markdown: rdiscount

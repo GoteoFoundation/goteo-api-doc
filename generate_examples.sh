@@ -41,7 +41,7 @@ function save {
 	url=$API$1
 	response=$(curl $OPTIONS --write-out %{http_code} --silent --output /dev/null $url)
 	if [ "$response" != "200" ]; then
-		echo "Response code error in [$url]"
+		echo "Response code error [$response] in [$url]"
 		echo "Aborting... Please check credentials!"
 		exit 2
 	fi
@@ -50,7 +50,11 @@ function save {
 }
 
 
-save apidocs/spec.json swagger_specs
+save spec swagger_specs
 save projects/ projects
 save projects/llevamealhuerto project
+save users/ users
+save users/goteo user
+save categories/ categories
+save licenses/ licenses
 

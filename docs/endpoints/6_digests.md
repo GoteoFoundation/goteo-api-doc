@@ -5,6 +5,7 @@ group: endpoint
 permalink: /doc/digests/
 ---
 # Digests endpoint
+
 This section allows to automatically group the information provided from other endpoints in predefined intervals of dates.
 
 For example, you can retrieve all money reports given by the [/reports/money/](/doc/reports/#money) endpoint in 13 different chunks, 12 corresponding to the 12 months of the year and the last one for whole year itself. 

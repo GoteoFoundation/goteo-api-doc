@@ -5,28 +5,28 @@ group: apidoc
 permalink: /doc/
 
 ---
-# GOTEO API v1.0
-> Currently in **BETA** (big changes can be expected at any moment!)
+# GOTEO API v1.1
+> Currently in **BETA**
 
 ## Introduction
 
 Welcome to the API for the crowdfunding platform [Goteo.org](http://goteo.org).
 
-Fundación Goteo is pleased to present our open data API and to share our work with people interested in data, API and visualizations, specifically data on crowdfunding and our Goteo.org community. We offer you access to all of the activities and the impact of the Goteo platform. Our ultimate aim is to build new standards in the worlds of collective finance and collaborative economy, while also contributing to the open data commons.  
+Fundación Goteo is pleased to present our open data API and to share our work with people interested in data, API and visualizations, specifically data on crowdfunding and our Goteo.org community. We offer you access to all of the activities and the impact of the Goteo platform. Our ultimate aim is to build new standards in the worlds of collective finance and collaborative economy, while also contributing to the open data commons.
 
 We want to share this new development and battery of open resources with developers and experts in analysis and data visualization, as well as general researchers. If you've got ideas about new applications and uses for the data we have been gathering since 2012, and crowdfunding in general, we're ready for you!
 
 We’re open to contributions in:
 
 * Improving our API, along with the common good, in the aspect of open data.
-* Creating new applications and visualizations 
+* Creating new applications and visualizations
 * Comparing and finding new hypotheses about the relationships emerging between resources, needs, people and open projects looking for funding.
 
 Please contact us with any questions or comments.
 
 #### API URL: [{{ site.apiurl }}]({{ site.apiurl }})
 
-The API is compatible with the [Swagger](http://swagger.io/) specification. Checkout the [html interface]({{ site.apiurl }}/api/spec.html#!/spec) for a live testing console or the [json interface]({{ site.apiurl }}/api/spec.json)
+The API is compatible with the [Swagger](http://swagger.io/) specification. Checkout the [html console interface](/doc/console/) for a live testing console or the [json interface]({{ site.api_spec }})
 
 
 ## Authentication

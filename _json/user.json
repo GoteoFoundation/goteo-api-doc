@@ -1,0 +1,20 @@
+{
+  "about": "Este perfil representa al equipo que administra la plataforma Goteo, desde el que nos comunicamos con todos los usuarios y usuarias. Si quieres contactar con nosotras escribe desde la secci\u00f3n de \"Contacto\" (en el pie de la p\u00e1gina) o bien v\u00eda Twitter (@gteofunding)",
+  "amount-public-invested": 0.0,
+  "date-created": "Sat, 20 Aug 2011 13:57:14 +0200",
+  "id": "goteo",
+  "lang": "es",
+  "name": "Goteo",
+  "node": null,
+  "profile-image-url": "https://goteo.org/img/medium/goteo-twitter7r.png",
+  "profile-url": "https://goteo.org/user/profile/goteo",
+  "projects-collaborated": 7,
+  "projects-public-invested": 0,
+  "projects-published": 0,
+  "time-elapsed": 0.05212688446044922,
+  "translations": {
+    "fr": {
+      "name": null
+    }
+  }
+}

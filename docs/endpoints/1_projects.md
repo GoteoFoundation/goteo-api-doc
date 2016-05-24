@@ -54,6 +54,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/projects/llevamealhuerto
 
 ### Filters available:
 
+* No filters are available in this endpoint
 * **{PROJECT_ID}** must be the unique identifier of the project
 
 

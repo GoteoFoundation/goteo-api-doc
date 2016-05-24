@@ -1,102 +1,23 @@
 {
+  "basePath": "/v1",
   "definitions": {
-    "api_call_projects_call_get_ProjectCall": {
-      "properties": {
-        "amount": {
-          "description": "Currently achieved amount for the project",
-          "type": "number"
-        },
-        "amount-call": {
-          "description": "Only the matchfunding part of the achieved amount for the project",
-          "type": "number"
-        },
-        "date-created": {
-          "description": "Date when the project was created RFC822 format",
-          "type": "string"
-        },
-        "date-published": {
-          "description": "Date when the project was published RFC822 format",
-          "type": "string"
-        },
-        "description-short": {
-          "description": "Short description of the project",
-          "type": "string"
-        },
-        "id": {
-          "description": "Project unique identifier",
-          "type": "string"
-        },
-        "image-url": {
-          "description": "URL with the main image of the project",
-          "type": "string"
-        },
-        "lang": {
-          "description": "Main language of the project",
-          "type": "string"
-        },
-        "latitude": {
-          "description": "Latitude coordinate for the project",
-          "type": "number"
-        },
-        "longitude": {
-          "description": "Longitude coordinate for the project",
-          "type": "number"
-        },
-        "minimum": {
-          "description": "Minimum amount to achieve to consider the project succeeded",
-          "type": "number"
-        },
-        "name": {
-          "description": "Name of the project",
-          "type": "string"
-        },
-        "node": {
-          "description": "Node where the project was created originally",
-          "type": "string"
-        },
-        "optimum": {
-          "description": "Optimum amount to achieve for the project to achieve all his goals",
-          "type": "number"
-        },
-        "owner": {
-          "description": "Projects owner's user ID",
-          "type": "string"
-        },
-        "owner-name": {
-          "description": "Projects owner's user name",
-          "type": "string"
-        },
-        "project-url": {
-          "description": "URL where for the project",
-          "type": "string"
-        },
-        "region": {
-          "description": "Region location for the project",
-          "type": "string"
-        },
-        "status": {
-          "description": "Status of the project",
-          "type": "string"
-        }
-      }
-    },
     "api_calls_call_get_CallFull": {
       "properties": {
         "amount-available": {
           "description": "Available amount of cash to distribute among projects",
-          "type": "float"
+          "type": "number"
         },
         "amount-committed": {
-          "description": null,
-          "type": "float"
+          "description": "Maximum total amount of cash that was available to distribute among projects",
+          "type": "number"
         },
         "amount-peers": {
           "description": "Amount of cash already distribute among projects",
-          "type": "float"
+          "type": "number"
         },
         "amount-remaining": {
           "description": "Amount of cash still available for distribute among projects",
-          "type": "float"
+          "type": "number"
         },
         "applies": {
           "description": "Text description about which kind of projects will be selected for the matchfunding call",
@@ -287,23 +208,103 @@
         }
       }
     },
-    "api_calls_calls_list_get_Call": {
+    "api_calls_call_projects_get_ProjectCall": {
+      "properties": {
+        "amount": {
+          "description": "Currently achieved amount for the project",
+          "type": "number"
+        },
+        "amount-call": {
+          "description": "Only the matchfunding part of the achieved amount for the project",
+          "type": "number"
+        },
+        "date-created": {
+          "description": "Date when the project was created RFC822 format",
+          "type": "string"
+        },
+        "date-published": {
+          "description": "Date when the project was published RFC822 format",
+          "type": "string"
+        },
+        "description-short": {
+          "description": "Short description of the project",
+          "type": "string"
+        },
+        "id": {
+          "description": "Project unique identifier",
+          "type": "string"
+        },
+        "image-url": {
+          "description": "URL with the main image of the project",
+          "type": "string"
+        },
+        "lang": {
+          "description": "Main language of the project",
+          "type": "string"
+        },
+        "latitude": {
+          "description": "Latitude coordinate for the project",
+          "type": "number"
+        },
+        "longitude": {
+          "description": "Longitude coordinate for the project",
+          "type": "number"
+        },
+        "minimum": {
+          "description": "Minimum amount to achieve to consider the project succeeded",
+          "type": "number"
+        },
+        "name": {
+          "description": "Name of the project",
+          "type": "string"
+        },
+        "node": {
+          "description": "Node where the project was created originally",
+          "type": "string"
+        },
+        "optimum": {
+          "description": "Optimum amount to achieve for the project to achieve all his goals",
+          "type": "number"
+        },
+        "owner": {
+          "description": "Projects owner's user ID",
+          "type": "string"
+        },
+        "owner-name": {
+          "description": "Projects owner's user name",
+          "type": "string"
+        },
+        "project-url": {
+          "description": "URL where for the project",
+          "type": "string"
+        },
+        "region": {
+          "description": "Region location for the project",
+          "type": "string"
+        },
+        "status": {
+          "description": "Status of the project",
+          "type": "string"
+        }
+      }
+    },
+    "api_calls_calls_get_Call": {
       "properties": {
         "amount-available": {
           "description": "Available amount of cash to distribute among projects",
-          "type": "float"
+          "type": "number"
         },
         "amount-committed": {
-          "description": null,
-          "type": "float"
+          "description": "Maximum total amount of cash that was available to distribute among projects",
+          "type": "number"
         },
         "amount-peers": {
           "description": "Amount of cash already distribute among projects",
-          "type": "float"
+          "type": "number"
         },
         "amount-remaining": {
           "description": "Amount of cash still available for distribute among projects",
-          "type": "float"
+          "type": "number"
         },
         "call-location": {
           "description": "Custom location value for the call",
@@ -339,7 +340,7 @@
         },
         "latitude": {
           "description": "Latitude coordinate for the call",
-          "type": "float"
+          "type": "number"
         },
         "logo-url": {
           "description": "URL for the call's logo",
@@ -347,7 +348,7 @@
         },
         "longitude": {
           "description": "Longitude coordinate for the call",
-          "type": "float"
+          "type": "number"
         },
         "name": {
           "description": "Name of the matchfunding call",
@@ -387,13 +388,13 @@
         }
       }
     },
-    "api_calls_calls_list_get_calls": {
+    "api_calls_calls_get_calls": {
       "items": {
-        "$ref": "#/definitions/api_calls_calls_list_get_Call"
+        "$ref": "#/definitions/api_calls_calls_get_Call"
       },
       "type": "array"
     },
-    "api_categories_categories_list_get_Category": {
+    "api_categories_categories_get_Category": {
       "properties": {
         "description": {
           "description": "Category short description",
@@ -417,9 +418,9 @@
         }
       }
     },
-    "api_categories_categories_list_get_categories": {
+    "api_categories_categories_get_categories": {
       "items": {
-        "$ref": "#/definitions/api_categories_categories_list_get_Category"
+        "$ref": "#/definitions/api_categories_categories_get_Category"
       },
       "type": "array"
     },
@@ -444,7 +445,7 @@
       "properties": {
         "amount": {
           "description": "Amount of the contribution",
-          "type": "float"
+          "type": "number"
         },
         "call": {
           "description": "Id of the matchfunding call if this invest belongs to a invest in selected",
@@ -452,7 +453,7 @@
         },
         "conversion-ratio": {
           "description": "Currency rate at the moment of the payment (relative to EUR)",
-          "type": "float"
+          "type": "number"
         },
         "currency": {
           "description": "Currency of the contribution (currently one of EUR, GBP or USD)",
@@ -529,11 +530,11 @@
         }
       }
     },
-    "api_invests_invests_list_get_Invest": {
+    "api_invests_invests_get_Invest": {
       "properties": {
         "amount": {
           "description": "Amount of the contribution",
-          "type": "float"
+          "type": "number"
         },
         "call": {
           "description": "Id of the matchfunding call if this invest belongs to a invest in selected",
@@ -541,7 +542,7 @@
         },
         "conversion-ratio": {
           "description": "Currency rate at the moment of the payment (relative to EUR)",
-          "type": "float"
+          "type": "number"
         },
         "currency": {
           "description": "Currency of the contribution (currently one of EUR, GBP or USD)",
@@ -597,13 +598,13 @@
         }
       }
     },
-    "api_invests_invests_list_get_invests": {
+    "api_invests_invests_get_invests": {
       "items": {
-        "$ref": "#/definitions/api_invests_invests_list_get_Invest"
+        "$ref": "#/definitions/api_invests_invests_get_Invest"
       },
       "type": "array"
     },
-    "api_licenses_licenses_list_get_License": {
+    "api_licenses_licenses_get_License": {
       "properties": {
         "description": {
           "description": "License short description",
@@ -635,13 +636,13 @@
         }
       }
     },
-    "api_licenses_licenses_list_get_licenses": {
+    "api_licenses_licenses_get_licenses": {
       "items": {
-        "$ref": "#/definitions/api_licenses_licenses_list_get_License"
+        "$ref": "#/definitions/api_licenses_licenses_get_License"
       },
       "type": "array"
     },
-    "api_projects_donors_project_get_ProjectDonor": {
+    "api_projects_project_donors_get_ProjectDonor": {
       "properties": {
         "anonymous": {
           "description": "If the contributor is anonymous",
@@ -676,7 +677,7 @@
     "api_projects_project_get_ProjectCost": {
       "properties": {
         "amount": {
-          "type": "float"
+          "type": "number"
         },
         "cost": {
           "type": "string"
@@ -959,7 +960,7 @@
         }
       }
     },
-    "api_projects_projects_list_get_Project": {
+    "api_projects_projects_get_Project": {
       "properties": {
         "amount": {
           "description": "Currently achieved amount for the project",
@@ -990,11 +991,11 @@
           "type": "string"
         },
         "latitude": {
-          "description": "Latitude coordinate for the project",
+          "description": "Latitude coordinate for the project (if available)",
           "type": "number"
         },
         "longitude": {
-          "description": "Longitude coordinate for the project",
+          "description": "Longitude coordinate for the project (if available)",
           "type": "number"
         },
         "minimum": {
@@ -1014,15 +1015,15 @@
           "type": "number"
         },
         "owner": {
-          "description": "Projects owner's user ID",
+          "description": "Project owner's user ID",
           "type": "string"
         },
         "owner-name": {
-          "description": "Projects owner's user name",
+          "description": "Project owner's user name",
           "type": "string"
         },
         "project-url": {
-          "description": "URL where for the project",
+          "description": "Project's original URL (crowd-funding web page)",
           "type": "string"
         },
         "region": {
@@ -1035,13 +1036,13 @@
         }
       }
     },
-    "api_projects_projects_list_get_projects": {
+    "api_projects_projects_get_projects": {
       "items": {
-        "$ref": "#/definitions/api_projects_projects_list_get_Project"
+        "$ref": "#/definitions/api_projects_projects_get_Project"
       },
       "type": "array"
     },
-    "api_reports_community_get_Category": {
+    "api_reports_reports_community_get_Category": {
       "properties": {
         "id": {
           "type": "integer"
@@ -1057,7 +1058,7 @@
         }
       }
     },
-    "api_reports_community_get_Collaboration": {
+    "api_reports_reports_community_get_Collaboration": {
       "properties": {
         "interactions": {
           "type": "integer"
@@ -1076,7 +1077,7 @@
         }
       }
     },
-    "api_reports_community_get_Community": {
+    "api_reports_reports_community_get_Community": {
       "properties": {
         "average-collaborators": {
           "type": "integer"
@@ -1089,7 +1090,7 @@
         },
         "categories": {
           "items": {
-            "$ref": "#/definitions/api_reports_community_get_Category"
+            "$ref": "#/definitions/api_reports_reports_community_get_Category"
           },
           "type": "array"
         },
@@ -1143,19 +1144,19 @@
         },
         "top10-collaborators": {
           "items": {
-            "$ref": "#/definitions/api_reports_community_get_Collaboration"
+            "$ref": "#/definitions/api_reports_reports_community_get_Collaboration"
           },
           "type": "array"
         },
         "top10-donors": {
           "items": {
-            "$ref": "#/definitions/api_reports_community_get_Donation"
+            "$ref": "#/definitions/api_reports_reports_community_get_Donation"
           },
           "type": "array"
         },
         "top10-multidonors": {
           "items": {
-            "$ref": "#/definitions/api_reports_community_get_Donation"
+            "$ref": "#/definitions/api_reports_reports_community_get_Donation"
           },
           "type": "array"
         },
@@ -1170,7 +1171,7 @@
         }
       }
     },
-    "api_reports_community_get_Donation": {
+    "api_reports_reports_community_get_Donation": {
       "properties": {
         "amount": {
           "type": "number"
@@ -1192,7 +1193,7 @@
         }
       }
     },
-    "api_reports_money_get_Money": {
+    "api_reports_reports_money_get_Money": {
       "properties": {
         "average-donation": {
           "type": "number"
@@ -1244,7 +1245,7 @@
         }
       }
     },
-    "api_reports_projects_get_Project": {
+    "api_reports_reports_projects_get_Project": {
       "properties": {
         "average-amount-successful": {
           "type": "number"
@@ -1275,25 +1276,25 @@
         },
         "top10-collaborations": {
           "items": {
-            "$ref": "#/definitions/api_reports_projects_get_ProjectContribution"
+            "$ref": "#/definitions/api_reports_reports_projects_get_ProjectContribution"
           },
           "type": "array"
         },
         "top10-donations": {
           "items": {
-            "$ref": "#/definitions/api_reports_projects_get_ProjectContribution"
+            "$ref": "#/definitions/api_reports_reports_projects_get_ProjectContribution"
           },
           "type": "array"
         },
         "top10-receipts": {
           "items": {
-            "$ref": "#/definitions/api_reports_projects_get_ProjectAmount"
+            "$ref": "#/definitions/api_reports_reports_projects_get_ProjectAmount"
           },
           "type": "array"
         }
       }
     },
-    "api_reports_projects_get_ProjectAmount": {
+    "api_reports_reports_projects_get_ProjectAmount": {
       "properties": {
         "date-published": {
           "type": "string"
@@ -1321,7 +1322,7 @@
         }
       }
     },
-    "api_reports_projects_get_ProjectContribution": {
+    "api_reports_reports_projects_get_ProjectContribution": {
       "properties": {
         "date-published": {
           "type": "string"
@@ -1349,7 +1350,7 @@
         }
       }
     },
-    "api_reports_rewards_get_Favourite": {
+    "api_reports_reports_rewards_get_Favourite": {
       "properties": {
         "description": {
           "type": "string"
@@ -1368,7 +1369,7 @@
         }
       }
     },
-    "api_reports_rewards_get_PerAmount": {
+    "api_reports_reports_rewards_get_PerAmount": {
       "properties": {
         "rewards-between-100-400": {
           "type": "integer"
@@ -1387,11 +1388,11 @@
         }
       }
     },
-    "api_reports_rewards_get_Reward": {
+    "api_reports_reports_rewards_get_Reward": {
       "properties": {
         "favorite-rewards": {
           "items": {
-            "$ref": "#/definitions/api_reports_rewards_get_Favourite"
+            "$ref": "#/definitions/api_reports_reports_rewards_get_Favourite"
           },
           "type": "array"
         },
@@ -1403,13 +1404,13 @@
         },
         "rewards-per-amount": {
           "items": {
-            "$ref": "#/definitions/api_reports_rewards_get_PerAmount"
+            "$ref": "#/definitions/api_reports_reports_rewards_get_PerAmount"
           },
           "type": "array"
         }
       }
     },
-    "api_reports_summary_get_Summary": {
+    "api_reports_reports_summary_get_Summary": {
       "properties": {
         "average-donation": {
           "type": "number"
@@ -1468,11 +1469,11 @@
       "properties": {
         "about": {
           "description": "User's about text",
-          "type": "text"
+          "type": "string"
         },
         "amount-public-invested": {
           "description": "Amount of money invested in any project (excluding anonymous investions)",
-          "type": "float"
+          "type": "number"
         },
         "date-created": {
           "description": "Date when the user was created RFC822 format",
@@ -1533,7 +1534,7 @@
         }
       }
     },
-    "api_users_users_list_get_User": {
+    "api_users_users_get_User": {
       "properties": {
         "date-created": {
           "description": "Date when the user was created RFC822 format",
@@ -1561,9 +1562,9 @@
         }
       }
     },
-    "api_users_users_list_get_users": {
+    "api_users_users_get_users": {
       "items": {
-        "$ref": "#/definitions/api_users_users_list_get_User"
+        "$ref": "#/definitions/api_users_users_get_User"
       },
       "type": "array"
     }
@@ -1637,13 +1638,18 @@
           "200": {
             "description": "List of available calls",
             "schema": {
-              "$ref": "#/definitions/api_calls_calls_list_get_calls"
+              "$ref": "#/definitions/api_calls_calls_get_calls"
             }
           },
           "400": {
             "description": "Invalid parameters format"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Call API",
         "tags": [
           "calls"
@@ -1666,16 +1672,21 @@
           "200": {
             "description": "Call data",
             "schema": {
-              "$ref": "#/definitions/api_calls_calls_list_get_CallFull"
+              "$ref": "#/definitions/api_calls_call_get_CallFull"
             }
           },
           "404": {
             "description": "Resource not found"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Call API",
         "tags": [
-          "calls"
+          "call"
         ]
       }
     },
@@ -1735,7 +1746,7 @@
             "description": "Project data",
             "schema": {
               "items": {
-                "$ref": "#/definitions/api_calls_calls_list_get_ProjectCall"
+                "$ref": "#/definitions/api_calls_call_projects_get_ProjectCall"
               },
               "type": "array"
             }
@@ -1744,9 +1755,14 @@
             "description": "Resource not found"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Call API",
         "tags": [
-          "calls"
+          "call_projects"
         ]
       }
     },
@@ -1801,13 +1817,18 @@
           "200": {
             "description": "List of available categories",
             "schema": {
-              "$ref": "#/definitions/api_categories_categories_list_get_categories"
+              "$ref": "#/definitions/api_categories_categories_get_categories"
             }
           },
           "400": {
             "description": "Invalid parameters format"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Category API",
         "tags": [
           "categories"
@@ -1883,9 +1904,14 @@
             "description": "Invalid parameters format"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Digest Stats API",
         "tags": [
-          "digests_reports"
+          "digests"
         ]
       }
     },
@@ -1951,13 +1977,18 @@
           "200": {
             "description": "List of available invests",
             "schema": {
-              "$ref": "#/definitions/api_invests_invests_list_get_invests"
+              "$ref": "#/definitions/api_invests_invests_get_invests"
             }
           },
           "400": {
             "description": "Invalid parameters format"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Invest API",
         "tags": [
           "invests"
@@ -1980,16 +2011,21 @@
           "200": {
             "description": "Invest data",
             "schema": {
-              "$ref": "#/definitions/api_invests_invests_list_get_InvestFull"
+              "$ref": "#/definitions/api_invests_invest_get_InvestFull"
             }
           },
           "404": {
             "description": "Resource not found"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Invest API",
         "tags": [
-          "invests"
+          "invest"
         ]
       }
     },
@@ -2044,13 +2080,18 @@
           "200": {
             "description": "List of available licenses",
             "schema": {
-              "$ref": "#/definitions/api_licenses_licenses_list_get_licenses"
+              "$ref": "#/definitions/api_licenses_licenses_get_licenses"
             }
           },
           "400": {
             "description": "Invalid parameters format"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "License API",
         "tags": [
           "licenses"
@@ -2119,13 +2160,18 @@
           "200": {
             "description": "List of available projects",
             "schema": {
-              "$ref": "#/definitions/api_projects_projects_list_get_projects"
+              "$ref": "#/definitions/api_projects_projects_get_projects"
             }
           },
           "400": {
             "description": "Invalid parameters format"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Project API",
         "tags": [
           "projects"
@@ -2155,9 +2201,14 @@
             "description": "Resource not found"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Project API",
         "tags": [
-          "projects"
+          "project"
         ]
       }
     },
@@ -2217,7 +2268,7 @@
             "description": "User data",
             "schema": {
               "items": {
-                "$ref": "#/definitions/api_projects_projects_list_get_ProjectDonor"
+                "$ref": "#/definitions/api_projects_project_donors_get_ProjectDonor"
               },
               "type": "array"
             }
@@ -2226,9 +2277,14 @@
             "description": "Resource not found"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Project API",
         "tags": [
-          "projects"
+          "project_donors"
         ]
       }
     },
@@ -2294,16 +2350,21 @@
           "200": {
             "description": "Community object",
             "schema": {
-              "$ref": "#/definitions/api_reports_community_get_Community"
+              "$ref": "#/definitions/api_reports_reports_community_get_Community"
             }
           },
           "400": {
             "description": "Invalid parameters format"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Community Stats API",
         "tags": [
-          "community_reports"
+          "reports_community"
         ]
       }
     },
@@ -2369,16 +2430,21 @@
           "200": {
             "description": "List of available projects",
             "schema": {
-              "$ref": "#/definitions/api_reports_money_get_Money"
+              "$ref": "#/definitions/api_reports_reports_money_get_Money"
             }
           },
           "400": {
             "description": "Invalid parameters format"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Money Stats API",
         "tags": [
-          "money_reports"
+          "reports_money"
         ]
       }
     },
@@ -2444,16 +2510,21 @@
           "200": {
             "description": "List of available projects",
             "schema": {
-              "$ref": "#/definitions/api_reports_projects_get_Project"
+              "$ref": "#/definitions/api_reports_reports_projects_get_Project"
             }
           },
           "400": {
             "description": "Invalid parameters format"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Projects Stats API",
         "tags": [
-          "project_reports"
+          "reports_projects"
         ]
       }
     },
@@ -2519,16 +2590,21 @@
           "200": {
             "description": "List of available projects",
             "schema": {
-              "$ref": "#/definitions/api_reports_rewards_get_Reward"
+              "$ref": "#/definitions/api_reports_reports_rewards_get_Reward"
             }
           },
           "400": {
             "description": "Invalid parameters format"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Reward Stats API",
         "tags": [
-          "reward_reports"
+          "reports_rewards"
         ]
       }
     },
@@ -2594,16 +2670,21 @@
           "200": {
             "description": "List of available projects",
             "schema": {
-              "$ref": "#/definitions/api_reports_summary_get_Summary"
+              "$ref": "#/definitions/api_reports_reports_summary_get_Summary"
             }
           },
           "400": {
             "description": "Invalid parameters format"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "Summary Stats API",
         "tags": [
-          "summary_reports"
+          "reports_summary"
         ]
       }
     },
@@ -2662,13 +2743,18 @@
           "200": {
             "description": "List of available users",
             "schema": {
-              "$ref": "#/definitions/api_users_users_list_get_users"
+              "$ref": "#/definitions/api_users_users_get_users"
             }
           },
           "400": {
             "description": "Invalid parameters format"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "User API",
         "tags": [
           "users"
@@ -2691,18 +2777,28 @@
           "200": {
             "description": "User data",
             "schema": {
-              "$ref": "#/definitions/api_users_users_list_get_UserFull"
+              "$ref": "#/definitions/api_users_user_get_UserFull"
             }
           },
           "404": {
             "description": "Resource not found"
           }
         },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "User API",
         "tags": [
-          "users"
+          "user"
         ]
       }
+    }
+  },
+  "securityDefinitions": {
+    "basic": {
+      "type": "basic"
     }
   },
   "swagger": "2.0"

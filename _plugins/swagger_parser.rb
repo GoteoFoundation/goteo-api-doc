@@ -53,7 +53,7 @@ module SwaggerParser
             # Markdown table
             def get_parameters_table(data)
                 t = ''
-                puts data
+                # puts data
                 for key,parameters in data
                     # t << '##### <a id="' + key + '">' + key + '</a>'
                     t << "\n| Attribute  | Type | Description |\n"
@@ -63,15 +63,19 @@ module SwaggerParser
                         type = val['type']
                         t << "| **#{val['name']}** | *#{type}* | #{val['description']} |\n"
                     end
-                    puts(t)
+                    # puts(t)
                 end
                 return t
             end
 
             # @site.data['swagger'] = swagger
             for key,id in {
-                'projects' => 'api_projects_projects_list_get_Project',
-                'project' => 'api_projects_project_get_ProjectFull'
+                'projects' => 'api_projects_projects_get_Project',
+                'project' => 'api_projects_project_get_ProjectFull',
+                'users' => 'api_users_users_get_User',
+                'user' => 'api_users_user_get_UserFull',
+                'categories' => 'api_categories_categories_get_Category',
+                'licenses' => 'api_licenses_licenses_get_License',
                 }
                 @site.data[key] = Hash.new
                 @site.data[key]['definitions'] = get_definitions(id)
