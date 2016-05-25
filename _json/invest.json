@@ -1,0 +1,27 @@
+{
+  "amount": 10.0,
+  "call": null,
+  "conversion-ratio": 1.0,
+  "currency": "EUR",
+  "date-charged": "Sun, 15 Jan 2012 00:00:00 +0100",
+  "date-created": "Tue, 13 Dec 2011 00:00:00 +0100",
+  "date-returned": null,
+  "date-updated": "Tue, 13 Dec 2011 15:24:57 +0100",
+  "id": 1000,
+  "location": [
+    {
+      "city": "Madrid",
+      "country": "Spain",
+      "country-code": "ES",
+      "latitude": 40.4167754,
+      "longitude": -3.7037902,
+      "region": "Community of Madrid"
+    }
+  ],
+  "project": "freedonia-se-mete-en-el-estudio",
+  "region": null,
+  "resign": true,
+  "status": "paid",
+  "time-elapsed": 0.002243518829345703,
+  "type": "payment"
+}

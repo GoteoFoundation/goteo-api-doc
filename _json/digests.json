@@ -21,7 +21,7 @@
       "percentage-pledged-successful": 145.77,
       "pledged": 28388,
       "refunded": 4681,
-      "time-elapsed": 1.106297492980957
+      "time-elapsed": 0.0035576820373535156
     },
     "2012": {
       "average-donation": 41.75,
@@ -44,7 +44,7 @@
       "percentage-pledged-successful": 128.54,
       "pledged": 438832,
       "refunded": 25218,
-      "time-elapsed": 1.003225326538086
+      "time-elapsed": 0.003589153289794922
     },
     "2013": {
       "average-donation": 48.98,
@@ -67,7 +67,7 @@
       "percentage-pledged-successful": 129.69,
       "pledged": 940001,
       "refunded": 47339,
-      "time-elapsed": 1.0678679943084717
+      "time-elapsed": 0.003599405288696289
     },
     "2014": {
       "average-donation": 48.83,
@@ -90,7 +90,7 @@
       "percentage-pledged-successful": 123.74,
       "pledged": 800330,
       "refunded": 59358,
-      "time-elapsed": 1.092334270477295
+      "time-elapsed": 0.003491640090942383
     },
     "2015": {
       "average-donation": 52.97,
@@ -113,7 +113,7 @@
       "percentage-pledged-successful": 132.81,
       "pledged": 895092,
       "refunded": 51126,
-      "time-elapsed": 1.0703308582305908
+      "time-elapsed": 0.005872249603271484
     },
     "2016": {
       "average-donation": 48.88,
@@ -129,14 +129,14 @@
       "matchfundpledge-amount": 70000,
       "meta": {
         "from_date": "2016-01-01",
-        "to_date": "2016-05-24"
+        "to_date": "2016-05-25"
       },
       "paypal-amount": 66528,
       "percentage-pledged-failed": 24.03,
       "percentage-pledged-successful": 153.83,
       "pledged": 437421,
       "refunded": 10613,
-      "time-elapsed": 1.2204272747039795
+      "time-elapsed": 0.0037429332733154297
     }
   },
   "endpoint": "/reports/money/",
@@ -157,7 +157,7 @@
     "percentage-pledged-successful": 129.94,
     "pledged": 3540064,
     "refunded": 198335,
-    "time-elapsed": 1.146101474761963
+    "time-elapsed": 0.0027022361755371094
   },
-  "time-elapsed": 7.707189559936523
+  "time-elapsed": 0.027172565460205078
 }

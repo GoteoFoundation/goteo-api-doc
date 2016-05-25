@@ -46,11 +46,12 @@ function save {
 		exit 2
 	fi
 	curl $OPTIONS --silent $url > _json/$2.json
-	echo "Generated _json/$2.json"
+	echo "Generated _json/$2.json [$response]"
 }
 
 
 save spec swagger_specs
+save login login
 save projects/ projects
 save projects/llevamealhuerto project
 save projects/llevamealhuerto/donors/ project_donors
@@ -58,6 +59,11 @@ save users/ users
 save users/goteo user
 save categories/ categories
 save licenses/ licenses
+save invests/ invests
+save invests/1000 invest
+save calls/ calls
+save calls/unia-capital-riego call
+save calls/unia-capital-riego/projects/ call_projects
 save reports/summary/ reports_summary
 save reports/projects/ reports_projects
 save reports/rewards/ reports_rewards

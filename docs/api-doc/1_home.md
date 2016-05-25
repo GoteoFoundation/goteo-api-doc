@@ -1,6 +1,6 @@
 ---
 layout: default
-title: API Introduction
+title: Introduction
 group: apidoc
 permalink: /doc/
 
@@ -31,13 +31,13 @@ The API is compatible with the [Swagger](http://swagger.io/) specification. Chec
 
 ## Authentication
 
-This API uses Http authentication, please get your **user** and **password** from your activity dashboard in [http://goteo.org/dashboard/activity/apikey](http://goteo.org/dashboard/activity/apikey)
+This API requires authentication, please referer to the [Authentication section](/doc/security/#authentication) for details.
 
 ## Quick start: Basic usage
 
-Once you have your user/key, you can make petitions. Here are few examples:
+If you have a user/key, you can make petitions to some endpoints. Here are few examples:
 
-### CURL example from a command line:
+### CURL example from the command line:
 
 ```bash
 curl -i  --basic --user "user:key" {{ site.apiurl }}/reports/money/
@@ -106,16 +106,3 @@ X-RateLimit-Reset: 1424167620
 Date: Tue, 17 Feb 2015 10:06:37 GMT
 ```
 
-## HTTP Statuses
-
-todo...
-
-## Responses
-
-todo ...
-
-## Meta
-
-todo ...
-
-## Rate limit

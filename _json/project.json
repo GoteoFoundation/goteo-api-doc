@@ -4,46 +4,51 @@
   "costs": [
     {
       "amount": 2800.0,
-      "cost": "Equipo audiovisual ",
       "date-from": "Thu, 13 Sep 2012 00:00:00 +0200",
       "date-to": "Thu, 13 Sep 2012 00:00:00 +0200",
       "description": "Los videos son la esencia de este proyecto y creemos que por el hecho de emitirse en Internet  no hay que escatimar en calidad t\u00e9cnica, por ello nos hemos propuesto mejorar el equipo de grabaci\u00f3n con una c\u00e1mara profesional, un micro decente y tal vez alg\u00fan foco. ",
+      "id": 3054,
+      "name": "Equipo audiovisual ",
       "required": "True",
       "type": "material"
     },
     {
       "amount": 2200.0,
-      "cost": "Equipo de edici\u00f3n",
       "date-from": "Mon, 19 Nov 2012 00:00:00 +0100",
       "date-to": "Mon, 14 Jan 2013 00:00:00 +0100",
       "description": "Necesitamos un ordenador con un procesador m\u00e1s potente para manejar im\u00e1genes HD a la hora de editar.",
+      "id": 3085,
+      "name": "Equipo de edici\u00f3n",
       "required": "False",
       "type": "material"
     },
     {
       "amount": 1000.0,
-      "cost": "Dise\u00f1o y programaci\u00f3n profesional de la web",
       "date-from": "Mon, 19 Nov 2012 00:00:00 +0100",
       "date-to": "Thu, 20 Dec 2012 00:00:00 +0100",
       "description": "Queremos convertir nuestra web en un medio realmente eficiente e interactivo con nuestro p\u00fablico, creemos que necesita mejorar el dise\u00f1o para convertirla en una plataforma m\u00e1s atractiva, sencilla y que invite a intervenir y profesionalizar la programaci\u00f3n para lograr un mejor posicionamiento.",
+      "id": 3053,
+      "name": "Dise\u00f1o y programaci\u00f3n profesional de la web",
       "required": "True",
       "type": "task"
     },
     {
       "amount": 1400.0,
-      "cost": "Programa piloto nueva secci\u00f3n \"Huertalizaci\u00f3n\"",
       "date-from": "Mon, 11 Mar 2013 00:00:00 +0100",
       "date-to": "Mon, 10 Jun 2013 00:00:00 +0200",
       "description": "\"Huertalizaci\u00f3n\" se trata de una nueva secci\u00f3n para mostrar, compartir y expandir las iniciativas de huertas urbanas, azoteas verdes, proyectos formativos en ciudades de todo el mundo. En el piloto queremos conocer las iniciativas de tres ciudades: Sevilla, Barcelona y Madrid a trav\u00e9s de una serie de reportajes que muestren sus experiencias en huertas urbanas y huertos compartidos, balcones comestibles y acciones sociales y formativas en torno al cultivo de la tierra.",
+      "id": 3083,
+      "name": "Programa piloto nueva secci\u00f3n \"Huertalizaci\u00f3n\"",
       "required": "True",
       "type": "task"
     },
     {
       "amount": 1800.0,
-      "cost": "Dos pilotos m\u00e1s para la secci\u00f3n \"huertalizaci\u00f3n\"",
       "date-from": "Mon, 20 May 2013 00:00:00 +0200",
       "date-to": "Mon, 14 Oct 2013 00:00:00 +0200",
       "description": "Nos gustar\u00eda cubrir con nuestros reportajes algunas de las iniciativas que se est\u00e1n desarrollando en otros lugares de Europa en torno a las huertas urbanas, las azoteas verdes y los m\u00e9todos para cultivar en casa. Estamos pensando en Berlin, Londres y Par\u00eds que cuentan con iniciativas \"copiables\" en nuestras ciudades. ",
+      "id": 3086,
+      "name": "Dos pilotos m\u00e1s para la secci\u00f3n \"huertalizaci\u00f3n\"",
       "required": "False",
       "type": "task"
     }
@@ -104,17 +109,20 @@
   "needs": [
     {
       "description": "Nos gustar\u00eda subtitular nuestros v\u00eddeos al euskera, al ingl\u00e9s y a otros idiomas, porque cuantos m\u00e1s seamos mejor.",
-      "support": "Subt\u00edtulos",
+      "id": 1129,
+      "name": "Subt\u00edtulos",
       "type": "task"
     },
     {
       "description": "Nos vendr\u00eda muy bien conocer aplicaciones, buenos h\u00e1bitos y estrategias para sacarle m\u00e1s rendimiento a las redes sociales y nuestra Web.",
-      "support": "Nociones avanzadas en manejo de redes y marketing on line",
+      "id": 1130,
+      "name": "Nociones avanzadas en manejo de redes y marketing on line",
       "type": "task"
     },
     {
       "description": "Si quieres ayudarnos a mejorar la web, su posicionamiento, su funcionalidad, su dise\u00f1o,...",
-      "support": "Dise\u00f1o de la web",
+      "id": 1132,
+      "name": "Dise\u00f1o de la web",
       "type": "task"
     }
   ],
@@ -125,88 +133,101 @@
   "project-url": "https://goteo.org/project/llevamealhuerto",
   "rewards": [
     {
+      "amount": 0,
       "description": "Un gran racimo de sencillas, \u00fatiles y entretenidas p\u00edldoras audiovisuales con las que aprender-ense\u00f1ar a cultivar en cualquier pedazo de tierra que tengas disponible.",
-      "icon": null,
-      "license": null,
-      "reward": "V\u00eddeo tutoriales",
+      "icon-url": "https://goteoassets.org/api/svg/icons/file.svg",
+      "id": 3437,
+      "license": "ccbyncnd",
+      "license-description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial ni otras obras derivadas",
+      "license-name": "CC - Reconocimiento - NoComercial - SinObraDerivada",
+      "license-svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncnd.svg",
+      "license-url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.es_ES",
+      "name": "V\u00eddeo tutoriales",
       "type": "social"
     },
     {
+      "amount": 0,
       "description": "A trav\u00e9s de los v\u00eddeos y sus secciones, de la web, el blog y las noticias relacionadas que difundimos procedentes de otras webs, blogs, redes sociales, etc. queremos, deseamos, intentamos,...aportar un granito de tierra al despertar de la conciencia terr\u00edcola, es decir, al sentimiento de agradecimiento y respeto a la Tierra.",
-      "icon": null,
-      "license": null,
-      "reward": "Despertar el ADN terr\u00edcola",
+      "icon-url": "https://goteoassets.org/api/svg/icons/other.svg",
+      "id": 3438,
+      "name": "Despertar el ADN terr\u00edcola",
       "type": "social"
     },
     {
+      "amount": 5,
       "description": "Qui\u00e9nes colaboren con el proyecto aparecer\u00e1n en nuestra web como 'semillas honor\u00edficas' que ayudan al crecimiento y florecimiento de llevamealhuerto.com\r\n",
-      "icon": null,
-      "license": null,
-      "reward": "'Semilla honor\u00edfica'",
+      "icon-url": "https://goteoassets.org/api/svg/icons/thanks.svg",
+      "id": 3418,
+      "name": "'Semilla honor\u00edfica'",
       "type": "individual"
     },
     {
+      "amount": 25,
       "description": "Te mandaremos un DVD que recopile todos los v\u00eddeotutoriales que hayamos grabado hasta el momento (ya llevamos m\u00e1s de 60!) + Reconocimeinto",
-      "icon": null,
-      "license": null,
-      "reward": "DVD con todos los v\u00eddeotutoriales",
+      "icon-url": "https://goteoassets.org/api/svg/icons/product.svg",
+      "id": 3496,
+      "name": "DVD con todos los v\u00eddeotutoriales",
       "type": "individual"
     },
     {
+      "amount": 40,
       "description": "Cesta mediana (2 personas) de verduras y hortalizas de temporada procedentes del caser\u00edo Burgobarri de Mungia, cultivadas por I\u00f1aki, nuestro presentador, a qui\u00e9n conocer\u00e1s personalmente cuando, el d\u00eda acordado, llame a tu puerta para entregarte en mano una cesta de productos del campo + el DVD recopilatorio de los v\u00eddeos emitidos en la Red + Reconocimiento. Las entregas s\u00f3lo se hacen en Bizkaia, pero si no vives por aqu\u00ed, seguro que tienes alguien a quien hacerle un buen regalo ;)",
-      "icon": null,
-      "license": null,
-      "reward": "Cesta de productos de temporada de nuestra tierra",
+      "icon-url": "https://goteoassets.org/api/svg/icons/product.svg",
+      "id": 3495,
+      "name": "Cesta de productos de temporada de nuestra tierra",
       "type": "individual"
     },
     {
+      "amount": 50,
       "description": "Cesta familiar (5 personas) de verduras y hortalizas de temporada procedentes del caser\u00edo Burgobarri de Mungia, cultivadas por I\u00f1aki, nuestro presentador, a qui\u00e9n conocer\u00e1s personalmente cuando, el d\u00eda acordado, llame a tu puerta para entregarte en mano una cesta de productos del campo + el DVD recopilatorio de los v\u00eddeos emitidos en la Red + Reconocimiento. Las entregas s\u00f3lo se hacen en Bizkaia, pero si no vives por aqu\u00ed, seguro que tienes alguien a quien hacerle un buen regalo ;)",
-      "icon": null,
-      "license": null,
-      "reward": "Cesta familiar de productos de temporada de nuestra tierra",
+      "icon-url": "https://goteoassets.org/api/svg/icons/product.svg",
+      "id": 3422,
+      "name": "Cesta familiar de productos de temporada de nuestra tierra",
       "type": "individual"
     },
     {
+      "amount": 150,
       "description": "Una visita al lugar de cultivo (huerto, jard\u00edn, azotea, balc\u00f3n,..) m\u00e1s la elaboraci\u00f3n de un informe sobre los cultivos y materiales a emplear en funci\u00f3n del espacio, la orientaci\u00f3n, el clima y los gustos del usuario. Adem\u00e1s incluimos un dossier basado en los cursos formativos de I\u00f1aki destinado a ayudarte en el auto-cultivo. El precio incluye salida 40 kms a la redonda desde Bilbao y a partir de ah\u00ed un coste a\u00f1adido por kilometraje de  0,30\u20ac/km. Si est\u00e1s de acuerdo con el informe puedes encargarnos un segundo presupuesto en concepto de dise\u00f1o y materiales a emplear (jardineras, soportes, sustratos , plantas y semillas,...).\r\n+ DVD + Reconocimiento",
-      "icon": null,
-      "license": null,
-      "reward": "Dise\u00f1o de balc\u00f3n, huerta o jard\u00edn personalizado",
+      "icon-url": "https://goteoassets.org/api/svg/icons/service.svg",
+      "id": 3435,
+      "name": "Dise\u00f1o de balc\u00f3n, huerta o jard\u00edn personalizado",
       "type": "individual"
     },
     {
+      "amount": 250,
       "description": "Tu logo o marca aparecer\u00e1 al principio de nuestros v\u00eddeos, en un total de 4 cap\u00edtulos, adem\u00e1s de mantener tu ense\u00f1a en nuestra web durante un mes.",
-      "icon": null,
-      "license": null,
-      "reward": "Patrocinio de tu marca, producto o negocio",
+      "icon-url": "https://goteoassets.org/api/svg/icons/service.svg",
+      "id": 3424,
+      "name": "Patrocinio de tu marca, producto o negocio",
       "type": "individual"
     },
     {
+      "amount": 800,
       "description": "Cursos presenciales de 15 horas, a cargo de I\u00f1aki Melgosa, sobre agricultura sostenible, casera, adaptada al espacio y necesidades de las/los cultivadoras/es. El viaje y alojamiento de I\u00f1aki, si el curso se desarrolla muy lejos de Euskadi, correr\u00e1n a cargo de la organizaci\u00f3n, as\u00ed c\u00f3mo el local para impartirlo. \u00a1Aprovecha ahora esta oportunidad antes de que I\u00f1aki salte a la fama!",
-      "icon": null,
-      "license": null,
-      "reward": "Formaci\u00f3n presencial",
+      "icon-url": "https://goteoassets.org/api/svg/icons/service.svg",
+      "id": 3425,
+      "name": "Formaci\u00f3n presencial",
       "type": "individual"
     }
   ],
   "scope": "global",
   "status": "funded",
-  "time-elapsed": 0.05696392059326172,
+  "time-elapsed": 0.009345769882202148,
   "translations": {
     "eu": {
       "about": "llevamealhuerto.com se caracteriza por transmitir conocimientos de agricultura ecol\u00f3gica y sostenible, a trav\u00e9s de breves p\u00edldoras audiovisuales, de manera sencilla, cercana, f\u00e1cil y con buen humor. \r\n\r\nNos preocupamos de la calidad, tanto a nivel de contenidos como t\u00e9cnica, para conseguir llegar a la gente y resultarles de utilidad. Nuestro reto es convertirnos en un referente dentro del mundo de las huertas urbanas y alternativas, un espacio verde digital que se retroalimente de comentarios, experiencias de los/as propios/as hortelanos/as y otras noticias de inter\u00e9s.",
       "description": "Un programa audiovisual on-line para aprender a cultivar en tu balc\u00f3n o en el huerto. Vivas d\u00f3nde vivas, en el campo, en la ciudad o en un pueblo, tanto si dispones de tierra propia, colectiva o solo de unas macetas, llevamealhuerto.com intenta transmitirte ese amor a la tierra, a comer rico, a implicarnos en el proceso de generar nuestra comida, eso s\u00ed \u00a1pas\u00e1ndonoslo bien!\r\n\r\nCada v\u00eddeo es una peque\u00f1a p\u00edldora pr\u00e1ctica, de la mano de I\u00f1aki Melgosa, un joven agricultor de Mung\u00eda, que nos cuenta sus trucos y consejos. Adem\u00e1s de esta secci\u00f3n llamada 'Balc\u00f3n comestible' el programa tiene otras dos: 'A pie de mata', donde recogemos iniciativas y proyectos alternativos relacionados con el primer sector y 'Baserritarrak', que pone en valor la sabidur\u00eda de nuestros mayores sobre la tierra y sus productos. \r\n\r\nLa difusi\u00f3n del programa es a trav\u00e9s de Internet, desde nuestra web y a trav\u00e9s de distintas redes sociales, lo que nos permite estar en contacto con todo un movimiento global de huertalizaci\u00f3n del mundo y de nuestras vidas.",
       "description-short": "Balkoian eta ortuan lantzen ikasteteko on-line ikus-entzunezko programa.",
-      "motivation": "llevamealhuerto.com va dirigido a gente que quiera huertalizar su vida, gente joven o madura que se sienta atra\u00eda por la posibilidad de cultivar, ya sea en el balc\u00f3n o la terraza, participando en alguna iniciativa de huerto urbano en su barrio o sacando partido a ese peque\u00f1a parcela que ahora est\u00e1 llena de 'maleza' al lado de casa.  Por supuesto, es una iniciativa para los/as defensores/as de la soberan\u00eda alimenticia y los amantes de los sabores tradicionales. En definitiva, un proyecto dirigido a todas aquellas personas que hayan entendido la importancia de transformar lo cercano y cotidiano para cambiar algo tan grande como el mundo moderno. ",
-      "video-url": "http://youtu.be/jUOo7xMoPzI"
+      "motivation": "llevamealhuerto.com va dirigido a gente que quiera huertalizar su vida, gente joven o madura que se sienta atra\u00eda por la posibilidad de cultivar, ya sea en el balc\u00f3n o la terraza, participando en alguna iniciativa de huerto urbano en su barrio o sacando partido a ese peque\u00f1a parcela que ahora est\u00e1 llena de 'maleza' al lado de casa.  Por supuesto, es una iniciativa para los/as defensores/as de la soberan\u00eda alimenticia y los amantes de los sabores tradicionales. En definitiva, un proyecto dirigido a todas aquellas personas que hayan entendido la importancia de transformar lo cercano y cotidiano para cambiar algo tan grande como el mundo moderno. "
     }
   },
   "user": {
-    "date_created": "Wed, 11 Jul 2012 12:58:29 +0200",
+    "date-created": "Wed, 11 Jul 2012 12:58:29 +0200",
     "id": "julieta",
     "name": "Llevamealhuerto.com",
-    "node": null,
-    "profile_image_url": "https://goteo.org/img/medium/logo-llah_1.png",
-    "profile_url": "https://goteo.org/user/profile/julieta"
+    "node": "euskadi",
+    "profile-image-url": "https://goteo.org/img/medium/logo-llah_1.png",
+    "profile-url": "https://goteo.org/user/profile/julieta"
   },
   "video-url": "http://youtu.be/jUOo7xMoPzI",
   "widget-url": "https://goteo.org/widget/project/llevamealhuerto"

@@ -50,7 +50,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/users/
 Gets information about a single user.
 
 ```bash
-curl -i --basic --user "user:key" {{ site.apiurl }}/users/olivier/
+curl -i --basic --user "user:key" {{ site.apiurl }}/users/goteo
 ```
 
 ### Filters available:
@@ -64,6 +64,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/users/olivier/
 {{ site.data.user.definitions_table }}
 
 ### Response body:
+
 ```json
 {{ site.data.user.example }}
 ```

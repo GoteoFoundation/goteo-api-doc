@@ -3144,18 +3144,6 @@ input[type="button"].btn-block {
 .panel-docs:after {
   clear: both;
 }
-.panel-docs:before,
-.panel-docs:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.panel-docs:after {
-  clear: both;
-}
 .panel-full-width {
   padding-left: 0;
   padding-right: 0;
@@ -4037,7 +4025,7 @@ input[type="button"].btn-block {
   line-height: 2;
 }
 @media all and (max-width: 800px) {
- 
+
   h1{
     font-size: 20px;
   }
@@ -4056,7 +4044,7 @@ input[type="button"].btn-block {
   .custom-ul {
   	font-size:10px !important;
   	margin-left: 0 !important;
-  } 
+  }
 }
 @media all and (max-width: 600px) {
   .teaser .teaser-content {

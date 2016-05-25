@@ -1,5 +1,21 @@
 {
   "definitions": {
+    "api_auth_token_get_Token": {
+      "properties": {
+        "access_token": {
+          "description": "Acces token that can be used to authenticate the API endpoints throught a HTTP Header:<br> \"Authorization: Bearer {access_token}\"",
+          "type": "string"
+        },
+        "expires_in": {
+          "description": "Number of seconds wich the access_token will be valid",
+          "type": "string"
+        },
+        "token_type": {
+          "description": "Currently, only `bearer`",
+          "type": "string"
+        }
+      }
+    },
     "api_calls_call_get_CallFull": {
       "properties": {
         "amount-available": {
@@ -126,11 +142,11 @@
           "type": "string"
         },
         "scope": {
-          "description": "Scope of the matchfunding call, one of 'local', 'regional', 'national', 'global' (or empty)",
+          "description": "Scope of the matchfunding call, one of `local`, `regional`, `national`, `global` (or `null`)",
           "type": "string"
         },
         "status": {
-          "description": "Status of the call, one of 'pending', 'editing', 'reviewing', 'applying', 'published', 'succeeded', 'expired'",
+          "description": "Status of the call, one of `pending`, `editing`, `reviewing`, `applying`, `published`, `succeeded`, `expired`",
           "type": "string"
         },
         "translations": {
@@ -157,52 +173,35 @@
     "api_calls_call_get_CallLocation": {
       "properties": {
         "city": {
+          "description": "City location of the matchfunding call (language may vary)",
           "type": "string"
         },
         "country": {
+          "description": "Country name of the matchfunding call (language may vary)",
           "type": "string"
         },
         "country-code": {
+          "description": "Country code of the matchfunding call in [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format",
           "type": "string"
         },
         "latitude": {
+          "description": "Project's location latitude coordinate",
           "type": "number"
         },
         "longitude": {
+          "description": "Project's location longitude coordinate",
           "type": "number"
         },
         "region": {
+          "description": "Region location of the matchfunding call (language may vary)",
           "type": "string"
         }
       }
     },
     "api_calls_call_get_CallTranslation": {
       "properties": {
-        "applies": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "description-short": {
-          "type": "string"
-        },
-        "dossier": {
-          "type": "string"
-        },
-        "legal": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "resources": {
-          "type": "string"
-        },
-        "tweet": {
-          "type": "string"
-        },
-        "whom": {
+        "*misc*": {
+          "description": "Every item of a translation will have the same structure as the parent object with the same fields (**and those fields only**) translated. Non translated items won't be displayed at all",
           "type": "string"
         }
       }
@@ -382,7 +381,7 @@
           "type": "string"
         },
         "status": {
-          "description": "Status of the call, one of 'pending', 'editing', 'reviewing', 'applying', 'published', 'succeeded', 'expired'",
+          "description": "Status of the call, one of `pending`, `editing`, `reviewing`, `applying`, `published`, `succeeded`, `expired`",
           "type": "string"
         }
       }
@@ -464,7 +463,7 @@
           "type": "number"
         },
         "currency": {
-          "description": "Currency of the contribution (currently one of EUR, GBP or USD)",
+          "description": "Currency of the contribution (currently one of `EUR`, `GBP`, `USD`) in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) format",
           "type": "string"
         },
         "date-charged": {
@@ -507,11 +506,11 @@
           "type": "boolean"
         },
         "status": {
-          "description": "Status of the payment, one of 'processing', 'pending', 'charged', 'cancelled', 'paid', 'returned', 'relocated', 'pool-returned'",
+          "description": "Status of the payment, one of `processing`, `pending`, `charged`, `cancelled`, `paid`, `returned`, `relocated`, `pool-returned`",
           "type": "string"
         },
         "type": {
-          "description": "Type of the payment, one of 'payment', 'drop', 'pool'",
+          "description": "Type of the payment, one of `payment`, `drop`, `pool`",
           "type": "string"
         }
       }
@@ -519,21 +518,27 @@
     "api_invests_invest_get_InvestLocation": {
       "properties": {
         "city": {
+          "description": "City location of the invest (language may vary)",
           "type": "string"
         },
         "country": {
+          "description": "Country name of the invest (language may vary)",
           "type": "string"
         },
         "country-code": {
+          "description": "Country code of the invest in [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format",
           "type": "string"
         },
         "latitude": {
+          "description": "Project's location latitude coordinate",
           "type": "number"
         },
         "longitude": {
+          "description": "Project's location longitude coordinate",
           "type": "number"
         },
         "region": {
+          "description": "Region location of the invest (language may vary)",
           "type": "string"
         }
       }
@@ -553,7 +558,7 @@
           "type": "number"
         },
         "currency": {
-          "description": "Currency of the contribution (currently one of EUR, GBP or USD)",
+          "description": "Currency of the contribution (currently one of `EUR`, `GBP`, `USD`) in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) format",
           "type": "string"
         },
         "date-charged": {
@@ -597,11 +602,11 @@
           "type": "boolean"
         },
         "status": {
-          "description": "Status of the payment, one of 'processing', 'pending', 'charged', 'cancelled', 'paid', 'returned', 'relocated', 'pool-returned'",
+          "description": "Status of the payment, one of `processing`, `pending`, `charged`, `cancelled`, `paid`, `returned`, `relocated`, `pool-returned`",
           "type": "string"
         },
         "type": {
-          "description": "Type of the payment, one of 'payment', 'drop', 'pool'",
+          "description": "Type of the payment, one of `payment`, `drop`, `pool`",
           "type": "string"
         }
       }
@@ -685,24 +690,35 @@
     "api_projects_project_get_ProjectCost": {
       "properties": {
         "amount": {
+          "description": "Cost's budget amount",
           "type": "number"
         },
-        "cost": {
-          "type": "string"
-        },
         "date-from": {
+          "description": "Date when to start the task associated with the cost (if any)",
           "type": "string"
         },
         "date-to": {
+          "description": "Date when to finish the task associated with the cost (if any)",
           "type": "string"
         },
         "description": {
+          "description": "Cost's description",
+          "type": "string"
+        },
+        "id": {
+          "description": "Cost's unique identifier",
+          "type": "integer"
+        },
+        "name": {
+          "description": "Cost's title",
           "type": "string"
         },
         "required": {
+          "description": "Whether is an optional or not cost (optional costs count for the optimum project's amount)",
           "type": "string"
         },
         "type": {
+          "description": "Cost's type (one of `task`, `structure`, `material`)",
           "type": "string"
         }
       }
@@ -853,7 +869,7 @@
           "type": "string"
         },
         "translations": {
-          "description": "All available translations in a list by language",
+          "description": "All available translations in a list indexed by language in [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format",
           "items": {
             "$ref": "#/definitions/api_projects_project_get_ProjectTranslation"
           },
@@ -876,9 +892,11 @@
     "api_projects_project_get_ProjectGallery": {
       "properties": {
         "image-url": {
+          "description": "URL image gallery item",
           "type": "string"
         },
         "resource-url": {
+          "description": "URL resource (link) associated with the gallery item (if any)",
           "type": "string"
         }
       }
@@ -886,21 +904,27 @@
     "api_projects_project_get_ProjectLocation": {
       "properties": {
         "city": {
+          "description": "City location of the project (language may vary)",
           "type": "string"
         },
         "country": {
+          "description": "Country name of the project (language may vary)",
           "type": "string"
         },
         "country-code": {
+          "description": "Country code of the project in [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format",
           "type": "string"
         },
         "latitude": {
+          "description": "Project's location latitude coordinate",
           "type": "number"
         },
         "longitude": {
+          "description": "Project's location longitude coordinate",
           "type": "number"
         },
         "region": {
+          "description": "Region location of the project (language may vary)",
           "type": "string"
         }
       }
@@ -908,62 +932,75 @@
     "api_projects_project_get_ProjectNeed": {
       "properties": {
         "description": {
+          "description": "Description for the non-economical desired project's contribution",
           "type": "string"
         },
-        "support": {
+        "id": {
+          "description": "Non-economical desired contribution unique identifier",
+          "type": "integer"
+        },
+        "name": {
+          "description": "Name for the non-economical desired project's contribution",
           "type": "string"
         },
         "type": {
+          "description": "Type fot the non-economical necessity (one of `lend`, `task`)",
           "type": "string"
         }
       }
     },
     "api_projects_project_get_ProjectReward": {
       "properties": {
+        "amount": {
+          "description": "Minimum amount required for a invest to apply this reward",
+          "type": "number"
+        },
         "description": {
+          "description": "Reward's item description",
           "type": "string"
         },
-        "icon": {
+        "icon-url": {
+          "description": "Reward's item URL icon",
           "type": "string"
+        },
+        "id": {
+          "description": "Reward's unique identifier",
+          "type": "integer"
         },
         "license": {
+          "description": "Reward's associated license ID (if any, only for `type=social`)",
           "type": "string"
         },
-        "reward": {
+        "license-description": {
+          "description": "Reward's associated license description (if any, only for `type=social`)",
+          "type": "string"
+        },
+        "license-name": {
+          "description": "Reward's associated license name (if any, only for `type=social`)",
+          "type": "string"
+        },
+        "license-svg-url": {
+          "description": "Reward's associated license SVG image URL resource (if any, only for `type=social`)",
+          "type": "string"
+        },
+        "license-url": {
+          "description": "Reward's associated license URL containing its terms (if any, only for `type=social`)",
+          "type": "string"
+        },
+        "name": {
+          "description": "Reward's item name",
           "type": "string"
         },
         "type": {
+          "description": "Reward's item type (one of `social`, `individual`)",
           "type": "string"
         }
       }
     },
     "api_projects_project_get_ProjectTranslation": {
       "properties": {
-        "about": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "keywords": {
-          "type": "string"
-        },
-        "media": {
-          "type": "string"
-        },
-        "motivation": {
-          "type": "string"
-        },
-        "related": {
-          "type": "string"
-        },
-        "reward": {
-          "type": "string"
-        },
-        "subtitle": {
-          "type": "string"
-        },
-        "video": {
+        "*misc*": {
+          "description": "Every item of a translation will have the same structure as the parent object with the same fields (**and those fields only**) translated. Non translated items won't be displayed at all.<br>**costs**, **rewards** and **needs** may be translated as well (in this case the translated array generated will use the ID as a key).",
           "type": "string"
         }
       }
@@ -1136,7 +1173,7 @@
           "type": "integer"
         },
         "donors-collaborators": {
-          "description": "Number of donors who collaborate",
+          "description": "Number of donors who collaborate with others creators",
           "type": "integer"
         },
         "leading-category": {
@@ -1144,7 +1181,7 @@
           "type": "integer"
         },
         "multidonors": {
-          "description": null,
+          "description": "Number of donors who donate to more than 1 project",
           "type": "integer"
         },
         "paypal-donors": {
@@ -1636,7 +1673,7 @@
           "type": "number"
         },
         "translations": {
-          "description": "All available translations in a list by language",
+          "description": "All available translations in a list indexed by language in [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format",
           "items": {
             "$ref": "#/definitions/api_users_user_get_UserTranslation"
           },
@@ -1647,9 +1684,11 @@
     "api_users_user_get_UserTranslation": {
       "properties": {
         "about": {
+          "description": "User's about text translated (if any)",
           "type": "string"
         },
         "name": {
+          "description": "Name of the user translated (if any)",
           "type": "string"
         }
       }
@@ -1698,18 +1737,18 @@
   "paths": {
     "/calls/": {
       "get": {
-        "description": "This resource returns call information.<br/><a href=\"http://developers.goteo.org/doc/calls\">developers.goteo.org/doc/calls</a>",
+        "description": "This resource returns call information.<br/>http://developers.goteo.org/doc/calls",
         "parameters": [
           {
             "collectionFormat": "multi",
-            "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the invests originally created in that node(s)",
+            "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the calls originally created in that node(s)",
             "in": "query",
             "name": "node",
             "type": "string"
           },
           {
             "collectionFormat": "multi",
-            "description": "Filter by individual project(s). Multiple projects can be specified. Restricts the list to the invests that have either collaborate or contributed (financially) to that project(s).",
+            "description": "Filter by individual project(s). Multiple projects can be specified. Restricts the list to the calls that containing that projects",
             "in": "query",
             "name": "project",
             "type": "string"
@@ -1722,28 +1761,28 @@
             "type": "string"
           },
           {
-            "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the invests created in that range",
+            "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the calls published in that range",
             "format": "date",
             "in": "query",
             "name": "from_date",
             "type": "string"
           },
           {
-            "description": "Filter until date.. Ex. \"2014-01-01\". Restricts the list to the invests created in that range",
+            "description": "Filter until date.. Ex. \"2014-01-01\". Restricts the list to the calls published in that range",
             "format": "date",
             "in": "query",
             "name": "to_date",
             "type": "string"
           },
           {
-            "description": "Filter by project category. Multiple invests can be specified. Restricts the list to the invests that have interests in that category(ies)",
+            "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the calls containing project with interests in that category(ies)",
             "in": "query",
             "name": "category",
             "type": "integer"
           },
           {
             "collectionFormat": "csv",
-            "description": "Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the invests used in projects geolocated in that area",
+            "description": "Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the calls with projects geolocated in that area",
             "in": "query",
             "name": "location",
             "type": "number"
@@ -1770,6 +1809,9 @@
           },
           "400": {
             "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
           }
         },
         "security": [
@@ -1785,7 +1827,7 @@
     },
     "/calls/{call_id}": {
       "get": {
-        "description": "This resource returns call information.<br/><a href=\"http://developers.goteo.org/calls#call\">developers.goteo.org/calls#call</a>",
+        "description": "This resource returns call information.<br/>http://developers.goteo.org/calls#call",
         "parameters": [
           {
             "description": "Unique ID for the call",
@@ -1801,6 +1843,9 @@
             "schema": {
               "$ref": "#/definitions/api_calls_call_get_CallFull"
             }
+          },
+          "401": {
+            "description": "Resource requires authorization"
           },
           "404": {
             "description": "Resource not found"
@@ -1819,7 +1864,7 @@
     },
     "/calls/{call_id}/projects/": {
       "get": {
-        "description": "This resource returns user projects information.<br/><a href=\"http://developers.goteo.org/calls#projects\">developers.goteo.org/calls#projects</a>",
+        "description": "This resource returns user projects information.<br/>http://developers.goteo.org/calls#projects",
         "parameters": [
           {
             "description": "Unique ID for the call",
@@ -1885,6 +1930,9 @@
               "type": "array"
             }
           },
+          "401": {
+            "description": "Resource requires authorization"
+          },
           "404": {
             "description": "Resource not found"
           }
@@ -1902,7 +1950,7 @@
     },
     "/categories/": {
       "get": {
-        "description": "This resource returns categories information.<br/><a href=\"http://developers.goteo.org/doc/categories\">developers.goteo.org/doc/categories</a>",
+        "description": "This resource returns categories information.<br/>http://developers.goteo.org/doc/categories",
         "parameters": [
           {
             "collectionFormat": "multi",
@@ -1956,6 +2004,9 @@
           },
           "400": {
             "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
           }
         },
         "security": [
@@ -1971,7 +2022,7 @@
     },
     "/digests/{endpoint}": {
       "get": {
-        "description": "<a href=\"http://developers.goteo.org/doc/digests\">developers.goteo.org/doc/digests</a><br/>This resource returns grouped statistics",
+        "description": "This resource returns grouped statistics<br/>http://developers.goteo.org/doc/digests",
         "parameters": [
           {
             "collectionFormat": "multi",
@@ -2023,6 +2074,9 @@
           },
           "400": {
             "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
           }
         },
         "security": [
@@ -2038,7 +2092,7 @@
     },
     "/invests/": {
       "get": {
-        "description": "This resource returns invest information.<br/><a href=\"http://developers.goteo.org/doc/invests\">developers.goteo.org/doc/invests</a>",
+        "description": "This resource returns invest information.<br/>http://developers.goteo.org/doc/invests",
         "parameters": [
           {
             "collectionFormat": "multi",
@@ -2069,7 +2123,7 @@
             "type": "string"
           },
           {
-            "description": "Filter by project category. Multiple invests can be specified. Restricts the list to the invests that have interests in that category(ies)",
+            "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the invests that have interests in that category(ies)",
             "in": "query",
             "name": "category",
             "type": "integer"
@@ -2103,6 +2157,9 @@
           },
           "400": {
             "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
           }
         },
         "security": [
@@ -2118,7 +2175,7 @@
     },
     "/invests/{invest_id}": {
       "get": {
-        "description": "This resource returns invest information.<br/><a href=\"http://developers.goteo.org/invests#invest\">developers.goteo.org/invests#invest</a>",
+        "description": "This resource returns invest information.<br/>http://developers.goteo.org/invests",
         "parameters": [
           {
             "description": "Unique ID for the invest",
@@ -2134,6 +2191,9 @@
             "schema": {
               "$ref": "#/definitions/api_invests_invest_get_InvestFull"
             }
+          },
+          "401": {
+            "description": "Resource requires authorization"
           },
           "404": {
             "description": "Resource not found"
@@ -2152,7 +2212,7 @@
     },
     "/licenses/": {
       "get": {
-        "description": "This resource returns license information.<br/><a href=\"http://developers.goteo.org/doc/licenses\">developers.goteo.org/doc/licenses</a>",
+        "description": "This resource returns license information.<br/>http://developers.goteo.org/doc/licenses",
         "parameters": [
           {
             "collectionFormat": "multi",
@@ -2196,13 +2256,6 @@
             "type": "integer"
           },
           {
-            "collectionFormat": "multi",
-            "description": "Get results by specified lang. Multiple langs can be specified",
-            "in": "query",
-            "name": "lang",
-            "type": "string"
-          },
-          {
             "collectionFormat": "csv",
             "description": "Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the licenses used in project rewards where the project is geolocated in that area.",
             "in": "query",
@@ -2219,6 +2272,9 @@
           },
           "400": {
             "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
           }
         },
         "security": [
@@ -2232,9 +2288,34 @@
         ]
       }
     },
+    "/login": {
+      "get": {
+        "description": "This resource returns login information.<br/>https://developers.goteo.org/doc/licenses",
+        "responses": {
+          "200": {
+            "description": "Bearer token data ready for an OAuth implicit authorization",
+            "schema": {
+              "$ref": "#/definitions/api_auth_token_get_Token"
+            }
+          },
+          "401": {
+            "description": "Resource requires authorization"
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "Auth API",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
     "/projects/": {
       "get": {
-        "description": "<a href=\"http://developers.goteo.org/doc/projects\">developers.goteo.org/doc/projects</a><br/>This resource returns project information.",
+        "description": "This resource returns project information.<br/>http://developers.goteo.org/doc/projects",
         "parameters": [
           {
             "collectionFormat": "multi",
@@ -2306,6 +2387,9 @@
           },
           "400": {
             "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
           }
         },
         "security": [
@@ -2321,7 +2405,7 @@
     },
     "/projects/{project_id}": {
       "get": {
-        "description": "<a href=\"http://developers.goteo.org/projects#project\">developers.goteo.org/projects#project</a><br/>This resource returns project detailed information.",
+        "description": "This resource returns project detailed information.<br/>http://developers.goteo.org/projects#project",
         "parameters": [
           {
             "description": "Unique ID for the project",
@@ -2337,6 +2421,9 @@
             "schema": {
               "$ref": "#/definitions/api_projects_project_get_ProjectFull"
             }
+          },
+          "401": {
+            "description": "Resource requires authorization"
           },
           "404": {
             "description": "Resource not found"
@@ -2355,7 +2442,7 @@
     },
     "/projects/{project_id}/donors/": {
       "get": {
-        "description": "This resource returns user donors information.<br/><a href=\"http://developers.goteo.org/projects#donors\">developers.goteo.org/projects#donors</a>",
+        "description": "This resource returns user donors information.<br/>http://developers.goteo.org/projects#donors",
         "parameters": [
           {
             "description": "Unique ID for the project",
@@ -2421,6 +2508,9 @@
               "type": "array"
             }
           },
+          "401": {
+            "description": "Resource requires authorization"
+          },
           "404": {
             "description": "Resource not found"
           }
@@ -2438,7 +2528,7 @@
     },
     "/reports/community/": {
       "get": {
-        "description": "<a href=\"http://developers.goteo.org/doc/reports#community\">developers.goteo.org/doc/reports#community</a><br/>This resource returns statistics about the community in Goteo.",
+        "description": "This resource returns statistics about the community in Goteo.<br/>http://developers.goteo.org/doc/reports#community",
         "parameters": [
           {
             "collectionFormat": "multi",
@@ -2498,6 +2588,9 @@
           },
           "400": {
             "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
           }
         },
         "security": [
@@ -2513,7 +2606,7 @@
     },
     "/reports/money/": {
       "get": {
-        "description": "<a href=\"http://developers.goteo.org/doc/reports#money\">developers.goteo.org/doc/reports#money</a><br/>This resource returns statistics about money in Goteo.",
+        "description": "This resource returns statistics about money in Goteo.<br/>http://developers.goteo.org/doc/reports#money",
         "parameters": [
           {
             "collectionFormat": "multi",
@@ -2566,6 +2659,9 @@
           },
           "400": {
             "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
           }
         },
         "security": [
@@ -2581,7 +2677,7 @@
     },
     "/reports/projects/": {
       "get": {
-        "description": "<a href=\"http://developers.goteo.org/doc/reports#projects\">developers.goteo.org/doc/reports#projects</a><br/>This resource returns statistics about projects in Goteo.",
+        "description": "This resource returns statistics about projects in Goteo.<br/>http://developers.goteo.org/doc/reports#projects",
         "parameters": [
           {
             "collectionFormat": "multi",
@@ -2634,6 +2730,9 @@
           },
           "400": {
             "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
           }
         },
         "security": [
@@ -2649,7 +2748,7 @@
     },
     "/reports/rewards/": {
       "get": {
-        "description": "<a href=\"http://developers.goteo.org/doc/reports#rewards\">developers.goteo.org/doc/reports#rewards</a><br/>This resource returns statistics about rewards in Goteo.",
+        "description": "This resource returns statistics about rewards in Goteo.<br/>http://developers.goteo.org/doc/reports#rewards",
         "parameters": [
           {
             "collectionFormat": "multi",
@@ -2702,6 +2801,9 @@
           },
           "400": {
             "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
           }
         },
         "security": [
@@ -2717,7 +2819,7 @@
     },
     "/reports/summary/": {
       "get": {
-        "description": "<a href=\"http://developers.goteo.org/doc/reports#summary\">developers.goteo.org/doc/reports#summary</a><br/>This resource returns statistics about the summary in Goteo.",
+        "description": "This resource returns statistics about the summary in Goteo.<br/>http://developers.goteo.org/doc/reports#summary",
         "parameters": [
           {
             "collectionFormat": "multi",
@@ -2770,6 +2872,9 @@
           },
           "400": {
             "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
           }
         },
         "security": [
@@ -2785,7 +2890,7 @@
     },
     "/users/": {
       "get": {
-        "description": "This resource returns user information.<br/><a href=\"http://developers.goteo.org/doc/users\">developers.goteo.org/doc/users</a>",
+        "description": "This resource returns user information.<br/>http://developers.goteo.org/doc/users",
         "parameters": [
           {
             "collectionFormat": "multi",
@@ -2850,6 +2955,9 @@
           },
           "400": {
             "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
           }
         },
         "security": [
@@ -2865,7 +2973,7 @@
     },
     "/users/{user_id}": {
       "get": {
-        "description": "This resource returns user information.<br/><a href=\"http://developers.goteo.org/users#user\">developers.goteo.org/users#user</a>",
+        "description": "This resource returns user information.<br/>http://developers.goteo.org/users#user",
         "parameters": [
           {
             "description": "Unique ID for the user",

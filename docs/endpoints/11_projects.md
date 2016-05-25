@@ -36,7 +36,6 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/projects/
 
 {{ site.data.projects.definitions_table }}
 
-
 ### Response body:
 
 ```json
@@ -58,11 +57,9 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/projects/llevamealhuerto
 * No filters are available in this endpoint
 * **{PROJECT_ID}** must be the unique identifier of the project
 
-
 ### Response values:
 
 {{ site.data.project.definitions_table }}
-
 
 ### Response body:
 
@@ -73,7 +70,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/projects/llevamealhuerto
 <a name="project"></a>
 ## /projects/{PROJECT_ID}/donors/
 
-Gets information about a single project.
+Lists all donors in a project
 
 ```bash
 curl -i --basic --user "user:key" {{ site.apiurl }}/projects/llevamealhuerto/donors/
@@ -91,7 +88,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/projects/llevamealhuerto/don
 
 | Attribute  | Type | Description |
 | ------------- | ------------- | ------------ |
-| * **items** | *array* | An array (limited to the maximum results per page specified in filters) with the list of projects |
+| * **items** | *array* | An array (limited to the maximum results per page specified in filters) with the list of donors |
 | **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
 
 #### * Array sub-fields:
@@ -99,7 +96,6 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/projects/llevamealhuerto/don
 **items** returns an array of the following object:
 
 {{ site.data.project_donors.definitions_table }}
-
 
 ### Response body:
 

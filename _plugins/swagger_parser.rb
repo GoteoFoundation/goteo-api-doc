@@ -52,7 +52,7 @@ module SwaggerParser
                     t << "\n| Attribute  | Type | Description |\n"
                     t << "|------------|------|-------------|\n"
                     for _key,val in definitions
-                        t << "| **#{_key}** | *#{val['type']}* | #{val['description']} |\n"
+                        t << "| #{_key} | #{val['type']} | #{val['description']} |\n"
                     end
                     # puts(t)
                 end
@@ -69,7 +69,7 @@ module SwaggerParser
                     t << "|------------|------|-------------|\n"
                     for val in parameters
                         type = val['type']
-                        t << "| **#{val['name']}** | *#{type}* | #{val['description']} |\n"
+                        t << "| #{val['name']} | #{type} | #{val['description']} |\n"
                     end
                     # puts(t)
                 end
@@ -78,6 +78,7 @@ module SwaggerParser
 
             # @site.data['swagger'] = swagger
             for key,ob in {
+                'login' => { 'id' => 'api_auth_token_get_Token' },
                 'projects' => { 'id' => 'api_projects_projects_get_Project' },
                 'project' => { 'id' => 'api_projects_project_get_ProjectFull' },
                 'project_donors' => { 'id' => 'api_projects_project_donors_get_ProjectDonor', 'endpoint' => '/project/{project}/donors/' },
@@ -85,6 +86,11 @@ module SwaggerParser
                 'user' => { 'id' => 'api_users_user_get_UserFull' },
                 'categories' => { 'id' => 'api_categories_categories_get_Category' },
                 'licenses' => { 'id' => 'api_licenses_licenses_get_License' },
+                'invests' => { 'id' => 'api_invests_invests_get_Invest' },
+                'invest' => { 'id' => 'api_invests_invest_get_InvestFull' },
+                'calls' => { 'id' => 'api_calls_calls_get_Call' },
+                'call' => { 'id' => 'api_calls_call_get_CallFull' },
+                'call_projects' => { 'id' => 'api_calls_call_projects_get_ProjectCall', 'endpoint' => '/call/{call}/projects/' },
                 'reports_summary' => { 'id' => 'api_reports_reports_summary_get_Summary', 'endpoint' => '/reports/summary/' },
                 'reports_community' => { 'id' => 'api_reports_reports_community_get_Community', 'endpoint' => '/reports/community/' },
                 'reports_money' => { 'id' => 'api_reports_reports_money_get_Money', 'endpoint' => '/reports/money/' },
