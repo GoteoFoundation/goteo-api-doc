@@ -21,7 +21,7 @@
       "percentage-pledged-successful": 145.77,
       "pledged": 28388,
       "refunded": 4681,
-      "time-elapsed": 0.0035016536712646484
+      "time-elapsed": 0.003536224365234375
     },
     "2012": {
       "average-donation": 41.75,
@@ -44,7 +44,7 @@
       "percentage-pledged-successful": 128.54,
       "pledged": 438832,
       "refunded": 25218,
-      "time-elapsed": 0.0035429000854492188
+      "time-elapsed": 0.0038976669311523438
     },
     "2013": {
       "average-donation": 48.98,
@@ -67,7 +67,7 @@
       "percentage-pledged-successful": 129.69,
       "pledged": 940001,
       "refunded": 47339,
-      "time-elapsed": 0.003602266311645508
+      "time-elapsed": 0.004122257232666016
     },
     "2014": {
       "average-donation": 48.83,
@@ -90,7 +90,7 @@
       "percentage-pledged-successful": 123.74,
       "pledged": 800330,
       "refunded": 59358,
-      "time-elapsed": 0.003477811813354492
+      "time-elapsed": 0.003693819046020508
     },
     "2015": {
       "average-donation": 52.97,
@@ -113,7 +113,7 @@
       "percentage-pledged-successful": 132.81,
       "pledged": 895092,
       "refunded": 51126,
-      "time-elapsed": 0.0035130977630615234
+      "time-elapsed": 0.0034639835357666016
     },
     "2016": {
       "average-donation": 48.88,
@@ -129,14 +129,14 @@
       "matchfundpledge-amount": 70000,
       "meta": {
         "from_date": "2016-01-01",
-        "to_date": "2016-05-25"
+        "to_date": "2016-05-26"
       },
       "paypal-amount": 66528,
       "percentage-pledged-failed": 24.03,
       "percentage-pledged-successful": 153.83,
       "pledged": 437421,
       "refunded": 10613,
-      "time-elapsed": 0.0035860538482666016
+      "time-elapsed": 0.0037796497344970703
     }
   },
   "endpoint": "/reports/money/",
@@ -157,7 +157,7 @@
     "percentage-pledged-successful": 129.94,
     "pledged": 3540064,
     "refunded": 198335,
-    "time-elapsed": 0.0023772716522216797
+    "time-elapsed": 0.002560138702392578
   },
-  "time-elapsed": 0.024166107177734375
+  "time-elapsed": 0.025672435760498047
 }
