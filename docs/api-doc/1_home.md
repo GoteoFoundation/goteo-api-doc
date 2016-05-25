@@ -106,3 +106,24 @@ X-RateLimit-Reset: 1424167620
 Date: Tue, 17 Feb 2015 10:06:37 GMT
 ```
 
+## HTTP Statuses
+
+Along with the HTTP methods that the API responds to, it will also return standard HTTP statuses, including error codes.
+
+In the event of a problem, the status will contain the error code, while the body of the response will usually contain additional information about the problem that was encountered.
+
+In general, if the status returned is in the 200 range, it indicates that the request was fulfilled successfully and that no error was encountered.
+
+Return codes in the 400 range typically indicate that there was an issue with the request that was sent. Among other things, this could mean that you did not authenticate correctly, that you are requesting an action that you do not have authorization for, that the object you are requesting does not exist, or that your request is malformed.
+
+If you receive a status in the 500 range, this generally indicates a server-side problem. This means that we are having an issue on our end and cannot fulfill your request currently.
+
+**Tipical responses returned by the API:**
+
+| Code | Error | Description |
+|------|-------|-------------|
+| 200  | None  | request ok |
+| 401  | yes, in request | Resource requires authorization, authentication is needed or was unsuccessful |
+| 400  | yes, in request | Invalid parameters format, typically when data passed in the query string does not much the proper required format |
+| 404  | yes, in request | Resource not found, invalid endpoint or the OBJECT ID required does not exists |
+| 500  | yes, in server | Server error, that's on us! Please report and we will investigate. |

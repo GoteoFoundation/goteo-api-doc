@@ -386,11 +386,18 @@
         }
       }
     },
-    "api_calls_calls_get_calls": {
-      "items": {
-        "$ref": "#/definitions/api_calls_calls_get_Call"
-      },
-      "type": "array"
+    "api_calls_calls_get_ResponseCall": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/api_calls_calls_get_Call"
+          },
+          "type": "array"
+        },
+        "meta": {
+          "$ref": "#/definitions/api_projects_projects_get_MetaProject"
+        }
+      }
     },
     "api_categories_categories_get_Category": {
       "properties": {
@@ -416,11 +423,54 @@
         }
       }
     },
-    "api_categories_categories_get_categories": {
-      "items": {
-        "$ref": "#/definitions/api_categories_categories_get_Category"
-      },
-      "type": "array"
+    "api_categories_categories_get_MetaCategory": {
+      "properties": {
+        "from_date": {
+          "description": "Only if filtering by from_date",
+          "type": "string"
+        },
+        "lang": {
+          "description": "Only if filtering by lang",
+          "items": [],
+          "type": "array"
+        },
+        "location": {
+          "description": "Only if filtering by location",
+          "items": [],
+          "type": "array"
+        },
+        "node": {
+          "description": "Only if filtering by node",
+          "items": [],
+          "type": "array"
+        },
+        "project": {
+          "description": "Only if filtering by project",
+          "items": [],
+          "type": "array"
+        },
+        "to_date": {
+          "description": "Only if filtering by to_date",
+          "type": "string"
+        },
+        "total": {
+          "description": "Total elements available for the collection",
+          "type": "integer"
+        }
+      }
+    },
+    "api_categories_categories_get_ResponseCategory": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/api_categories_categories_get_Category"
+          },
+          "type": "array"
+        },
+        "meta": {
+          "$ref": "#/definitions/api_categories_categories_get_MetaCategory"
+        }
+      }
     },
     "api_digests_get_Bucket": {
       "properties": {
@@ -543,6 +593,26 @@
         }
       }
     },
+    "api_invests_invests_get_ExtraInvest": {
+      "properties": {
+        "calls": {
+          "description": "Number of matchfunding calls applying in the current query",
+          "type": "integer"
+        },
+        "pledged": {
+          "description": "Total sum pledged amount for the current query",
+          "type": "number"
+        },
+        "projects": {
+          "description": "Total sum of projects applying in the current query",
+          "type": "integer"
+        },
+        "refunded": {
+          "description": "Total sum of refunded amount for the current query",
+          "type": "number"
+        }
+      }
+    },
     "api_invests_invests_get_Invest": {
       "properties": {
         "amount": {
@@ -611,11 +681,21 @@
         }
       }
     },
-    "api_invests_invests_get_invests": {
-      "items": {
-        "$ref": "#/definitions/api_invests_invests_get_Invest"
-      },
-      "type": "array"
+    "api_invests_invests_get_ResponseInvest": {
+      "properties": {
+        "extra": {
+          "$ref": "#/definitions/api_invests_invests_get_ExtraInvest"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/definitions/api_invests_invests_get_Invest"
+          },
+          "type": "array"
+        },
+        "meta": {
+          "$ref": "#/definitions/api_projects_projects_get_MetaProject"
+        }
+      }
     },
     "api_licenses_licenses_get_License": {
       "properties": {
@@ -649,11 +729,59 @@
         }
       }
     },
-    "api_licenses_licenses_get_licenses": {
-      "items": {
-        "$ref": "#/definitions/api_licenses_licenses_get_License"
-      },
-      "type": "array"
+    "api_licenses_licenses_get_MetaLicense": {
+      "properties": {
+        "category": {
+          "description": "Only if filtering by category",
+          "items": [],
+          "type": "array"
+        },
+        "from_date": {
+          "description": "Only if filtering by from_date",
+          "type": "string"
+        },
+        "lang": {
+          "description": "Only if filtering by lang",
+          "items": [],
+          "type": "array"
+        },
+        "location": {
+          "description": "Only if filtering by location",
+          "items": [],
+          "type": "array"
+        },
+        "node": {
+          "description": "Only if filtering by node",
+          "items": [],
+          "type": "array"
+        },
+        "project": {
+          "description": "Only if filtering by project",
+          "items": [],
+          "type": "array"
+        },
+        "to_date": {
+          "description": "Only if filtering by to_date",
+          "type": "string"
+        },
+        "total": {
+          "description": "Total elements available for the collection",
+          "type": "integer"
+        }
+      }
+    },
+    "api_licenses_licenses_get_ResponseLicense": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/api_licenses_licenses_get_License"
+          },
+          "type": "array"
+        },
+        "meta": {
+          "$ref": "#/definitions/api_licenses_licenses_get_MetaLicense"
+        }
+      }
     },
     "api_projects_project_donors_get_ProjectDonor": {
       "properties": {
@@ -684,6 +812,19 @@
         "profile-url": {
           "description": "URL for the user profile",
           "type": "string"
+        }
+      }
+    },
+    "api_projects_project_donors_get_ResponseDonor": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/api_projects_project_donors_get_ProjectDonor"
+          },
+          "type": "array"
+        },
+        "meta": {
+          "$ref": "#/definitions/api_users_users_get_MetaUser"
         }
       }
     },
@@ -1005,6 +1146,55 @@
         }
       }
     },
+    "api_projects_projects_get_MetaProject": {
+      "properties": {
+        "category": {
+          "description": "Only if filtering by category",
+          "items": [],
+          "type": "array"
+        },
+        "from_date": {
+          "description": "Only if filtering by from_date",
+          "type": "string"
+        },
+        "lang": {
+          "description": "Only if filtering by lang",
+          "items": [],
+          "type": "array"
+        },
+        "limit": {
+          "description": "Limit of results per page when retrieving a collection",
+          "type": "integer"
+        },
+        "location": {
+          "description": "Only if filtering by location",
+          "items": [],
+          "type": "array"
+        },
+        "node": {
+          "description": "Only if filtering by node",
+          "items": [],
+          "type": "array"
+        },
+        "page": {
+          "description": "Current page, `0` based (first page is zero)",
+          "type": "integer"
+        },
+        "project": {
+          "description": "Only if filtering by project",
+          "items": [],
+          "type": "array"
+        },
+        "to_date": {
+          "description": "Only if filtering by to_date",
+          "type": "string"
+        },
+        "total": {
+          "description": "Total elements available for the collection",
+          "type": "integer"
+        }
+      }
+    },
     "api_projects_projects_get_Project": {
       "properties": {
         "amount": {
@@ -1081,11 +1271,18 @@
         }
       }
     },
-    "api_projects_projects_get_projects": {
-      "items": {
-        "$ref": "#/definitions/api_projects_projects_get_Project"
-      },
-      "type": "array"
+    "api_projects_projects_get_ResponseProject": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/api_projects_projects_get_Project"
+          },
+          "type": "array"
+        },
+        "meta": {
+          "$ref": "#/definitions/api_projects_projects_get_MetaProject"
+        }
+      }
     },
     "api_reports_reports_community_get_Category": {
       "properties": {
@@ -1693,6 +1890,63 @@
         }
       }
     },
+    "api_users_users_get_MetaUser": {
+      "properties": {
+        "category": {
+          "description": "Only if filtering by category",
+          "items": [],
+          "type": "array"
+        },
+        "from_date": {
+          "description": "Only if filtering by from_date",
+          "type": "string"
+        },
+        "lang": {
+          "description": "Only if filtering by lang",
+          "items": [],
+          "type": "array"
+        },
+        "limit": {
+          "description": "Limit of results per page when retrieving a collection",
+          "type": "integer"
+        },
+        "node": {
+          "description": "Only if filtering by node",
+          "items": [],
+          "type": "array"
+        },
+        "page": {
+          "description": "Current page, `0` based (first page is zero)",
+          "type": "integer"
+        },
+        "project": {
+          "description": "Only if filtering by project",
+          "items": [],
+          "type": "array"
+        },
+        "to_date": {
+          "description": "Only if filtering by to_date",
+          "type": "string"
+        },
+        "total": {
+          "description": "Total elements available for the collection",
+          "type": "integer"
+        }
+      }
+    },
+    "api_users_users_get_ResponseUser": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/api_users_users_get_User"
+          },
+          "type": "array"
+        },
+        "meta": {
+          "$ref": "#/definitions/api_users_users_get_MetaUser"
+        }
+      }
+    },
     "api_users_users_get_User": {
       "properties": {
         "date-created": {
@@ -1720,12 +1974,6 @@
           "type": "string"
         }
       }
-    },
-    "api_users_users_get_users": {
-      "items": {
-        "$ref": "#/definitions/api_users_users_get_User"
-      },
-      "type": "array"
     }
   },
   "info": {
@@ -1775,6 +2023,7 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
             "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the calls containing project with interests in that category(ies)",
             "in": "query",
             "name": "category",
@@ -1804,7 +2053,7 @@
           "200": {
             "description": "List of available calls",
             "schema": {
-              "$ref": "#/definitions/api_calls_calls_get_calls"
+              "$ref": "#/definitions/api_calls_calls_get_ResponseCall"
             }
           },
           "400": {
@@ -1902,6 +2151,7 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
             "description": "Filter by call category. Multiple users can be specified. Restricts the list to the users that have interests in that category(ies)",
             "in": "query",
             "name": "category",
@@ -1925,7 +2175,7 @@
             "description": "Project data",
             "schema": {
               "items": {
-                "$ref": "#/definitions/api_calls_call_projects_get_ProjectCall"
+                "$ref": "#/definitions/api_projects_projects_get_ResponseProject"
               },
               "type": "array"
             }
@@ -1999,7 +2249,7 @@
           "200": {
             "description": "List of available categories",
             "schema": {
-              "$ref": "#/definitions/api_categories_categories_get_categories"
+              "$ref": "#/definitions/api_categories_categories_get_ResponseCategory"
             }
           },
           "400": {
@@ -2024,6 +2274,13 @@
       "get": {
         "description": "This resource returns grouped statistics<br/>http://developers.goteo.org/doc/digests",
         "parameters": [
+          {
+            "description": "Endpoint to digest. Not all endpoints may be available to digest",
+            "in": "path",
+            "name": "endpoint",
+            "required": true,
+            "type": "string"
+          },
           {
             "collectionFormat": "multi",
             "description": "Filter by individual node(s). Multiple nodes can be specified",
@@ -2123,6 +2380,7 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
             "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the invests that have interests in that category(ies)",
             "in": "query",
             "name": "category",
@@ -2152,7 +2410,7 @@
           "200": {
             "description": "List of available invests",
             "schema": {
-              "$ref": "#/definitions/api_invests_invests_get_invests"
+              "$ref": "#/definitions/api_invests_invests_get_ResponseInvest"
             }
           },
           "400": {
@@ -2267,7 +2525,7 @@
           "200": {
             "description": "List of available licenses",
             "schema": {
-              "$ref": "#/definitions/api_licenses_licenses_get_licenses"
+              "$ref": "#/definitions/api_licenses_licenses_get_ResponseLicense"
             }
           },
           "400": {
@@ -2353,6 +2611,7 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
             "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the projects that have interests in that category(ies)",
             "in": "query",
             "name": "category",
@@ -2382,7 +2641,7 @@
           "200": {
             "description": "List of available projects",
             "schema": {
-              "$ref": "#/definitions/api_projects_projects_get_projects"
+              "$ref": "#/definitions/api_projects_projects_get_ResponseProject"
             }
           },
           "400": {
@@ -2500,12 +2759,9 @@
         ],
         "responses": {
           "200": {
-            "description": "User data",
+            "description": "Donor's data",
             "schema": {
-              "items": {
-                "$ref": "#/definitions/api_projects_project_donors_get_ProjectDonor"
-              },
-              "type": "array"
+              "$ref": "#/definitions/api_projects_project_donors_get_ResponseDonor"
             }
           },
           "401": {
@@ -2928,6 +3184,7 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
             "description": "Filter by user categories. Multiple categories can be specified. Restricts the list to the users that have interests in that category(ies)",
             "in": "query",
             "name": "category",
@@ -2950,7 +3207,7 @@
           "200": {
             "description": "List of available users",
             "schema": {
-              "$ref": "#/definitions/api_users_users_get_users"
+              "$ref": "#/definitions/api_users_users_get_ResponseUser"
             }
           },
           "400": {
@@ -2989,6 +3246,9 @@
             "schema": {
               "$ref": "#/definitions/api_users_user_get_UserFull"
             }
+          },
+          "401": {
+            "description": "Resource requires authorization"
           },
           "404": {
             "description": "Resource not found"

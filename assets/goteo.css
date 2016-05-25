@@ -80,39 +80,40 @@
 
 }
 
- table  {
+ .panel-docs table  {
   border:none;
  }
- table thead tr th {
+ .panel-docs table thead tr th {
   color:#aaa;
   border:none;
  }
+ table > tbody > tr:hover > td ,
  table > tbody > tr:nth-child(odd) > td {
   background-color: inherit;
  }
- table > tbody > tr:hover > td,
- table > tbody > tr:hover > th {
+ .panel-docs table > tbody > tr:hover > td,
+ .panel-docs table > tbody > tr:hover > th {
   background-color: #f5f5f5;
 }
- table > tbody > tr > td:first-child {
+ .panel-docs table > tbody > tr > td:first-child {
   font-family: monospace;
   font-weight: bold;
   color:#333;
  }
- table > tbody > tr > td:nth-child(2) {
+ .panel-docs table > tbody > tr > td:nth-child(2) {
   font-size: 0.8em;
   color:#777;
   font-style: italic;
   // background: #f9f9f9;
  }
- table > tbody > tr > td:last-child {
+ .panel-docs table > tbody > tr > td:last-child {
   color:#444;
   font-style: normal;
   font-size: 0.9em;
   background: #f9f9f9;
  }
 
- table > tbody > tr > td {
+ .panel-docs table > tbody > tr > td {
   border:none;
   border-top: 1px solid #ddd;
  }

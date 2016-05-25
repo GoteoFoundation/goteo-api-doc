@@ -19,7 +19,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/calls/
 
 ### Filters available:
 
-**The [standard set of filters](/doc/filters) applies to this endpoint with these particulars:**
+**The [standard set of filters](/doc/filters/) applies to this endpoint with these particulars:**
 
 {{ site.data.calls.parameters_table }}
 

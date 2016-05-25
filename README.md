@@ -12,12 +12,14 @@ Swagger JSON files are needed to generate the documentation, they can be retriev
 
 They'll be copied to the `_json` folder
 
+
 For compilation we use [Jekyll](https://jekyllrb.com/), install dependencies as the explain in [Github](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll) and start a live preview with this command:
 
 ```bash
 jekyll serve
 ```
 
+Compilation uses the downloaded JSON files in the `_json` folder, the plugin `_plugins/swagger_parser.rb` creates some views and objects ready to be used in the templates.
 
 Finally, an automatic publication to the `gh-pages` branch can be achieved with this Rake task:
 

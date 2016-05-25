@@ -21,7 +21,7 @@
       "percentage-pledged-successful": 145.77,
       "pledged": 28388,
       "refunded": 4681,
-      "time-elapsed": 0.003533601760864258
+      "time-elapsed": 0.0038633346557617188
     },
     "2012": {
       "average-donation": 41.75,
@@ -44,7 +44,7 @@
       "percentage-pledged-successful": 128.54,
       "pledged": 438832,
       "refunded": 25218,
-      "time-elapsed": 0.0036699771881103516
+      "time-elapsed": 0.004004716873168945
     },
     "2013": {
       "average-donation": 48.98,
@@ -67,7 +67,7 @@
       "percentage-pledged-successful": 129.69,
       "pledged": 940001,
       "refunded": 47339,
-      "time-elapsed": 0.003845691680908203
+      "time-elapsed": 0.004649162292480469
     },
     "2014": {
       "average-donation": 48.83,
@@ -90,7 +90,7 @@
       "percentage-pledged-successful": 123.74,
       "pledged": 800330,
       "refunded": 59358,
-      "time-elapsed": 0.0035409927368164062
+      "time-elapsed": 0.004454851150512695
     },
     "2015": {
       "average-donation": 52.97,
@@ -113,7 +113,7 @@
       "percentage-pledged-successful": 132.81,
       "pledged": 895092,
       "refunded": 51126,
-      "time-elapsed": 0.0035915374755859375
+      "time-elapsed": 0.00404047966003418
     },
     "2016": {
       "average-donation": 48.88,
@@ -136,7 +136,7 @@
       "percentage-pledged-successful": 153.83,
       "pledged": 437421,
       "refunded": 10613,
-      "time-elapsed": 0.0036013126373291016
+      "time-elapsed": 0.003763437271118164
     }
   },
   "endpoint": "/reports/money/",
@@ -157,7 +157,7 @@
     "percentage-pledged-successful": 129.94,
     "pledged": 3540064,
     "refunded": 198335,
-    "time-elapsed": 0.0034394264221191406
+    "time-elapsed": 0.002367734909057617
   },
-  "time-elapsed": 0.025821685791015625
+  "time-elapsed": 0.027777910232543945
 }

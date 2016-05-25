@@ -22,15 +22,15 @@ module SwaggerParser
                     if value['$ref']
                         ref = value['$ref'].split('/')[-1]
                         _key = ref.split('_')[-1]
-                        value['description'] << ' &#9758;<a href="#' + _key + '">' + _key + '</a>'
+                        value['description'] << ' &#9758; <a href="#' + _key + '">' + _key + '</a>'
                         puts(ref, _key)
                         definitions[_key] = get_definitions(ref)[_key]
                     end
 
-                    if(value['items'].respond_to? :each and value['items']['$ref'])
+                    if(value['items'] and value['items'].is_a? Hash and value['items']['$ref'])
                         ref = value['items']['$ref'].split('/')[-1]
                         _key = ref.split('_')[-1]
-                        value['description'] << ' &#9758;<a href="#' + _key + '">' + _key + '</a>'
+                        value['description'] << ' &#9758; <a href="#' + _key + '">' + _key + '</a>'
                         puts(ref, _key)
                         definitions[_key] = get_definitions(ref)[_key]
                     end
@@ -78,6 +78,7 @@ module SwaggerParser
 
             # @site.data['swagger'] = swagger
             for key,ob in {
+                'meta' => { 'id' => 'api_projects_projects_get_MetaProject' },
                 'login' => { 'id' => 'api_auth_token_get_Token' },
                 'projects' => { 'id' => 'api_projects_projects_get_Project' },
                 'project' => { 'id' => 'api_projects_project_get_ProjectFull' },

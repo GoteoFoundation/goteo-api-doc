@@ -28,6 +28,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/invests/
 | ------------- | ------------- | ------------ |
 | * **items** | *array* | An array (limited to the maximum results per page specified in filters) with the list of invests |
 | **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
+| **extra** | *object* | This object will return  |
 
 #### * Array sub-fields:
 
