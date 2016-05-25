@@ -25,15 +25,6 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/categories/
 
 ### Response values:
 
-| Attribute  | Type | Description |
-| ------------- | ------------- | ------------ |
-| * **items** | *array* | An array with the list of categories |
-| **meta** | *array* | Additionally, extra information will be provided here (such as parameter filtering) |
-
-#### * Array sub-fields:
-
-**items** returns an array of the following object:
-
 {{ site.data.categories.definitions_table }}
 
 ### Response body

@@ -19,19 +19,18 @@ module SwaggerParser
                 for key,value in definitions[key]
                     value['description'] = '...' if not value['description']
 
-                    if value['$ref']
+                    # Adding children to definitions and a anchor
+                    ref = nil
+                    _key = nil
+                    if value.has_key? '$ref'
                         ref = value['$ref'].split('/')[-1]
-                        _key = ref.split('_')[-1]
-                        value['description'] << ' &#9758; <a href="#' + _key + '">' + _key + '</a>'
-                        puts(ref, _key)
-                        definitions[_key] = get_definitions(ref)[_key]
-                    end
-
-                    if(value['items'] and value['items'].is_a? Hash and value['items']['$ref'])
+                    elsif value.has_key? 'items' and value['items'].is_a? Hash and value['items'].has_key? '$ref'
                         ref = value['items']['$ref'].split('/')[-1]
+                    end
+                    if ref and not definitions.has_key? _key
                         _key = ref.split('_')[-1]
-                        value['description'] << ' &#9758; <a href="#' + _key + '">' + _key + '</a>'
-                        puts(ref, _key)
+                        value['description'] << ' &#9758; <a href="#' + _key + '">' + _key + '</a>' if not value['description'].include? _key
+                        # puts(ref, _key)
                         definitions[_key] = get_definitions(ref)[_key]
                     end
                 end
@@ -78,20 +77,31 @@ module SwaggerParser
 
             # @site.data['swagger'] = swagger
             for key,ob in {
-                'meta' => { 'id' => 'api_projects_projects_get_MetaProject' },
+                'metaproject' => { 'id' => 'api_projects_projects_get_MetaProject' },
+                'metauser' => { 'id' => 'api_users_users_get_MetaUser' },
+                'metacategory' => { 'id' => 'api_categories_categories_get_MetaCategory' },
+                'metalicense' => { 'id' => 'api_licenses_licenses_get_MetaLicense' },
                 'login' => { 'id' => 'api_auth_token_get_Token' },
-                'projects' => { 'id' => 'api_projects_projects_get_Project' },
+                # 'projects' => { 'id' => 'api_projects_projects_get_Project' },
+                'projects' => { 'id' => 'api_projects_projects_get_ResponseProject' },
                 'project' => { 'id' => 'api_projects_project_get_ProjectFull' },
-                'project_donors' => { 'id' => 'api_projects_project_donors_get_ProjectDonor', 'endpoint' => '/project/{project}/donors/' },
-                'users' => { 'id' => 'api_users_users_get_User' },
+                # 'project_donors' => { 'id' => 'api_projects_project_donors_get_ProjectDonor', 'endpoint' => '/project/{project}/donors/' },
+                'project_donors' => { 'id' => 'api_projects_project_donors_get_ResponseDonor', 'endpoint' => '/project/{project}/donors/' },
+                # 'users' => { 'id' => 'api_users_users_get_User' },
+                'users' => { 'id' => 'api_users_users_get_ResponseUser' },
                 'user' => { 'id' => 'api_users_user_get_UserFull' },
-                'categories' => { 'id' => 'api_categories_categories_get_Category' },
-                'licenses' => { 'id' => 'api_licenses_licenses_get_License' },
-                'invests' => { 'id' => 'api_invests_invests_get_Invest' },
+                # 'categories' => { 'id' => 'api_categories_categories_get_Category' },
+                'categories' => { 'id' => 'api_categories_categories_get_ResponseCategory' },
+                # 'licenses' => { 'id' => 'api_licenses_licenses_get_License' },
+                'licenses' => { 'id' => 'api_licenses_licenses_get_ResponseLicense' },
+                # 'invests' => { 'id' => 'api_invests_invests_get_Invest' },
+                'invests' => { 'id' => 'api_invests_invests_get_ResponseInvest' },
                 'invest' => { 'id' => 'api_invests_invest_get_InvestFull' },
-                'calls' => { 'id' => 'api_calls_calls_get_Call' },
+                # 'calls' => { 'id' => 'api_calls_calls_get_Call' },
+                'calls' => { 'id' => 'api_calls_calls_get_ResponseCall' },
                 'call' => { 'id' => 'api_calls_call_get_CallFull' },
-                'call_projects' => { 'id' => 'api_calls_call_projects_get_ProjectCall', 'endpoint' => '/call/{call}/projects/' },
+                # 'call_projects' => { 'id' => 'api_calls_call_projects_get_ProjectCall', 'endpoint' => '/call/{call}/projects/' },
+                'call_projects' => { 'id' => 'api_projects_projects_get_ResponseProject', 'endpoint' => '/call/{call}/projects/'  },
                 'reports_summary' => { 'id' => 'api_reports_reports_summary_get_Summary', 'endpoint' => '/reports/summary/' },
                 'reports_community' => { 'id' => 'api_reports_reports_community_get_Community', 'endpoint' => '/reports/community/' },
                 'reports_money' => { 'id' => 'api_reports_reports_money_get_Money', 'endpoint' => '/reports/money/' },

@@ -2,7 +2,7 @@
 layout: default
 title: Matchfunding calls
 group: endpoint
-permalink: /doc/projects/
+permalink: /doc/calls/
 ---
 # Matchfunding calls endpoint
 
@@ -24,15 +24,6 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/calls/
 {{ site.data.calls.parameters_table }}
 
 ### Response values:
-
-| Attribute  | Type | Description |
-| ------------- | ------------- | ------------ |
-| * **items** | *array* | An array (limited to the maximum results per page specified in filters) with the list of matchfunding calls |
-| **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
-
-#### * Array sub-fields:
-
-**items** returns an array of the following object:
 
 {{ site.data.calls.definitions_table }}
 
@@ -85,17 +76,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/calls/unia-capital-riego/pro
 
 ### Response values:
 
-| Attribute  | Type | Description |
-| ------------- | ------------- | ------------ |
-| * **items** | *array* | An array (limited to the maximum results per page specified in filters) with the list of projects |
-| **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
-
-#### * Array sub-fields:
-
-**items** returns an array of the following object:
-
 {{ site.data.call_projects.definitions_table }}
-
 
 ### Response body:
 

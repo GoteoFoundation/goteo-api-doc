@@ -431,22 +431,30 @@
         },
         "lang": {
           "description": "Only if filtering by lang",
-          "items": [],
+          "items": {
+            "type": "string"
+          },
           "type": "array"
         },
         "location": {
           "description": "Only if filtering by location",
-          "items": [],
+          "items": {
+            "type": "number"
+          },
           "type": "array"
         },
         "node": {
           "description": "Only if filtering by node",
-          "items": [],
+          "items": {
+            "type": "string"
+          },
           "type": "array"
         },
         "project": {
           "description": "Only if filtering by project",
-          "items": [],
+          "items": {
+            "type": "string"
+          },
           "type": "array"
         },
         "to_date": {
@@ -733,7 +741,9 @@
       "properties": {
         "category": {
           "description": "Only if filtering by category",
-          "items": [],
+          "items": {
+            "type": "number"
+          },
           "type": "array"
         },
         "from_date": {
@@ -742,22 +752,30 @@
         },
         "lang": {
           "description": "Only if filtering by lang",
-          "items": [],
+          "items": {
+            "type": "string"
+          },
           "type": "array"
         },
         "location": {
           "description": "Only if filtering by location",
-          "items": [],
+          "items": {
+            "type": "number"
+          },
           "type": "array"
         },
         "node": {
           "description": "Only if filtering by node",
-          "items": [],
+          "items": {
+            "type": "string"
+          },
           "type": "array"
         },
         "project": {
           "description": "Only if filtering by project",
-          "items": [],
+          "items": {
+            "type": "string"
+          },
           "type": "array"
         },
         "to_date": {
@@ -1150,7 +1168,9 @@
       "properties": {
         "category": {
           "description": "Only if filtering by category",
-          "items": [],
+          "items": {
+            "type": "number"
+          },
           "type": "array"
         },
         "from_date": {
@@ -1159,7 +1179,9 @@
         },
         "lang": {
           "description": "Only if filtering by lang",
-          "items": [],
+          "items": {
+            "type": "string"
+          },
           "type": "array"
         },
         "limit": {
@@ -1168,12 +1190,16 @@
         },
         "location": {
           "description": "Only if filtering by location",
-          "items": [],
+          "items": {
+            "type": "number"
+          },
           "type": "array"
         },
         "node": {
           "description": "Only if filtering by node",
-          "items": [],
+          "items": {
+            "type": "string"
+          },
           "type": "array"
         },
         "page": {
@@ -1182,7 +1208,9 @@
         },
         "project": {
           "description": "Only if filtering by project",
-          "items": [],
+          "items": {
+            "type": "string"
+          },
           "type": "array"
         },
         "to_date": {
@@ -1894,7 +1922,9 @@
       "properties": {
         "category": {
           "description": "Only if filtering by category",
-          "items": [],
+          "items": {
+            "type": "number"
+          },
           "type": "array"
         },
         "from_date": {
@@ -1903,7 +1933,9 @@
         },
         "lang": {
           "description": "Only if filtering by lang",
-          "items": [],
+          "items": {
+            "type": "string"
+          },
           "type": "array"
         },
         "limit": {
@@ -1912,7 +1944,9 @@
         },
         "node": {
           "description": "Only if filtering by node",
-          "items": [],
+          "items": {
+            "type": "string"
+          },
           "type": "array"
         },
         "page": {
@@ -1921,7 +1955,9 @@
         },
         "project": {
           "description": "Only if filtering by project",
-          "items": [],
+          "items": {
+            "type": "string"
+          },
           "type": "array"
         },
         "to_date": {

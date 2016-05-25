@@ -25,15 +25,6 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/projects/
 
 ### Response values:
 
-| Attribute  | Type | Description |
-| ------------- | ------------- | ------------ |
-| * **items** | *array* | An array (limited to the maximum results per page specified in filters) with the list of projects |
-| **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
-
-#### * Array sub-fields:
-
-**items** returns an array of the following object:
-
 {{ site.data.projects.definitions_table }}
 
 ### Response body:
@@ -85,15 +76,6 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/projects/llevamealhuerto/don
 {{ site.data.project_donors.parameters_table }}
 
 ### Response values:
-
-| Attribute  | Type | Description |
-| ------------- | ------------- | ------------ |
-| * **items** | *array* | An array (limited to the maximum results per page specified in filters) with the list of donors |
-| **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
-
-#### * Array sub-fields:
-
-**items** returns an array of the following object:
 
 {{ site.data.project_donors.definitions_table }}
 

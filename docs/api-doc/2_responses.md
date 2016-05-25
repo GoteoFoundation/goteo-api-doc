@@ -67,5 +67,5 @@ For **40X** errors, the response body will be in JSON format as well. Typically 
 
 Meta information may include (depending on the endpoint, this applies for the projects endpoint) this keys:
 
-{{ site.data.meta.definitions_table }}
+{{ site.data.metaproject.definitions_table }}
 

@@ -24,16 +24,6 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/invests/
 
 ### Response values:
 
-| Attribute  | Type | Description |
-| ------------- | ------------- | ------------ |
-| * **items** | *array* | An array (limited to the maximum results per page specified in filters) with the list of invests |
-| **meta** | *array* | Additionally, extra information will be provided here (such as pagination or parameter filtering ) |
-| **extra** | *object* | This object will return  |
-
-#### * Array sub-fields:
-
-**items** returns an array of the following object:
-
 {{ site.data.invests.definitions_table }}
 
 ### Response body:

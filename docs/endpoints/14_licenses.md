@@ -25,15 +25,6 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/licenses/
 
 ### Response values:
 
-| Attribute  | Type | Description |
-| ------------- | ------------- | ------------ |
-| * **items** | *array* | An array with the list of licenses |
-| **meta** | *array* | Additionally, extra information will be provided here (such as  parameter filtering) |
-
-#### * Array sub-fields:
-
-**items** returns an array of the following object:
-
 {{ site.data.licenses.definitions_table }}
 
 ### Response body
