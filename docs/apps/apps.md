@@ -22,19 +22,19 @@ The types of work we envision featuring here include, but aren’t limited to:
 
 The following image is a representation of Goteo's statistics, visualizing data by sections, years and categories. Here you can see all kinds of relevant information displayed graphically, including the top 10 projects with the highest donations, the total number of projects published by year, the different categories of interest for projects, and the breakdown of favorite individual rewards, among other statistics. 
 
-[![Goteo Visualization](http://developers.goteo.org/assets/images/app1.png)](http://stats.goteo.org)
+[![Goteo Visualization](//developers.goteo.org/assets/images/app1.png)](http://stats.goteo.org)
 
 ##Demo ECF Labs
 
 The demo was made by the ECF Labs team at the Goteathon even in Madrid, using  AngularJS
 
-[![Goteo Visualization](https://developers.goteo.org/assets/images/ecf.jpg)](http://ecflabs.org/app/lab/innovacion/goteo-api-usage-angularjs-demo-ecf-labs-team)
+[![Goteo Visualization](//developers.goteo.org/assets/images/ecf.jpg)](http://ecflabs.org/app/lab/innovacion/goteo-api-usage-angularjs-demo-ecf-labs-team)
 
 ##Madrid Goteo Projects
 
 The following map is a representation of Goteo's projects in Madrid. 
 
-[![Goteo Visualization](http://developers.goteo.org/assets/images/app3.png)](http://experiments.goteo.org/madrid-projects)
+[![Goteo Visualization](//developers.goteo.org/assets/images/app3.png)](http://experiments.goteo.org/madrid-projects)
 
 
 

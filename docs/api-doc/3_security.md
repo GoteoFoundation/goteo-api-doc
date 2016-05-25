@@ -9,7 +9,7 @@ permalink: /doc/security/
 <a name="authentication"></a>
 ## Authentication
 
-Get your **user** and **password** from your activity dashboard in [http://goteo.org/dashboard/activity/apikey](http://goteo.org/dashboard/activity/apikey)
+Get your **user** and **password** from your activity dashboard in [goteo.org/dashboard/activity/apikey](http://goteo.org/dashboard/activity/apikey)
 
 todo ...
 
