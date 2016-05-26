@@ -29,7 +29,7 @@ module SwaggerParser
                     end
                     if ref and not definitions.has_key? _key
                         _key = ref.split('_')[-1]
-                        value['description'] << ' &#9758; <a href="#' + _key + '">' + _key + '</a>' if not value['description'].include? _key
+                        value['description'] << ' &#9758; [' + _key + '](#' + _key + ')' if not value['description'].include? _key
                         # puts(ref, _key)
                         definitions[_key] = get_definitions(ref)[_key]
                     end
@@ -47,8 +47,8 @@ module SwaggerParser
             def get_definitions_table(data)
                 t = ''
                 for key,definitions in data
-                    t << '##### <a id="' + key + '">' + key + '</a>'
-                    t << "\n| Attribute  | Type | Description |\n"
+                    t << '##### <a id="' + key + '">' + key + "</a>\n"
+                    t << "| Attribute  | Type | Description |\n"
                     t << "|------------|------|-------------|\n"
                     for _key,val in definitions
                         t << "| #{_key} | #{val['type']} | #{val['description']} |\n"

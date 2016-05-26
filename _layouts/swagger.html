@@ -2,10 +2,12 @@
 <html lang="en">
 
   <head>
+
+
   {% include head.html %}
 
-  <link href='{{ "/assets/swagger-ui/css/typography.css" | prepend: site.baseurl }}' media='screen' rel='stylesheet' type='text/css'/>
   <link href='{{ "/assets/swagger-ui/css/reset.css" | prepend: site.baseurl }}' media='screen' rel='stylesheet' type='text/css'/>
+  <link href='{{ "/assets/swagger-ui/css/typography.css" | prepend: site.baseurl }}' media='screen' rel='stylesheet' type='text/css'/>
   <link href='{{ "/assets/swagger-ui/css/screen.css" | prepend: site.baseurl }}' media='screen' rel='stylesheet' type='text/css'/>
   <link href='{{ "/assets/swagger-ui/css/reset.css" | prepend: site.baseurl }}' media='print' rel='stylesheet' type='text/css'/>
   <link href='{{ "/assets/swagger-ui/css/print.css" | prepend: site.baseurl }}' media='print' rel='stylesheet' type='text/css'/>
@@ -28,13 +30,14 @@
 
   <style type="text/css">
     .navbar.navbar-fixed-top {margin-bottom: 0}
+    .navbar a{font-family: 'Gotham SSm A', 'Gotham SSm B', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;}
     .swagger-section #header {background: #58595B;min-height: 50px}
     .swagger-section .logo__title {color: #FFF;font-size:1.2em;font-weight: bold;line-height: 1.5em}
     .swagger-section #api_info {position:static;display:none}
   </style>
   </head>
 
-  <body style="background: white;" class="swagger-section"
+  <body style="background: white;" class="swagger-section">
 
     {% include navbar.html %}
 

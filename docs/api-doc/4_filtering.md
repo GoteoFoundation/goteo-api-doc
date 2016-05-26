@@ -13,11 +13,11 @@ A common set of filters may be available trough all the endpoints with slightly 
 Some endpoints may have a reduced set of filters or have a bigger one. Check documentation for each of them.
 
 
- **Apply any filter by sending it in the request's query string**
+**Apply any filter by sending it in the request's query string**
 
- {% highlight http %}
- GET https://api.goteo.org/v1/users/?node=barcelona HTTP/1.1
- {% endhighlight %}
+```http
+GET https://api.goteo.org/v1/users/?node=barcelona HTTP/1.1
+```
 
 <a name="filters"></a>
 ## COMMON FILTERS:
@@ -44,21 +44,21 @@ Some endpoints may have a reduced set of filters or have a bigger one. Check doc
 
 ## Examples:
 
-Obtain a list of users created in Goteo around Barcelona in a radius of 50Km during the year 2014:
+Obtaining a list of users created in Goteo around Barcelona in a radius of 50Km during the year 2014:
 
 ```bash
 curl --basic --user "user:key" \
 "{{ site.apiurl }}/users/?location=41.38879,2.15899,50&from_date=2014-01-01&to_date=2014-12-31"
 ```
 
-Obtain all the money statistics for the project a single project:
+Obtaining all the money statistics for the project a single project:
 
 ```bash
 curl --basic --user "user:key" \
 "{{ site.apiurl }}/reports/money/?project=crowdfundparato"
 ```
 
-Obtain all the community reports for the nodes of barcelona, euskadi an andalucia together:
+Obtaining all the community reports for the nodes of barcelona, euskadi an andalucia together:
 
 ```bash
 curl --basic --user "user:key" \

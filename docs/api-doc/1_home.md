@@ -6,7 +6,6 @@ permalink: /doc/
 
 ---
 # GOTEO API v1.1
-> Currently in **BETA**
 
 ## Introduction
 
@@ -31,7 +30,7 @@ The API is compatible with the [Swagger](http://swagger.io/) specification. Chec
 
 ## Authentication
 
-This API requires authentication, please referer to the [Authentication section](/doc/security/#authentication) for details.
+This API requires authentication, please referer to the [Authentication section](/doc/security/) for details.
 
 ## Quick start: Basic usage
 
@@ -91,7 +90,9 @@ Info about the users requests without the response:
 curl --basic --user 'user:key' -i --head http://api.goteo.org/v1/users/
 ```
 
-```
+Headers returned:
+
+```http
 HTTP/1.0 200 OK
 Content-Type: application/json
 Content-Length: 2113
@@ -126,4 +127,5 @@ If you receive a status in the 500 range, this generally indicates a server-side
 | 401  | yes, in request | Resource requires authorization, authentication is needed or was unsuccessful |
 | 400  | yes, in request | Invalid parameters format, typically when data passed in the query string does not much the proper required format |
 | 404  | yes, in request | Resource not found, invalid endpoint or the OBJECT ID required does not exists |
+| 429  | yes, in request | Too many resources, no more requests can be made until a new time window starts |
 | 500  | yes, in server | Server error, that's on us! Please report and we will investigate. |
