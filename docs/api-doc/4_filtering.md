@@ -32,7 +32,7 @@ GET https://api.goteo.org/v1/users/?node=barcelona HTTP/1.1
 | node | string (*multiple) | This allows you to restrict the results to a single node of Goteo.<br><br>Currently, 4 different nodes are available: **barcelona**, **euskadi**, **andalucia** and **goteo** (general node) |
 | from_date | date | Results can be confined into a range of dates, use this parameter to specify the start date you want results for.<br><br>The date expected format is **YYYY-MM-DD** |
 | to_date | date | Same as **from_date**, sets the last date you want results for. |
-| location | date | This parameter allows you to restrict results to a certain geographic point and a radius around it. The point coordinates must be in [decimal degrees](http://en.wikipedia.org/wiki/Decimal_degrees) (latitude, longitude) and the radius in Km (with a maximum of 500Km).<br><br>All 3 values must separated by a comma(**,**): **longitude,latitude,radius**<br><br>For instance: **?location=41.38879,2.15899,100** will return results around the city of Barcelona in a radius of 100Km. |
+| location | numbers (csv) | This parameter allows you to restrict results to a certain geographic point and a radius around it. The point coordinates must be in [decimal degrees](http://en.wikipedia.org/wiki/Decimal_degrees) (latitude, longitude) and the radius in Km (with a maximum of 500Km).<br><br>All 3 values must separated by a comma(**,**): **longitude,latitude,radius**<br><br>For instance: **?location=41.38879,2.15899,100** will return results around the city of Barcelona in a radius of 100Km. |
 
 > ***multiple**: These parameters can be queried multiple times and all values will be included in the filter.
 > 
