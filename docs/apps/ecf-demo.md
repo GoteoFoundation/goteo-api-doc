@@ -7,7 +7,7 @@ group: apps
 # ECF Labs Demo
 Developed by: [ECF Labs](http://ecflabs.org)
 
- [![ECF Labs Demo](//developers.goteo.org/assets/images/ecf.jpg)](https://experiments.goteo.org/GoteoApiAngularJS/angular.html)
+ [![ECF Labs Demo](https://developers.goteo.org/assets/images/ecf.jpg)](https://experiments.goteo.org/GoteoApiAngularJS/angular.html)
 
 
 ## Description

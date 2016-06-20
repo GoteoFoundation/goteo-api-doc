@@ -21,7 +21,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/digests/reports/money/?year=
 
 
 ### Filters available
-**Some of the [standard set of filters](/doc/filters) plues some more applies to this endpoint:**
+**Some of the [standard set of filters](filters.html)) plues some more applies to this endpoint:**
 
 {{ site.data.digests.parameters_table }}
 

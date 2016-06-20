@@ -25,20 +25,20 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-62675757-1', 'auto');
+  ga('create', '{{ site.analytics }}', 'auto');
   ga('send', 'pageview');
 
 </script>
 
 <!-- Important Owl stylesheet -->
 <link rel="stylesheet" href="{{ "/assets/carousel/owl.carousel.css" | prepend: site.baseurl }}">
- 
+
 <!-- Default Theme -->
 <link rel="stylesheet" href="{{ "/assets/carousel/owl.theme.css" | prepend: site.baseurl }}">
- 
+
 <!--  jQuery 1.7+  -->
 <script src="{{ "/assets/js/jquery-1.9.1.min.js" | prepend: site.baseurl }}"></script>
- 
+
 <!-- Include js plugin -->
 <script src="{{ "/assets/js/owl.carousel.js" | prepend: site.baseurl }}"></script>
 
@@ -55,7 +55,7 @@ $(document).ready(function() {
       singleItem : true
 
       // "singleItem:true" is a shortcut for:
-      // items : 1, 
+      // items : 1,
       // itemsDesktop : false,
       // itemsDesktopSmall : false,
       // itemsTablet: false,

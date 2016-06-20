@@ -9,7 +9,7 @@ twitter_username: goteofunding
 github_url: https://github.com/GoteoFoundation/goteo-api-doc
 # api_spec: http://localhost:5000/spec
 api_spec: https://api.goteo.org/v1/spec
-
+analytics: UA-62675757-1
 # Build settings
 markdown: rdiscount
 

@@ -19,7 +19,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/projects/
 
 ### Filters available:
 
-**The [standard set of filters](/doc/filters) applies to this endpoint with these particulars:**
+**The [standard set of filters](filters.html) applies to this endpoint with these particulars:**
 
 {{ site.data.projects.parameters_table }}
 
@@ -71,7 +71,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/projects/llevamealhuerto/don
 
 ### Filters available:
 
-**Some of the [standard set of filters](/doc/filters) can be applied here:**
+**Some of the [standard set of filters]({{ "doc/filters.html" | prepend: site.baseurl }}) can be applied here:**
 
 {{ site.data.project_donors.parameters_table }}
 

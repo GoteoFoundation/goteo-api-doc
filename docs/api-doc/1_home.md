@@ -25,12 +25,12 @@ Please contact us with any questions or comments.
 
 #### API URL: [{{ site.apiurl }}]({{ site.apiurl }})
 
-The API is compatible with the [Swagger](http://swagger.io/) specification. Checkout the [html console interface](/doc/console/) for a live testing console or the [json interface]({{ site.api_spec }})
+The API is compatible with the [Swagger](http://swagger.io/) specification. Checkout the [html console interface](console.html) for a live testing console or the [json interface]({{ site.api_spec }})
 
 
 ## Authentication
 
-This API requires authentication, please referer to the [Authentication section](/doc/security/) for details.
+This API requires authentication, please referer to the [Authentication section](security.html) for details.
 
 ## Quick start: Basic usage
 
