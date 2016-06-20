@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Madrid Projects
-permalink: /apps/madrid-projects/
+permalink: /apps/madrid-projects.html
 group: apps
 ---
 # Basic Stats
 Developed by: [Platoniq](http://www.youcoop.org/)
 
- [![Madrid projects ](//developers.goteo.org/assets/images/app3.png)](http://experiments.goteo.org/madrid-projects)
+ [![Madrid projects ](//developers.goteo.org/assets/images/madrid.png)](http://experiments.goteo.org/madrid-projects)
 
 
 ## Description

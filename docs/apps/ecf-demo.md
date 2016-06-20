@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ECF Labs Demo
-permalink: /apps/ecf-labs-demo/
+permalink: /apps/ecf-labs-demo.html
 group: apps
 ---
 # ECF Labs Demo

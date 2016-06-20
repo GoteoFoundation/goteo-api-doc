@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Apps Goteo
-permalink: /apps/
+permalink: /apps/index.html
 group: apps
 ---
 # Apps

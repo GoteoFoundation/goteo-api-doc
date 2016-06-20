@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Basic Stats
-permalink: /apps/basic-stats/
+permalink: /apps/basic-stats.html
 group: apps
 ---
 # Basic Stats
