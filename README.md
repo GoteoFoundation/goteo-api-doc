@@ -19,19 +19,19 @@ For compilation we use [Jekyll](https://jekyllrb.com/), install dependencies as 
 jekyll serve
 ```
 
-Compilation uses the downloaded JSON files in the `_json` folder. A custom plugin, `_plugins/swagger_parser.rb`, creates some views and objects ready to be used in the templates.
+Compilation uses the downloaded JSON files in the `_json` folder. A custom plugin, `_plugins/swagger_parser.rb`, automatically parses the downloaded JSON files and adds its content to the Markdown templates.
 
 **Two task are configure for Rake:**
 
-- Generates documentation as static, off-line HTML files into the `_simple` directory:
+1. Generates documentation as static, off-line HTML files into the `_simple` directory:
 
-```bash
-JEKYLL_ENV=simple rake doc:simple
-```
+    ```bash
+    JEKYLL_ENV=simple rake doc:simple
+    ```
 
-And the automatic publication to the `gh-pages` branch in Github (official documentation):
+2. And the automatic publication to the `gh-pages` branch in Github (official documentation):
 
-```bash
-rake doc:publish
-```
+    ```bash
+    rake doc:publish
+    ```
 
