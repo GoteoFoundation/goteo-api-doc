@@ -2,7 +2,7 @@
 layout: default
 title: Reports
 group: endpoint
-permalink: /doc/reports/
+permalink: /doc/reports.html
 ---
 # Reports endpoint
 This section gives you information about average numbers in [Goteo.org](http://goteo.org).

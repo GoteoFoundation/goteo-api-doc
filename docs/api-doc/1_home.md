@@ -2,7 +2,7 @@
 layout: default
 title: Introduction
 group: apidoc
-permalink: /doc/
+permalink: /doc/index.html
 
 ---
 # GOTEO API v1.1

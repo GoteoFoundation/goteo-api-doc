@@ -2,7 +2,7 @@
 layout: default
 title: Digests
 group: endpoint
-permalink: /doc/digests/
+permalink: /doc/digests.html
 ---
 # Digests endpoint
 

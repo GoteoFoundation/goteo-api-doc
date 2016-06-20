@@ -48,4 +48,21 @@ namespace :doc do
 
     # Done.
   end
+
+  desc "Creates a simple version of the API documentation only"
+  task :simple do
+    if Jekyll.env != 'simple'
+      puts "Please run this command as"
+      puts "JEKYLL_ENV=simple rake doc:simple"
+      exit!
+    end
+    # Compile the Jekyll site using the config.
+    Jekyll::Site.new(Jekyll.configuration({
+      "source"      => ".",
+      "destination" => "_simple",
+      "config" => "_config.yml",
+      "baseurl" => ".."
+    })).process
+  end
 end
+

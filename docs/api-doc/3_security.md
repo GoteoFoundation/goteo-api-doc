@@ -2,7 +2,7 @@
 layout: default
 title: Security
 group: apidoc
-permalink: /doc/security/
+permalink: /doc/security.html
 
 ---
 

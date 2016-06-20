@@ -8,7 +8,11 @@
   <body style="background: white;">
   <div class="wrapper">
 
-    {% include navbar.html %}
+  {% if jekyll.environment == "simple" %}
+      {% include navbar_simple.html %}
+  {% else %}
+      {% include navbar.html %}
+  {% endif %}
 
     <!-- Page content
     ============================================== -->

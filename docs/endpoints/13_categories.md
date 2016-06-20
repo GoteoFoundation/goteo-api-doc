@@ -2,7 +2,7 @@
 layout: default
 title: Categories
 group: endpoint
-permalink: /doc/categories/
+permalink: /doc/categories.html
 ---
 # Categories endpoint
 

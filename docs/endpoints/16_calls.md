@@ -2,7 +2,7 @@
 layout: default
 title: Matchfunding calls
 group: endpoint
-permalink: /doc/calls/
+permalink: /doc/calls.html
 ---
 # Matchfunding calls endpoint
 

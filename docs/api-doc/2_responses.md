@@ -2,7 +2,7 @@
 layout: default
 title: Responses
 group: apidoc
-permalink: /doc/responses/
+permalink: /doc/responses.html
 
 ---
 

@@ -2,7 +2,7 @@
 layout: default
 title: Filters
 group: apidoc
-permalink: /doc/filters/
+permalink: /doc/filters.html
 ---
 # Filtering data in endpoints
 

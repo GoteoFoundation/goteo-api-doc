@@ -2,7 +2,7 @@
 layout: default
 title: Invests
 group: endpoint
-permalink: /doc/invests/
+permalink: /doc/invests.html
 ---
 # Invests endpoint
 

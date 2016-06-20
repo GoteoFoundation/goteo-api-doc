@@ -2,7 +2,7 @@
 layout: default
 title: Licenses
 group: endpoint
-permalink: /doc/licenses/
+permalink: /doc/licenses.html
 ---
 # Licenses endpoint
 

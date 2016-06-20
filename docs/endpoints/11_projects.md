@@ -2,7 +2,7 @@
 layout: default
 title: Projects
 group: endpoint
-permalink: /doc/projects/
+permalink: /doc/projects.html
 ---
 # Projects endpoint
 

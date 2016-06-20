@@ -2,7 +2,7 @@
 layout: default
 title: Users
 group: endpoint
-permalink: /doc/users/
+permalink: /doc/users.html
 ---
 # Users endpoint
 

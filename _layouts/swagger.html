@@ -39,7 +39,11 @@
 
   <body style="background: white;" class="swagger-section">
 
-    {% include navbar.html %}
+    {% if jekyll.environment == "simple" %}
+      {% include navbar_simple.html %}
+    {% else %}
+      {% include navbar.html %}
+    {% endif %}
 
     {{ content | prepend: site.baseurl }}
 
