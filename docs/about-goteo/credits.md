@@ -15,5 +15,5 @@ group: aboutgoteo
 - **API Code**: Pablo Castellano, Ivan Vergés
 - **API Documentation**: Ivan Vergés, Javier Carrillo
 - **Translation and editing**: [Guerrilla Translation](http://guerrillatranslation.org)
-- Goteo API development is funded by the [European Cultural Foundation](http://www.culturalfoundation.eu/) as part of the Connecting Culture, Communities and Democracy Networked Programme
+- Goteo API development is funded by : ![Ministerio de Educación, Cultura y Deporte](https://developers.goteo.org/assets/images/logo-ecd.gif) *Actividad subvencionada por el Ministerio de Educación, Cultura y Deporte. Acción y Promoción Cultural 2015*
 

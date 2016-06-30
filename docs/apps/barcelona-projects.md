@@ -7,7 +7,7 @@ group: apps
 # Basic Stats
 Developed by: [Platoniq](http://www.youcoop.org/)
 
- [![Barcelona projects ](https://developers.goteo.org/assets/images/barcelona.png)](http://experiments.goteo.org/barcelona-projects)
+ [![Barcelona projects](https://developers.goteo.org/assets/images/barcelona.png)](http://experiments.goteo.org/barcelona-projects)
 
 
 ## Description
