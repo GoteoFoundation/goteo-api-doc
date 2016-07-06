@@ -19,7 +19,11 @@ group: aboutgoteo
 
 > **Goteo API development is funded by:**
 > 
-> ![Ministerio de Educación, Cultura y Deporte](https://developers.goteo.org/assets/images/logo-ecd.gif)
+> ![Ministerio de Educación, Cultura y Deporte logo](https://developers.goteo.org/assets/images/logo-ecd.gif)
 > 
 > *Actividad subvencionada por el Ministerio de Educación, Cultura y Deporte. Acción y Promoción Cultural 2015*
+> 
+> ![Europeana DSI project logo](https://developers.goteo.org/assets/images/eu_flag_cef.svg)
+> 
+> *Goteo API Match-funding endpoint and Match-funding data visualization development is co-financed by European Union under the Europeana DSI project*
 
