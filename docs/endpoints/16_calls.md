@@ -6,7 +6,12 @@ permalink: /doc/calls.html
 ---
 # Matchfunding calls endpoint
 
-This section gives you information about matchfunding calls in [Goteo.org](http://goteo.org)
+This section gives you information about [matchfunding calls](https://www.goteo.org/service/resources) in [Goteo.org](http://goteo.org)
+
+Since 2011, Goteo has been engaged in what we call our "Matchfunding", namely a pool of large donations from different types of public and private entities which make an annual commitment. These donations are allocated to specific projects through specific temporary calls tenders (using predesigned forms or ad hoc arrangements). This makes it possible to link up contributions from various kinds of entities, tailoring them to specific projects, certain thematic areas, geographical zones or types of returns and licenses.
+
+At Goteo we have created a social investment pool with contributions from public institutions, businesses, other private institutions and individuals. The aim is to bring about a multiplier effect and thus encourage co-responsible investment in projects that rely on the support of civil society.
+
 
 <a name="calls"></a>
 ## /calls/
