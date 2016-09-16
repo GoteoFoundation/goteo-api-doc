@@ -12,7 +12,7 @@
         "to_date": "2014-01-31",
         "total": 0
       },
-      "time-elapsed": 0.0005593299865722656
+      "time-elapsed": 0.052060842514038086
     },
     "02": {
       "items": [
@@ -54,7 +54,7 @@
         "to_date": "2014-02-28",
         "total": 3
       },
-      "time-elapsed": 0.002245187759399414
+      "time-elapsed": 0.2559652328491211
     },
     "03": {
       "items": [
@@ -105,7 +105,7 @@
         "to_date": "2014-03-31",
         "total": 4
       },
-      "time-elapsed": 0.0039484500885009766
+      "time-elapsed": 0.2760765552520752
     },
     "04": {
       "items": [
@@ -138,10 +138,19 @@
         "to_date": "2014-04-30",
         "total": 2
       },
-      "time-elapsed": 0.0022029876708984375
+      "time-elapsed": 0.15303277969360352
     },
     "05": {
       "items": [
+        {
+          "description": "Licencia P\u00fablica General de GNU para la libre distribuci\u00f3n, modificaci\u00f3n y uso de software",
+          "id": "gpl",
+          "name": "General Public License",
+          "svg-url": "https://goteoassets.org/api/svg/licenses/gpl.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://www.gnu.org/licenses/gpl.html"
+        },
         {
           "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda",
           "id": "ccby",
@@ -156,8 +165,8 @@
           "id": "ccbyncsa",
           "name": "CC - Reconocimiento - NoComercial - CompartirIgual",
           "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncsa.svg",
-          "total-projects": 2,
-          "total-rewards": 3,
+          "total-projects": 3,
+          "total-rewards": 5,
           "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
         },
         {
@@ -196,9 +205,9 @@
           "radius": 100
         },
         "to_date": "2014-05-31",
-        "total": 5
+        "total": 6
       },
-      "time-elapsed": 0.003450632095336914
+      "time-elapsed": 0.3745274543762207
     },
     "06": {
       "items": [
@@ -222,7 +231,7 @@
         "to_date": "2014-06-30",
         "total": 1
       },
-      "time-elapsed": 0.001088857650756836
+      "time-elapsed": 0.10788178443908691
     },
     "07": {
       "items": [],
@@ -236,7 +245,7 @@
         "to_date": "2014-07-31",
         "total": 0
       },
-      "time-elapsed": 0.0006375312805175781
+      "time-elapsed": 0.05835747718811035
     },
     "08": {
       "items": [],
@@ -250,7 +259,7 @@
         "to_date": "2014-08-31",
         "total": 0
       },
-      "time-elapsed": 0.0004780292510986328
+      "time-elapsed": 0.06146979331970215
     },
     "09": {
       "items": [],
@@ -264,7 +273,7 @@
         "to_date": "2014-09-30",
         "total": 0
       },
-      "time-elapsed": 0.0005066394805908203
+      "time-elapsed": 0.053072452545166016
     },
     "10": {
       "items": [],
@@ -278,7 +287,7 @@
         "to_date": "2014-10-31",
         "total": 0
       },
-      "time-elapsed": 0.0006299018859863281
+      "time-elapsed": 0.05556011199951172
     },
     "11": {
       "items": [
@@ -302,7 +311,7 @@
         "to_date": "2014-11-30",
         "total": 1
       },
-      "time-elapsed": 0.0011792182922363281
+      "time-elapsed": 0.10588717460632324
     },
     "12": {
       "items": [
@@ -326,12 +335,21 @@
         "to_date": "2014-12-31",
         "total": 1
       },
-      "time-elapsed": 0.0012154579162597656
+      "time-elapsed": 0.10219478607177734
     }
   },
   "endpoint": "/licenses/",
   "global": {
     "items": [
+      {
+        "description": "Licencia P\u00fablica General de GNU para la libre distribuci\u00f3n, modificaci\u00f3n y uso de software",
+        "id": "gpl",
+        "name": "General Public License",
+        "svg-url": "https://goteoassets.org/api/svg/licenses/gpl.svg",
+        "total-projects": 1,
+        "total-rewards": 1,
+        "url": "http://www.gnu.org/licenses/gpl.html"
+      },
       {
         "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda",
         "id": "ccby",
@@ -355,8 +373,8 @@
         "id": "ccbyncsa",
         "name": "CC - Reconocimiento - NoComercial - CompartirIgual",
         "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncsa.svg",
-        "total-projects": 7,
-        "total-rewards": 10,
+        "total-projects": 8,
+        "total-rewards": 12,
         "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
       },
       {
@@ -395,9 +413,9 @@
         "radius": 100
       },
       "to_date": "2014-12-31",
-      "total": 6
+      "total": 7
     },
-    "time-elapsed": 0.0053255558013916016
+    "time-elapsed": 0.4825758934020996
   },
   "meta": {
     "location": {
@@ -406,5 +424,5 @@
       "radius": 100
     }
   },
-  "time-elapsed": 0.02486562728881836
+  "time-elapsed": 2.141507387161255
 }

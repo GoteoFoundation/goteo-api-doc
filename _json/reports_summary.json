@@ -1,76 +1,76 @@
 {
-  "average-donation": 49.32,
+  "average-donation": 48.60,
   "categories": [
     {
       "2": {
         "id": 2,
         "name": "Social",
-        "percentage-users": 7.89,
-        "users": 6251
+        "percentage-users": 7.7,
+        "users": 6612
       }
     },
     {
       "10": {
         "id": 10,
         "name": "Educativo",
-        "percentage-users": 6.08,
-        "users": 4815
+        "percentage-users": 5.92,
+        "users": 5079
       }
     },
     {
       "11": {
         "id": 11,
         "name": "Cultural",
-        "percentage-users": 6.05,
-        "users": 4796
+        "percentage-users": 5.92,
+        "users": 5079
       }
     },
     {
       "13": {
         "id": 13,
         "name": "Ecol\u00f3gico",
-        "percentage-users": 4.66,
-        "users": 3693
+        "percentage-users": 4.56,
+        "users": 3911
       }
     },
     {
       "7": {
         "id": 7,
         "name": "Tecnol\u00f3gico",
-        "percentage-users": 4.39,
-        "users": 3477
+        "percentage-users": 4.22,
+        "users": 3626
       }
     },
     {
       "6": {
         "id": 6,
         "name": "Comunicativo",
-        "percentage-users": 3.63,
-        "users": 2874
+        "percentage-users": 3.5,
+        "users": 3000
       }
     },
     {
       "14": {
         "id": 14,
         "name": "Cient\u00edfico",
-        "percentage-users": 2.97,
-        "users": 2351
+        "percentage-users": 2.88,
+        "users": 2472
       }
     },
     {
       "9": {
         "id": 9,
         "name": "Emprendedor",
-        "percentage-users": 2.85,
-        "users": 2260
+        "percentage-users": 2.87,
+        "users": 2467
       }
     },
     {
       "16": {
         "id": 16,
         "name": "Dise\u00f1o",
-        "percentage-users": 1.6,
-        "users": 1265
+        "percentage-users": 1.57,
+        "users": 1349
       }
     }
   ],
@@ -80,73 +80,73 @@
       "icon": "product",
       "name": "Producto",
       "svg_url": "https://goteoassets.org/api/svg/icons/product.svg",
-      "total": 1800
+      "total": 2044
     },
     {
       "description": "Acciones y/o sesiones durante tiempo determinado para satisfacer una necesidad individual o de grupo: una formaci\u00f3n, una ayuda t\u00e9cnica, un asesoramiento, etc.",
       "icon": "service",
       "name": "Servicios",
       "svg_url": "https://goteoassets.org/api/svg/icons/service.svg",
-      "total": 1086
+      "total": 1170
     },
     {
       "description": "Los archivos digitales pueden ser de m\u00fasica, v\u00eddeo, documentos de texto, etc.",
       "icon": "file",
       "name": "Archivos digitales",
       "svg_url": "https://goteoassets.org/api/svg/icons/file.svg",
-      "total": 853
+      "total": 912
     },
     {
       "description": "Agradecimiento o reconocimiento",
       "icon": "thanks",
       "name": "Reconocimiento",
       "svg_url": "https://goteoassets.org/api/svg/icons/thanks.svg",
-      "total": 661
+      "total": 723
     },
     {
       "description": "Sorpr\u00e9ndenos con esta nueva tipolog\u00eda, realmente nos interesa :) ",
       "icon": "other",
       "name": "Otro",
       "svg_url": "https://goteoassets.org/api/svg/icons/other.svg",
-      "total": 369
+      "total": 405
     },
     {
       "description": "Documentos pr\u00e1cticos detallando pasos, materiales formativos, bussiness plans, \u201chow tos\u201d, recetas, etc.",
       "icon": "manual",
       "name": "Manuales",
       "svg_url": "https://goteoassets.org/api/svg/icons/manual.svg",
-      "total": 144
+      "total": 158
     },
     {
       "description": "Por c\u00f3digo fuente entendemos programas y software en general.",
       "icon": "code",
       "name": "C\u00f3digo fuente",
       "svg_url": "https://goteoassets.org/api/svg/icons/code.svg",
-      "total": 81
+      "total": 83
     },
     {
       "description": "Los dise\u00f1os pueden ser de planos o patrones, esquemas, esbozos, diagramas de flujo, etc.",
       "icon": "design",
       "name": "Dise\u00f1o",
       "svg_url": "https://goteoassets.org/api/svg/icons/design.svg",
-      "total": 49
+      "total": 52
     },
     {
       "description": "Retornos econ\u00f3micos proporcionales a la inversi\u00f3n realizada, que se deben detallar en cantidad pero tambi\u00e9n forma de pago.",
       "icon": "money",
       "name": "Dinero",
       "svg_url": "https://goteoassets.org/api/svg/icons/money.svg",
-      "total": 31
+      "total": 30
     }
   ],
-  "matchfund-amount": 75389,
+  "matchfund-amount": 81851,
   "matchfundpledge-amount": 166000,
-  "pledged": 3540064,
-  "projects-failed": 202,
-  "projects-published": 699,
-  "projects-received": 860,
-  "projects-successful": 474,
-  "time-elapsed": 0.00815439224243164,
+  "pledged": 3866084,
+  "projects-failed": 217,
+  "projects-published": 759,
+  "projects-received": 948,
+  "projects-successful": 512,
+  "time-elapsed": 3.1109535694122314,
   "top10-collaborations": [
     {
       "date-published": "Tue, 31 Jan 2012 23:00:00 GMT",
@@ -301,6 +301,21 @@
   ],
   "top10-donations": [
     {
+      "date-published": "Sun, 24 Apr 2016 22:00:00 GMT",
+      "date_published": "Mon, 25 Apr 2016 00:00:00 +0200",
+      "description-short": "Investigamos, informamos, transformamos",
+      "description_short": "Investigamos, informamos, transformamos",
+      "image-url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
+      "image_url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
+      "name": "#YoIBEXtigo con La Marea ",
+      "project": null,
+      "project-url": "https://goteo.org/project/yoibextigo",
+      "project_url": "https://goteo.org/project/yoibextigo",
+      "total": 3543,
+      "video-url": "https://youtu.be/1aBtwciWKYM",
+      "video_url": "https://youtu.be/1aBtwciWKYM"
+    },
+    {
       "date-published": "Sat, 13 Feb 2016 23:00:00 GMT",
       "date_published": "Sun, 14 Feb 2016 00:00:00 +0100",
       "description-short": "Queremos seguir informando con libertad, seleccionando cada semana los asuntos que consideramos debes conocer, haci\u00e9ndonos eco de la voz a las minor\u00edas, demostrando que hay alternativas al pensamiento \u00fanico. Hazte mecenas de CTXT",
@@ -329,21 +344,6 @@
       "total": 1492,
       "video-url": "https://vimeo.com/79968295",
       "video_url": "https://vimeo.com/79968295"
-    },
-    {
-      "date-published": "Sun, 24 Apr 2016 22:00:00 GMT",
-      "date_published": "Mon, 25 Apr 2016 00:00:00 +0200",
-      "description-short": "Investigamos, informamos, transformamos",
-      "description_short": "Investigamos, informamos, transformamos",
-      "image-url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
-      "image_url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
-      "name": "#YoIBEXtigo con La Marea ",
-      "project": null,
-      "project-url": "https://goteo.org/project/yoibextigo",
-      "project_url": "https://goteo.org/project/yoibextigo",
-      "total": 1330,
-      "video-url": "https://youtu.be/RSiuin6dO30",
-      "video_url": "https://youtu.be/RSiuin6dO30"
     },
     {
       "date-published": "Wed, 18 Dec 2013 23:00:00 GMT",
@@ -406,6 +406,21 @@
       "video_url": "https://vimeo.com/123081321"
     },
     {
+      "date-published": "Wed, 31 Aug 2016 22:00:00 GMT",
+      "date_published": "Thu, 01 Sep 2016 00:00:00 +0200",
+      "description-short": "Necesitamos financiar las costas judiciales del recurso ante el Tribunal Supremo por la sobretasaci\u00f3n en los pr\u00e9stamos hipotecarios",
+      "description_short": "Necesitamos financiar las costas judiciales del recurso ante el Tribunal Supremo por la sobretasaci\u00f3n en los pr\u00e9stamos hipotecarios",
+      "image-url": "https://goteo.org/img/medium/portada750x422.jpg",
+      "image_url": "https://goteo.org/img/medium/portada750x422.jpg",
+      "name": "Querella 15M: #HazteFiscal contra directivos de Caja Madrid",
+      "project": null,
+      "project-url": "https://goteo.org/project/querella-15m-contra-directivos-de-caja-madrid",
+      "project_url": "https://goteo.org/project/querella-15m-contra-directivos-de-caja-madrid",
+      "total": 767,
+      "video-url": "https://youtu.be/A1w3FAxF1SE",
+      "video_url": "https://youtu.be/A1w3FAxF1SE"
+    },
+    {
       "date-published": "Mon, 02 Feb 2015 23:00:00 GMT",
       "date_published": "Tue, 03 Feb 2015 00:00:00 +0100",
       "description-short": "Un drama social sobre los desahucios, con S\u00edlvia P\u00e9rez Cruz",
@@ -434,22 +449,7 @@
       "total": 634,
       "video-url": "https://vimeo.com/149844580",
       "video_url": "https://vimeo.com/149844580"
-    },
-    {
-      "date-published": "Thu, 19 Dec 2013 23:00:00 GMT",
-      "date_published": "Fri, 20 Dec 2013 00:00:00 +0100",
-      "description-short": "Empieza la revoluci\u00f3n energ\u00e9tica ciudadana",
-      "description_short": "Empieza la revoluci\u00f3n energ\u00e9tica ciudadana",
-      "image-url": "https://goteo.org/img/medium/slide-oligopolyoff-13.jpg",
-      "image_url": "https://goteo.org/img/medium/slide-oligopolyoff-13.jpg",
-      "name": "#OligopolyOFF",
-      "project": null,
-      "project-url": "https://goteo.org/project/oligopolyoff",
-      "project_url": "https://goteo.org/project/oligopolyoff",
-      "total": 628,
-      "video-url": "http://youtu.be/FsH1TDM9KwE",
-      "video_url": "http://youtu.be/FsH1TDM9KwE"
     }
   ],
-  "users": 79210
+  "users": 85835
 }

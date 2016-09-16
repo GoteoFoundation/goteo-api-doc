@@ -101,7 +101,7 @@ module SwaggerParser
                 'calls' => { 'id' => 'api_calls_calls_get_ResponseCall' },
                 'call' => { 'id' => 'api_calls_call_get_CallFull' },
                 # 'call_projects' => { 'id' => 'api_calls_call_projects_get_ProjectCall', 'endpoint' => '/call/{call}/projects/' },
-                'call_projects' => { 'id' => 'api_projects_projects_get_ResponseProject', 'endpoint' => '/call/{call}/projects/'  },
+                'call_projects' => { 'id' => 'api_projects_projects_get_ResponseProject', 'endpoint' => '/calls/{call_id}/projects/'  },
                 'reports_summary' => { 'id' => 'api_reports_reports_summary_get_Summary', 'endpoint' => '/reports/summary/' },
                 'reports_community' => { 'id' => 'api_reports_reports_community_get_Community', 'endpoint' => '/reports/community/' },
                 'reports_money' => { 'id' => 'api_reports_reports_money_get_Money', 'endpoint' => '/reports/money/' },

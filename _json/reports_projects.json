@@ -1,14 +1,14 @@
 {
-  "average-amount-successful": 6828.48,
-  "average-posts-successful": 11.63,
-  "failed": 202,
-  "percentage-successful": 70.12,
-  "percentage-successful-completed": 69.85,
-  "published": 699,
-  "received": 860,
-  "successful": 474,
-  "successful-completed": 468,
-  "time-elapsed": 0.007184505462646484,
+  "average-amount-successful": 7053.22,
+  "average-posts-successful": 11.59,
+  "failed": 217,
+  "percentage-successful": 70.23,
+  "percentage-successful-completed": 69.99,
+  "published": 759,
+  "received": 948,
+  "successful": 512,
+  "successful-completed": 506,
+  "time-elapsed": 1.7914631366729736,
   "top10-collaborations": [
     {
       "date-published": "Wed, 01 Feb 2012 00:00:00 +0100",
@@ -123,6 +123,17 @@
   ],
   "top10-donations": [
     {
+      "date-published": "Mon, 25 Apr 2016 00:00:00 +0200",
+      "description-short": "Investigamos, informamos, transformamos",
+      "image-url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
+      "name": "#YoIBEXtigo con La Marea ",
+      "project": "yoibextigo",
+      "project-url": "https://goteo.org/project/yoibextigo",
+      "status": "funded",
+      "total": 3543,
+      "video-url": "https://youtu.be/1aBtwciWKYM"
+    },
+    {
       "date-published": "Sun, 14 Feb 2016 00:00:00 +0100",
       "description-short": "Queremos seguir informando con libertad, seleccionando cada semana los asuntos que consideramos debes conocer, haci\u00e9ndonos eco de la voz a las minor\u00edas, demostrando que hay alternativas al pensamiento \u00fanico. Hazte mecenas de CTXT",
       "image-url": "https://goteo.org/img/medium/goteo-malagon.jpg",
@@ -143,17 +154,6 @@
       "status": "fulfilled",
       "total": 1492,
       "video-url": "https://vimeo.com/79968295"
-    },
-    {
-      "date-published": "Mon, 25 Apr 2016 00:00:00 +0200",
-      "description-short": "Investigamos, informamos, transformamos",
-      "image-url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
-      "name": "#YoIBEXtigo con La Marea ",
-      "project": "yoibextigo",
-      "project-url": "https://goteo.org/project/yoibextigo",
-      "status": "in_campaign",
-      "total": 1330,
-      "video-url": "https://youtu.be/RSiuin6dO30"
     },
     {
       "date-published": "Thu, 19 Dec 2013 00:00:00 +0100",
@@ -200,6 +200,17 @@
       "video-url": "https://vimeo.com/123081321"
     },
     {
+      "date-published": "Thu, 01 Sep 2016 00:00:00 +0200",
+      "description-short": "Necesitamos financiar las costas judiciales del recurso ante el Tribunal Supremo por la sobretasaci\u00f3n en los pr\u00e9stamos hipotecarios",
+      "image-url": "https://goteo.org/img/medium/portada750x422.jpg",
+      "name": "Querella 15M: #HazteFiscal contra directivos de Caja Madrid",
+      "project": "querella-15m-contra-directivos-de-caja-madrid",
+      "project-url": "https://goteo.org/project/querella-15m-contra-directivos-de-caja-madrid",
+      "status": "funded",
+      "total": 767,
+      "video-url": "https://youtu.be/A1w3FAxF1SE"
+    },
+    {
       "date-published": "Tue, 03 Feb 2015 00:00:00 +0100",
       "description-short": "Un drama social sobre los desahucios, con S\u00edlvia P\u00e9rez Cruz",
       "image-url": "https://goteo.org/img/medium/cerca-de-tucasa-29-1b-1.jpg",
@@ -220,17 +231,6 @@
       "status": "funded",
       "total": 634,
       "video-url": "https://vimeo.com/149844580"
-    },
-    {
-      "date-published": "Fri, 20 Dec 2013 00:00:00 +0100",
-      "description-short": "Empieza la revoluci\u00f3n energ\u00e9tica ciudadana",
-      "image-url": "https://goteo.org/img/medium/slide-oligopolyoff-13.jpg",
-      "name": "#OligopolyOFF",
-      "project": "oligopolyoff",
-      "project-url": "https://goteo.org/project/oligopolyoff",
-      "status": "funded",
-      "total": 628,
-      "video-url": "http://youtu.be/FsH1TDM9KwE"
     }
   ],
   "top10-receipts": [
@@ -255,6 +255,17 @@
       "project-url": "https://goteo.org/project/cercadetucasa",
       "status": "funded",
       "video-url": "https://youtu.be/rqGWOSy1Xx0"
+    },
+    {
+      "amount": 98285.0,
+      "date-published": "Mon, 25 Apr 2016 00:00:00 +0200",
+      "description-short": "Investigamos, informamos, transformamos",
+      "image-url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
+      "name": "#YoIBEXtigo con La Marea ",
+      "project": "yoibextigo",
+      "project-url": "https://goteo.org/project/yoibextigo",
+      "status": "funded",
+      "video-url": "https://youtu.be/1aBtwciWKYM"
     },
     {
       "amount": 72883.0,
@@ -332,17 +343,6 @@
       "project-url": "https://goteo.org/project/oligopolyoff",
       "status": "funded",
       "video-url": "http://youtu.be/FsH1TDM9KwE"
-    },
-    {
-      "amount": 23098.0,
-      "date-published": "Mon, 13 Jan 2014 00:00:00 +0100",
-      "description-short": "Lur honek gauza asko ditu esateko. Ahotsa falta zaio. ",
-      "image-url": "https://goteo.org/img/medium/jtk-4387.jpg",
-      "name": "Ahotsa behar dugu",
-      "project": "ahotsa-behar-dugu",
-      "project-url": "https://goteo.org/project/ahotsa-behar-dugu",
-      "status": "funded",
-      "video-url": "https://www.youtube.com/watch?v=PKGaPv_qN8Q&feature=youtu.be"
     }
   ]
 }

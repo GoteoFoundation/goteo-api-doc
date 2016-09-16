@@ -10,20 +10,28 @@
       "date-opened": "Wed, 27 Feb 2013 00:00:00 +0100",
       "date-published": "Mon, 15 Apr 2013 00:00:00 +0200",
       "date-succeeded": "Mon, 26 Aug 2013 00:00:00 +0200",
-      "description-short": "Financiando colectivamente proyectos de innovaci\u00f3n social y cultural mediante #UNIAcapitalRiego. Queremos reivindicar el valor del procom\u00fan desde la Universidad, con procesos que cedan el protagonismo a la sociedad civil.",
+      "description-short": "I Convocatoria #UNIACapitalRiego: Financiamos colectivamente proyectos de innovaci\u00f3n social y cultural. Reivindicamos el valor del procom\u00fan desde la Universidad, con procesos que cedan el protagonismo a la sociedad civil.",
       "id": "unia-capital-riego",
       "image-url": "https://goteo.org/img/medium/211x230-widget-uniacapitalriego-13-03r.jpg",
-      "latitude": null,
-      "logo-url": "https://goteo.org/img/medium/250x124px-logo-uniacapitalriego-uniar.jpg",
-      "longitude": null,
-      "name": "Universidad Internacional de Andaluc\u00eda",
+      "latitude": 37.54427060000000,
+      "logo-url": "https://goteo.org/img/medium/250x124px-logo-uniacapitalriego-13-01.jpg",
+      "longitude": -4.72775279999996,
+      "name": "Innovaci\u00f3n sociocultural",
       "owner": "unia",
       "owner-name": "UNIA",
       "projects-active": 0,
       "projects-applied": 38,
       "projects-succeeded": 4,
-      "projects-total": 108,
-      "region": null,
+      "projects-total": 75,
+      "radius": 150,
+      "region": "Andaluc\u00eda",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/logo-unia-color-nuevo_2r.jpg",
+          "name": "UNIA",
+          "url": "http://www.unia.es/"
+        }
+      ],
       "status": "succeeded"
     },
     {
@@ -36,20 +44,33 @@
       "date-opened": "Sun, 02 Jun 2013 00:00:00 +0200",
       "date-published": "Fri, 13 Sep 2013 00:00:00 +0200",
       "date-succeeded": "Sun, 02 Mar 2014 00:00:00 +0100",
-      "description-short": "Explorando nuevas maneras de proponer, promover y financiar colectivamente iniciativas innovadoras en el campo de la salud y la vida saludable en Euskadi, que permitan la utilizaci\u00f3n y replicabilidad de los resultados de manera libre y abierta. ",
+      "description-short": "Esta primera convocatoria Crowdsasuna propone, promueve y financia colectivamente iniciativas innovadoras en el campo de la salud y la vida saludable en Euskadi, que permitan la utilizaci\u00f3n y replicabilidad de los resultados de manera libre y abierta.",
       "id": "crowdsasuna",
       "image-url": "https://goteo.org/img/medium/crowdsasuna-widget-web_1r.png",
       "latitude": 42.98962480000000,
       "logo-url": "https://goteo.org/img/medium/crowdsasuna-logocampa-ad-web4r.png",
       "longitude": -2.61892730000000,
-      "name": "Proyectos de Innovaci\u00f3n en el \u00e1mbito de la Salud en Euskadi",
+      "name": "Innovaci\u00f3n en Salud I",
       "owner": "innobasque",
       "owner-name": "CROWDSASUNA",
       "projects-active": 0,
       "projects-applied": 26,
       "projects-succeeded": 3,
-      "projects-total": 60,
-      "region": "Comunitat aut\u00f2noma del Pa\u00eds Basc",
+      "projects-total": 40,
+      "radius": 50,
+      "region": "Pa\u00eds Vasco",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/euskera-castellano.jpg",
+          "name": "Innobasque",
+          "url": "http://www.innobasque.com/home.aspx?tabid=1562"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/obra-social-la-caixa-v-color-fons-blanc_1.jpg",
+          "name": "Obra Social \"la Caixa\"",
+          "url": "http://obrasocial.lacaixa.es/"
+        }
+      ],
       "status": "succeeded"
     },
     {
@@ -62,11 +83,11 @@
       "date-opened": "Sun, 01 Sep 2013 00:00:00 +0200",
       "date-published": "Tue, 26 Nov 2013 00:00:00 +0100",
       "date-succeeded": "Sun, 02 Mar 2014 00:00:00 +0100",
-      "description-short": "La Universidad Internacional de Andaluc\u00eda abre una convocatoria de proyectos de Innovaci\u00f3n educativa que contribuyan a \u201crepensar y expandir el conocimiento\u201d, reformulando los procesos de ense\u00f1anza y aprendizaje.",
+      "description-short": "II Convocatoria #UNIACapitalRiego: Para proyectos de Innovaci\u00f3n educativa que contribuyan a \u201crepensar y expandir el conocimiento\u201d, reformulando los procesos de ense\u00f1anza y aprendizaje.",
       "id": "unia-cofinanciacion-innovacion-educativa",
       "image-url": "https://goteo.org/img/medium/211x230-widget-uniacapitalriego-13-01.jpg",
       "latitude": 37.54427060000000,
-      "logo-url": "https://goteo.org/img/medium/250x124pxlogo-8-13.jpg",
+      "logo-url": "https://goteo.org/img/medium/logo-convo-unia-2.jpg",
       "longitude": -4.72775279999996,
       "name": "Innovaci\u00f3n en educaci\u00f3n y conocimiento abierto",
       "owner": "unia",
@@ -74,8 +95,16 @@
       "projects-active": 0,
       "projects-applied": 16,
       "projects-succeeded": 5,
-      "projects-total": 48,
-      "region": "Andalusia",
+      "projects-total": 40,
+      "radius": 150,
+      "region": "Andaluc\u00eda",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/logo-unia-color-nuevo-2r-2.jpg",
+          "name": "UNIA",
+          "url": ""
+        }
+      ],
       "status": "succeeded"
     },
     {
@@ -88,20 +117,53 @@
       "date-opened": "Fri, 13 Sep 2013 00:00:00 +0200",
       "date-published": "Sat, 12 Oct 2013 00:00:00 +0200",
       "date-succeeded": "Sun, 02 Mar 2014 00:00:00 +0100",
-      "description-short": "#Cofinancia es una iniciativa del Gobierno de Extremadura para promover proyectos abiertos de emprendimiento empresarial a trav\u00e9s de crowdfunding. ",
+      "description-short": "Convocatoria del Gobierno de Extremadura para promover proyectos abiertos de emprendimiento empresarial a trav\u00e9s de crowdfunding. ",
       "id": "cofinancia-extremadura",
       "image-url": "https://goteo.org/img/medium/imagen-widget.png",
-      "latitude": 39.49370000000000,
-      "logo-url": "https://goteo.org/img/medium/cofinancia-web-isotipo-250x124px-2.jpg",
-      "longitude": -6.06790000000000,
-      "name": "Financiaci\u00f3n colectiva para nuevos proyectos emprendedores",
+      "latitude": 39.49373920000000,
+      "logo-url": "https://goteo.org/img/medium/logo-convo-2.jpg",
+      "longitude": -6.06791939999994,
+      "name": "Emprendimiento empresarial",
       "owner": "gobext",
       "owner-name": "Gobierno de Extremadura",
       "projects-active": 0,
       "projects-applied": 12,
       "projects-succeeded": 5,
-      "projects-total": 65,
-      "region": "Espanya",
+      "projects-total": 39,
+      "radius": 120,
+      "region": "Extremadura",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/logo-gobex-sec-sponsor.jpg",
+          "name": "Gobierno de Extremadura",
+          "url": "http://www.gobex.es/gobex/view/main/index/index.php"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/imagen_7.png",
+          "name": "Cavatrans",
+          "url": "http://cavatrans.com/"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/imagen_8.png",
+          "name": "Programa de cooperaci\u00f3n transfronteriza Espa\u00f1a-Portugal",
+          "url": "http://www.poctep.eu/"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/imagen_9.png",
+          "name": "FEDER - Fondo Europeo de Desarrollo Regional",
+          "url": "http://europa.eu/legislation_summaries/agriculture/general_framework/g24234_es.htm"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/imagen_10.png",
+          "name": "EUROACE - Alentejo, Centro, Extremadura.",
+          "url": "http://www.euro-ace.eu/"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/logoavante-22.png",
+          "name": "Extremadura Avante",
+          "url": "http://www.extremaduraavante.es/"
+        }
+      ],
       "status": "succeeded"
     },
     {
@@ -114,20 +176,28 @@
       "date-opened": "Sun, 02 Mar 2014 00:00:00 +0100",
       "date-published": "Mon, 19 May 2014 00:00:00 +0200",
       "date-succeeded": "Tue, 03 Mar 2015 00:00:00 +0100",
-      "description-short": "La Universidad Internacional de Andaluc\u00eda abre una nueva convocatoria para apoyar y promover proyectos de innovaci\u00f3n en el \u00e1mbito de la cooperaci\u00f3n que persigan la mejora del bienestar infantil.",
+      "description-short": "III Convocatoria #UNIACapitalRiego: Para apoyar y promover proyectos de innovaci\u00f3n en el \u00e1mbito de la cooperaci\u00f3n que persigan la mejora del bienestar infantil.",
       "id": "unia-cooperacion-infancia",
       "image-url": "https://goteo.org/img/medium/211x230-widget-uniacapitalriego-14-03.jpg",
       "latitude": 37.54427060000000,
-      "logo-url": "https://goteo.org/img/medium/250x124pxlogo-2014-_3.jpg",
+      "logo-url": "https://goteo.org/img/medium/logo-convo-unia-3.jpg",
       "longitude": -4.72775279999996,
-      "name": "Innovaci\u00f3n en Cooperaci\u00f3n e Infancia",
+      "name": "Innovaci\u00f3n en cooperaci\u00f3n e infancia",
       "owner": "unia",
       "owner-name": "UNIA",
       "projects-active": 0,
       "projects-applied": 8,
       "projects-succeeded": 4,
-      "projects-total": 42,
-      "region": "Andalusia",
+      "projects-total": 30,
+      "radius": 900,
+      "region": "Andaluc\u00eda",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/logo-unia-color-nuevo.jpg",
+          "name": "UNIA",
+          "url": "http://www.unia.es/"
+        }
+      ],
       "status": "succeeded"
     },
     {
@@ -140,20 +210,33 @@
       "date-opened": "Mon, 10 Mar 2014 00:00:00 +0100",
       "date-published": "Tue, 20 May 2014 00:00:00 +0200",
       "date-succeeded": "Tue, 03 Mar 2015 00:00:00 +0100",
-      "description-short": "Innobasque lanza una nueva edici\u00f3n de CROWDSASUNA para seguir explorando nuevas maneras de proponer, promover y financiar colectivamente iniciativas innovadoras en el campo de la salud y la vida saludable en Euskadi",
+      "description-short": "II Convocatoria. Nuevas maneras de proponer, promover y financiar colectivamente iniciativas innovadoras en el campo de la salud y la vida saludable en Euskadi, que permitan la utilizaci\u00f3n y replicabilidad de los resultados de manera libre y abierta.",
       "id": "crowdsasuna2014",
       "image-url": "https://goteo.org/img/medium/crowdsasuna-widget-share-versionanchura230-web.png",
       "latitude": 42.98962480000000,
       "logo-url": "https://goteo.org/img/medium/logo-crowdsasuna-powered-inno_1.jpg",
       "longitude": -2.61892730000000,
-      "name": "II Convocatoria para proyectos innovadores en el \u00e1mbito de la Salud en Euskadi",
+      "name": "Innovaci\u00f3n en Salud II",
       "owner": "innobasque",
       "owner-name": "CROWDSASUNA",
       "projects-active": 0,
       "projects-applied": 16,
       "projects-succeeded": 5,
-      "projects-total": 36,
-      "region": "Comunitat aut\u00f2noma del Pa\u00eds Basc",
+      "projects-total": 28,
+      "radius": 50,
+      "region": "Pa\u00eds Vasco",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/euskera-castellano_1.jpg",
+          "name": "Innobasque",
+          "url": "http://www.innobasque.com/home.aspx?tabid=1"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/obra-social-la-caixa-v-color-fons-blanc_2.jpg",
+          "name": "Obra Social \"la Caixa\"",
+          "url": "https://obrasocial.lacaixa.es/"
+        }
+      ],
       "status": "succeeded"
     },
     {
@@ -161,7 +244,7 @@
       "amount-committed": 8936.0,
       "amount-peers": 11928.0,
       "amount-remaining": 1064.0,
-      "call-location": "Europe",
+      "call-location": "Europa",
       "call-url": "https://goteo.org/call/patrimonio-cultural-y-remezcla-digital",
       "date-opened": "Mon, 02 Mar 2015 00:00:00 +0100",
       "date-published": "Wed, 10 Jun 2015 00:00:00 +0200",
@@ -169,17 +252,30 @@
       "description-short": "IV Convocatoria #UNIACapitalRiego: Proyectos innovadores de cultura, que utilicen contenidos abiertos y pongan en valor el patrimonio cultural a trav\u00e9s de la remezcla digital.",
       "id": "patrimonio-cultural-y-remezcla-digital",
       "image-url": "https://goteo.org/img/medium/211x230-widget-uniacapitalriego-15.jpg",
-      "latitude": 37.39861100000000,
-      "logo-url": "https://goteo.org/img/medium/250x124pxlogo-2014-3.jpg",
-      "longitude": -6.00722199999996,
+      "latitude": 37.54427060000000,
+      "logo-url": "https://goteo.org/img/medium/logo-convo-unia-7.jpg",
+      "longitude": -4.72775279999996,
       "name": "Patrimonio cultural y remezcla digital",
       "owner": "unia",
       "owner-name": "UNIA",
       "projects-active": 5,
       "projects-applied": 13,
       "projects-succeeded": 4,
-      "projects-total": 39,
-      "region": "Sevilla",
+      "projects-total": 29,
+      "radius": 150,
+      "region": "Andaluc\u00eda",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/escudo-mecd-peque.gif",
+          "name": "Iniciativa subvencionada por el Ministerio de Educaci\u00f3n, Cultura y Deporte",
+          "url": ""
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/logo-unia-color-nuevo-2r-3.jpg",
+          "name": "UNIA",
+          "url": ""
+        }
+      ],
       "status": "succeeded"
     },
     {
@@ -192,47 +288,68 @@
       "date-opened": "Wed, 08 Apr 2015 00:00:00 +0200",
       "date-published": "Tue, 01 Sep 2015 00:00:00 +0200",
       "date-succeeded": "Wed, 27 Apr 2016 00:00:00 +0200",
-      "description-short": "I Convocatoria Crowdfunding ZGZ. Del 8 de abril a 25 de mayo. Conectando el talento local, la energ\u00eda emprendedora y la financiaci\u00f3n colaborativa al servicio de una mejor calidad de vida de l@s ciudadan@s",
+      "description-short": "Conectando el talento local, la energ\u00eda emprendedora y la financiaci\u00f3n colaborativa al servicio de una mejor calidad de vida de l@s ciudadan@s",
       "id": "crowdfunding-zgz",
       "image-url": "https://goteo.org/img/medium/logofinal.jpg",
-      "latitude": 41.64886959999999,
-      "logo-url": "https://goteo.org/img/medium/logo-55.jpg",
-      "longitude": -0.88974210000004,
+      "latitude": 41.64882259999999,
+      "logo-url": "https://goteo.org/img/medium/logo-convo-1.jpg",
+      "longitude": -0.88908530000003,
       "name": "Crowdfunding ZGZ",
       "owner": "ayuntamientozaragoza",
       "owner-name": "Ayuntamiento de Zaragoza",
       "projects-active": 4,
-      "projects-applied": 18,
+      "projects-applied": 17,
       "projects-succeeded": 3,
-      "projects-total": 52,
+      "projects-total": 30,
+      "radius": 50,
       "region": "Zaragoza",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/logo-zaragoza-2.png",
+          "name": "Ayuntamiento de Zaragoza",
+          "url": ""
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/etopia.png",
+          "name": "Etopia",
+          "url": ""
+        }
+      ],
       "status": "succeeded"
     },
     {
       "amount-available": 70000.0,
-      "amount-committed": 0.0,
-      "amount-peers": 0.0,
-      "amount-remaining": 70000.0,
+      "amount-committed": 6462.0,
+      "amount-peers": 7747.0,
+      "amount-remaining": 63538.0,
       "call-location": "Gipuzkoa, Espa\u00f1a",
       "call-url": "https://goteo.org/call/meta-gipuzkoa",
       "date-opened": "Wed, 27 Apr 2016 00:00:00 +0200",
-      "date-published": null,
+      "date-published": "Thu, 15 Sep 2016 00:00:00 +0200",
       "date-succeeded": null,
-      "description-short": "Lanzamos Meta!: 70.000 \u20ac una convocatoria de crowdfunding para proyectos culturales de Gipuzkoa. Presenta un proyecto antes del 19 de Junio y podr\u00e1 ser uno de los 20 seleccionados para salir a campa\u00f1a en Septiembre de 2016. ",
+      "description-short": "El pr\u00f3ximo 15 de Septiembre lanzamos las 20 campa\u00f1as seleccionadas dentro de #MetaKultura!: hasta 70.000 \u20ac de la Diputaci\u00f3n Foral de Gipuzkoa se sumar\u00e1n a los aportes ciudadanos que consigan los proyectos.",
       "id": "meta-gipuzkoa",
       "image-url": "https://goteo.org/img/medium/imagenwidgetmeta-1.jpg",
       "latitude": 43.07562990000000,
       "logo-url": "https://goteo.org/img/medium/logoconvocatoriameta.jpg",
       "longitude": -2.22366669999997,
-      "name": "Micromecenazgo para proyectos culturales en Gipuzkoa",
+      "name": "Proyectos culturales en Gipuzkoa",
       "owner": "gfa-dfg",
       "owner-name": "Diputaci\u00f3n Foral de Gipuzkoa",
       "projects-active": 0,
-      "projects-applied": 2,
-      "projects-succeeded": 1,
-      "projects-total": 0,
+      "projects-applied": 37,
+      "projects-succeeded": 0,
+      "projects-total": 51,
+      "radius": 50,
       "region": "Guip\u00fazcoa",
-      "status": "applying"
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/gfa-albokoa1-beltzaperu-1.png",
+          "name": "Diputaci\u00f3n Foral de Gipuzkoa",
+          "url": "https://goteo.org/user/profile/gfa-dfg"
+        }
+      ],
+      "status": "published"
     }
   ],
   "meta": {
@@ -240,5 +357,5 @@
     "page": 0,
     "total": 9
   },
-  "time-elapsed": 0.016176939010620117
+  "time-elapsed": 0.16536545753479004
 }

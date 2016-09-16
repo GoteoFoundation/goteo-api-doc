@@ -9,7 +9,7 @@ This section gives you information about average numbers in [Goteo.org](http://g
 
 ## Filters available
 
-**The [standard set of filters](filters.html)) applies to all of these endpoints with these particulars:**
+**The [standard set of filters](filters.html) applies to all of these endpoints with these particulars:**
 
 {{ site.data.reports_community.parameters_table }}
 

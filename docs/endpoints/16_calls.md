@@ -75,7 +75,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/calls/unia-capital-riego/pro
 
 ### Filters available:
 
-**Some of the [standard set of filters](filters.html)) can be applied here:**
+**The [standard set of filters](/doc/filters/) applies to this endpoint with these particulars:**
 
 {{ site.data.call_projects.parameters_table }}
 

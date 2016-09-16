@@ -1,335 +1,173 @@
 {
-  "average-collaborators": 8.4217,
-  "average-donors": 120.9829,
-  "cash-donors": 666,
+  "average-collaborators": 8.0713,
+  "average-donors": 129.7075,
+  "cash-donors": 670,
   "categories": [
     {
       "2": {
         "id": 2,
         "name": "Social",
-        "percentage-users": 7.89,
-        "users": 6251
+        "percentage-users": 7.7,
+        "users": 6612
       }
     },
     {
       "10": {
         "id": 10,
         "name": "Educativo",
-        "percentage-users": 6.08,
-        "users": 4815
+        "percentage-users": 5.92,
+        "users": 5079
       }
     },
     {
       "11": {
         "id": 11,
         "name": "Cultural",
-        "percentage-users": 6.05,
-        "users": 4796
+        "percentage-users": 5.92,
+        "users": 5079
       }
     },
     {
       "13": {
         "id": 13,
         "name": "Ecol\u00f3gico",
-        "percentage-users": 4.66,
-        "users": 3693
+        "percentage-users": 4.56,
+        "users": 3911
       }
     },
     {
       "7": {
         "id": 7,
         "name": "Tecnol\u00f3gico",
-        "percentage-users": 4.39,
-        "users": 3477
+        "percentage-users": 4.22,
+        "users": 3626
       }
     },
     {
       "6": {
         "id": 6,
         "name": "Comunicativo",
-        "percentage-users": 3.63,
-        "users": 2874
+        "percentage-users": 3.5,
+        "users": 3000
       }
     },
     {
       "14": {
         "id": 14,
         "name": "Cient\u00edfico",
-        "percentage-users": 2.97,
-        "users": 2351
+        "percentage-users": 2.88,
+        "users": 2472
       }
     },
     {
       "9": {
         "id": 9,
         "name": "Emprendedor",
-        "percentage-users": 2.85,
-        "users": 2260
+        "percentage-users": 2.87,
+        "users": 2467
       }
     },
     {
       "16": {
         "id": 16,
         "name": "Dise\u00f1o",
-        "percentage-users": 1.6,
-        "users": 1265
+        "percentage-users": 1.57,
+        "users": 1349
       }
     }
   ],
-  "collaborators": 5708,
-  "creators-collaborators": 32,
-  "creators-donors": 42,
-  "creditcard-donors": 42884,
-  "donors": 52760,
-  "donors-collaborators": 1222,
+  "collaborators": 5831,
+  "creators-collaborators": 33,
+  "creators-donors": 43,
+  "creditcard-donors": 47022,
+  "donors": 57938,
+  "donors-collaborators": 1255,
   "leading-category": 2,
-  "multidonors": 7692,
-  "paypal-donors": 10637,
-  "percentage-donors-users": 66.61,
-  "percentage-multidonor-donors": 14.58,
-  "percentage-multidonor-users": 9.71,
-  "percentage-unsubscribed-users": 2.42,
-  "percentage-users-leading-category": 7.89,
-  "percentage-users-second-category": 6.08,
+  "multidonors": 8707,
+  "paypal-donors": 11913,
+  "percentage-donors-users": 67.5,
+  "percentage-multidonor-donors": 15.03,
+  "percentage-multidonor-users": 10.14,
+  "percentage-unsubscribed-users": 2.33,
+  "percentage-users-leading-category": 7.7,
+  "percentage-users-second-category": 5.92,
   "second-category": 10,
-  "time-elapsed": 0.004744291305541992,
+  "time-elapsed": 1.8231923580169678,
   "top10-collaborators": [
     {
-      "interactions": 46,
-      "name": "EmmanuelG",
-      "profile-image-url": "https://goteo.org/img/medium/logorvb75x75.jpg",
-      "profile-url": "https://goteo.org/user/profile/watsdesign",
-      "user": null
-    },
-    {
-      "interactions": 44,
+      "interactions": 51,
       "name": "Colectivo Afinidad Rebelde",
       "profile-image-url": "https://goteo.org/img/medium/afinidad.png",
       "profile-url": "https://goteo.org/user/profile/afinidadrebelde",
       "user": null
     },
     {
-      "interactions": 28,
+      "interactions": 48,
+      "name": "EmmanuelG",
+      "profile-image-url": "https://goteo.org/img/medium/logorvb75x75.jpg",
+      "profile-url": "https://goteo.org/user/profile/watsdesign",
+      "user": null
+    },
+    {
+      "interactions": 35,
       "name": "Fab Lab Barcelona",
       "profile-image-url": "https://goteo.org/img/medium/fablab.jpg",
       "profile-url": "https://goteo.org/user/profile/fablabbcn",
       "user": null
     },
     {
-      "interactions": 25,
+      "interactions": 34,
+      "name": "Allinvalencia",
+      "profile-image-url": "https://goteo.org/img/medium/enconstruccion.jpg",
+      "profile-url": "https://goteo.org/user/profile/dirk-eric",
+      "user": null
+    },
+    {
+      "interactions": 33,
       "name": "David Cabo",
       "profile-image-url": "https://goteo.org/img/medium/twitter4.png",
       "profile-url": "https://goteo.org/user/profile/davidcabo",
       "user": null
     },
     {
-      "interactions": 24,
+      "interactions": 30,
       "name": "D\u00fao SinCron\u00eda",
       "profile-image-url": "https://goteo.org/img/medium/logo_40.jpg",
       "profile-url": "https://goteo.org/user/profile/jngsax",
       "user": null
     },
     {
-      "interactions": 23,
+      "interactions": 28,
       "name": "Asociaci\u00f3n Civil Redes de Pares",
       "profile-image-url": "https://goteo.org/img/medium/logo_8r.jpg",
       "profile-url": "https://goteo.org/user/profile/reevo",
       "user": null
     },
     {
-      "interactions": 19,
-      "name": "Lomi",
-      "profile-image-url": "https://goteo.org/img/medium/carro.jpg",
-      "profile-url": "https://goteo.org/user/profile/lomi",
+      "interactions": 24,
+      "name": "ARSGAMES",
+      "profile-image-url": "https://goteo.org/img/medium/logo-ag.png",
+      "profile-url": "https://goteo.org/user/profile/arsgames",
       "user": null
     },
     {
-      "interactions": 18,
-      "name": "Eneko Mobydick",
-      "profile-image-url": "https://goteo.org/img/medium/md1-cd-_101.jpg",
-      "profile-url": "https://goteo.org/user/profile/enekomobydick",
+      "interactions": 23,
+      "name": "Fundaci\u00f3n Menudos Corazones",
+      "profile-image-url": "https://goteo.org/img/medium/logotipo-300-pix.jpg",
+      "profile-url": "https://goteo.org/user/profile/tbordons",
       "user": null
     },
     {
-      "interactions": 16,
+      "interactions": 23,
       "name": "Freedonia",
       "profile-image-url": "https://goteo.org/img/medium/1385988-10151821557898425-1933888924-n.jpg",
       "profile-url": "https://goteo.org/user/profile/freedonia",
       "user": null
-    },
-    {
-      "interactions": 16,
-      "name": "Nxtmdia",
-      "profile-image-url": "https://goteo.org/img/medium/nxtmdia-avatar-tw.jpg",
-      "profile-url": "https://goteo.org/user/profile/nxtmdia",
-      "user": null
     }
   ],
-  "top10-donors": [
-    {
-      "amount": 26600.0,
-      "contributions": 1,
-      "name": "CANDIDATURES D'UNITAT POPULAR (CUP)",
-      "profile-image-url": "https://goteo.org/img/medium/",
-      "profile-url": "https://goteo.org/user/profile/cupcat",
-      "user": null
-    },
-    {
-      "amount": 14711.0,
-      "contributions": 1,
-      "name": "ASSEMBLEA DE DOCENTS DE LES ILLES BALEARS",
-      "profile-image-url": "https://goteo.org/img/medium/",
-      "profile-url": "https://goteo.org/user/profile/caixaderesistencia",
-      "user": null
-    },
-    {
-      "amount": 14500.0,
-      "contributions": 1,
-      "name": "Assemblea Pagesa",
-      "profile-image-url": "https://goteo.org/img/medium/logo_95.jpg",
-      "profile-url": "https://goteo.org/user/profile/assembleapagesa",
-      "user": null
-    },
-    {
-      "amount": 14418.0,
-      "contributions": 8,
-      "name": "Celia",
-      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
-      "profile-url": "https://goteo.org/user/profile/celiamayer",
-      "user": null
-    },
-    {
-      "amount": 11000.0,
-      "contributions": 1,
-      "name": "Bruno Fabregas",
-      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
-      "profile-url": "https://goteo.org/user/profile/bausan-films",
-      "user": null
-    },
-    {
-      "amount": 10000.0,
-      "contributions": 1,
-      "name": "Luis Hern\u00e1ndez",
-      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
-      "profile-url": "https://goteo.org/user/profile/lhb",
-      "user": null
-    },
-    {
-      "amount": 8280.0,
-      "contributions": 36,
-      "name": "carmen",
-      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
-      "profile-url": "https://goteo.org/user/profile/carmeliya",
-      "user": null
-    },
-    {
-      "amount": 8100.0,
-      "contributions": 1,
-      "name": "Ernest Companys",
-      "profile-image-url": "https://goteo.org/img/medium/884-37311472158-7031-n.jpgoh-91720447652c15e435b06",
-      "profile-url": "https://goteo.org/user/profile/ernest-companys",
-      "user": null
-    },
-    {
-      "amount": 7999.0,
-      "contributions": 24,
-      "name": "Antoni Guti\u00e9rrez-Rub\u00ed",
-      "profile-image-url": "https://goteo.org/img/medium/antonigr.jpg",
-      "profile-url": "https://goteo.org/user/profile/antonigr",
-      "user": null
-    },
-    {
-      "amount": 7500.0,
-      "contributions": 1,
-      "name": "INSyria",
-      "profile-image-url": "https://goteo.org/img/medium/ins-logo-fb-and-twitter.jpg",
-      "profile-url": "https://goteo.org/user/profile/ins",
-      "user": null
-    }
-  ],
-  "top10-multidonors": [
-    {
-      "amount": 4686.0,
-      "contributions": 169,
-      "name": "Olivier",
-      "profile-image-url": "https://goteo.org/img/medium/ici-olivier-lift-losange.png",
-      "profile-url": "https://goteo.org/user/profile/olivier",
-      "user": null
-    },
-    {
-      "amount": 1845.0,
-      "contributions": 63,
-      "name": "ColaBoraBora",
-      "profile-image-url": "https://goteo.org/img/medium/logodibu-cbbnombrer.jpg",
-      "profile-url": "https://goteo.org/user/profile/colaborabora",
-      "user": null
-    },
-    {
-      "amount": 2292.0,
-      "contributions": 56,
-      "name": "Alvaro Moya",
-      "profile-image-url": "https://goteo.org/img/medium/img-20140227-wa0000.jpg",
-      "profile-url": "https://goteo.org/user/profile/amoya62",
-      "user": null
-    },
-    {
-      "amount": 376.0,
-      "contributions": 50,
-      "name": "Qu\u00e8txup",
-      "profile-image-url": "https://goteo.org/img/medium/",
-      "profile-url": "https://goteo.org/user/profile/pablo.checadejoz",
-      "user": null
-    },
-    {
-      "amount": 1307.0,
-      "contributions": 41,
-      "name": "Eduardo Cervantes Sevilla",
-      "profile-image-url": "https://goteo.org/img/medium/foto-edu1.jpeg.jpeg",
-      "profile-url": "https://goteo.org/user/profile/edwalmeria",
-      "user": null
-    },
-    {
-      "amount": 630.0,
-      "contributions": 41,
-      "name": "lave",
-      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
-      "profile-url": "https://goteo.org/user/profile/lave76",
-      "user": null
-    },
-    {
-      "amount": 668.0,
-      "contributions": 39,
-      "name": "Julian Canaves",
-      "profile-image-url": "https://goteo.org/img/medium/julian1.jpg",
-      "profile-url": "https://goteo.org/user/profile/jcanaves",
-      "user": null
-    },
-    {
-      "amount": 1132.0,
-      "contributions": 38,
-      "name": "papakorkel",
-      "profile-image-url": "https://goteo.org/img/medium/platano.gif",
-      "profile-url": "https://goteo.org/user/profile/papakorkel",
-      "user": null
-    },
-    {
-      "amount": 8280.0,
-      "contributions": 36,
-      "name": "carmen",
-      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
-      "profile-url": "https://goteo.org/user/profile/carmeliya",
-      "user": null
-    },
-    {
-      "amount": 1054.0,
-      "contributions": 35,
-      "name": "Eva Saura",
-      "profile-image-url": "https://goteo.org/img/medium/picture-type-large_119",
-      "profile-url": "https://goteo.org/user/profile/evasaura",
-      "user": null
-    }
-  ],
-  "users": 79210,
-  "users-leading-category": 6251,
-  "users-second-category": 4815
+  "top10-donors": [],
+  "top10-multidonors": [],
+  "users": 85835,
+  "users-leading-category": 6612,
+  "users-second-category": 5079
 }

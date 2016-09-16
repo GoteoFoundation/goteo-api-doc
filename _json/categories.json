@@ -4,68 +4,68 @@
       "description": "Proyectos que promueven el cambio social, la resoluci\u00f3n de problemas en las relaciones humanas y/o su fortalecimiento para conseguir un mayor bienestar.",
       "id": 2,
       "name": "Social",
-      "total-projects": 458,
-      "total-users": 6152
+      "total-projects": 506,
+      "total-users": 6511
     },
     {
       "description": "Desarrollos t\u00e9cnicos de software, hardware, herramientas etc. para solucionar problemas o necesidades concretas. ",
       "id": 7,
       "name": "Tecnol\u00f3gico",
-      "total-projects": 171,
-      "total-users": 3408
+      "total-projects": 180,
+      "total-users": 3554
     },
     {
       "description": "Proyectos que aspiran a convertirse en una iniciativa empresarial o de emprendimiento social, generando beneficios econ\u00f3micos. ",
       "id": 9,
       "name": "Emprendedor",
-      "total-projects": 112,
-      "total-users": 2235
+      "total-projects": 123,
+      "total-users": 2440
     },
     {
       "description": "",
       "id": 16,
       "name": "Dise\u00f1o",
-      "total-projects": 69,
-      "total-users": 1250
+      "total-projects": 78,
+      "total-users": 1333
     },
     {
       "description": "Proyectos con el objetivo de informar, denunciar, comunicar (por ejemplo periodismo ciudadano, documentales, blogs, programas de radio).",
       "id": 6,
       "name": "Comunicativo",
-      "total-projects": 228,
-      "total-users": 2827
+      "total-projects": 245,
+      "total-users": 2953
     },
     {
       "description": "Proyectos donde el objetivo primordial es la formaci\u00f3n o el aprendizaje. ",
       "id": 10,
       "name": "Educativo",
-      "total-projects": 363,
-      "total-users": 4739
+      "total-projects": 400,
+      "total-users": 4999
     },
     {
       "description": "Proyectos con objetivos art\u00edsticos y culturales en un sentido amplio.",
       "id": 11,
       "name": "Cultural",
-      "total-projects": 337,
-      "total-users": 4720
+      "total-projects": 380,
+      "total-users": 5000
     },
     {
       "description": "Proyectos relacionados con el cuidado del medio ambiente, la sostenibilidad y/o la diversidad biol\u00f3gica.\r\n",
       "id": 13,
       "name": "Ecol\u00f3gico",
-      "total-projects": 202,
-      "total-users": 3637
+      "total-projects": 219,
+      "total-users": 3853
     },
     {
       "description": "Estudios o investigaciones de alguna materia, proyectos que buscan respuestas, soluciones, explicaciones nuevas.",
       "id": 14,
       "name": "Cient\u00edfico",
-      "total-projects": 88,
-      "total-users": 2314
+      "total-projects": 95,
+      "total-users": 2434
     }
   ],
   "meta": {
     "total": 9
   },
-  "time-elapsed": 0.0036478042602539062
+  "time-elapsed": 0.4611806869506836
 }

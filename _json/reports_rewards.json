@@ -5,73 +5,73 @@
       "icon": "product",
       "name": "Producto",
       "svg-url": "https://goteoassets.org/api/svg/icons/product.svg",
-      "total": 1800
+      "total": 2044
     },
     {
       "description": "Acciones y/o sesiones durante tiempo determinado para satisfacer una necesidad individual o de grupo: una formaci\u00f3n, una ayuda t\u00e9cnica, un asesoramiento, etc.",
       "icon": "service",
       "name": "Servicios",
       "svg-url": "https://goteoassets.org/api/svg/icons/service.svg",
-      "total": 1086
+      "total": 1170
     },
     {
       "description": "Los archivos digitales pueden ser de m\u00fasica, v\u00eddeo, documentos de texto, etc.",
       "icon": "file",
       "name": "Archivos digitales",
       "svg-url": "https://goteoassets.org/api/svg/icons/file.svg",
-      "total": 853
+      "total": 912
     },
     {
       "description": "Agradecimiento o reconocimiento",
       "icon": "thanks",
       "name": "Reconocimiento",
       "svg-url": "https://goteoassets.org/api/svg/icons/thanks.svg",
-      "total": 661
+      "total": 723
     },
     {
       "description": "Sorpr\u00e9ndenos con esta nueva tipolog\u00eda, realmente nos interesa :) ",
       "icon": "other",
       "name": "Otro",
       "svg-url": "https://goteoassets.org/api/svg/icons/other.svg",
-      "total": 369
+      "total": 405
     },
     {
       "description": "Documentos pr\u00e1cticos detallando pasos, materiales formativos, bussiness plans, \u201chow tos\u201d, recetas, etc.",
       "icon": "manual",
       "name": "Manuales",
       "svg-url": "https://goteoassets.org/api/svg/icons/manual.svg",
-      "total": 144
+      "total": 158
     },
     {
       "description": "Por c\u00f3digo fuente entendemos programas y software en general.",
       "icon": "code",
       "name": "C\u00f3digo fuente",
       "svg-url": "https://goteoassets.org/api/svg/icons/code.svg",
-      "total": 81
+      "total": 83
     },
     {
       "description": "Los dise\u00f1os pueden ser de planos o patrones, esquemas, esbozos, diagramas de flujo, etc.",
       "icon": "design",
       "name": "Dise\u00f1o",
       "svg-url": "https://goteoassets.org/api/svg/icons/design.svg",
-      "total": 49
+      "total": 52
     },
     {
       "description": "Retornos econ\u00f3micos proporcionales a la inversi\u00f3n realizada, que se deben detallar en cantidad pero tambi\u00e9n forma de pago.",
       "icon": "money",
       "name": "Dinero",
       "svg-url": "https://goteoassets.org/api/svg/icons/money.svg",
-      "total": 31
+      "total": 30
     }
   ],
-  "percentage-reward-refusal": 34.86,
-  "reward-refusal": 18392,
+  "percentage-reward-refusal": 0.0,
+  "reward-refusal": 0,
   "rewards-per-amount": {
-    "rewards-between-100-400": 3990,
-    "rewards-between-15-30": 19027,
-    "rewards-between-30-100": 20312,
-    "rewards-less-than-15": 13309,
-    "rewards-more-than-400": 413
+    "rewards-between-100-400": 958,
+    "rewards-between-15-30": 3817,
+    "rewards-between-30-100": 4818,
+    "rewards-less-than-15": 4117,
+    "rewards-more-than-400": 76
   },
-  "time-elapsed": 0.002227306365966797
+  "time-elapsed": 0.7902917861938477
 }

@@ -21,7 +21,7 @@
       "percentage-pledged-successful": 145.77,
       "pledged": 28388,
       "refunded": 4681,
-      "time-elapsed": 0.003536224365234375
+      "time-elapsed": 1.9143941402435303
     },
     "2012": {
       "average-donation": 41.75,
@@ -44,7 +44,7 @@
       "percentage-pledged-successful": 128.54,
       "pledged": 438832,
       "refunded": 25218,
-      "time-elapsed": 0.0038976669311523438
+      "time-elapsed": 1.8982348442077637
     },
     "2013": {
       "average-donation": 48.98,
@@ -67,7 +67,7 @@
       "percentage-pledged-successful": 129.69,
       "pledged": 940001,
       "refunded": 47339,
-      "time-elapsed": 0.004122257232666016
+      "time-elapsed": 1.96022629737854
     },
     "2014": {
       "average-donation": 48.83,
@@ -90,17 +90,17 @@
       "percentage-pledged-successful": 123.74,
       "pledged": 800330,
       "refunded": 59358,
-      "time-elapsed": 0.003693819046020508
+      "time-elapsed": 2.0577237606048584
     },
     "2015": {
-      "average-donation": 52.97,
-      "average-donation-paypal": 37.36,
-      "average-failed": 1304.91,
+      "average-donation": 53.00,
+      "average-donation-paypal": 37.46,
+      "average-failed": 1323.02,
       "average-minimum": 5436.30,
       "average-received": 6732.74,
       "average-second-round": 682.05,
       "cash-amount": 151812,
-      "creditcard-amount": 658821,
+      "creditcard-amount": 658551,
       "fee-amount": 67214.72,
       "matchfund-amount": 17451,
       "matchfundpledge-amount": 22000,
@@ -108,56 +108,56 @@
         "from_date": "2015-01-01",
         "to_date": "2015-12-31"
       },
-      "paypal-amount": 65626,
-      "percentage-pledged-failed": 20.59,
+      "paypal-amount": 65406,
+      "percentage-pledged-failed": 20.37,
       "percentage-pledged-successful": 132.81,
-      "pledged": 895092,
-      "refunded": 51126,
-      "time-elapsed": 0.0034639835357666016
+      "pledged": 894602,
+      "refunded": 50636,
+      "time-elapsed": 1.9392659664154053
     },
     "2016": {
-      "average-donation": 48.88,
-      "average-donation-paypal": 29.38,
-      "average-failed": 1116.57,
-      "average-minimum": 11220.76,
-      "average-received": 15851.67,
-      "average-second-round": 2246.31,
-      "cash-amount": 31494,
-      "creditcard-amount": 330122,
-      "fee-amount": 34006.24,
-      "matchfund-amount": 0,
+      "average-donation": 45.26,
+      "average-donation-paypal": 29.62,
+      "average-failed": 1176.80,
+      "average-minimum": 9343.98,
+      "average-received": 12536.68,
+      "average-second-round": 1990.04,
+      "cash-amount": 34594,
+      "creditcard-amount": 594816,
+      "fee-amount": 58553.28,
+      "matchfund-amount": 6462,
       "matchfundpledge-amount": 70000,
       "meta": {
         "from_date": "2016-01-01",
-        "to_date": "2016-05-26"
+        "to_date": "2016-09-16"
       },
-      "paypal-amount": 66528,
-      "percentage-pledged-failed": 24.03,
-      "percentage-pledged-successful": 153.83,
-      "pledged": 437421,
-      "refunded": 10613,
-      "time-elapsed": 0.0037796497344970703
+      "paypal-amount": 115459,
+      "percentage-pledged-failed": 21.45,
+      "percentage-pledged-successful": 135.75,
+      "pledged": 763931,
+      "refunded": 28500,
+      "time-elapsed": 1.9497957229614258
     }
   },
   "endpoint": "/reports/money/",
   "global": {
-    "average-donation": 49.32,
-    "average-donation-paypal": 35.12,
-    "average-failed": 1009.91,
-    "average-minimum": 5298.16,
-    "average-received": 6794.10,
-    "average-second-round": 872.11,
-    "cash-amount": 311007,
-    "creditcard-amount": 2683695,
-    "fee-amount": 266422.32,
-    "matchfund-amount": 75389,
+    "average-donation": 48.60,
+    "average-donation-paypal": 34.58,
+    "average-failed": 1028.50,
+    "average-minimum": 5524.10,
+    "average-received": 7087.78,
+    "average-second-round": 929.54,
+    "cash-amount": 314107,
+    "creditcard-amount": 2948119,
+    "fee-amount": 290969.36,
+    "matchfund-amount": 81851,
     "matchfundpledge-amount": 166000,
-    "paypal-amount": 459314,
-    "percentage-pledged-failed": 22.36,
-    "percentage-pledged-successful": 129.94,
-    "pledged": 3540064,
-    "refunded": 198335,
-    "time-elapsed": 0.002560138702392578
+    "paypal-amount": 508025,
+    "percentage-pledged-failed": 22.09,
+    "percentage-pledged-successful": 129.62,
+    "pledged": 3866084,
+    "refunded": 215732,
+    "time-elapsed": 2.4234583377838135
   },
-  "time-elapsed": 0.025672435760498047
+  "time-elapsed": 14.144376039505005
 }

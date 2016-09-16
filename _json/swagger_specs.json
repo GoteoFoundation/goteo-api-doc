@@ -1,4 +1,5 @@
 {
+  "basePath": "/v1",
   "definitions": {
     "api_auth_token_get_Token": {
       "properties": {
@@ -145,12 +146,19 @@
           "description": "Scope of the matchfunding call, one of `local`, `regional`, `national`, `global` (or `null`)",
           "type": "string"
         },
+        "sponsors": {
+          "description": "All available sponsors in a ordered list",
+          "items": {
+            "$ref": "#/definitions/api_calls_call_get_CallSponsor"
+          },
+          "type": "array"
+        },
         "status": {
           "description": "Status of the call, one of `pending`, `editing`, `reviewing`, `applying`, `published`, `succeeded`, `expired`",
           "type": "string"
         },
         "translations": {
-          "description": "All available translations in a list by language",
+          "description": "All available translations in a dictionary by language",
           "items": {
             "$ref": "#/definitions/api_calls_call_get_CallTranslation"
           },
@@ -192,8 +200,28 @@
           "description": "Project's location longitude coordinate",
           "type": "number"
         },
+        "radius": {
+          "description": "Radius (Km) of influence for the call (if any)",
+          "type": "number"
+        },
         "region": {
           "description": "Region location of the matchfunding call (language may vary)",
+          "type": "string"
+        }
+      }
+    },
+    "api_calls_call_get_CallSponsor": {
+      "properties": {
+        "image-url": {
+          "description": "URL for the image/logo of the sponsor",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the sponsor",
+          "type": "string"
+        },
+        "url": {
+          "description": "URL for the sponsor (if available)",
           "type": "string"
         }
       }
@@ -376,9 +404,20 @@
           "description": "Total number of projects included into this matchfunding call",
           "type": "integer"
         },
+        "radius": {
+          "description": "Radius (Km) of influence for the call (if any)",
+          "type": "number"
+        },
         "region": {
           "description": "Region location for the call",
           "type": "string"
+        },
+        "sponsors": {
+          "description": "All available sponsors in a ordered list",
+          "items": {
+            "$ref": "#/definitions/api_calls_call_get_CallSponsor"
+          },
+          "type": "array"
         },
         "status": {
           "description": "Status of the call, one of `pending`, `editing`, `reviewing`, `applying`, `published`, `succeeded`, `expired`",
@@ -2013,9 +2052,9 @@
     }
   },
   "info": {
-    "description": "Goteo.org API",
+    "description": "Goteo.org Api",
     "termsOfService": "Terms of service",
-    "title": "Goteo.org API",
+    "title": "Goteo.org Api",
     "version": "1.1"
   },
   "paths": {
