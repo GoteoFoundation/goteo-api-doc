@@ -10,9 +10,9 @@ Developed by: [Platoniq](http://platoniq.net), Developer: [Ivan Vergés](https:/
 
 [![Goteo Visualization](https://developers.goteo.org/assets/images/matchfunding-1.png)](https://matchfunding.goteo.org/#/matchfunding-stage1)
 
-[![Goteo Visualization](https://developers.goteo.org/assets/images/matchfunding-1.png)](https://matchfunding.goteo.org/#/matchfunding-stage2)
+[![Goteo Visualization](https://developers.goteo.org/assets/images/matchfunding-2.png)](https://matchfunding.goteo.org/#/matchfunding-stage2)
 
-[![Goteo Visualization](https://developers.goteo.org/assets/images/matchfunding-2.png)](https://matchfunding.goteo.org/#/matchfunding-contributions/unia-capital-riego/night/no)
+[![Goteo Visualization](https://developers.goteo.org/assets/images/matchfunding-3.png)](https://matchfunding.goteo.org/#/matchfunding-contributions/unia-capital-riego/night/no)
 
 
 ## Description
