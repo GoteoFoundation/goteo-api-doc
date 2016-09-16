@@ -5,9 +5,9 @@ permalink: /apps/barcelona-projects.html
 group: apps
 ---
 # Basic Stats
-Developed by: [Platoniq](http://www.youcoop.org/)
+Developed by: [Platoniq](http://platoniq.net/), Developer: [Javier Carrillo](https://twitter.com/javicarrillo)
 
- [![Barcelona projects](https://developers.goteo.org/assets/images/barcelona.png)](http://experiments.goteo.org/barcelona-projects)
+[![Barcelona projects](https://developers.goteo.org/assets/images/barcelona.png)](http://experiments.goteo.org/barcelona-projects)
 
 
 ## Description

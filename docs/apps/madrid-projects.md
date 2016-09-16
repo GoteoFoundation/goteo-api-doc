@@ -5,9 +5,9 @@ permalink: /apps/madrid-projects.html
 group: apps
 ---
 # Basic Stats
-Developed by: [Platoniq](http://www.youcoop.org/)
+Developed by: [Platoniq](http://platoniq.net/), Developer: [Javier Carrillo](https://twitter.com/javicarrillo)
 
- [![Madrid projects](https://developers.goteo.org/assets/images/madrid.png)](http://experiments.goteo.org/madrid-projects)
+[![Madrid projects](https://developers.goteo.org/assets/images/madrid.png)](http://experiments.goteo.org/madrid-projects)
 
 
 ## Description

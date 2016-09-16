@@ -7,7 +7,7 @@ group: apps
 # Basic Stats
 Developed by: [Outliers Collective](http://www.outliers.es)
 
- [![Goteo Visualization](https://developers.goteo.org/assets/images/app1.png)](http://stats.goteo.org)
+[![Goteo Visualization](https://developers.goteo.org/assets/images/app1.png)](http://stats.goteo.org)
 
 
 ## Description
