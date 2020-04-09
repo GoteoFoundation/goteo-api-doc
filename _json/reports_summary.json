@@ -6,7 +6,7 @@
         "id": 2,
         "name": "Social",
         "percentage-users": 6.86,
-        "users": 12952
+        "users": 12953
       }
     },
     {
@@ -46,7 +46,7 @@
         "id": 9,
         "name": "Commercial",
         "percentage-users": 2.97,
-        "users": 5613
+        "users": 5614
       }
     },
     {
@@ -146,12 +146,12 @@
       "en"
     ]
   },
-  "pledged": 9997561,
+  "pledged": 9997786,
   "projects-failed": 314,
   "projects-published": 1531,
-  "projects-received": 5863,
+  "projects-received": 5864,
   "projects-successful": 1195,
-  "time-elapsed": 9.784963130950928,
+  "time-elapsed": 10.944620370864868,
   "top10-collaborations": [
     {
       "date-published": "Thu, 04 Jan 2018 23:00:00 GMT",
@@ -456,5 +456,5 @@
       "video_url": "https://youtu.be/yTzyu7W3kz0"
     }
   ],
-  "users": 188714
+  "users": 188722
 }

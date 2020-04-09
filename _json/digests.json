@@ -24,7 +24,7 @@
       "percentage-pledged-successful": 145.77,
       "pledged": 28388,
       "refunded": 4681,
-      "time-elapsed": 0.005768537521362305
+      "time-elapsed": 0.47659850120544434
     },
     "2012": {
       "average-donation": 41.75,
@@ -50,7 +50,7 @@
       "percentage-pledged-successful": 128.54,
       "pledged": 439042,
       "refunded": 25428,
-      "time-elapsed": 0.00567626953125
+      "time-elapsed": 1.3759994506835938
     },
     "2013": {
       "average-donation": 48.99,
@@ -76,7 +76,7 @@
       "percentage-pledged-successful": 129.69,
       "pledged": 942201,
       "refunded": 49474,
-      "time-elapsed": 0.0064830780029296875
+      "time-elapsed": 3.0721635818481445
     },
     "2014": {
       "average-donation": 48.83,
@@ -102,7 +102,7 @@
       "percentage-pledged-successful": 123.74,
       "pledged": 801389,
       "refunded": 59378,
-      "time-elapsed": 0.005884408950805664
+      "time-elapsed": 1.7361507415771484
     },
     "2015": {
       "average-donation": 53.00,
@@ -128,7 +128,7 @@
       "percentage-pledged-successful": 132.81,
       "pledged": 895397,
       "refunded": 51546,
-      "time-elapsed": 0.005635738372802734
+      "time-elapsed": 1.6127362251281738
     },
     "2016": {
       "average-donation": 46.24,
@@ -154,7 +154,7 @@
       "percentage-pledged-successful": 140.59,
       "pledged": 1173981,
       "refunded": 36674,
-      "time-elapsed": 0.006022930145263672
+      "time-elapsed": 3.19954252243042
     },
     "2017": {
       "average-donation": 52.61,
@@ -180,7 +180,7 @@
       "percentage-pledged-successful": 145.84,
       "pledged": 1360149,
       "refunded": 61041,
-      "time-elapsed": 0.00576019287109375
+      "time-elapsed": 3.5454113483428955
     },
     "2018": {
       "average-donation": 48.73,
@@ -206,7 +206,7 @@
       "percentage-pledged-successful": 164.91,
       "pledged": 1933938,
       "refunded": 37037,
-      "time-elapsed": 0.005709171295166016
+      "time-elapsed": 3.652007579803467
     },
     "2019": {
       "average-donation": 50.63,
@@ -232,18 +232,18 @@
       "percentage-pledged-successful": 149.50,
       "pledged": 1983646,
       "refunded": 34807,
-      "time-elapsed": 0.005362033843994141
+      "time-elapsed": 3.852531671524048
     },
     "2020": {
-      "average-donation": 52.01,
-      "average-donation-paypal": 46.61,
+      "average-donation": 51.98,
+      "average-donation-paypal": 46.58,
       "average-failed": 1763.86,
       "average-minimum": 5052.97,
       "average-received": 6924.30,
-      "average-second-round": 1009.96,
+      "average-second-round": 1010.56,
       "cash-amount": 16500,
-      "creditcard-amount": 367603,
-      "fee-amount": 16707.8,
+      "creditcard-amount": 367928,
+      "fee-amount": 16721.6,
       "matchfund-amount": 0,
       "matchfundpledge-amount": 8000,
       "meta": {
@@ -251,14 +251,14 @@
         "lang": [
           "en"
         ],
-        "to_date": "2020-04-09"
+        "to_date": "2020-04-10"
       },
-      "paypal-amount": 55207,
+      "paypal-amount": 55227,
       "percentage-pledged-failed": 30.25,
       "percentage-pledged-successful": 158.64,
-      "pledged": 439310,
+      "pledged": 439655,
       "refunded": 2755,
-      "time-elapsed": 0.005905628204345703
+      "time-elapsed": 1.3084406852722168
     }
   },
   "endpoint": "/reports/money/",
@@ -266,12 +266,12 @@
     "average-donation": 50.21,
     "average-donation-paypal": 35.23,
     "average-failed": 1163.32,
-    "average-minimum": 5679.92,
-    "average-received": 7876.83,
-    "average-second-round": 1259.76,
+    "average-minimum": 5675.41,
+    "average-received": 7870.46,
+    "average-second-round": 1259.79,
     "cash-amount": 581622,
-    "creditcard-amount": 7794896,
-    "fee-amount": 383167.68,
+    "creditcard-amount": 7795121,
+    "fee-amount": 383176.68,
     "matchfund-amount": 489335,
     "matchfundpledge-amount": 644000,
     "meta": {
@@ -281,15 +281,15 @@
     },
     "paypal-amount": 1131708,
     "percentage-pledged-failed": 22.28,
-    "percentage-pledged-successful": 143.44,
-    "pledged": 9997561,
+    "percentage-pledged-successful": 143.40,
+    "pledged": 9997786,
     "refunded": 362821,
-    "time-elapsed": 6.372973442077637
+    "time-elapsed": 6.8925464153289795
   },
   "meta": {
     "lang": [
       "en"
     ]
   },
-  "time-elapsed": 6.432461977005005
+  "time-elapsed": 30.726799249649048
 }

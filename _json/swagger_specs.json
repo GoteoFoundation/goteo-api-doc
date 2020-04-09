@@ -2876,6 +2876,20 @@
             "type": "integer"
           },
           {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the calls containing projects with that SDG(s)",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprints can be specified. Restricts the list to the calls containing projects with that footprint(s)",
+            "in": "query",
+            "name": "footprint",
+            "type": "integer"
+          },
+          {
             "collectionFormat": "csv",
             "description": "Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the calls with projects geolocated in that area",
             "in": "query",
@@ -3112,6 +3126,20 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the categories in that SDG(s)",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by footprint. Multiple footprints can be specified. Restricts the list to the categories in that footprint(s)",
+            "in": "query",
+            "name": "footprint",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Get results by specified lang. Multiple langs can be specified",
             "in": "query",
             "name": "lang",
@@ -3177,6 +3205,13 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s)",
+            "in": "query",
+            "name": "matcher",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Filter by individual project(s). Multiple projects can be specified",
             "in": "query",
             "name": "project",
@@ -3194,6 +3229,20 @@
             "description": "Filter by project social commitment. Multiple social commitments can be specified",
             "in": "query",
             "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainability Development Goal. Multiple SDGs can be specified",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprints can be specified",
+            "in": "query",
+            "name": "footprint",
             "type": "integer"
           },
           {
@@ -3285,6 +3334,12 @@
             "description": "Filter by category. Multiple categories can be specified. Restricts the list to the social commitments matching with that category(ies)",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "description": "Filter by Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the social commitments matching with that SDG(s)",
+            "in": "query",
+            "name": "sdg",
             "type": "integer"
           },
           {
@@ -3385,6 +3440,20 @@
             "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the invests of projects with that social commitment(s)",
             "in": "query",
             "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the invests of projects with that SDG(s)",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprints can be specified. Restricts the list to the invests of projects with that footprint(s)",
+            "in": "query",
+            "name": "footprint",
             "type": "integer"
           },
           {
@@ -3669,6 +3738,27 @@
             "type": "integer"
           },
           {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the matchers containing projects with that SDG(s)",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprints can be specified. Restricts the list to the matchers containing projects with that footprint(s)",
+            "in": "query",
+            "name": "footprint",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the matchers containing projects with that SDG(s)",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
             "collectionFormat": "csv",
             "description": "Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the matchers with projects geolocated in that area",
             "in": "query",
@@ -3812,6 +3902,13 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by matcher Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the users that have interests in that SDG(s)",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Filter by matcher social commitment. Multiple social commitments can be specified. Restricts the list to the users that have interests in that social commitment(s)",
             "in": "query",
             "name": "social_commitment",
@@ -3921,13 +4018,6 @@
           {
             "collectionFormat": "multi",
             "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the projects with that social commitment(s)",
-            "in": "query",
-            "name": "social_commitment",
-            "type": "integer"
-          },
-          {
-            "collectionFormat": "multi",
-            "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the licenses used in rewards of projects with that social commitment(s)",
             "in": "query",
             "name": "social_commitment",
             "type": "integer"
@@ -4167,6 +4257,13 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s)",
+            "in": "query",
+            "name": "matcher",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Filter by individual project(s). Multiple projects can be specified",
             "in": "query",
             "name": "project",
@@ -4205,6 +4302,20 @@
             "description": "Filter by project social commitment. Multiple social commitments can be specified",
             "in": "query",
             "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainability Development Goal. Multiple SDGs can be specified",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprints can be specified",
+            "in": "query",
+            "name": "footprint",
             "type": "integer"
           },
           {
@@ -4287,6 +4398,20 @@
             "type": "integer"
           },
           {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainability Development Goal. Multiple SDGs can be specified",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprints can be specified",
+            "in": "query",
+            "name": "footprint",
+            "type": "integer"
+          },
+          {
             "collectionFormat": "csv",
             "description": "Filter by project location (Latitude,longitude,Radius in Km)",
             "in": "query",
@@ -4339,6 +4464,13 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s)",
+            "in": "query",
+            "name": "matcher",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Filter by individual project(s). Multiple projects can be specified",
             "in": "query",
             "name": "project",
@@ -4370,6 +4502,20 @@
             "description": "Filter by project social commitment. Multiple social commitments can be specified",
             "in": "query",
             "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainability Development Goal. Multiple SDGs can be specified",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprints can be specified",
+            "in": "query",
+            "name": "footprint",
             "type": "integer"
           },
           {
@@ -4425,6 +4571,13 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s)",
+            "in": "query",
+            "name": "matcher",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Filter by individual project(s). Multiple projects can be specified",
             "in": "query",
             "name": "project",
@@ -4456,6 +4609,20 @@
             "description": "Filter by project social commitment. Multiple social commitments can be specified",
             "in": "query",
             "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainability Development Goal. Multiple SDGs can be specified",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprints can be specified",
+            "in": "query",
+            "name": "footprint",
             "type": "integer"
           },
           {
@@ -4545,6 +4712,20 @@
             "type": "integer"
           },
           {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainability Development Goal. Multiple SDGs can be specified",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprints can be specified",
+            "in": "query",
+            "name": "footprint",
+            "type": "integer"
+          },
+          {
             "collectionFormat": "csv",
             "description": "Filter by project location (Latitude,longitude,Radius in Km)",
             "in": "query",
@@ -4610,7 +4791,7 @@
             "type": "string"
           },
           {
-            "description": "Filter by category. Multiple categories can be specified. Restricts the list to the social commitments matching with that category(ies)",
+            "description": "Filter by category. Multiple categories can be specified. Restricts the list to the SDGs matching with that category(ies)",
             "in": "query",
             "name": "category",
             "type": "integer"
@@ -4624,14 +4805,7 @@
           },
           {
             "collectionFormat": "multi",
-            "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the licenses used in rewards of projects with that social commitment(s)",
-            "in": "query",
-            "name": "social_commitment",
-            "type": "integer"
-          },
-          {
-            "collectionFormat": "multi",
-            "description": "Filter by project footprint. Multiple footprint can be specified. Restricts the list to the licenses used in rewards of projects with that footprint(s)",
+            "description": "Filter by project footprint. Multiple footprint can be specified. Restricts the list to the sdgs matching that footprint(s)",
             "in": "query",
             "name": "footprint",
             "type": "integer"
@@ -4726,6 +4900,20 @@
             "description": "Filter by social commitment. Multiple social commitments can be specified. Restricts the list to the social commitments specified",
             "in": "query",
             "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the social commitments matching that SDG(s)",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprints can be specified. Restricts the list to social commitments with that footprint(s)",
+            "in": "query",
+            "name": "footprint",
             "type": "integer"
           },
           {
@@ -4826,6 +5014,20 @@
             "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the users that have invested in projects with that social commitment(s)",
             "in": "query",
             "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the users that have invested in projects with that SDG(s)",
+            "in": "query",
+            "name": "sdg",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprints can be specified. Restricts the list to the users that have invested in projects with that footprint(s)",
+            "in": "query",
+            "name": "footprint",
             "type": "integer"
           },
           {

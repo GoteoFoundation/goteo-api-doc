@@ -1,6 +1,6 @@
 {
-  "average-collaborators": 6.0912,
-  "average-donors": 134.0085,
+  "average-collaborators": 6.1152,
+  "average-donors": 133.9585,
   "cash-donors": 784,
   "categories": [
     {
@@ -8,7 +8,7 @@
         "id": 2,
         "name": "Social",
         "percentage-users": 6.86,
-        "users": 12952
+        "users": 12953
       }
     },
     {
@@ -48,7 +48,7 @@
         "id": 9,
         "name": "Commercial",
         "percentage-users": 2.97,
-        "users": 5613
+        "users": 5614
       }
     },
     {
@@ -79,8 +79,8 @@
   "collaborators": 4056,
   "creators-collaborators": 49,
   "creators-donors": 62,
-  "creditcard-donors": 112937,
-  "donors": 133849,
+  "creditcard-donors": 112944,
+  "donors": 133856,
   "donors-collaborators": 1484,
   "leading-category": 2,
   "meta": {
@@ -88,7 +88,7 @@
       "en"
     ]
   },
-  "multidonors": 22967,
+  "multidonors": 22968,
   "paypal-donors": 24460,
   "percentage-donors-users": 70.93,
   "percentage-multidonor-donors": 17.16,
@@ -97,7 +97,7 @@
   "percentage-users-leading-category": 6.86,
   "percentage-users-second-category": 5.18,
   "second-category": 10,
-  "time-elapsed": 8.259614706039429,
+  "time-elapsed": 10.725663900375366,
   "top10-collaborators": [
     {
       "interactions": 855,
@@ -334,7 +334,7 @@
       "user": null
     }
   ],
-  "users": 188714,
-  "users-leading-category": 12952,
+  "users": 188722,
+  "users-leading-category": 12953,
   "users-second-category": 9778
 }

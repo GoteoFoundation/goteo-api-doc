@@ -11,7 +11,7 @@
         "name": "Solidario"
       },
       "total-projects": 691,
-      "total-users": 12698
+      "total-users": 12699
     },
     {
       "description": "Projects whose objective is to inform, denounce and/or communicate (for example, civic journalism, documentaries, blogs, radio programs).",
@@ -50,7 +50,7 @@
         "name": "Generar empleo"
       },
       "total-projects": 153,
-      "total-users": 5503
+      "total-users": 5504
     },
     {
       "description": "Projects whose most important objective is formation or learning. ",
@@ -124,5 +124,5 @@
     ],
     "total": 9
   },
-  "time-elapsed": 1.8086810111999512
+  "time-elapsed": 2.4537246227264404
 }

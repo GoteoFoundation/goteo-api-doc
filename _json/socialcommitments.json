@@ -145,7 +145,7 @@
         }
       ],
       "total-projects": 24,
-      "total-users": 2439
+      "total-users": 2440
     },
     {
       "categories": [],
@@ -221,7 +221,7 @@
         }
       ],
       "total-projects": 120,
-      "total-users": 9754
+      "total-users": 9755
     },
     {
       "categories": [],
@@ -460,7 +460,7 @@
         }
       ],
       "total-projects": 31,
-      "total-users": 2540
+      "total-users": 2544
     },
     {
       "categories": [],
@@ -521,5 +521,5 @@
     ],
     "total": 14
   },
-  "time-elapsed": 40.87287998199463
+  "time-elapsed": 42.41797184944153
 }

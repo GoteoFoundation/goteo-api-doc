@@ -70,13 +70,13 @@
     ]
   },
   "percentage-reward-refusal": 34.09,
-  "reward-refusal": 45633,
+  "reward-refusal": 45634,
   "rewards-per-amount": {
     "rewards-between-100-400": 12241,
-    "rewards-between-15-30": 54996,
-    "rewards-between-30-100": 57901,
+    "rewards-between-15-30": 55003,
+    "rewards-between-30-100": 57904,
     "rewards-less-than-15": 30879,
     "rewards-more-than-400": 1004
   },
-  "time-elapsed": 6.363196611404419
+  "time-elapsed": 7.211138963699341
 }

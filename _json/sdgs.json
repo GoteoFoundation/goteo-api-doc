@@ -69,9 +69,9 @@
           "name": "Health and care"
         }
       ],
-      "total-invests": 60232,
+      "total-invests": 60239,
       "total-projects": 472,
-      "total-users": 45549
+      "total-users": 45554
     },
     {
       "description": "Ensuring healthy lives and promoting the well-being for all at all ages is essential to sustainable development.",
@@ -118,9 +118,9 @@
           "name": "Health and care"
         }
       ],
-      "total-invests": 60205,
+      "total-invests": 60212,
       "total-projects": 470,
-      "total-users": 45525
+      "total-users": 45530
     },
     {
       "description": "Obtaining a quality education is the foundation to improving people\u2019s lives and sustainable development.",
@@ -167,9 +167,9 @@
           "name": "Creating culture"
         }
       ],
-      "total-invests": 57287,
+      "total-invests": 57289,
       "total-projects": 441,
-      "total-users": 43331
+      "total-users": 43332
     },
     {
       "description": "Gender equality is not only a fundamental human right, but a necessary foundation for a peaceful, prosperous and sustainable world.",
@@ -228,9 +228,9 @@
           "name": "Genre"
         }
       ],
-      "total-invests": 65552,
+      "total-invests": 65553,
       "total-projects": 351,
-      "total-users": 47912
+      "total-users": 47913
     },
     {
       "description": "Clean, accessible water for all is an essential part of the world we want to live in.",
@@ -253,9 +253,9 @@
           "name": "Health and care"
         }
       ],
-      "total-invests": 2945,
+      "total-invests": 2950,
       "total-projects": 31,
-      "total-users": 2540
+      "total-users": 2544
     },
     {
       "description": "Energy is central to nearly every major challenge and opportunity.",
@@ -333,9 +333,9 @@
           "name": "Creating culture"
         }
       ],
-      "total-invests": 57287,
+      "total-invests": 57289,
       "total-projects": 441,
-      "total-users": 43331
+      "total-users": 43332
     },
     {
       "description": "Investments in infrastructure are crucial to achieving sustainable development.",
@@ -382,9 +382,9 @@
           "name": "Creating culture"
         }
       ],
-      "total-invests": 57287,
+      "total-invests": 57289,
       "total-projects": 441,
-      "total-users": 43331
+      "total-users": 43332
     },
     {
       "description": "To reduce inequalities, policies should be universal in principle, paying attention to the needs of disadvantaged and marginalized populations.",
@@ -491,9 +491,9 @@
           "name": "Energy and sustainability"
         }
       ],
-      "total-invests": 98296,
+      "total-invests": 98298,
       "total-projects": 612,
-      "total-users": 70326
+      "total-users": 70327
     },
     {
       "description": "Responsible Production and Consumption",
@@ -692,5 +692,5 @@
     ],
     "total": 17
   },
-  "time-elapsed": 0.029636621475219727
+  "time-elapsed": 65.64332675933838
 }

@@ -204,9 +204,9 @@
           "name": "Health and care"
         }
       ],
-      "total-invests": 60232,
+      "total-invests": 60239,
       "total-projects": 472,
-      "total-users": 45549
+      "total-users": 45554
     },
     {
       "categories": [
@@ -316,5 +316,5 @@
     ],
     "total": 3
   },
-  "time-elapsed": 14.750757217407227
+  "time-elapsed": 15.463863372802734
 }
