@@ -30,7 +30,7 @@ module SwaggerParser
                     if ref and not definitions.has_key? _key
                         _key = ref.split('_')[-1]
                         value['description'] << ' &#9758; [' + _key + '](#' + _key + ')' if not value['description'].include? _key
-                        # puts(ref, _key)
+                        puts(ref, _key)
                         definitions[_key] = get_definitions(ref)[_key]
                     end
                 end
@@ -62,8 +62,7 @@ module SwaggerParser
             def get_parameters_table(data)
                 t = ''
                 # puts data
-                for key,parameters in data
-                    # t << '##### <a id="' + key + '">' + key + '</a>'
+                for _key,parameters in data
                     t << "\n| Attribute  | Type | Description |\n"
                     t << "|------------|------|-------------|\n"
                     for val in parameters
@@ -82,33 +81,31 @@ module SwaggerParser
                 'metacategory' => { 'id' => 'api_categories_categories_get_MetaCategory' },
                 'metalicense' => { 'id' => 'api_licenses_licenses_get_MetaLicense' },
                 'login' => { 'id' => 'api_auth_token_get_Token' },
-                # 'projects' => { 'id' => 'api_projects_projects_get_Project' },
                 'projects' => { 'id' => 'api_projects_projects_get_ResponseProject' },
                 'project' => { 'id' => 'api_projects_project_get_ProjectFull' },
-                # 'project_donors' => { 'id' => 'api_projects_project_donors_get_ProjectDonor', 'endpoint' => '/project/{project}/donors/' },
                 'project_donors' => { 'id' => 'api_projects_project_donors_get_ResponseDonor', 'endpoint' => '/project/{project}/donors/' },
-                # 'users' => { 'id' => 'api_users_users_get_User' },
                 'users' => { 'id' => 'api_users_users_get_ResponseUser' },
                 'user' => { 'id' => 'api_users_user_get_UserFull' },
-                # 'categories' => { 'id' => 'api_categories_categories_get_Category' },
                 'categories' => { 'id' => 'api_categories_categories_get_ResponseCategory' },
-                # 'licenses' => { 'id' => 'api_licenses_licenses_get_License' },
+                'footprints' => { 'id' => 'api_footprints_footprints_get_ResponseFootPrint' },
+                'socialcommitments' => { 'id' => 'api_socialcommitments_socialcommitments_get_ResponseSocialCommitment' },
+                'sdgs' => { 'id' => 'api_sdgs_sdgs_get_ResponseSDG' },
                 'licenses' => { 'id' => 'api_licenses_licenses_get_ResponseLicense' },
-                # 'invests' => { 'id' => 'api_invests_invests_get_Invest' },
                 'invests' => { 'id' => 'api_invests_invests_get_ResponseInvest' },
                 'invest' => { 'id' => 'api_invests_invest_get_InvestFull' },
-                # 'calls' => { 'id' => 'api_calls_calls_get_Call' },
                 'calls' => { 'id' => 'api_calls_calls_get_ResponseCall' },
                 'call' => { 'id' => 'api_calls_call_get_CallFull' },
-                # 'call_projects' => { 'id' => 'api_calls_call_projects_get_ProjectCall', 'endpoint' => '/call/{call}/projects/' },
                 'call_projects' => { 'id' => 'api_projects_projects_get_ResponseProject', 'endpoint' => '/calls/{call_id}/projects/'  },
+                'matchers' => { 'id' => 'api_matchers_matchers_get_ResponseMatcher' },
+                'matcher' => { 'id' => 'api_matchers_matcher_get_MatcherFull' },
+                'matcher_projects' => { 'id' => 'api_projects_projects_get_ResponseProject', 'endpoint' => '/matchers/{matcher_id}/projects/'  },
                 'reports_summary' => { 'id' => 'api_reports_reports_summary_get_Summary', 'endpoint' => '/reports/summary/' },
                 'reports_community' => { 'id' => 'api_reports_reports_community_get_Community', 'endpoint' => '/reports/community/' },
                 'reports_money' => { 'id' => 'api_reports_reports_money_get_Money', 'endpoint' => '/reports/money/' },
                 'reports_rewards' => { 'id' => 'api_reports_reports_rewards_get_Reward', 'endpoint' => '/reports/rewards/' },
                 'reports_projects' => { 'id' => 'api_reports_reports_projects_get_Project', 'endpoint' => '/reports/projects/' },
                 'digests' => { 'id' => 'api_digests_get_Digest', 'endpoint' => '/digests/{endpoint}' },
-                'digests1' => { 'id' => 'api_digests_get_Digest' },
+                'digests1' => { 'id' => 'api_digests_get_Digest' }
                 }
                 _id = ob['id']
                 _key = if ob['endpoint'] then ob['endpoint'] else '/' + key + '/' end

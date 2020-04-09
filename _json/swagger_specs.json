@@ -308,6 +308,10 @@
           "description": "Region location for the project",
           "type": "string"
         },
+        "social-commitment-id": {
+          "description": "SocialCommitment ID for this project",
+          "type": "string"
+        },
         "status": {
           "description": "Status of the project",
           "type": "string"
@@ -452,6 +456,10 @@
           "description": "Category name",
           "type": "string"
         },
+        "social-commitment": {
+          "$ref": "#/definitions/api_socialcommitments_socialcommitments_get_SocialCommitment",
+          "description": "Non-economical detailed list of necessities"
+        },
         "total-projects": {
           "description": "Number of published projects in the category",
           "type": "integer"
@@ -545,13 +553,98 @@
         }
       }
     },
+    "api_footprints_footprints_get_FootPrint": {
+      "properties": {
+        "description": {
+          "description": "FootPrint short description",
+          "type": "string"
+        },
+        "icon-url": {
+          "description": "URL for the image resource associated with this social commitment",
+          "type": "string"
+        },
+        "id": {
+          "description": "FootPrint unique identifier",
+          "type": "string"
+        },
+        "name": {
+          "description": "FootPrint name",
+          "type": "string"
+        },
+        "total-projects": {
+          "description": "Number of published projects in the FootPrint",
+          "type": "integer"
+        },
+        "total-users": {
+          "description": "Number of users interested in the FootPrint",
+          "type": "integer"
+        }
+      }
+    },
+    "api_footprints_footprints_get_MetaFootPrint": {
+      "properties": {
+        "from_date": {
+          "description": "Only if filtering by from_date",
+          "type": "string"
+        },
+        "lang": {
+          "description": "Only if filtering by lang",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "location": {
+          "description": "Only if filtering by location",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "node": {
+          "description": "Only if filtering by node",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "project": {
+          "description": "Only if filtering by project",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "to_date": {
+          "description": "Only if filtering by to_date",
+          "type": "string"
+        },
+        "total": {
+          "description": "Total elements available for the collection",
+          "type": "integer"
+        }
+      }
+    },
+    "api_footprints_footprints_get_ResponseFootPrint": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/api_footprints_footprints_get_FootPrint"
+          },
+          "type": "array"
+        },
+        "meta": {
+          "$ref": "#/definitions/api_footprints_footprints_get_MetaFootPrint"
+        }
+      }
+    },
     "api_invests_invest_get_InvestFull": {
       "properties": {
         "amount": {
           "description": "Amount of the contribution",
           "type": "number"
         },
-        "call": {
+        "call-id": {
           "description": "Id of the matchfunding call if this invest belongs to a invest in selected",
           "type": "string"
         },
@@ -589,6 +682,10 @@
             "$ref": "#/definitions/api_invests_invest_get_InvestLocation"
           },
           "type": "array"
+        },
+        "matcher-id": {
+          "description": "Id of the matchfunding matcher if this invest belongs to a invest in selected",
+          "type": "string"
         },
         "project": {
           "description": "Id of the invest where applies the invests",
@@ -666,7 +763,7 @@
           "description": "Amount of the contribution",
           "type": "number"
         },
-        "call": {
+        "call-id": {
           "description": "Id of the matchfunding call if this invest belongs to a invest in selected",
           "type": "string"
         },
@@ -705,6 +802,10 @@
         "longitude": {
           "description": "Longitude coordinate for the invest",
           "type": "number"
+        },
+        "matcher-id": {
+          "description": "Id of the matchfunding matcher if this invest belongs to a invest in selected",
+          "type": "string"
         },
         "project": {
           "description": "Id of the invest where applies the invests",
@@ -785,6 +886,13 @@
           },
           "type": "array"
         },
+        "footprint": {
+          "description": "Only if filtering by footprint",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
         "from_date": {
           "description": "Only if filtering by from_date",
           "type": "string"
@@ -817,6 +925,20 @@
           },
           "type": "array"
         },
+        "sdg": {
+          "description": "Only if filtering by Sustainable Development Goal",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "social_commitment": {
+          "description": "Only if filtering by social_commitment",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
         "to_date": {
           "description": "Only if filtering by to_date",
           "type": "string"
@@ -837,6 +959,427 @@
         },
         "meta": {
           "$ref": "#/definitions/api_licenses_licenses_get_MetaLicense"
+        }
+      }
+    },
+    "api_matchers_matcher_get_MatcherFull": {
+      "properties": {
+        "amount-available": {
+          "description": "Available amount of cash to distribute among projects",
+          "type": "number"
+        },
+        "amount-committed": {
+          "description": "Maximum total amount of cash that was available to distribute among projects",
+          "type": "number"
+        },
+        "amount-peers": {
+          "description": "Amount of cash already distribute among projects",
+          "type": "number"
+        },
+        "amount-remaining": {
+          "description": "Amount of cash still available for distribute among projects",
+          "type": "number"
+        },
+        "applies": {
+          "description": "Text description about which kind of projects will be selected for the matchfunding matcher",
+          "type": "string"
+        },
+        "date-closed": {
+          "description": "Date when the matchfunding matcher was closed",
+          "type": "string"
+        },
+        "date-opened": {
+          "description": "Date when the matchfunding matcher was opened",
+          "type": "string"
+        },
+        "date-published": {
+          "description": "Date when the matchfunding matcher was published",
+          "type": "string"
+        },
+        "date-succeeded": {
+          "description": "Date when the matchfunding matcher was succeeded",
+          "type": "string"
+        },
+        "description": {
+          "description": "Full description for the matchfunding matcher",
+          "type": "string"
+        },
+        "description-short": {
+          "description": "Short description for the matchfunding matcher",
+          "type": "string"
+        },
+        "dossier": {
+          "description": "External links for the matchfunding matcher",
+          "type": "string"
+        },
+        "facebook-url": {
+          "description": "URL of the Facebook page for the matchfunding matcher",
+          "type": "string"
+        },
+        "id": {
+          "description": "Id of the matchfunding matcher",
+          "type": "string"
+        },
+        "image-background-url": {
+          "description": "URL for the main matcher image",
+          "type": "string"
+        },
+        "image-url": {
+          "description": "URL for the main matcher image",
+          "type": "string"
+        },
+        "image-url-big": {
+          "description": "URL for the main matcher image (big size)",
+          "type": "string"
+        },
+        "legal": {
+          "description": "Some particular legal or conditions for the matchfunding matcher",
+          "type": "string"
+        },
+        "location": {
+          "description": "Location of the matcher",
+          "items": {
+            "$ref": "#/definitions/api_matchers_matcher_get_MatcherLocation"
+          },
+          "type": "array"
+        },
+        "logo-url": {
+          "description": "URL for the matcher's logo",
+          "type": "string"
+        },
+        "matcher-location": {
+          "description": "Custom location value for the matcher",
+          "type": "string"
+        },
+        "matcher-url": {
+          "description": "URL where to visualize the matchfunding matcher",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the matchfunding matcher",
+          "type": "string"
+        },
+        "owner": {
+          "description": "User ID of the matcher's owner",
+          "type": "string"
+        },
+        "owner-name": {
+          "description": "User name of the matcher's owner",
+          "type": "string"
+        },
+        "projects-active": {
+          "description": "Active projects (still with a running campaign) in this matchfunding matcher",
+          "type": "integer"
+        },
+        "projects-applied": {
+          "description": "Total number of projects effectively applicating to this matchfunding matcher",
+          "type": "integer"
+        },
+        "projects-succeeded": {
+          "description": "Projects funded in this matchfunding matcher",
+          "type": "integer"
+        },
+        "projects-total": {
+          "description": "Total number of projects included into this matchfunding matcher",
+          "type": "integer"
+        },
+        "resources": {
+          "description": "Text description of the available resources for the matchfunding matcher",
+          "type": "string"
+        },
+        "scope": {
+          "description": "Scope of the matchfunding matcher, one of `local`, `regional`, `national`, `global` (or `null`)",
+          "type": "string"
+        },
+        "sponsors": {
+          "description": "All available sponsors in a ordered list",
+          "items": {
+            "$ref": "#/definitions/api_matchers_matcher_get_MatcherSponsor"
+          },
+          "type": "array"
+        },
+        "status": {
+          "description": "Status of the matcher, one of `pending`, `editing`, `reviewing`, `applying`, `published`, `succeeded`, `expired`",
+          "type": "string"
+        },
+        "translations": {
+          "description": "All available translations in a dictionary by language",
+          "items": {
+            "$ref": "#/definitions/api_matchers_matcher_get_MatcherTranslation"
+          },
+          "type": "array"
+        },
+        "tweet": {
+          "description": "Text used to make an automatic tweet to share the the matchfunding matcher",
+          "type": "string"
+        },
+        "user": {
+          "description": "Matcher owner's user Object",
+          "type": "string"
+        },
+        "whom": {
+          "description": "Target of the matchfunding matcher",
+          "type": "string"
+        }
+      }
+    },
+    "api_matchers_matcher_get_MatcherLocation": {
+      "properties": {
+        "city": {
+          "description": "City location of the matchfunding matcher (language may vary)",
+          "type": "string"
+        },
+        "country": {
+          "description": "Country name of the matchfunding matcher (language may vary)",
+          "type": "string"
+        },
+        "country-code": {
+          "description": "Country code of the matchfunding matcher in [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format",
+          "type": "string"
+        },
+        "latitude": {
+          "description": "Project's location latitude coordinate",
+          "type": "number"
+        },
+        "longitude": {
+          "description": "Project's location longitude coordinate",
+          "type": "number"
+        },
+        "radius": {
+          "description": "Radius (Km) of influence for the matcher (if any)",
+          "type": "number"
+        },
+        "region": {
+          "description": "Region location of the matchfunding matcher (language may vary)",
+          "type": "string"
+        }
+      }
+    },
+    "api_matchers_matcher_get_MatcherSponsor": {
+      "properties": {
+        "image-url": {
+          "description": "URL for the image/logo of the sponsor",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the sponsor",
+          "type": "string"
+        },
+        "url": {
+          "description": "URL for the sponsor (if available)",
+          "type": "string"
+        }
+      }
+    },
+    "api_matchers_matcher_get_MatcherTranslation": {
+      "properties": {
+        "*misc*": {
+          "description": "Every item of a translation will have the same structure as the parent object with the same fields (**and those fields only**) translated. Non translated items won't be displayed at all",
+          "type": "string"
+        }
+      }
+    },
+    "api_matchers_matcher_projects_get_ProjectMatcher": {
+      "properties": {
+        "amount": {
+          "description": "Currently achieved amount for the project",
+          "type": "number"
+        },
+        "amount-matcher": {
+          "description": "Only the matchfunding part of the achieved amount for the project",
+          "type": "number"
+        },
+        "date-created": {
+          "description": "Date when the project was created RFC822 format",
+          "type": "string"
+        },
+        "date-published": {
+          "description": "Date when the project was published RFC822 format",
+          "type": "string"
+        },
+        "description-short": {
+          "description": "Short description of the project",
+          "type": "string"
+        },
+        "id": {
+          "description": "Project unique identifier",
+          "type": "string"
+        },
+        "image-url": {
+          "description": "URL with the main image of the project",
+          "type": "string"
+        },
+        "lang": {
+          "description": "Main language of the project",
+          "type": "string"
+        },
+        "latitude": {
+          "description": "Latitude coordinate for the project",
+          "type": "number"
+        },
+        "longitude": {
+          "description": "Longitude coordinate for the project",
+          "type": "number"
+        },
+        "minimum": {
+          "description": "Minimum amount to achieve to consider the project succeeded",
+          "type": "number"
+        },
+        "name": {
+          "description": "Name of the project",
+          "type": "string"
+        },
+        "node": {
+          "description": "Node where the project was created originally",
+          "type": "string"
+        },
+        "optimum": {
+          "description": "Optimum amount to achieve for the project to achieve all his goals",
+          "type": "number"
+        },
+        "owner": {
+          "description": "Projects owner's user ID",
+          "type": "string"
+        },
+        "owner-name": {
+          "description": "Projects owner's user name",
+          "type": "string"
+        },
+        "project-url": {
+          "description": "URL where for the project",
+          "type": "string"
+        },
+        "region": {
+          "description": "Region location for the project",
+          "type": "string"
+        },
+        "status": {
+          "description": "Status of the project",
+          "type": "string"
+        }
+      }
+    },
+    "api_matchers_matchers_get_Matcher": {
+      "properties": {
+        "amount-available": {
+          "description": "Available amount of cash to distribute among projects",
+          "type": "number"
+        },
+        "amount-committed": {
+          "description": "Maximum total amount of cash that was available to distribute among projects",
+          "type": "number"
+        },
+        "amount-peers": {
+          "description": "Amount of cash already distribute among projects",
+          "type": "number"
+        },
+        "amount-remaining": {
+          "description": "Amount of cash still available for distribute among projects",
+          "type": "number"
+        },
+        "date-opened": {
+          "description": "Date when the matchfunding matcher was opened",
+          "type": "string"
+        },
+        "date-published": {
+          "description": "Date when the matchfunding matcher was published",
+          "type": "string"
+        },
+        "date-succeeded": {
+          "description": "Date when the matchfunding matcher was succeeded",
+          "type": "string"
+        },
+        "description-short": {
+          "description": "Short description for the matchfunding matcher",
+          "type": "string"
+        },
+        "id": {
+          "description": "Id of the matchfunding matcher",
+          "type": "string"
+        },
+        "image-url": {
+          "description": "URL for the main matcher's image",
+          "type": "string"
+        },
+        "latitude": {
+          "description": "Latitude coordinate for the matcher",
+          "type": "number"
+        },
+        "logo-url": {
+          "description": "URL for the matcher's logo",
+          "type": "string"
+        },
+        "longitude": {
+          "description": "Longitude coordinate for the matcher",
+          "type": "number"
+        },
+        "matcher-location": {
+          "description": "Custom location value for the matcher",
+          "type": "string"
+        },
+        "matcher-url": {
+          "description": "URL where to visualize the matchfunding matcher",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the matchfunding matcher",
+          "type": "string"
+        },
+        "owner": {
+          "description": "User ID of the matcher's owner",
+          "type": "string"
+        },
+        "owner-name": {
+          "description": "User name of the matcher's owner",
+          "type": "string"
+        },
+        "projects-active": {
+          "description": "Active projects (still with a running campaign) in this matchfunding matcher",
+          "type": "integer"
+        },
+        "projects-applied": {
+          "description": "Total number of projects effectively applicating to this matchfunding matcher",
+          "type": "integer"
+        },
+        "projects-succeeded": {
+          "description": "Projects funded in this matchfunding matcher",
+          "type": "integer"
+        },
+        "projects-total": {
+          "description": "Total number of projects included into this matchfunding matcher",
+          "type": "integer"
+        },
+        "radius": {
+          "description": "Radius (Km) of influence for the matcher (if any)",
+          "type": "number"
+        },
+        "region": {
+          "description": "Region location for the matcher",
+          "type": "string"
+        },
+        "sponsors": {
+          "description": "All available sponsors in a ordered list",
+          "items": {
+            "$ref": "#/definitions/api_matchers_matcher_get_MatcherSponsor"
+          },
+          "type": "array"
+        },
+        "status": {
+          "description": "Status of the matcher, one of `pending`, `editing`, `reviewing`, `applying`, `published`, `succeeded`, `expired`",
+          "type": "string"
+        }
+      }
+    },
+    "api_matchers_matchers_get_ResponseMatcher": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/api_matchers_matchers_get_Matcher"
+          },
+          "type": "array"
+        },
+        "meta": {
+          "$ref": "#/definitions/api_projects_projects_get_MetaProject"
         }
       }
     },
@@ -930,6 +1473,13 @@
         "amount": {
           "description": "Currently achieved amount for the project",
           "type": "number"
+        },
+        "categories": {
+          "description": "Non-economical detailed list of necessities",
+          "items": {
+            "$ref": "#/definitions/api_categories_categories_get_Category"
+          },
+          "type": "array"
         },
         "costs": {
           "description": "Economical detailed list of necessities",
@@ -1060,6 +1610,18 @@
         },
         "scope": {
           "description": "Scope of the project",
+          "type": "string"
+        },
+        "social-commitment": {
+          "description": "SocialCommitment title for the project",
+          "type": "string"
+        },
+        "social-commitment-description": {
+          "description": "SocialCommitment description for the project",
+          "type": "string"
+        },
+        "social-commitment-id": {
+          "description": "SocialCommitment unique identifier of the project",
           "type": "string"
         },
         "status": {
@@ -1212,6 +1774,13 @@
           },
           "type": "array"
         },
+        "footprint": {
+          "description": "Only if filtering by footprint",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
         "from_date": {
           "description": "Only if filtering by from_date",
           "type": "string"
@@ -1249,6 +1818,20 @@
           "description": "Only if filtering by project",
           "items": {
             "type": "string"
+          },
+          "type": "array"
+        },
+        "sdg": {
+          "description": "Only if filtering by Sustainable Development Goal",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "social_commitment": {
+          "description": "Only if filtering by social_commitment",
+          "items": {
+            "type": "number"
           },
           "type": "array"
         },
@@ -1330,6 +1913,10 @@
         },
         "region": {
           "description": "Region location for the project",
+          "type": "string"
+        },
+        "social-commitment-id": {
+          "description": "SocialCommitment unique identifier of the project",
           "type": "string"
         },
         "status": {
@@ -1886,6 +2473,176 @@
         }
       }
     },
+    "api_sdgs_sdgs_get_MetaSDG": {
+      "properties": {
+        "from_date": {
+          "description": "Only if filtering by from_date",
+          "type": "string"
+        },
+        "lang": {
+          "description": "Only if filtering by lang",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "location": {
+          "description": "Only if filtering by location",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "node": {
+          "description": "Only if filtering by node",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "project": {
+          "description": "Only if filtering by project",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "to_date": {
+          "description": "Only if filtering by to_date",
+          "type": "string"
+        },
+        "total": {
+          "description": "Total elements available for the collection",
+          "type": "integer"
+        }
+      }
+    },
+    "api_sdgs_sdgs_get_ResponseSDG": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/api_sdgs_sdgs_get_SDG"
+          },
+          "type": "array"
+        },
+        "meta": {
+          "$ref": "#/definitions/api_sdgs_sdgs_get_MetaSDG"
+        }
+      }
+    },
+    "api_sdgs_sdgs_get_SDG": {
+      "properties": {
+        "description": {
+          "description": "SDG short description",
+          "type": "string"
+        },
+        "icon-url": {
+          "description": "URL for the image resource associated with this social commitment",
+          "type": "string"
+        },
+        "id": {
+          "description": "SDG unique identifier",
+          "type": "string"
+        },
+        "name": {
+          "description": "SDG name",
+          "type": "string"
+        },
+        "total-projects": {
+          "description": "Number of published projects in the SDG",
+          "type": "integer"
+        },
+        "total-users": {
+          "description": "Number of users interested in the SDG",
+          "type": "integer"
+        }
+      }
+    },
+    "api_socialcommitments_socialcommitments_get_MetaSocialCommitment": {
+      "properties": {
+        "from_date": {
+          "description": "Only if filtering by from_date",
+          "type": "string"
+        },
+        "lang": {
+          "description": "Only if filtering by lang",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "location": {
+          "description": "Only if filtering by location",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "node": {
+          "description": "Only if filtering by node",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "project": {
+          "description": "Only if filtering by project",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "to_date": {
+          "description": "Only if filtering by to_date",
+          "type": "string"
+        },
+        "total": {
+          "description": "Total elements available for the collection",
+          "type": "integer"
+        }
+      }
+    },
+    "api_socialcommitments_socialcommitments_get_ResponseSocialCommitment": {
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/definitions/api_socialcommitments_socialcommitments_get_SocialCommitment"
+          },
+          "type": "array"
+        },
+        "meta": {
+          "$ref": "#/definitions/api_socialcommitments_socialcommitments_get_MetaSocialCommitment"
+        }
+      }
+    },
+    "api_socialcommitments_socialcommitments_get_SocialCommitment": {
+      "properties": {
+        "description": {
+          "description": "SocialCommitment short description",
+          "type": "string"
+        },
+        "icon-url": {
+          "description": "URL for the image resource associated with this social commitment",
+          "type": "string"
+        },
+        "id": {
+          "description": "SocialCommitment unique identifier",
+          "type": "string"
+        },
+        "name": {
+          "description": "SocialCommitment name",
+          "type": "string"
+        },
+        "total-projects": {
+          "description": "Number of published projects in the SocialCommitment",
+          "type": "integer"
+        },
+        "total-users": {
+          "description": "Number of users interested in the SocialCommitment",
+          "type": "integer"
+        }
+      }
+    },
     "api_users_user_get_UserFull": {
       "properties": {
         "about": {
@@ -2055,7 +2812,7 @@
     "description": "Goteo.org Api",
     "termsOfService": "Terms of service",
     "title": "Goteo.org Api",
-    "version": "1.1"
+    "version": "1.2"
   },
   "paths": {
     "/calls/": {
@@ -2067,6 +2824,13 @@
             "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the calls originally created in that node(s)",
             "in": "query",
             "name": "node",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
             "type": "string"
           },
           {
@@ -2099,9 +2863,16 @@
           },
           {
             "collectionFormat": "multi",
-            "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the calls containing project with interests in that category(ies)",
+            "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the calls containing projects with interests in that category(ies)",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the calls containing projects with that social commitment(s)",
+            "in": "query",
+            "name": "social_commitment",
             "type": "integer"
           },
           {
@@ -2206,6 +2977,13 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Get results by specified lang. Multiple langs can be specified",
             "in": "query",
             "name": "lang",
@@ -2227,9 +3005,16 @@
           },
           {
             "collectionFormat": "multi",
-            "description": "Filter by call category. Multiple users can be specified. Restricts the list to the users that have interests in that category(ies)",
+            "description": "Filter by call category. Multiple categories can be specified. Restricts the list to the users that have interests in that category(ies)",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by call social commitment. Multiple social commitments can be specified. Restricts the list to the users that have interests in that social commitment(s)",
+            "in": "query",
+            "name": "social_commitment",
             "type": "integer"
           },
           {
@@ -2286,6 +3071,13 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Filter by individual project(s). Multiple projects can be specified. Restricts the list to the categories used in that projects",
             "in": "query",
             "name": "project",
@@ -2304,6 +3096,19 @@
             "in": "query",
             "name": "to_date",
             "type": "string"
+          },
+          {
+            "description": "Filter by category. Multiple categories can be specified. Restricts the list to the categories specified",
+            "in": "query",
+            "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by social commitment. Multiple social commitments can be specified. Restricts the list to the categories matching with that social commitment(s)",
+            "in": "query",
+            "name": "social_commitment",
+            "type": "integer"
           },
           {
             "collectionFormat": "multi",
@@ -2365,15 +3170,30 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Filter by individual project(s). Multiple projects can be specified",
             "in": "query",
             "name": "project",
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
             "description": "Filter by project category. Multiple categories can be specified",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified",
+            "in": "query",
+            "name": "social_commitment",
             "type": "integer"
           },
           {
@@ -2422,6 +3242,98 @@
         ]
       }
     },
+    "/footprints/": {
+      "get": {
+        "description": "This resource returns social commitments information.<br/>\"http://developers.goteo.org/doc/footprints\"",
+        "parameters": [
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the footprints used in projects assigned in that nodes",
+            "in": "query",
+            "name": "node",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual project(s). Multiple projects can be specified. Restricts the list to the footprints used in that projects",
+            "in": "query",
+            "name": "project",
+            "type": "string"
+          },
+          {
+            "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the footprints used in projects created between that dates",
+            "format": "date",
+            "in": "query",
+            "name": "from_date",
+            "type": "string"
+          },
+          {
+            "description": "Filter until date.. Ex. \"2014-01-01\". Restricts the list to the footprints used in projects created between that dates",
+            "format": "date",
+            "in": "query",
+            "name": "to_date",
+            "type": "string"
+          },
+          {
+            "description": "Filter by category. Multiple categories can be specified. Restricts the list to the social commitments matching with that category(ies)",
+            "in": "query",
+            "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by social commitment. Multiple social commitments can be specified. Restricts the list to the social commitments specified",
+            "in": "query",
+            "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "csv",
+            "description": "Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the footprints used in projects geolocated in that area",
+            "in": "query",
+            "name": "location",
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of available footprints",
+            "schema": {
+              "$ref": "#/definitions/api_footprints_footprints_get_ResponseFootPrint"
+            }
+          },
+          "400": {
+            "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "FootPrint API",
+        "tags": [
+          "footprints"
+        ]
+      }
+    },
     "/invests/": {
       "get": {
         "description": "This resource returns invest information.<br/>http://developers.goteo.org/doc/invests",
@@ -2431,6 +3343,13 @@
             "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the invests originally created in that node(s)",
             "in": "query",
             "name": "node",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
             "type": "string"
           },
           {
@@ -2456,9 +3375,16 @@
           },
           {
             "collectionFormat": "multi",
-            "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the invests that have interests in that category(ies)",
+            "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the invests of projects with that category(ies)",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the invests of projects with that social commitment(s)",
+            "in": "query",
+            "name": "social_commitment",
             "type": "integer"
           },
           {
@@ -2556,6 +3482,20 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s)",
+            "in": "query",
+            "name": "matcher",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Filter by individual project(s). Multiple projects can be specified. Restricts the list to the licenses used in rewards for that projects",
             "in": "query",
             "name": "project",
@@ -2583,9 +3523,31 @@
             "type": "string"
           },
           {
-            "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the licenses used in project rewards in that categories",
+            "collectionFormat": "multi",
+            "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the licenses used in rewards of projects with that category(ies)",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the licenses used in rewards of projects with that social commitment(s)",
+            "in": "query",
+            "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprint can be specified. Restricts the list to the licenses used in rewards of projects with that footprint(s)",
+            "in": "query",
+            "name": "footprint",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainable Development Goal. Multiple sdg can be specified. Restricts the list to the licenses used in rewards of projects with that sdg(s)",
+            "in": "query",
+            "name": "sdg",
             "type": "integer"
           },
           {
@@ -2646,6 +3608,256 @@
         ]
       }
     },
+    "/matchers/": {
+      "get": {
+        "description": "This resource returns matcher information.<br/>http://developers.goteo.org/doc/matchers",
+        "parameters": [
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the matchers originally created in that node(s)",
+            "in": "query",
+            "name": "node",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s)",
+            "in": "query",
+            "name": "matcher",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual project(s). Multiple projects can be specified. Restricts the list to the matchers that containing that projects",
+            "in": "query",
+            "name": "project",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
+            "type": "string"
+          },
+          {
+            "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the matchers published in that range",
+            "format": "date",
+            "in": "query",
+            "name": "from_date",
+            "type": "string"
+          },
+          {
+            "description": "Filter until date.. Ex. \"2014-01-01\". Restricts the list to the matchers published in that range",
+            "format": "date",
+            "in": "query",
+            "name": "to_date",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the matchers containing projects with interests in that category(ies)",
+            "in": "query",
+            "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the matchers containing projects with that social commitment(s)",
+            "in": "query",
+            "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "csv",
+            "description": "Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the matchers with projects geolocated in that area",
+            "in": "query",
+            "name": "location",
+            "type": "number"
+          },
+          {
+            "description": "Page number (starting at 1) if the result can be paginated",
+            "in": "query",
+            "name": "page",
+            "type": "integer"
+          },
+          {
+            "description": "Page limit (maximum 50 results, defaults to 10) if the result can be paginated",
+            "in": "query",
+            "name": "limit",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of available matchers",
+            "schema": {
+              "$ref": "#/definitions/api_matchers_matchers_get_ResponseMatcher"
+            }
+          },
+          "400": {
+            "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "Matcher API",
+        "tags": [
+          "matchers"
+        ]
+      }
+    },
+    "/matchers/{matcher_id}": {
+      "get": {
+        "description": "This resource returns matcher information.<br/>http://developers.goteo.org/matchers#matcher",
+        "parameters": [
+          {
+            "description": "Unique ID for the matcher",
+            "in": "path",
+            "name": "matcher_id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Matcher data",
+            "schema": {
+              "$ref": "#/definitions/api_matchers_matcher_get_MatcherFull"
+            }
+          },
+          "401": {
+            "description": "Resource requires authorization"
+          },
+          "404": {
+            "description": "Resource not found"
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "Matcher API",
+        "tags": [
+          "matcher"
+        ]
+      }
+    },
+    "/matchers/{matcher_id}/projects/": {
+      "get": {
+        "description": "This resource returns user projects information.<br/>http://developers.goteo.org/matchers#projects",
+        "parameters": [
+          {
+            "description": "Unique ID for the matcher",
+            "in": "path",
+            "name": "matcher_id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the users originally created in that node(s)",
+            "in": "query",
+            "name": "node",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s)",
+            "in": "query",
+            "name": "matcher",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s)",
+            "in": "query",
+            "name": "matcher",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
+            "type": "string"
+          },
+          {
+            "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the users created in that range",
+            "format": "date",
+            "in": "query",
+            "name": "from_date",
+            "type": "string"
+          },
+          {
+            "description": "Filter until date.. Ex. \"2014-01-01\". Restricts the list to the users created in that range",
+            "format": "date",
+            "in": "query",
+            "name": "to_date",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by matcher category. Multiple categories can be specified. Restricts the list to the users that have interests in that category(ies)",
+            "in": "query",
+            "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by matcher social commitment. Multiple social commitments can be specified. Restricts the list to the users that have interests in that social commitment(s)",
+            "in": "query",
+            "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "description": "Page number (starting at 1) if the result can be paginated",
+            "in": "query",
+            "name": "page",
+            "type": "integer"
+          },
+          {
+            "description": "Page limit (maximum 50 results, defaults to 10) if the result can be paginated",
+            "in": "query",
+            "name": "limit",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Project data",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/api_projects_projects_get_ResponseProject"
+              },
+              "type": "array"
+            }
+          },
+          "401": {
+            "description": "Resource requires authorization"
+          },
+          "404": {
+            "description": "Resource not found"
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "Matcher API",
+        "tags": [
+          "matcher_projects"
+        ]
+      }
+    },
     "/projects/": {
       "get": {
         "description": "This resource returns project information.<br/>http://developers.goteo.org/doc/projects",
@@ -2655,6 +3867,20 @@
             "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the projects originally created in that node(s)",
             "in": "query",
             "name": "node",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s)",
+            "in": "query",
+            "name": "matcher",
             "type": "string"
           },
           {
@@ -2690,6 +3916,34 @@
             "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the projects that have interests in that category(ies)",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the projects with that social commitment(s)",
+            "in": "query",
+            "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the licenses used in rewards of projects with that social commitment(s)",
+            "in": "query",
+            "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprint can be specified. Restricts the list to the licenses used in rewards of projects with that footprint(s)",
+            "in": "query",
+            "name": "footprint",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainable Development Goal. Multiple sdg can be specified. Restricts the list to the licenses used in rewards of projects with that sdg(s)",
+            "in": "query",
+            "name": "sdg",
             "type": "integer"
           },
           {
@@ -2794,6 +4048,20 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s)",
+            "in": "query",
+            "name": "matcher",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Get results by specified lang. Multiple langs can be specified",
             "in": "query",
             "name": "lang",
@@ -2814,9 +4082,31 @@
             "type": "string"
           },
           {
-            "description": "Filter by project category. Multiple users can be specified. Restricts the list to the users that have interests in that category(ies)",
+            "collectionFormat": "multi",
+            "description": "Filter by project category. Multiple categories can be specified. Restricts the list to the users that have interests in that category(ies)",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the licenses used in rewards of projects with that social commitment(s)",
+            "in": "query",
+            "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprint can be specified. Restricts the list to the licenses used in rewards of projects with that footprint(s)",
+            "in": "query",
+            "name": "footprint",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project Sustainable Development Goal. Multiple sdg can be specified. Restricts the list to the licenses used in rewards of projects with that sdg(s)",
+            "in": "query",
+            "name": "sdg",
             "type": "integer"
           },
           {
@@ -2870,6 +4160,13 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Filter by individual project(s). Multiple projects can be specified",
             "in": "query",
             "name": "project",
@@ -2897,9 +4194,17 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
             "description": "Filter by project category. Multiple categories can be specified",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified",
+            "in": "query",
+            "name": "social_commitment",
             "type": "integer"
           },
           {
@@ -2968,9 +4273,17 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
             "description": "Filter by project category. Multiple categories can be specified",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social_commitment. Multiple social commitments can be specified",
+            "in": "query",
+            "name": "social_commitment",
             "type": "integer"
           },
           {
@@ -3019,6 +4332,13 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Filter by individual project(s). Multiple projects can be specified",
             "in": "query",
             "name": "project",
@@ -3039,9 +4359,17 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
             "description": "Filter by project category. Multiple categories can be specified",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified",
+            "in": "query",
+            "name": "social_commitment",
             "type": "integer"
           },
           {
@@ -3090,6 +4418,13 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Filter by individual project(s). Multiple projects can be specified",
             "in": "query",
             "name": "project",
@@ -3110,9 +4445,17 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
             "description": "Filter by project category. Multiple categories can be specified",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified",
+            "in": "query",
+            "name": "social_commitment",
             "type": "integer"
           },
           {
@@ -3161,6 +4504,13 @@
           },
           {
             "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
             "description": "Filter by individual project(s). Multiple projects can be specified",
             "in": "query",
             "name": "project",
@@ -3181,9 +4531,17 @@
             "type": "string"
           },
           {
+            "collectionFormat": "multi",
             "description": "Filter by project category. Multiple categories can be specified",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified",
+            "in": "query",
+            "name": "social_commitment",
             "type": "integer"
           },
           {
@@ -3219,6 +4577,197 @@
         ]
       }
     },
+    "/sdgs/": {
+      "get": {
+        "description": "This resource returns social commitments information.<br/>http://developers.goteo.org/doc/sdgs",
+        "parameters": [
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the sdgs used in projects assigned in that nodes",
+            "in": "query",
+            "name": "node",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual project(s). Multiple projects can be specified. Restricts the list to the sdgs used in that projects",
+            "in": "query",
+            "name": "project",
+            "type": "string"
+          },
+          {
+            "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the sdgs used in projects created between that dates",
+            "format": "date",
+            "in": "query",
+            "name": "from_date",
+            "type": "string"
+          },
+          {
+            "description": "Filter until date.. Ex. \"2014-01-01\". Restricts the list to the sdgs used in projects created between that dates",
+            "format": "date",
+            "in": "query",
+            "name": "to_date",
+            "type": "string"
+          },
+          {
+            "description": "Filter by category. Multiple categories can be specified. Restricts the list to the social commitments matching with that category(ies)",
+            "in": "query",
+            "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by social commitment. Multiple social commitments can be specified. Restricts the list to the social commitments specified",
+            "in": "query",
+            "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the licenses used in rewards of projects with that social commitment(s)",
+            "in": "query",
+            "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project footprint. Multiple footprint can be specified. Restricts the list to the licenses used in rewards of projects with that footprint(s)",
+            "in": "query",
+            "name": "footprint",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "csv",
+            "description": "Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the sdgs used in projects geolocated in that area",
+            "in": "query",
+            "name": "location",
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of available sdgs",
+            "schema": {
+              "$ref": "#/definitions/api_sdgs_sdgs_get_ResponseSDG"
+            }
+          },
+          "400": {
+            "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "SDG API",
+        "tags": [
+          "sdgs"
+        ]
+      }
+    },
+    "/socialcommitments/": {
+      "get": {
+        "description": "This resource returns social commitments information.<br/>http://developers.goteo.org/doc/socialcommitments",
+        "parameters": [
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the socialcommitments used in projects assigned in that nodes",
+            "in": "query",
+            "name": "node",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual project(s). Multiple projects can be specified. Restricts the list to the socialcommitments used in that projects",
+            "in": "query",
+            "name": "project",
+            "type": "string"
+          },
+          {
+            "description": "Filter from date. Ex. \"2013-01-01\". Restricts the list to the socialcommitments used in projects created between that dates",
+            "format": "date",
+            "in": "query",
+            "name": "from_date",
+            "type": "string"
+          },
+          {
+            "description": "Filter until date.. Ex. \"2014-01-01\". Restricts the list to the socialcommitments used in projects created between that dates",
+            "format": "date",
+            "in": "query",
+            "name": "to_date",
+            "type": "string"
+          },
+          {
+            "description": "Filter by category. Multiple categories can be specified. Restricts the list to the social commitments matching with that category(ies)",
+            "in": "query",
+            "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by social commitment. Multiple social commitments can be specified. Restricts the list to the social commitments specified",
+            "in": "query",
+            "name": "social_commitment",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Get results by specified lang. Multiple langs can be specified",
+            "in": "query",
+            "name": "lang",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "csv",
+            "description": "Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the socialcommitments used in projects geolocated in that area",
+            "in": "query",
+            "name": "location",
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of available socialcommitments",
+            "schema": {
+              "$ref": "#/definitions/api_socialcommitments_socialcommitments_get_ResponseSocialCommitment"
+            }
+          },
+          "400": {
+            "description": "Invalid parameters format"
+          },
+          "401": {
+            "description": "Resource requires authorization"
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "SocialCommitment API",
+        "tags": [
+          "socialcommitments"
+        ]
+      }
+    },
     "/users/": {
       "get": {
         "description": "This resource returns user information.<br/>http://developers.goteo.org/doc/users",
@@ -3228,6 +4777,13 @@
             "description": "Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the users originally created in that node(s)",
             "in": "query",
             "name": "node",
+            "type": "string"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s)",
+            "in": "query",
+            "name": "call",
             "type": "string"
           },
           {
@@ -3263,6 +4819,13 @@
             "description": "Filter by user categories. Multiple categories can be specified. Restricts the list to the users that have interests in that category(ies)",
             "in": "query",
             "name": "category",
+            "type": "integer"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the users that have invested in projects with that social commitment(s)",
+            "in": "query",
+            "name": "social_commitment",
             "type": "integer"
           },
           {

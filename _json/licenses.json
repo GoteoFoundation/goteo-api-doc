@@ -1,260 +1,263 @@
 {
   "items": [
     {
-      "description": "Licencia P\u00fablica General de GNU para la libre distribuci\u00f3n, modificaci\u00f3n y uso de software",
+      "description": "GNU General Public License for the free distribution, modification, and use of software",
       "id": "gpl",
       "name": "General Public License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/gpl.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/gpl.svg",
       "total-projects": 48,
       "total-rewards": 158,
       "url": "http://www.gnu.org/licenses/gpl.html"
     },
     {
-      "description": "Licencia P\u00fablica General de GNU para la libre distribuci\u00f3n, modificaci\u00f3n y uso de software",
+      "description": "GNU General Public License for the free distribution, modification, and use of software",
       "id": "gpl2",
       "name": "General Public License (v.2)",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/gpl2.svg",
-      "total-projects": 22,
-      "total-rewards": 55,
+      "svg-url": "https://goteo.org/api/svg/licenses/gpl2.svg",
+      "total-projects": 23,
+      "total-rewards": 57,
       "url": "http://www.gnu.org/licenses/gpl-2.0.html"
     },
     {
-      "description": "Licencia p\u00fablica general de Affero para software libre que corra en servidores de red",
+      "description": "Affero General Public License for open networked software",
       "id": "agpl",
       "name": "Affero General Public License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/agpl.svg",
-      "total-projects": 13,
-      "total-rewards": 36,
+      "svg-url": "https://goteo.org/api/svg/licenses/agpl.svg",
+      "total-projects": 14,
+      "total-rewards": 37,
       "url": "http://www.affero.org/oagf.html"
     },
     {
-      "description": "Licencia P\u00fablica General Reducida de GNU, para software libre que puede ser utilizado por un programa no-GPL, que a su vez puede ser software libre o no",
+      "description": "GNU Lesser General Public License for free software that can be used by a non-GPL program, which in turn can be free software or not. ",
       "id": "lgpl",
       "name": "Lesser General Public License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/lgpl.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/lgpl.svg",
       "total-projects": 0,
       "total-rewards": 4,
       "url": "http://www.gnu.org/copyleft/lesser.html"
     },
     {
-      "description": "Licencia de documentaci\u00f3n libre de GNU, pudiendo ser \u00e9sta copiada, redistribuida, modificada e incluso vendida siempre y cuando se mantenga bajo los t\u00e9rminos de esa misma licencia",
+      "description": "GNU free documentation license, which can be copied, redistributed, modified and even sold, as long as the original terms of this same license are maintained.",
       "id": "fdl",
       "name": "Free Documentation License ",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/fdl.svg",
-      "total-projects": 11,
-      "total-rewards": 53,
+      "svg-url": "https://goteo.org/api/svg/licenses/fdl.svg",
+      "total-projects": 13,
+      "total-rewards": 57,
       "url": "http://www.gnu.org/copyleft/fdl.html"
     },
     {
-      "description": "Licencia de software libre permisiva, con pocas restricciones y que permite el uso del c\u00f3digo fuente en software no libre",
+      "description": "Permissive free software licenses, with few restrictions, that permit the use of source code in non-free software",
       "id": "bsd",
-      "name": "Berkeley Software Distribution",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/bsd.svg",
+      "name": "Berkeley Software Distribution Licenses",
+      "svg-url": "https://goteo.org/api/svg/licenses/bsd.svg",
       "total-projects": 0,
       "total-rewards": 2,
-      "url": "http://es.wikipedia.org/wiki/Licencia_BSD"
+      "url": "http://en.wikipedia.org/wiki/BSD_licenses"
     },
     {
-      "description": "Licencia de documentaci\u00f3n libre para el sistema operativo FreeBSD",
+      "description": "Free Documentation License for the FreeBSD operating system",
       "id": "freebsd",
       "name": "FreeBSD Documentation License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/freebsd.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/freebsd.svg",
       "total-projects": 1,
       "total-rewards": 3,
       "url": "http://www.freebsd.org/copyright/freebsd-doc-license.html"
     },
     {
-      "description": "Licencia p\u00fablica de Mozilla de software libre, que posibilita la reutilizaci\u00f3n no libre del software, sin restringir la reutilizaci\u00f3n del c\u00f3digo ni el relicenciamiento bajo la misma licencia",
+      "description": "Mozilla Public License for open software that makes possible the non-open reuse of software, without restricting the reuse of the code or the relicensing under the same license. ",
       "id": "mpl",
       "name": "Mozilla Public License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/mpl.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/mpl.svg",
       "total-projects": 0,
-      "total-rewards": 1,
+      "total-rewards": 2,
       "url": "http://www.mozilla.org/MPL/"
     },
     {
-      "description": "Licencia tanto para software libre como para software no libre, que permite no liberar los cambios realizados sobre el programa original",
+      "description": "License both for open and closed software, that allows changes made to the original program to be protected",
       "id": "mit",
       "name": "MIT / X11 License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/mit.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/mit.svg",
       "total-projects": 1,
-      "total-rewards": 3,
+      "total-rewards": 4,
       "url": "http://es.wikipedia.org/wiki/MIT_License"
     },
     {
-      "description": "Licencia bajo la que se publica el lenguaje de programaci\u00f3n PHP",
+      "description": "License under which the PHP programming language is published",
       "id": "php",
       "name": "PHP License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/php.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/php.svg",
       "total-projects": 1,
       "total-rewards": 11,
       "url": "http://www.php.net/license/"
     },
     {
-      "description": "Licencia Apache de software libre, que no exige que las obras derivadas se distribuyan usando la misma licencia ni como software libre",
+      "description": "Apache License for open software, that does not require that derivative works be distributed with the same license, or even as open software",
       "id": "apache",
       "name": "Apache License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/apache.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/apache.svg",
       "total-projects": 1,
       "total-rewards": 3,
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
     },
     {
-      "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda",
+      "description": "Creative Commons License with attribution",
       "id": "ccby",
-      "name": "CC - Reconocimiento",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/ccby.svg",
-      "total-projects": 80,
-      "total-rewards": 371,
-      "url": "http://creativecommons.org/licenses/by/4.0/deed.es_ES"
+      "name": "CC - Attribution",
+      "svg-url": "https://goteo.org/api/svg/licenses/ccby.svg",
+      "total-projects": 91,
+      "total-rewards": 403,
+      "url": "http://creativecommons.org/licenses/by/2.0/deed.en"
     },
     {
-      "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda y sin que se pueda hacer uso comercial",
+      "description": "Creative Commons License with attribution that does not permit commercial use",
       "id": "ccbync",
-      "name": "CC - Reconocimiento - NoComercial",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/ccbync.svg",
-      "total-projects": 131,
-      "total-rewards": 412,
-      "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.es_ES"
+      "name": "CC - Attribution-NonCommercial",
+      "svg-url": "https://goteo.org/api/svg/licenses/ccbync.svg",
+      "total-projects": 142,
+      "total-rewards": 433,
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.en"
     },
     {
-      "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial y a compartir en id\u00e9nticas condiciones",
+      "description": "Creative Commons License with attribution, that does not allow commercial use, and only allows sharing under identical licensing conditions",
       "id": "ccbyncsa",
-      "name": "CC - Reconocimiento - NoComercial - CompartirIgual",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncsa.svg",
-      "total-projects": 306,
-      "total-rewards": 720,
-      "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
+      "name": "CC - Attribution - NonCommercial - ShareAlike",
+      "svg-url": "https://goteo.org/api/svg/licenses/ccbyncsa.svg",
+      "total-projects": 325,
+      "total-rewards": 749,
+      "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en"
     },
     {
-      "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial ni otras obras derivadas",
+      "description": "Creative Commons License with attribution, that does not allow commercial use nor derivative works",
       "id": "ccbyncnd",
-      "name": "CC - Reconocimiento - NoComercial - SinObraDerivada",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncnd.svg",
-      "total-projects": 119,
-      "total-rewards": 335,
-      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.es_ES"
+      "name": "CC - Attribution  - NonCommercial - NoDerivs",
+      "svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
+      "total-projects": 135,
+      "total-rewards": 355,
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"
     },
     {
-      "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda y a compartir en id\u00e9nticas condiciones",
+      "description": "Creative Commons License with attribution that only allows sharing under identical licensing conditions",
       "id": "ccbysa",
-      "name": "CC - Reconocimiento - CompartirIgual",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/ccbysa.svg",
-      "total-projects": 107,
-      "total-rewards": 252,
-      "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.es_ES"
+      "name": "CC - Attribution - ShareAlike",
+      "svg-url": "https://goteo.org/api/svg/licenses/ccbysa.svg",
+      "total-projects": 116,
+      "total-rewards": 265,
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.en"
     },
     {
-      "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se puedan hacer obras derivadas ",
+      "description": "Creative Commons License with attribution that does not allow derivative works",
       "id": "ccbynd",
-      "name": "CC - Reconocimiento - SinObraDerivada",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/ccbynd.svg",
-      "total-projects": 5,
-      "total-rewards": 31,
-      "url": "http://creativecommons.org/licenses/by-nd/2.0/deed.es_ES"
+      "name": "CC - Attribution - NoDerivs",
+      "svg-url": "https://goteo.org/api/svg/licenses/ccbynd.svg",
+      "total-projects": 6,
+      "total-rewards": 33,
+      "url": "http://creativecommons.org/licenses/by-nd/2.0/deed.en"
     },
     {
-      "description": "Licencia para obras de hardware libre",
+      "description": "TAPR Open Hardware License",
       "id": "oshw",
       "name": "TAPR Open Hardware License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/oshw.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/oshw.svg",
       "total-projects": 7,
       "total-rewards": 16,
       "url": "http://www.tapr.org/OHL"
     },
     {
-      "description": "Licencia para obras de hardware libre con limitaci\u00f3n en su comercializaci\u00f3n ",
+      "description": "TAPR Noncommercial Hardware License",
       "id": "tapr",
       "name": "TAPR Noncommercial Hardware License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/tapr.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/tapr.svg",
       "total-projects": 0,
       "total-rewards": 1,
       "url": "http://www.tapr.org/NCL.html"
     },
     {
-      "description": "Licencia para hardware libre de los procesadores Balloon",
+      "description": "License for open Balloon boards",
       "id": "balloon",
       "name": "Balloon Open Hardware License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/balloon.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/balloon.svg",
       "total-projects": 0,
       "total-rewards": 1,
       "url": "http://balloonboard.org/licence.html"
     },
     {
-      "description": "Licencia de red abierta, libre y neutral, como acuerdo de interconexi\u00f3n entre iguales promovido por Guifi.net",
+      "description": "License for an open, free, neutral network, as an agreement of interconnection among equals, promoted by Guifi.net ",
       "id": "xoln",
-      "name": "Procom\u00fan de la XOLN",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/xoln.svg",
+      "name": "XOLN Common Good License",
+      "svg-url": "https://goteo.org/api/svg/licenses/xoln.svg",
       "total-projects": 1,
       "total-rewards": 2,
       "url": "http://guifi.net/es/ProcomunXOLN"
     },
     {
-      "description": "Licencia de base de datos abierta, que permite compartir, modificar y utilizar bases de datos en id\u00e9nticas condiciones",
+      "description": "Open Database License that allows for sharing, modifying, and using databases in identical conditions",
       "id": "odbl",
       "name": "Open Database License ",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/odbl.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/odbl.svg",
       "total-projects": 7,
       "total-rewards": 10,
       "url": "http://www.opendatacommons.org/licenses/odbl/"
     },
     {
-      "description": "Licencia de datos abierta, que permite compartir, modificar y utilizar los datos en id\u00e9nticas condiciones atribuyendo la fuente original",
+      "description": "Open data license that allows for sharing, modifying and using data under identical conditions, as long as attribution is given for the original source",
       "id": "odcby",
       "name": "Open Data Commons Attribution License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/odcby.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/odcby.svg",
       "total-projects": 2,
       "total-rewards": 10,
       "url": "http://www.opendatacommons.org/licenses/by/"
     },
     {
-      "description": "La obra puede ser libremente reproducida, distribuida, transmitida, usada, modificada, editada u objeto de cualquier otra forma de explotaci\u00f3n para el prop\u00f3sito que sea, comercial o no",
+      "description": "The work may be freely reproduced, distributed, transmitted, used, modified, edited, or subject to any other form of exploitation for any commerical or non-commercial use.",
       "id": "pd",
-      "name": "Dominio p\u00fablico",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/pd.svg",
-      "total-projects": 15,
-      "total-rewards": 74,
-      "url": "http://creativecommons.org/licenses/publicdomain/deed.es"
+      "name": "Public Domain",
+      "svg-url": "https://goteo.org/api/svg/licenses/pd.svg",
+      "total-projects": 17,
+      "total-rewards": 80,
+      "url": "http://creativecommons.org/licenses/publicdomain/deed.en"
     },
     {
-      "description": "Licencia Creative Commons de obra dedicada al dominio p\u00fablico, mediante renuncia a todos los derechos de autor\u00eda sobre la misma",
+      "description": "Creative Commons License for works dedicated to the public domain, by which all intellectual property rights over a work are waived",
       "id": "cc0",
-      "name": "CC0 Universal (Dominio P\u00fablico)",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/cc0.svg",
-      "total-projects": 41,
-      "total-rewards": 177,
-      "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.es"
+      "name": "CC0 Universal (Public Domain)",
+      "svg-url": "https://goteo.org/api/svg/licenses/cc0.svg",
+      "total-projects": 45,
+      "total-rewards": 190,
+      "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
     },
     {
-      "description": "La licencia de producci\u00f3n entre pares es un ejemplo de licencia Copyfarleft con la que \u00fanicamente aquellas personas, cooperativas o entidades sin \u00e1nimo de lucro pueden compartir y reutilizar la obra, pero no se permite el uso lucrativo por parte de entidades comerciales cuyo objetivo sea obtener beneficios econ\u00f3micos de la misma sin una reciprocidad expl\u00edcita hacia el procom\u00fan.",
+      "description": "The peer production license is an example of the Copyfarleft type of license, in which only other commoners, cooperatives and nonprofits can share and re-use the material, but not commercial entities intent on making profit through the commons without explicit reciprocity.",
       "id": "ppl",
-      "name": "Licencia de Producci\u00f3n entre Pares",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/ppl.svg",
-      "total-projects": 6,
-      "total-rewards": 15,
+      "name": "Peer Production License",
+      "svg-url": "https://goteo.org/api/svg/licenses/ppl.svg",
+      "total-projects": 9,
+      "total-rewards": 18,
       "url": "http://p2pfoundation.net/Peer_Production_License"
     },
     {
-      "description": "Licencia desarollada por el CERN - Laboratorio Europeo de F\u00edsica de Part\u00edculas Elementales para poryectos de Hardware",
+      "description": "Licenza sviluppata dal CERN - Laboratorio Europeo di Fisica della Particelle Elementari per progetti di Hardware",
       "id": "cernohl",
       "name": "CERN OHL Open Hardware Licence",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/cernohl.svg",
+      "svg-url": "https://goteo.org/api/svg/licenses/cernohl.svg",
       "total-projects": 1,
       "total-rewards": 8,
       "url": "http://www.ohwr.org/projects/cernohl/wiki"
     },
     {
-      "description": "Licencia de arte libre",
+      "description": "Free art license",
       "id": "fal",
       "name": "Free Art License",
-      "svg-url": "https://goteoassets.org/api/svg/licenses/fal.svg",
-      "total-projects": 13,
-      "total-rewards": 159,
-      "url": "http://artlibre.org/lal/es"
+      "svg-url": "https://goteo.org/api/svg/licenses/fal.svg",
+      "total-projects": 16,
+      "total-rewards": 173,
+      "url": "http://artlibre.org/licence/lal/en"
     }
   ],
   "meta": {
+    "lang": [
+      "en"
+    ],
     "total": 28
   },
-  "time-elapsed": 1.3805618286132812
+  "time-elapsed": 1.5935213565826416
 }

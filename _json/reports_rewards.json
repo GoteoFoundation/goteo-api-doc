@@ -1,77 +1,82 @@
 {
   "favorite-rewards": [
     {
-      "description": "Los productos pueden ser los que se han producido, en edici\u00f3n limitada, o fragmentos u obras derivadas del original.",
+      "description": "Products can be limited editions or prototypes, or pieces or works derived from the original.",
       "icon": "product",
-      "name": "Producto",
-      "svg-url": "https://goteoassets.org/api/svg/icons/product.svg",
-      "total": 2044
+      "name": "Product",
+      "svg-url": "https://goteo.org/api/svg/icons/product.svg",
+      "total": 2810
     },
     {
-      "description": "Acciones y/o sesiones durante tiempo determinado para satisfacer una necesidad individual o de grupo: una formaci\u00f3n, una ayuda t\u00e9cnica, un asesoramiento, etc.",
+      "description": "Actions or sessions during a specific period of time which satisfy an individual or group need: education, technical assistance, advice, etc. ",
       "icon": "service",
-      "name": "Servicios",
-      "svg-url": "https://goteoassets.org/api/svg/icons/service.svg",
-      "total": 1170
+      "name": "Services",
+      "svg-url": "https://goteo.org/api/svg/icons/service.svg",
+      "total": 1479
     },
     {
-      "description": "Los archivos digitales pueden ser de m\u00fasica, v\u00eddeo, documentos de texto, etc.",
+      "description": "Digital files may be music, video, text documents, etc.",
       "icon": "file",
-      "name": "Archivos digitales",
-      "svg-url": "https://goteoassets.org/api/svg/icons/file.svg",
-      "total": 912
+      "name": "Digital files",
+      "svg-url": "https://goteo.org/api/svg/icons/file.svg",
+      "total": 1100
     },
     {
-      "description": "Agradecimiento o reconocimiento",
+      "description": "Gratitude or acknowledgment",
       "icon": "thanks",
-      "name": "Reconocimiento",
-      "svg-url": "https://goteoassets.org/api/svg/icons/thanks.svg",
-      "total": 723
+      "name": "Acknowledgment",
+      "svg-url": "https://goteo.org/api/svg/icons/thanks.svg",
+      "total": 978
     },
     {
-      "description": "Sorpr\u00e9ndenos con esta nueva tipolog\u00eda, realmente nos interesa :) ",
+      "description": "Surprise us with this category, we're really interested!",
       "icon": "other",
-      "name": "Otro",
-      "svg-url": "https://goteoassets.org/api/svg/icons/other.svg",
-      "total": 405
+      "name": "Other",
+      "svg-url": "https://goteo.org/api/svg/icons/other.svg",
+      "total": 506
     },
     {
-      "description": "Documentos pr\u00e1cticos detallando pasos, materiales formativos, bussiness plans, \u201chow tos\u201d, recetas, etc.",
+      "description": "Practical documentation that details step-by-step instructions, tutorials, business plans, how-to's, code cookbooks, etc. ",
       "icon": "manual",
-      "name": "Manuales",
-      "svg-url": "https://goteoassets.org/api/svg/icons/manual.svg",
-      "total": 158
+      "name": "Manuals",
+      "svg-url": "https://goteo.org/api/svg/icons/manual.svg",
+      "total": 181
     },
     {
-      "description": "Por c\u00f3digo fuente entendemos programas y software en general.",
+      "description": "By source code, we mean programs and software in general.",
       "icon": "code",
-      "name": "C\u00f3digo fuente",
-      "svg-url": "https://goteoassets.org/api/svg/icons/code.svg",
-      "total": 83
+      "name": "Source code",
+      "svg-url": "https://goteo.org/api/svg/icons/code.svg",
+      "total": 85
     },
     {
-      "description": "Los dise\u00f1os pueden ser de planos o patrones, esquemas, esbozos, diagramas de flujo, etc.",
+      "description": "Designs can be drawings, patterns, sketches, rough drafts, flowcharts, etc.",
       "icon": "design",
-      "name": "Dise\u00f1o",
-      "svg-url": "https://goteoassets.org/api/svg/icons/design.svg",
-      "total": 52
+      "name": "Design",
+      "svg-url": "https://goteo.org/api/svg/icons/design.svg",
+      "total": 56
     },
     {
-      "description": "Retornos econ\u00f3micos proporcionales a la inversi\u00f3n realizada, que se deben detallar en cantidad pero tambi\u00e9n forma de pago.",
+      "description": "Economic benefits that are proportional to the investment made, with details about quantity and also form of payment",
       "icon": "money",
-      "name": "Dinero",
-      "svg-url": "https://goteoassets.org/api/svg/icons/money.svg",
-      "total": 30
+      "name": "Money",
+      "svg-url": "https://goteo.org/api/svg/icons/money.svg",
+      "total": 55
     }
   ],
-  "percentage-reward-refusal": 0.0,
-  "reward-refusal": 0,
-  "rewards-per-amount": {
-    "rewards-between-100-400": 958,
-    "rewards-between-15-30": 3817,
-    "rewards-between-30-100": 4818,
-    "rewards-less-than-15": 4117,
-    "rewards-more-than-400": 76
+  "meta": {
+    "lang": [
+      "en"
+    ]
   },
-  "time-elapsed": 0.7902917861938477
+  "percentage-reward-refusal": 34.09,
+  "reward-refusal": 45633,
+  "rewards-per-amount": {
+    "rewards-between-100-400": 12241,
+    "rewards-between-15-30": 54996,
+    "rewards-between-30-100": 57901,
+    "rewards-less-than-15": 30879,
+    "rewards-more-than-400": 1004
+  },
+  "time-elapsed": 6.363196611404419
 }

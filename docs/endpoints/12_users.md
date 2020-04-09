@@ -18,7 +18,7 @@ curl -i --basic --user "user:key" {{ site.apiurl }}/users/
 ```
 
 ### Filters available:
-**The [standard set of filters](filters.html)) applies to this endpoint with these particulars:**
+**The [standard set of filters](filters.html) applies to this endpoint with these particulars:**
 
 {{ site.data.users.parameters_table }}
 

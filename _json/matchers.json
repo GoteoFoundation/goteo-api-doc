@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "active": true,
+      "amount-available": 100000.0,
+      "amount-committed": 100000.0,
+      "amount-peers": 148755.0,
+      "amount-remaining": 0.0,
+      "date-created": "Fri, 10 Nov 2017 00:00:00 +0100",
+      "id": "ahoracomparte",
+      "latitude": 40.41677540000000,
+      "logo-url": "https://goteo.org/img/medium/la_gota.png",
+      "longitude": -3.70379020000000,
+      "matcher-location": "Madrid",
+      "matcher-url": "https://goteo.org/matcher/ahoracomparte",
+      "name": "Ahora Comparte",
+      "owner": "ahora-comparte",
+      "owner-name": "Ahora coMparte",
+      "projects-accepted": 16,
+      "projects-active": 0,
+      "projects-applied": 22,
+      "projects-discarded": 3,
+      "projects-pending": 19,
+      "projects-rejected": 1,
+      "projects-succeeded": 22,
+      "projects-total": 61,
+      "radius": 0,
+      "region": "Community of Madrid"
+    },
+    {
+      "active": true,
+      "amount-available": 8000.0,
+      "amount-committed": 0.0,
+      "amount-peers": 0.0,
+      "amount-remaining": 8000.0,
+      "date-created": "Mon, 24 Feb 2020 00:00:00 +0100",
+      "id": "fabraicoats",
+      "latitude": null,
+      "logo-url": "https://goteo.org/img/medium/fabra-1.jpg",
+      "longitude": null,
+      "matcher-location": "Barcelona",
+      "matcher-url": "https://goteo.org/matcher/fabraicoats",
+      "name": "Fabra i Coats",
+      "owner": "ficgoteo",
+      "owner-name": "Fabra i Coats",
+      "projects-accepted": 16,
+      "projects-active": 0,
+      "projects-applied": 0,
+      "projects-discarded": 3,
+      "projects-pending": 19,
+      "projects-rejected": 1,
+      "projects-succeeded": 22,
+      "projects-total": 61,
+      "radius": 0,
+      "region": null
+    }
+  ],
+  "meta": {
+    "lang": [
+      "en"
+    ],
+    "limit": 10,
+    "page": 0,
+    "total": 2
+  },
+  "time-elapsed": 0.1886453628540039
+}

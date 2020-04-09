@@ -29,7 +29,7 @@
       "id": "-blank",
       "name": "_blank",
       "node": "goteo",
-      "profile-image-url": "https://goteo.org/img/medium/-blank-icon-500r.gif",
+      "profile-image-url": "https://goteo.org/img/medium/",
       "profile-url": "https://goteo.org/user/profile/-blank"
     },
     {
@@ -82,9 +82,12 @@
     }
   ],
   "meta": {
+    "lang": [
+      "en"
+    ],
     "limit": 10,
     "page": 0,
-    "total": 85835
+    "total": 188714
   },
-  "time-elapsed": 0.2869534492492676
+  "time-elapsed": 6.271660327911377
 }

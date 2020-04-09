@@ -1,71 +1,128 @@
 {
   "items": [
     {
-      "description": "Proyectos que promueven el cambio social, la resoluci\u00f3n de problemas en las relaciones humanas y/o su fortalecimiento para conseguir un mayor bienestar.",
+      "description": "Projects that promote social change, resolve problems with or strengthen human relationshiops in order to achieve better well-being.",
       "id": 2,
       "name": "Social",
-      "total-projects": 506,
-      "total-users": 6511
+      "social-commitment": {
+        "description": "Solidario",
+        "icon_url": "https://goteo.org/img/medium/1-solidario-1.png",
+        "id": 1,
+        "name": "Solidario"
+      },
+      "total-projects": 691,
+      "total-users": 12698
     },
     {
-      "description": "Desarrollos t\u00e9cnicos de software, hardware, herramientas etc. para solucionar problemas o necesidades concretas. ",
-      "id": 7,
-      "name": "Tecnol\u00f3gico",
-      "total-projects": 180,
-      "total-users": 3554
-    },
-    {
-      "description": "Proyectos que aspiran a convertirse en una iniciativa empresarial o de emprendimiento social, generando beneficios econ\u00f3micos. ",
-      "id": 9,
-      "name": "Emprendedor",
-      "total-projects": 123,
-      "total-users": 2440
-    },
-    {
-      "description": "",
-      "id": 16,
-      "name": "Dise\u00f1o",
-      "total-projects": 78,
-      "total-users": 1333
-    },
-    {
-      "description": "Proyectos con el objetivo de informar, denunciar, comunicar (por ejemplo periodismo ciudadano, documentales, blogs, programas de radio).",
+      "description": "Projects whose objective is to inform, denounce and/or communicate (for example, civic journalism, documentaries, blogs, radio programs).",
       "id": 6,
-      "name": "Comunicativo",
-      "total-projects": 245,
-      "total-users": 2953
+      "name": "Communications",
+      "social-commitment": {
+        "description": "Periodismo independiente",
+        "icon_url": "https://goteo.org/img/medium/5-periodismo-1.png",
+        "id": 5,
+        "name": "Periodismo independiente"
+      },
+      "total-projects": 286,
+      "total-users": 5043
     },
     {
-      "description": "Proyectos donde el objetivo primordial es la formaci\u00f3n o el aprendizaje. ",
+      "description": "Technical development of software, hardware, tools, etc in order to solve concrete problems or needs.",
+      "id": 7,
+      "name": "Technological",
+      "social-commitment": {
+        "description": "Software libre",
+        "icon_url": "https://goteo.org/img/medium/2-software-libre-1.png",
+        "id": 2,
+        "name": "Software libre"
+      },
+      "total-projects": 190,
+      "total-users": 5914
+    },
+    {
+      "description": "Projects that are business initiatives, and that hope to generate profits.",
+      "id": 9,
+      "name": "Commercial",
+      "social-commitment": {
+        "description": "Generar empleo",
+        "icon_url": "https://goteo.org/img/medium/4b-empleo.png",
+        "id": 3,
+        "name": "Generar empleo"
+      },
+      "total-projects": 153,
+      "total-users": 5503
+    },
+    {
+      "description": "Projects whose most important objective is formation or learning. ",
       "id": 10,
-      "name": "Educativo",
-      "total-projects": 400,
-      "total-users": 4999
+      "name": "Educational",
+      "social-commitment": {
+        "description": "Educativo",
+        "icon_url": "https://goteo.org/img/medium/6-educativo-1.png",
+        "id": 6,
+        "name": "Educativo"
+      },
+      "total-projects": 530,
+      "total-users": 9563
     },
     {
-      "description": "Proyectos con objetivos art\u00edsticos y culturales en un sentido amplio.",
+      "description": "Projects with artistic or cultural objectives.",
       "id": 11,
       "name": "Cultural",
-      "total-projects": 380,
-      "total-users": 5000
+      "social-commitment": {
+        "description": "Crear cultura",
+        "icon_url": "https://goteo.org/img/medium/7--crear-cultura-1.png",
+        "id": 7,
+        "name": "Crear cultura"
+      },
+      "total-projects": 552,
+      "total-users": 9393
     },
     {
-      "description": "Proyectos relacionados con el cuidado del medio ambiente, la sostenibilidad y/o la diversidad biol\u00f3gica.\r\n",
+      "description": "Projects that are related to the care of the environment, sustainability, and/or biological diversity.\r\n",
       "id": 13,
-      "name": "Ecol\u00f3gico",
-      "total-projects": 219,
-      "total-users": 3853
+      "name": "Ecological",
+      "social-commitment": {
+        "description": "Acci\u00f3n por el clima",
+        "icon_url": "https://goteo.org/img/medium/8-ecologico-1.png",
+        "id": 8,
+        "name": "Acci\u00f3n por el clima"
+      },
+      "total-projects": 330,
+      "total-users": 7970
     },
     {
-      "description": "Estudios o investigaciones de alguna materia, proyectos que buscan respuestas, soluciones, explicaciones nuevas.",
+      "description": "Studies or research, projects that look for answers, solutions, new explanations.",
       "id": 14,
-      "name": "Cient\u00edfico",
-      "total-projects": 95,
-      "total-users": 2434
+      "name": "Scientific",
+      "social-commitment": {
+        "description": null,
+        "icon_url": null,
+        "id": 0,
+        "name": null
+      },
+      "total-projects": 108,
+      "total-users": 4625
+    },
+    {
+      "description": null,
+      "id": 16,
+      "name": "Design",
+      "social-commitment": {
+        "description": null,
+        "icon_url": null,
+        "id": 0,
+        "name": null
+      },
+      "total-projects": 81,
+      "total-users": 885
     }
   ],
   "meta": {
+    "lang": [
+      "en"
+    ],
     "total": 9
   },
-  "time-elapsed": 0.4611806869506836
+  "time-elapsed": 1.8086810111999512
 }

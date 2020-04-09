@@ -6,7 +6,7 @@
       "amount-call": 2000.0,
       "date-created": "Mon, 17 Dec 2012 00:00:00 +0100",
       "date-published": "Mon, 15 Apr 2013 00:00:00 +0200",
-      "description-short": "Arquitecturas Colectivas es una red de personas y colectivos interesados en la construcci\u00f3n participativa del entorno urbano. Queremos ampliar y mejorar las herramientas que dan soporte a esa red para que llegue mucho m\u00e1s lejos!",
+      "description-short": "Arquitecturas Colectivas is a network of individuals and collectives who share an interest in the participatory construction of the urban environment. We want to expand and improve the tools that give support to that network, so it can go further!",
       "id": "arquitecturas-colectivas",
       "image-url": "https://goteo.org/img/medium/encuentro-arquitecturas-colectivas-2011-valencia-j",
       "lang": "es",
@@ -20,6 +20,7 @@
       "owner-name": "Straddle3",
       "project-url": "https://goteo.org/project/arquitecturas-colectivas",
       "region": "Barcelona",
+      "social-commitment-id": null,
       "status": "fulfilled"
     },
     {
@@ -41,6 +42,7 @@
       "owner-name": "commonfab",
       "project-url": "https://goteo.org/project/fab-movil-00",
       "region": "Sevilla",
+      "social-commitment-id": null,
       "status": "fulfilled"
     },
     {
@@ -48,7 +50,7 @@
       "amount-call": 0.0,
       "date-created": "Fri, 22 Mar 2013 00:00:00 +0100",
       "date-published": "Mon, 15 Apr 2013 00:00:00 +0200",
-      "description-short": "Aulas de danza con vistas",
+      "description-short": "Dance studios with a view",
       "id": "picnic",
       "image-url": "https://goteo.org/img/medium/01-galeria_1r.png",
       "lang": "es",
@@ -62,6 +64,7 @@
       "owner-name": "Picnic",
       "project-url": "https://goteo.org/project/picnic",
       "region": "Sevilla",
+      "social-commitment-id": null,
       "status": "unfunded"
     },
     {
@@ -69,7 +72,7 @@
       "amount-call": 2000.0,
       "date-created": "Sat, 23 Mar 2013 00:00:00 +0100",
       "date-published": "Mon, 15 Apr 2013 00:00:00 +0200",
-      "description-short": "Adtl\u00e1ntida.tv es una comunidad y un sistema de RTV libre con servicio de livestreaming",
+      "description-short": "Adtl\u00e1ntida.tv is a community and a free radio-television system with livestreaming service",
       "id": "adtlantida-tv",
       "image-url": "https://goteo.org/img/medium/adtlantida-multi-streaming-appr.jpg",
       "lang": "es",
@@ -83,6 +86,7 @@
       "owner-name": "Adtlantida",
       "project-url": "https://goteo.org/project/adtlantida-tv",
       "region": "Pontevedra",
+      "social-commitment-id": null,
       "status": "fulfilled"
     },
     {
@@ -104,14 +108,18 @@
       "owner-name": "lamatraka",
       "project-url": "https://goteo.org/project/redetejas",
       "region": "Sevilla",
+      "social-commitment-id": null,
       "status": "fulfilled"
     }
   ],
   "meta": {
     "call": "unia-capital-riego",
+    "lang": [
+      "en"
+    ],
     "limit": 10,
     "page": 0,
     "total": 5
   },
-  "time-elapsed": 0.11388707160949707
+  "time-elapsed": 0.32991623878479004
 }

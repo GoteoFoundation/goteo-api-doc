@@ -1,19 +1,24 @@
 {
-  "average-donation": 48.60,
-  "average-donation-paypal": 34.58,
-  "average-failed": 1028.50,
-  "average-minimum": 5524.10,
-  "average-received": 7087.78,
-  "average-second-round": 929.54,
-  "cash-amount": 314107,
-  "creditcard-amount": 2948119,
-  "fee-amount": 290969.36,
-  "matchfund-amount": 81851,
-  "matchfundpledge-amount": 166000,
-  "paypal-amount": 508025,
-  "percentage-pledged-failed": 22.09,
-  "percentage-pledged-successful": 129.62,
-  "pledged": 3866084,
-  "refunded": 215732,
-  "time-elapsed": 1.53676438331604
+  "average-donation": 50.21,
+  "average-donation-paypal": 35.23,
+  "average-failed": 1163.32,
+  "average-minimum": 5679.92,
+  "average-received": 7876.83,
+  "average-second-round": 1259.76,
+  "cash-amount": 581622,
+  "creditcard-amount": 7794896,
+  "fee-amount": 383167.68,
+  "matchfund-amount": 489335,
+  "matchfundpledge-amount": 644000,
+  "meta": {
+    "lang": [
+      "en"
+    ]
+  },
+  "paypal-amount": 1131708,
+  "percentage-pledged-failed": 22.28,
+  "percentage-pledged-successful": 143.44,
+  "pledged": 9997561,
+  "refunded": 362821,
+  "time-elapsed": 3.5824809074401855
 }

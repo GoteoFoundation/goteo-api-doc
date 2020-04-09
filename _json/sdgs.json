@@ -1,0 +1,696 @@
+{
+  "items": [
+    {
+      "description": "Economic growth must be inclusive to provide sustainable jobs and promote equality.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/2.svg",
+          "id": 2,
+          "name": "B/ Social footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/1.png",
+      "id": 1,
+      "name": "No poverty",
+      "social_commitments": [],
+      "total-invests": 0,
+      "total-projects": 0,
+      "total-users": 0
+    },
+    {
+      "description": "The food and agriculture sector offers key solutions for development, and is central for hunger and poverty eradication.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/2.svg",
+          "id": 2,
+          "name": "B/ Social footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/2.png",
+      "id": 2,
+      "name": "Zero Hunger",
+      "social_commitments": [
+        {
+          "description": "Solidary",
+          "icon-url": "https://goteo.org/img/medium/1-solidario-1.png",
+          "id": 1,
+          "name": "Solidary"
+        },
+        {
+          "description": "Free software",
+          "icon-url": "https://goteo.org/img/medium/2-software-libre-1.png",
+          "id": 2,
+          "name": "Free software"
+        },
+        {
+          "description": "Creating employment",
+          "icon-url": "https://goteo.org/img/medium/4b-empleo.png",
+          "id": 3,
+          "name": "Creating employment"
+        },
+        {
+          "description": "Educational",
+          "icon-url": "https://goteo.org/img/medium/6-educativo-1.png",
+          "id": 6,
+          "name": "Educational"
+        },
+        {
+          "description": "Creating culture",
+          "icon-url": "https://goteo.org/img/medium/7--crear-cultura-1.png",
+          "id": 7,
+          "name": "Creating culture"
+        },
+        {
+          "description": null,
+          "icon-url": "https://goteo.org/img/medium/5b-cuidados.png",
+          "id": 14,
+          "name": "Health and care"
+        }
+      ],
+      "total-invests": 60232,
+      "total-projects": 472,
+      "total-users": 45549
+    },
+    {
+      "description": "Ensuring healthy lives and promoting the well-being for all at all ages is essential to sustainable development.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/2.svg",
+          "id": 2,
+          "name": "B/ Social footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/3.png",
+      "id": 3,
+      "name": "Good Health and Well-Being",
+      "social_commitments": [
+        {
+          "description": "Solidary",
+          "icon-url": "https://goteo.org/img/medium/1-solidario-1.png",
+          "id": 1,
+          "name": "Solidary"
+        },
+        {
+          "description": "Creating employment",
+          "icon-url": "https://goteo.org/img/medium/4b-empleo.png",
+          "id": 3,
+          "name": "Creating employment"
+        },
+        {
+          "description": "Educational",
+          "icon-url": "https://goteo.org/img/medium/6-educativo-1.png",
+          "id": 6,
+          "name": "Educational"
+        },
+        {
+          "description": "Creating culture",
+          "icon-url": "https://goteo.org/img/medium/7--crear-cultura-1.png",
+          "id": 7,
+          "name": "Creating culture"
+        },
+        {
+          "description": null,
+          "icon-url": "https://goteo.org/img/medium/5b-cuidados.png",
+          "id": 14,
+          "name": "Health and care"
+        }
+      ],
+      "total-invests": 60205,
+      "total-projects": 470,
+      "total-users": 45525
+    },
+    {
+      "description": "Obtaining a quality education is the foundation to improving people\u2019s lives and sustainable development.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/2.svg",
+          "id": 2,
+          "name": "B/ Social footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/4.png",
+      "id": 4,
+      "name": "Quality Education",
+      "social_commitments": [
+        {
+          "description": "Solidary",
+          "icon-url": "https://goteo.org/img/medium/1-solidario-1.png",
+          "id": 1,
+          "name": "Solidary"
+        },
+        {
+          "description": "Free software",
+          "icon-url": "https://goteo.org/img/medium/2-software-libre-1.png",
+          "id": 2,
+          "name": "Free software"
+        },
+        {
+          "description": "Creating employment",
+          "icon-url": "https://goteo.org/img/medium/4b-empleo.png",
+          "id": 3,
+          "name": "Creating employment"
+        },
+        {
+          "description": "Educational",
+          "icon-url": "https://goteo.org/img/medium/6-educativo-1.png",
+          "id": 6,
+          "name": "Educational"
+        },
+        {
+          "description": "Creating culture",
+          "icon-url": "https://goteo.org/img/medium/7--crear-cultura-1.png",
+          "id": 7,
+          "name": "Creating culture"
+        }
+      ],
+      "total-invests": 57287,
+      "total-projects": 441,
+      "total-users": 43331
+    },
+    {
+      "description": "Gender equality is not only a fundamental human right, but a necessary foundation for a peaceful, prosperous and sustainable world.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/3.svg",
+          "id": 3,
+          "name": "C/ Democratic footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/5.png",
+      "id": 5,
+      "name": "Gender Equality",
+      "social_commitments": [
+        {
+          "description": "Creating employment",
+          "icon-url": "https://goteo.org/img/medium/4b-empleo.png",
+          "id": 3,
+          "name": "Creating employment"
+        },
+        {
+          "description": "Independent journalism",
+          "icon-url": "https://goteo.org/img/medium/5-periodismo-1.png",
+          "id": 5,
+          "name": "Independent journalism"
+        },
+        {
+          "description": "Creating culture",
+          "icon-url": "https://goteo.org/img/medium/7--crear-cultura-1.png",
+          "id": 7,
+          "name": "Creating culture"
+        },
+        {
+          "description": "Open data",
+          "icon-url": "https://goteo.org/img/medium/10-datos-abiertos-1.png",
+          "id": 10,
+          "name": "Open data"
+        },
+        {
+          "description": "To strengthen democratic values",
+          "icon-url": "https://goteo.org/img/medium/11--reforzar-valores-democra-ticos.png",
+          "id": 11,
+          "name": "To strengthen democratic values"
+        },
+        {
+          "description": "Citizen participation",
+          "icon-url": "https://goteo.org/img/medium/12-participacion-ciudadana-1.png",
+          "id": 12,
+          "name": "Citizen participation"
+        },
+        {
+          "description": "Genre",
+          "icon-url": "https://goteo.org/img/medium/iconos-transgenero-26-60x60.png",
+          "id": 13,
+          "name": "Genre"
+        }
+      ],
+      "total-invests": 65552,
+      "total-projects": 351,
+      "total-users": 47912
+    },
+    {
+      "description": "Clean, accessible water for all is an essential part of the world we want to live in.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/1.svg",
+          "id": 1,
+          "name": "A/ Ecological footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/6.png",
+      "id": 6,
+      "name": "Clean Water and Sanitation",
+      "social_commitments": [
+        {
+          "description": null,
+          "icon-url": "https://goteo.org/img/medium/5b-cuidados.png",
+          "id": 14,
+          "name": "Health and care"
+        }
+      ],
+      "total-invests": 2945,
+      "total-projects": 31,
+      "total-users": 2540
+    },
+    {
+      "description": "Energy is central to nearly every major challenge and opportunity.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/1.svg",
+          "id": 1,
+          "name": "A/ Ecological footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/7.png",
+      "id": 7,
+      "name": "Affordable and Clean Energy",
+      "social_commitments": [
+        {
+          "description": "Ecological",
+          "icon-url": "https://goteo.org/img/medium/8-ecologico-1.png",
+          "id": 8,
+          "name": "Climate action"
+        },
+        {
+          "description": null,
+          "icon-url": "https://goteo.org/img/medium/1b-energia.png",
+          "id": 15,
+          "name": "Energy and sustainability"
+        }
+      ],
+      "total-invests": 12592,
+      "total-projects": 91,
+      "total-users": 10266
+    },
+    {
+      "description": "Sustainable economic growth will require societies to create the conditions that allow people to have quality jobs.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/2.svg",
+          "id": 2,
+          "name": "B/ Social footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/8.png",
+      "id": 8,
+      "name": "Decent Work and Economic Growth",
+      "social_commitments": [
+        {
+          "description": "Solidary",
+          "icon-url": "https://goteo.org/img/medium/1-solidario-1.png",
+          "id": 1,
+          "name": "Solidary"
+        },
+        {
+          "description": "Free software",
+          "icon-url": "https://goteo.org/img/medium/2-software-libre-1.png",
+          "id": 2,
+          "name": "Free software"
+        },
+        {
+          "description": "Creating employment",
+          "icon-url": "https://goteo.org/img/medium/4b-empleo.png",
+          "id": 3,
+          "name": "Creating employment"
+        },
+        {
+          "description": "Educational",
+          "icon-url": "https://goteo.org/img/medium/6-educativo-1.png",
+          "id": 6,
+          "name": "Educational"
+        },
+        {
+          "description": "Creating culture",
+          "icon-url": "https://goteo.org/img/medium/7--crear-cultura-1.png",
+          "id": 7,
+          "name": "Creating culture"
+        }
+      ],
+      "total-invests": 57287,
+      "total-projects": 441,
+      "total-users": 43331
+    },
+    {
+      "description": "Investments in infrastructure are crucial to achieving sustainable development.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/2.svg",
+          "id": 2,
+          "name": "B/ Social footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/9.png",
+      "id": 9,
+      "name": "Industry, Innovation and Infrastructure",
+      "social_commitments": [
+        {
+          "description": "Solidary",
+          "icon-url": "https://goteo.org/img/medium/1-solidario-1.png",
+          "id": 1,
+          "name": "Solidary"
+        },
+        {
+          "description": "Free software",
+          "icon-url": "https://goteo.org/img/medium/2-software-libre-1.png",
+          "id": 2,
+          "name": "Free software"
+        },
+        {
+          "description": "Creating employment",
+          "icon-url": "https://goteo.org/img/medium/4b-empleo.png",
+          "id": 3,
+          "name": "Creating employment"
+        },
+        {
+          "description": "Educational",
+          "icon-url": "https://goteo.org/img/medium/6-educativo-1.png",
+          "id": 6,
+          "name": "Educational"
+        },
+        {
+          "description": "Creating culture",
+          "icon-url": "https://goteo.org/img/medium/7--crear-cultura-1.png",
+          "id": 7,
+          "name": "Creating culture"
+        }
+      ],
+      "total-invests": 57287,
+      "total-projects": 441,
+      "total-users": 43331
+    },
+    {
+      "description": "To reduce inequalities, policies should be universal in principle, paying attention to the needs of disadvantaged and marginalized populations.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/2.svg",
+          "id": 2,
+          "name": "B/ Social footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/10.png",
+      "id": 10,
+      "name": "Reduced Inequalities",
+      "social_commitments": [],
+      "total-invests": 0,
+      "total-projects": 0,
+      "total-users": 0
+    },
+    {
+      "description": "There needs to be a future in which cities provide opportunities for all, with access to basic services, energy, housing, transportation and more.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/2.svg",
+          "id": 2,
+          "name": "B/ Social footprint"
+        },
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/3.svg",
+          "id": 3,
+          "name": "C/ Democratic footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/11.png",
+      "id": 11,
+      "name": "Sustainable Cities and Communities",
+      "social_commitments": [
+        {
+          "description": "Solidary",
+          "icon-url": "https://goteo.org/img/medium/1-solidario-1.png",
+          "id": 1,
+          "name": "Solidary"
+        },
+        {
+          "description": "Free software",
+          "icon-url": "https://goteo.org/img/medium/2-software-libre-1.png",
+          "id": 2,
+          "name": "Free software"
+        },
+        {
+          "description": "Creating employment",
+          "icon-url": "https://goteo.org/img/medium/4b-empleo.png",
+          "id": 3,
+          "name": "Creating employment"
+        },
+        {
+          "description": "Independent journalism",
+          "icon-url": "https://goteo.org/img/medium/5-periodismo-1.png",
+          "id": 5,
+          "name": "Independent journalism"
+        },
+        {
+          "description": "Educational",
+          "icon-url": "https://goteo.org/img/medium/6-educativo-1.png",
+          "id": 6,
+          "name": "Educational"
+        },
+        {
+          "description": "Creating culture",
+          "icon-url": "https://goteo.org/img/medium/7--crear-cultura-1.png",
+          "id": 7,
+          "name": "Creating culture"
+        },
+        {
+          "description": "Open data",
+          "icon-url": "https://goteo.org/img/medium/10-datos-abiertos-1.png",
+          "id": 10,
+          "name": "Open data"
+        },
+        {
+          "description": "To strengthen democratic values",
+          "icon-url": "https://goteo.org/img/medium/11--reforzar-valores-democra-ticos.png",
+          "id": 11,
+          "name": "To strengthen democratic values"
+        },
+        {
+          "description": "Citizen participation",
+          "icon-url": "https://goteo.org/img/medium/12-participacion-ciudadana-1.png",
+          "id": 12,
+          "name": "Citizen participation"
+        },
+        {
+          "description": "Genre",
+          "icon-url": "https://goteo.org/img/medium/iconos-transgenero-26-60x60.png",
+          "id": 13,
+          "name": "Genre"
+        },
+        {
+          "description": null,
+          "icon-url": "https://goteo.org/img/medium/1b-energia.png",
+          "id": 15,
+          "name": "Energy and sustainability"
+        }
+      ],
+      "total-invests": 98296,
+      "total-projects": 612,
+      "total-users": 70326
+    },
+    {
+      "description": "Responsible Production and Consumption",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/1.svg",
+          "id": 1,
+          "name": "A/ Ecological footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/12.png",
+      "id": 12,
+      "name": "Responsible Production and Consumption",
+      "social_commitments": [
+        {
+          "description": "Ecological",
+          "icon-url": "https://goteo.org/img/medium/8-ecologico-1.png",
+          "id": 8,
+          "name": "Climate action"
+        },
+        {
+          "description": null,
+          "icon-url": "https://goteo.org/img/medium/1b-energia.png",
+          "id": 15,
+          "name": "Energy and sustainability"
+        },
+        {
+          "description": null,
+          "icon-url": "https://goteo.org/img/medium/3b-rural.png",
+          "id": 16,
+          "name": "Agrorural development"
+        }
+      ],
+      "total-invests": 13630,
+      "total-projects": 97,
+      "total-users": 11154
+    },
+    {
+      "description": "Climate change is a global challenge that affects everyone, everywhere.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/1.svg",
+          "id": 1,
+          "name": "A/ Ecological footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/13.png",
+      "id": 13,
+      "name": "Climate Action",
+      "social_commitments": [],
+      "total-invests": 0,
+      "total-projects": 0,
+      "total-users": 0
+    },
+    {
+      "description": "Careful management of this essential global resource is a key feature of a sustainable future.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/1.svg",
+          "id": 1,
+          "name": "A/ Ecological footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/14.png",
+      "id": 14,
+      "name": "Life Below Water",
+      "social_commitments": [
+        {
+          "description": "Ecological",
+          "icon-url": "https://goteo.org/img/medium/8-ecologico-1.png",
+          "id": 8,
+          "name": "Climate action"
+        }
+      ],
+      "total-invests": 12568,
+      "total-projects": 90,
+      "total-users": 10245
+    },
+    {
+      "description": "Sustainably manage forests, combat desertification, halt and reverse land degradation, halt biodiversity loss",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/1.svg",
+          "id": 1,
+          "name": "A/ Ecological footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/15.png",
+      "id": 15,
+      "name": "Life On Land",
+      "social_commitments": [
+        {
+          "description": "Ecological",
+          "icon-url": "https://goteo.org/img/medium/8-ecologico-1.png",
+          "id": 8,
+          "name": "Climate action"
+        },
+        {
+          "description": null,
+          "icon-url": "https://goteo.org/img/medium/3b-rural.png",
+          "id": 16,
+          "name": "Agrorural development"
+        }
+      ],
+      "total-invests": 13606,
+      "total-projects": 96,
+      "total-users": 11134
+    },
+    {
+      "description": "Access to justice for all, and building effective, accountable institutions at all levels.",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/3.svg",
+          "id": 3,
+          "name": "C/ Democratic footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/16.png",
+      "id": 16,
+      "name": "Peace, Justice and Strong Institutions",
+      "social_commitments": [
+        {
+          "description": "Free software",
+          "icon-url": "https://goteo.org/img/medium/2-software-libre-1.png",
+          "id": 2,
+          "name": "Free software"
+        },
+        {
+          "description": "Independent journalism",
+          "icon-url": "https://goteo.org/img/medium/5-periodismo-1.png",
+          "id": 5,
+          "name": "Independent journalism"
+        },
+        {
+          "description": "Creating culture",
+          "icon-url": "https://goteo.org/img/medium/7--crear-cultura-1.png",
+          "id": 7,
+          "name": "Creating culture"
+        },
+        {
+          "description": "Open data",
+          "icon-url": "https://goteo.org/img/medium/10-datos-abiertos-1.png",
+          "id": 10,
+          "name": "Open data"
+        },
+        {
+          "description": "To strengthen democratic values",
+          "icon-url": "https://goteo.org/img/medium/11--reforzar-valores-democra-ticos.png",
+          "id": 11,
+          "name": "To strengthen democratic values"
+        },
+        {
+          "description": "Citizen participation",
+          "icon-url": "https://goteo.org/img/medium/12-participacion-ciudadana-1.png",
+          "id": 12,
+          "name": "Citizen participation"
+        },
+        {
+          "description": "Genre",
+          "icon-url": "https://goteo.org/img/medium/iconos-transgenero-26-60x60.png",
+          "id": 13,
+          "name": "Genre"
+        }
+      ],
+      "total-invests": 62317,
+      "total-projects": 329,
+      "total-users": 45915
+    },
+    {
+      "description": "Revitalize the global partnership for sustainable development",
+      "footprints": [
+        {
+          "description": "",
+          "icon-url": "https://goteo.org/assets/img/footprint/3.svg",
+          "id": 3,
+          "name": "C/ Democratic footprint"
+        }
+      ],
+      "icon-url": "https://goteo.org/assets/img/sdg/square/17.png",
+      "id": 17,
+      "name": "Partnerships for the Goals",
+      "social_commitments": [],
+      "total-invests": 0,
+      "total-projects": 0,
+      "total-users": 0
+    }
+  ],
+  "meta": {
+    "lang": [
+      "en"
+    ],
+    "total": 17
+  },
+  "time-elapsed": 0.029636621475219727
+}

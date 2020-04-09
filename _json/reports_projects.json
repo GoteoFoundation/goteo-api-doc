@@ -1,130 +1,135 @@
 {
-  "average-amount-successful": 7053.22,
-  "average-posts-successful": 11.59,
-  "failed": 217,
-  "percentage-successful": 70.23,
-  "percentage-successful-completed": 69.99,
-  "published": 759,
-  "received": 948,
-  "successful": 512,
-  "successful-completed": 506,
-  "time-elapsed": 1.7914631366729736,
+  "average-amount-successful": 7969.31,
+  "average-posts-successful": 9.46,
+  "failed": 314,
+  "meta": {
+    "lang": [
+      "en"
+    ]
+  },
+  "percentage-successful": 79.19,
+  "percentage-successful-completed": 79.0,
+  "published": 1531,
+  "received": 5863,
+  "successful": 1195,
+  "successful-completed": 1181,
+  "time-elapsed": 5.856653690338135,
   "top10-collaborations": [
     {
-      "date-published": "Wed, 01 Feb 2012 00:00:00 +0100",
-      "description-short": "Publicaci\u00f3n de distribuci\u00f3n masiva para la transformaci\u00f3n social",
-      "image-url": "https://goteo.org/img/medium/catala.pdfpagines.png",
-      "name": "\u00a1Rebelaos! Publicaci\u00f3n por la autogesti\u00f3n",
-      "project": "rebelaos-publicacion-por-la-autogestion",
-      "project-url": "https://goteo.org/project/rebelaos-publicacion-por-la-autogestion",
+      "date-published": "Fri, 05 Jan 2018 00:00:00 +0100",
+      "description-short": "\u00a1Esta es la pel\u00edcula sobre Juan Carlos I que algunos no quieren que veas!",
+      "image-url": "https://goteo.org/img/medium/3-el-rey-1.jpg",
+      "name": "EL REY, la peli",
+      "project": "el-rey-la-peli",
+      "project-url": "https://goteo.org/project/el-rey-la-peli",
       "status": "funded",
-      "total": 142,
-      "video-url": "http://vimeo.com/38480271"
+      "total": 864,
+      "video-url": "https://vimeo.com/300984355"
     },
     {
-      "date-published": "Sat, 20 Apr 2013 00:00:00 +0200",
-      "description-short": "An experience of distributed manufacturing for the next evolution of the FoldaRap",
-      "image-url": "https://goteo.org/img/medium/below2r.jpg",
-      "name": "FoldaRap, Peer-to-Peer Edition",
-      "project": "foldarap-peer-to-peer-edition",
-      "project-url": "https://goteo.org/project/foldarap-peer-to-peer-edition",
-      "status": "fulfilled",
-      "total": 141,
-      "video-url": "https://vimeo.com/63121424"
-    },
-    {
-      "date-published": "Wed, 04 Apr 2012 00:00:00 +0200",
-      "description-short": "Financiaci\u00f3n colectiva para la primera querella del pueblo contra la banca",
-      "image-url": "https://goteo.org/img/medium/vin-eta-counter-largo_3.png",
-      "name": "#CrowdfundPaRato",
-      "project": "crowdfundparato",
-      "project-url": "https://goteo.org/project/crowdfundparato",
-      "status": "fulfilled",
-      "total": 120,
-      "video-url": ""
-    },
-    {
-      "date-published": "Tue, 03 Feb 2015 00:00:00 +0100",
-      "description-short": "Un drama social sobre los desahucios, con S\u00edlvia P\u00e9rez Cruz",
-      "image-url": "https://goteo.org/img/medium/cerca-de-tucasa-29-1b-1.jpg",
-      "name": "Cerca de tu casa",
-      "project": "cercadetucasa",
-      "project-url": "https://goteo.org/project/cercadetucasa",
+      "date-published": "Mon, 02 Sep 2019 00:00:00 +0200",
+      "description-short": "Ayudanos a grabar y editar el 4\u00ba disco de Freedonia",
+      "image-url": "https://goteo.org/img/medium/16707615-10154098508925388-4891163837587556285-o.j",
+      "name": "Nuevo Disco De Freedonia : Conciencia",
+      "project": "freedonia-conciencia",
+      "project-url": "https://goteo.org/project/freedonia-conciencia",
       "status": "funded",
-      "total": 105,
-      "video-url": "https://youtu.be/rqGWOSy1Xx0"
+      "total": 723,
+      "video-url": "https://youtu.be/bd7W3RjvHv8"
     },
     {
-      "date-published": "Mon, 02 Jul 2012 00:00:00 +0200",
-      "description-short": "Convi\u00e9rtete en un sensor inteligente de la ciudad, generando y compartiendo datos reales en abierto sobre contaminaci\u00f3n del aire, ac\u00fastica y muchos m\u00e1s",
-      "image-url": "https://goteo.org/img/medium/panorama_4.jpg",
-      "name": "Smart Citizen - Sensores ciudadanos",
-      "project": "smart-citizen-sensores-ciudadanos",
-      "project-url": "https://goteo.org/project/smart-citizen-sensores-ciudadanos",
-      "status": "fulfilled",
-      "total": 101,
-      "video-url": "http://vimeo.com/45432343"
-    },
-    {
-      "date-published": "Wed, 03 Apr 2013 00:00:00 +0200",
-      "description-short": "Interfaz de control de c\u00f3digo abierto para aplicaciones multimedia, orientada a DJs, VJs, m\u00fasicos, hackers y creadores DIY",
-      "image-url": "https://goteo.org/img/medium/hi-top2r.jpg",
-      "name": "BHOREAL",
-      "project": "bhoreal",
-      "project-url": "https://goteo.org/project/bhoreal",
+      "date-published": "Wed, 27 Feb 2019 00:00:00 +0100",
+      "description-short": "We children want to know, we also want to help \u270a?\u270a?\u270a? Awareness raising campaign, with proceeds going to OPEN ARMS and OPEN CULTURAL CENTER.",
+      "image-url": "https://goteo.org/img/medium/portada-video-7.jpg",
+      "name": "Mediterranean Fragility",
+      "project": "mediterranean-fragility",
+      "project-url": "https://goteo.org/project/mediterranean-fragility",
       "status": "funded",
-      "total": 94,
-      "video-url": "https://vimeo.com/63156588"
+      "total": 456,
+      "video-url": "https://youtu.be/NMpPnAzzEg4"
     },
     {
-      "date-published": "Thu, 03 Nov 2011 00:00:00 +0100",
-      "description-short": "Sistema para presionar, hacer cumplir y que sea efectiva la ley de acceso a la informaci\u00f3n p\u00fablica",
-      "image-url": "https://goteo.org/img/medium/astheeu_1r.png",
-      "name": "tuderechoasaber.es",
-      "project": "tuderechoasaber.es",
-      "project-url": "https://goteo.org/project/tuderechoasaber.es",
+      "date-published": "Mon, 12 Feb 2018 00:00:00 +0100",
+      "description-short": "Popular cost for the creation of a monument in memory of the events of Sanfermines del 78 in Pamplona",
+      "image-url": "https://goteo.org/img/medium/campana-3.jpg",
+      "name": "Gogoan (En la memoria)",
+      "project": "gogoan",
+      "project-url": "https://goteo.org/project/gogoan",
       "status": "fulfilled",
-      "total": 87,
-      "video-url": "http://vimeo.com/31457442"
+      "total": 376,
+      "video-url": "https://youtu.be/TfKfpI-BaSo"
     },
     {
-      "date-published": "Mon, 01 Apr 2013 00:00:00 +0200",
-      "description-short": "Una plataforma colaborativa que se propone mapear, documentar y poner en red todas las personas, experiencias, organizaciones y conocimientos vinculados a la educaci\u00f3n y el aprendizaje libre, as\u00ed como modelos escolares no convencionales de habla hispana",
-      "image-url": "https://goteo.org/img/medium/vlcsnap-2013-02-25-19h51m46s86r.png",
-      "name": "Reevo - Red de Educaci\u00f3n Viva",
-      "project": "reevo",
-      "project-url": "https://goteo.org/project/reevo",
-      "status": "fulfilled",
-      "total": 84,
-      "video-url": "http://vimeo.com/42442845"
+      "date-published": "Mon, 03 Jun 2019 00:00:00 +0200",
+      "description-short": "La Quinta\u00b4l Texu School changes its location to have our Primary Education offer officially homologated.",
+      "image-url": "https://goteo.org/img/medium/whatsapp-image-2019-05-16-at-18.02.-52.jpeg",
+      "name": "Trasplantando el Texu",
+      "project": "trasplantando-el-texu",
+      "project-url": "https://goteo.org/project/trasplantando-el-texu",
+      "status": "funded",
+      "total": 359,
+      "video-url": "https://youtu.be/RE1M5PsfTyU"
     },
     {
-      "date-published": "Wed, 07 Dec 2011 00:00:00 +0100",
-      "description-short": "Sistema integral para regalos inteligentes 2.0 - Give love, not waste!",
-      "image-url": "https://goteo.org/img/medium/imatge2_1r.gif",
-      "name": "INFINIT Loop",
-      "project": "infinit-loop",
-      "project-url": "https://goteo.org/project/infinit-loop",
-      "status": "fulfilled",
-      "total": 71,
-      "video-url": "https://vimeo.com/33831307"
+      "date-published": "Wed, 16 May 2018 00:00:00 +0200",
+      "description-short": "Queremos autoeditar un libro-cuento sobre la identificaci\u00f3n de las emociones y la empat\u00eda",
+      "image-url": "https://goteo.org/img/medium/nanuk-2.jpg",
+      "name": "Libro-cuento \"Nanuk en el bosque de las emociones\"",
+      "project": "libro-cuento-nanuk-en-el-bosque-de-las-emociones",
+      "project-url": "https://goteo.org/project/libro-cuento-nanuk-en-el-bosque-de-las-emociones",
+      "status": "funded",
+      "total": 329,
+      "video-url": "https://youtu.be/TnVb0184DK8"
     },
     {
-      "date-published": "Thu, 21 Nov 2013 00:00:00 +0100",
-      "description-short": "Queremos seguir haciendo periodismo independiente y situado",
-      "image-url": "https://goteo.org/img/medium/cabecera-fb_1.jpg",
-      "name": "S.O.S. Diagonal: Ahora o nunca",
-      "project": "diagonal",
-      "project-url": "https://goteo.org/project/diagonal",
-      "status": "fulfilled",
-      "total": 66,
-      "video-url": "https://vimeo.com/79968295"
+      "date-published": "Wed, 08 May 2019 00:00:00 +0200",
+      "description-short": "Act\u00faa frente a la esclavitud del sector textil. \u00a1Apoya la Campa\u00f1a Ropa Limpia!",
+      "image-url": "https://goteo.org/img/medium/quienessomos-2.jpg",
+      "name": "#NecesitoRopaLimpia",
+      "project": "necesito-ropa-limpia",
+      "project-url": "https://goteo.org/project/necesito-ropa-limpia",
+      "status": "funded",
+      "total": 323,
+      "video-url": "https://youtu.be/bMED94d9nU4"
+    },
+    {
+      "date-published": "Tue, 05 Nov 2019 00:00:00 +0100",
+      "description-short": "Project of community agitation",
+      "image-url": "https://goteo.org/img/medium/jordiborras-objvenus-4.jpg",
+      "name": "Objetivo Venus",
+      "project": "objectiu-venus",
+      "project-url": "https://goteo.org/project/objectiu-venus",
+      "status": "funded",
+      "total": 322,
+      "video-url": "https://youtu.be/tlJWQSdfhRI"
+    },
+    {
+      "date-published": "Tue, 10 Dec 2019 00:00:00 +0100",
+      "description-short": "Activisme esc\u00e8nic",
+      "image-url": "https://goteo.org/img/medium/comandas.jpg",
+      "name": "COMANDO SE\u00d1ORAS",
+      "project": "comando-senoras",
+      "project-url": "https://goteo.org/project/comando-senoras",
+      "status": "funded",
+      "total": 305,
+      "video-url": "https://www.youtube.com/watch?v=vso93-3fRYM"
+    },
+    {
+      "date-published": "Wed, 24 Apr 2019 00:00:00 +0200",
+      "description-short": "Ara  amb +informaci\u00f3 +debat +comunit\u00e0ria +ecosist\u00e8mica +transversal i, amb el teu suport, aviat +sostenible",
+      "image-url": "https://goteo.org/img/medium/personas-bn6.png",
+      "name": "Reactivem POLI\u00c8DRICA > art \u00b7 educaci\u00f3 \u00b7 comunitat \u00b7 cultura",
+      "project": "poliedrica",
+      "project-url": "https://goteo.org/project/poliedrica",
+      "status": "funded",
+      "total": 302,
+      "video-url": "https://vimeo.com/326391808"
     }
   ],
   "top10-donations": [
     {
       "date-published": "Mon, 25 Apr 2016 00:00:00 +0200",
-      "description-short": "Investigamos, informamos, transformamos",
+      "description-short": "#weIBEXtigate with La Marea: we investigate, we inform, we transform",
       "image-url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
       "name": "#YoIBEXtigo con La Marea ",
       "project": "yoibextigo",
@@ -134,8 +139,30 @@
       "video-url": "https://youtu.be/1aBtwciWKYM"
     },
     {
+      "date-published": "Wed, 10 Oct 2018 00:00:00 +0200",
+      "description-short": "Periodismo contra la violencia machista",
+      "image-url": "https://goteo.org/img/medium/portada-33.jpg",
+      "name": "#PorTodas",
+      "project": "portodas",
+      "project-url": "https://goteo.org/project/portodas",
+      "status": "funded",
+      "total": 2921,
+      "video-url": "https://www.youtube.com/watch?v=5zy0-lzenJg&feature=youtu.be"
+    },
+    {
+      "date-published": "Mon, 12 Mar 2018 00:00:00 +0100",
+      "description-short": "The  Trade Union of Street Vendors in Barcelona",
+      "image-url": "https://goteo.org/img/medium/01.caratula-video04.png",
+      "name": "Top Manta \u00b7 Ropa legal hecha por gente ilegal",
+      "project": "top-manta-bcn",
+      "project-url": "https://goteo.org/project/top-manta-bcn",
+      "status": "funded",
+      "total": 2507,
+      "video-url": "https://vimeo.com/259331518"
+    },
+    {
       "date-published": "Sun, 14 Feb 2016 00:00:00 +0100",
-      "description-short": "Queremos seguir informando con libertad, seleccionando cada semana los asuntos que consideramos debes conocer, haci\u00e9ndonos eco de la voz a las minor\u00edas, demostrando que hay alternativas al pensamiento \u00fanico. Hazte mecenas de CTXT",
+      "description-short": "We want to continue reporting freely, each week selecting the issues that we believe you should know about, echoing the voice of minorities, showing that there are alternatives to mainstream thinking. Become a CTXT patron",
       "image-url": "https://goteo.org/img/medium/goteo-malagon.jpg",
       "name": "#CTXT. El contexto lo es todo",
       "project": "ctxt",
@@ -143,6 +170,39 @@
       "status": "funded",
       "total": 1835,
       "video-url": "https://vimeo.com/155287296"
+    },
+    {
+      "date-published": "Wed, 21 Nov 2018 00:00:00 +0100",
+      "description-short": "Es un momento clave en la lucha contra la mentira pol\u00edtica y los bulos. Juntos/as es m\u00e1s dif\u00edcil que nos la cuelen. Colabora, difunde y #FundaMaldita",
+      "image-url": "https://goteo.org/img/medium/aaa-copy.jpg",
+      "name": "Maldita: periodismo para que no te la cuelen #FundaMaldita",
+      "project": "maldita",
+      "project-url": "https://goteo.org/project/maldita",
+      "status": "funded",
+      "total": 1672,
+      "video-url": "https://www.youtube.com/watch?v=QkTD1mVaY_w"
+    },
+    {
+      "date-published": "Tue, 15 Oct 2019 00:00:00 +0200",
+      "description-short": "Torturas, guerra sucia, medallas, impunidad. Una historia por contar. Coproduce con CTXT y La Extra\u00f1a Zine el documental sobre Billy el Ni\u00f1o",
+      "image-url": "https://goteo.org/img/medium/31ca7e2a-0ca6-4ee7-86a2-9b9a5dd2572b.jpeg",
+      "name": "BILLY. EL DOCUMENTAL",
+      "project": "billy-el-documental",
+      "project-url": "https://goteo.org/project/billy-el-documental",
+      "status": "funded",
+      "total": 1634,
+      "video-url": "https://youtu.be/jTb3xJhdwic"
+    },
+    {
+      "date-published": "Sat, 06 Jul 2019 00:00:00 +0200",
+      "description-short": "Let's revive the Ribera d'Ebre and the areas affected by one of the largest fires in recent decades",
+      "image-url": "https://goteo.org/img/medium/1-141.png",
+      "name": "#Rebrotem",
+      "project": "rebrotem",
+      "project-url": "https://goteo.org/project/rebrotem",
+      "status": "funded",
+      "total": 1560,
+      "video-url": "https://www.youtube.com/watch?v=JphO_yJTTwM&feature=youtu.be"
     },
     {
       "date-published": "Thu, 21 Nov 2013 00:00:00 +0100",
@@ -156,81 +216,26 @@
       "video-url": "https://vimeo.com/79968295"
     },
     {
-      "date-published": "Thu, 19 Dec 2013 00:00:00 +0100",
-      "description-short": "The world needs GnuPG encryption more than ever - a new website, new design, and new content will make strong crypto friendly.",
-      "image-url": "https://goteo.org/img/medium/seahorse_1.png",
-      "name": "GnuPG: new website and infrastructure",
-      "project": "gnupg-new-website-and-infrastructure",
-      "project-url": "https://goteo.org/project/gnupg-new-website-and-infrastructure",
+      "date-published": "Wed, 10 Apr 2019 00:00:00 +0200",
+      "description-short": "Pantera no es s\u00f3lo una revista sobre naturaleza para ni\u00f1os y ni\u00f1as, es una comunidad que lucha contra el cambio clim\u00e1tico plantando \u00e1rboles.",
+      "image-url": "https://goteo.org/img/medium/mockup-2-portadas.jpg",
+      "name": "PANTERA MAGAZINE, la revista para ni\u00f1os y ni\u00f1as que s\u00ed salvar\u00e1n el planeta",
+      "project": "pantera-magazine",
+      "project-url": "https://goteo.org/project/pantera-magazine",
       "status": "funded",
-      "total": 1106,
-      "video-url": "https://www.youtube.com/watch?v=aEEckb-ioG4"
+      "total": 1472,
+      "video-url": "https://www.youtube.com/watch?v=UkQR6w_NeBc"
     },
     {
-      "date-published": "Wed, 04 Apr 2012 00:00:00 +0200",
-      "description-short": "Financiaci\u00f3n colectiva para la primera querella del pueblo contra la banca",
-      "image-url": "https://goteo.org/img/medium/vin-eta-counter-largo_3.png",
-      "name": "#CrowdfundPaRato",
-      "project": "crowdfundparato",
-      "project-url": "https://goteo.org/project/crowdfundparato",
-      "status": "fulfilled",
-      "total": 971,
-      "video-url": ""
-    },
-    {
-      "date-published": "Wed, 05 Aug 2015 00:00:00 +0200",
-      "description-short": "Sus multas y denuncias nos hacen fuertes. Operaci\u00f3n Lola Flores.",
-      "image-url": "https://goteo.org/img/medium/loleitor-antonio.jpg",
-      "name": "#OpLolaFlores",
-      "project": "oplolaflores",
-      "project-url": "https://goteo.org/project/oplolaflores",
+      "date-published": "Mon, 05 Nov 2018 00:00:00 +0100",
+      "description-short": "Semente Trasancos first began as a Galician language immersion project for pre-school.",
+      "image-url": "https://goteo.org/img/medium/banersemente.png",
+      "name": "Vamos polo Prim\u00e1rio!",
+      "project": "vamos-a-por-primario",
+      "project-url": "https://goteo.org/project/vamos-a-por-primario",
       "status": "funded",
-      "total": 879,
-      "video-url": "https://youtu.be/XYyk0U-KYHo"
-    },
-    {
-      "date-published": "Wed, 25 Mar 2015 00:00:00 +0100",
-      "description-short": "Una radiograf\u00eda diferente de nuestras ciudades",
-      "image-url": "https://goteo.org/img/medium/bilbao-1.jpg",
-      "name": "'Cercan\u00edas': el proyecto conjunto de La Marea y Diagonal",
-      "project": "cercanias",
-      "project-url": "https://goteo.org/project/cercanias",
-      "status": "funded",
-      "total": 841,
-      "video-url": "https://vimeo.com/123081321"
-    },
-    {
-      "date-published": "Thu, 01 Sep 2016 00:00:00 +0200",
-      "description-short": "Necesitamos financiar las costas judiciales del recurso ante el Tribunal Supremo por la sobretasaci\u00f3n en los pr\u00e9stamos hipotecarios",
-      "image-url": "https://goteo.org/img/medium/portada750x422.jpg",
-      "name": "Querella 15M: #HazteFiscal contra directivos de Caja Madrid",
-      "project": "querella-15m-contra-directivos-de-caja-madrid",
-      "project-url": "https://goteo.org/project/querella-15m-contra-directivos-de-caja-madrid",
-      "status": "funded",
-      "total": 767,
-      "video-url": "https://youtu.be/A1w3FAxF1SE"
-    },
-    {
-      "date-published": "Tue, 03 Feb 2015 00:00:00 +0100",
-      "description-short": "Un drama social sobre los desahucios, con S\u00edlvia P\u00e9rez Cruz",
-      "image-url": "https://goteo.org/img/medium/cerca-de-tucasa-29-1b-1.jpg",
-      "name": "Cerca de tu casa",
-      "project": "cercadetucasa",
-      "project-url": "https://goteo.org/project/cercadetucasa",
-      "status": "funded",
-      "total": 643,
-      "video-url": "https://youtu.be/rqGWOSy1Xx0"
-    },
-    {
-      "date-published": "Wed, 23 Dec 2015 00:00:00 +0100",
-      "description-short": "Un trajecte per la dignitat contra la precarietat",
-      "image-url": "https://goteo.org/img/medium/ebre.png",
-      "name": "CORRESCALES 2016",
-      "project": "correscales-2016",
-      "project-url": "https://goteo.org/project/correscales-2016",
-      "status": "funded",
-      "total": 634,
-      "video-url": "https://vimeo.com/149844580"
+      "total": 1325,
+      "video-url": "https://youtu.be/yTzyu7W3kz0"
     }
   ],
   "top10-receipts": [
@@ -257,9 +262,20 @@
       "video-url": "https://youtu.be/rqGWOSy1Xx0"
     },
     {
+      "amount": 105322.0,
+      "date-published": "Sat, 06 Jul 2019 00:00:00 +0200",
+      "description-short": "Let's revive the Ribera d'Ebre and the areas affected by one of the largest fires in recent decades",
+      "image-url": "https://goteo.org/img/medium/1-141.png",
+      "name": "#Rebrotem",
+      "project": "rebrotem",
+      "project-url": "https://goteo.org/project/rebrotem",
+      "status": "funded",
+      "video-url": "https://www.youtube.com/watch?v=JphO_yJTTwM&feature=youtu.be"
+    },
+    {
       "amount": 98285.0,
       "date-published": "Mon, 25 Apr 2016 00:00:00 +0200",
-      "description-short": "Investigamos, informamos, transformamos",
+      "description-short": "#weIBEXtigate with La Marea: we investigate, we inform, we transform",
       "image-url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
       "name": "#YoIBEXtigo con La Marea ",
       "project": "yoibextigo",
@@ -268,9 +284,31 @@
       "video-url": "https://youtu.be/1aBtwciWKYM"
     },
     {
+      "amount": 88948.0,
+      "date-published": "Wed, 10 Oct 2018 00:00:00 +0200",
+      "description-short": "Periodismo contra la violencia machista",
+      "image-url": "https://goteo.org/img/medium/portada-33.jpg",
+      "name": "#PorTodas",
+      "project": "portodas",
+      "project-url": "https://goteo.org/project/portodas",
+      "status": "funded",
+      "video-url": "https://www.youtube.com/watch?v=5zy0-lzenJg&feature=youtu.be"
+    },
+    {
+      "amount": 77260.0,
+      "date-published": "Wed, 21 Nov 2018 00:00:00 +0100",
+      "description-short": "Es un momento clave en la lucha contra la mentira pol\u00edtica y los bulos. Juntos/as es m\u00e1s dif\u00edcil que nos la cuelen. Colabora, difunde y #FundaMaldita",
+      "image-url": "https://goteo.org/img/medium/aaa-copy.jpg",
+      "name": "Maldita: periodismo para que no te la cuelen #FundaMaldita",
+      "project": "maldita",
+      "project-url": "https://goteo.org/project/maldita",
+      "status": "funded",
+      "video-url": "https://www.youtube.com/watch?v=QkTD1mVaY_w"
+    },
+    {
       "amount": 72883.0,
       "date-published": "Sun, 14 Feb 2016 00:00:00 +0100",
-      "description-short": "Queremos seguir informando con libertad, seleccionando cada semana los asuntos que consideramos debes conocer, haci\u00e9ndonos eco de la voz a las minor\u00edas, demostrando que hay alternativas al pensamiento \u00fanico. Hazte mecenas de CTXT",
+      "description-short": "We want to continue reporting freely, each week selecting the issues that we believe you should know about, echoing the voice of minorities, showing that there are alternatives to mainstream thinking. Become a CTXT patron",
       "image-url": "https://goteo.org/img/medium/goteo-malagon.jpg",
       "name": "#CTXT. El contexto lo es todo",
       "project": "ctxt",
@@ -290,59 +328,26 @@
       "video-url": "https://vimeo.com/79968295"
     },
     {
-      "amount": 52835.0,
-      "date-published": "Sat, 20 Apr 2013 00:00:00 +0200",
-      "description-short": "An experience of distributed manufacturing for the next evolution of the FoldaRap",
-      "image-url": "https://goteo.org/img/medium/below2r.jpg",
-      "name": "FoldaRap, Peer-to-Peer Edition",
-      "project": "foldarap-peer-to-peer-edition",
-      "project-url": "https://goteo.org/project/foldarap-peer-to-peer-edition",
-      "status": "fulfilled",
-      "video-url": "https://vimeo.com/63121424"
+      "amount": 67184.0,
+      "date-published": "Mon, 12 Mar 2018 00:00:00 +0100",
+      "description-short": "The  Trade Union of Street Vendors in Barcelona",
+      "image-url": "https://goteo.org/img/medium/01.caratula-video04.png",
+      "name": "Top Manta \u00b7 Ropa legal hecha por gente ilegal",
+      "project": "top-manta-bcn",
+      "project-url": "https://goteo.org/project/top-manta-bcn",
+      "status": "funded",
+      "video-url": "https://vimeo.com/259331518"
     },
     {
-      "amount": 36732.0,
-      "date-published": "Thu, 19 Dec 2013 00:00:00 +0100",
-      "description-short": "The world needs GnuPG encryption more than ever - a new website, new design, and new content will make strong crypto friendly.",
-      "image-url": "https://goteo.org/img/medium/seahorse_1.png",
-      "name": "GnuPG: new website and infrastructure",
-      "project": "gnupg-new-website-and-infrastructure",
-      "project-url": "https://goteo.org/project/gnupg-new-website-and-infrastructure",
+      "amount": 64360.0,
+      "date-published": "Mon, 05 Nov 2018 00:00:00 +0100",
+      "description-short": "Semente Trasancos first began as a Galician language immersion project for pre-school.",
+      "image-url": "https://goteo.org/img/medium/banersemente.png",
+      "name": "Vamos polo Prim\u00e1rio!",
+      "project": "vamos-a-por-primario",
+      "project-url": "https://goteo.org/project/vamos-a-por-primario",
       "status": "funded",
-      "video-url": "https://www.youtube.com/watch?v=aEEckb-ioG4"
-    },
-    {
-      "amount": 35412.0,
-      "date-published": "Thu, 20 Feb 2014 00:00:00 +0100",
-      "description-short": "Fem cr\u00e9ixer la democr\u00e0cia",
-      "image-url": "https://goteo.org/img/medium/multi_4.jpg",
-      "name": "Multirefer\u00e8ndum. Democr\u00e0cia d'arrel",
-      "project": "multireferendum",
-      "project-url": "https://goteo.org/project/multireferendum",
-      "status": "funded",
-      "video-url": "https://vimeo.com/85448473"
-    },
-    {
-      "amount": 32491.0,
-      "date-published": "Wed, 09 Oct 2013 00:00:00 +0200",
-      "description-short": "Nos transformamos en un espacio social al servicio de la imaginaci\u00f3n pol\u00edtica",
-      "image-url": "https://goteo.org/img/medium/img-9999-_205.jpg",
-      "name": "La Hormiga At\u00f3mica Liburuak",
-      "project": "hormiga-mutantea",
-      "project-url": "https://goteo.org/project/hormiga-mutantea",
-      "status": "funded",
-      "video-url": "http://www.youtube.com/watch?v=SE8MkHGVgUs&feature=youtu.be"
-    },
-    {
-      "amount": 24461.0,
-      "date-published": "Fri, 20 Dec 2013 00:00:00 +0100",
-      "description-short": "Empieza la revoluci\u00f3n energ\u00e9tica ciudadana",
-      "image-url": "https://goteo.org/img/medium/slide-oligopolyoff-13.jpg",
-      "name": "#OligopolyOFF",
-      "project": "oligopolyoff",
-      "project-url": "https://goteo.org/project/oligopolyoff",
-      "status": "funded",
-      "video-url": "http://youtu.be/FsH1TDM9KwE"
+      "video-url": "https://youtu.be/yTzyu7W3kz0"
     }
   ]
 }

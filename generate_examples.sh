@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 API='https://api.goteo.org/v1/'
 
@@ -39,7 +39,14 @@ function save {
 	fi
 
 	url=$API$1
-	response=$(curl $OPTIONS --write-out %{http_code} --silent --output /dev/null $url)
+  if [[ $url == *'?'* ]]; then
+    url="$url&lang=en"
+  else
+    url="$url?lang=en"
+  fi
+  cmd="curl $OPTIONS --write-out %{http_code} --silent --output /dev/null $url"
+  echo $cmd
+	response=$($cmd)
 	if [ "$response" != "200" ]; then
 		echo "Response code error [$response] in [$url]"
 		echo "Aborting... Please check credentials!"
@@ -58,12 +65,18 @@ save projects/llevamealhuerto/donors/ project_donors
 save users/ users
 save users/goteo user
 save categories/ categories
+save footprints/ footprints
+save sdgs/ sdgs
+save socialcommitments/ socialcommitments
 save licenses/ licenses
 save invests/ invests
 save invests/1000 invest
 save calls/ calls
 save calls/unia-capital-riego call
 save calls/unia-capital-riego/projects/ call_projects
+save matchers/ matchers
+save matchers/ahoracomparte matcher
+save matchers/ahoracomparte/projects/ matcher_projects
 save reports/summary/ reports_summary
 save reports/projects/ reports_projects
 save reports/rewards/ reports_rewards

@@ -25,7 +25,7 @@
       "id": "agallastegi",
       "name": "Asier Gallastegi",
       "node": "euskadi",
-      "profile-image-url": "https://goteo.org/img/medium/picturetype-large_1331",
+      "profile-image-url": "https://goteo.org/img/medium/14344783-10209373787197828-5794167605490887725-n.j",
       "profile-url": "https://goteo.org/user/profile/agallastegi"
     },
     {
@@ -83,19 +83,22 @@
       "profile-url": "https://goteo.org/user/profile/alorza"
     },
     {
-      "anonymous": true,
+      "anonymous": false,
       "date-created": "Thu, 27 Sep 2012 15:11:11 GMT",
-      "id": null,
-      "name": "Anonymous",
+      "id": "ametsarte",
+      "name": "Ametsarte",
       "node": "goteo",
-      "profile-image-url": null,
-      "profile-url": null
+      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
+      "profile-url": "https://goteo.org/user/profile/ametsarte"
     }
   ],
   "meta": {
+    "lang": [
+      "en"
+    ],
     "limit": 10,
     "page": 0,
     "total": 80
   },
-  "time-elapsed": 0.030545473098754883
+  "time-elapsed": 0.042829275131225586
 }

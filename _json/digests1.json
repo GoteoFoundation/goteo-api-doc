@@ -4,6 +4,9 @@
       "items": [],
       "meta": {
         "from_date": "2014-01-01",
+        "lang": [
+          "en"
+        ],
         "location": {
           "latitude": "41.38879",
           "longitude": "2.15899",
@@ -12,40 +15,43 @@
         "to_date": "2014-01-31",
         "total": 0
       },
-      "time-elapsed": 0.052060842514038086
+      "time-elapsed": 0.0006005764007568359
     },
     "02": {
       "items": [
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda",
+          "description": "Creative Commons License with attribution",
           "id": "ccby",
-          "name": "CC - Reconocimiento",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccby.svg",
+          "name": "CC - Attribution",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccby.svg",
           "total-projects": 1,
           "total-rewards": 1,
-          "url": "http://creativecommons.org/licenses/by/4.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by/2.0/deed.en"
         },
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda y sin que se pueda hacer uso comercial",
+          "description": "Creative Commons License with attribution that does not permit commercial use",
           "id": "ccbync",
-          "name": "CC - Reconocimiento - NoComercial",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbync.svg",
+          "name": "CC - Attribution-NonCommercial",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbync.svg",
           "total-projects": 1,
           "total-rewards": 2,
-          "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.en"
         },
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda y a compartir en id\u00e9nticas condiciones",
+          "description": "Creative Commons License with attribution that only allows sharing under identical licensing conditions",
           "id": "ccbysa",
-          "name": "CC - Reconocimiento - CompartirIgual",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbysa.svg",
+          "name": "CC - Attribution - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbysa.svg",
           "total-projects": 1,
           "total-rewards": 1,
-          "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.en"
         }
       ],
       "meta": {
         "from_date": "2014-02-01",
+        "lang": [
+          "en"
+        ],
         "location": {
           "latitude": "41.38879",
           "longitude": "2.15899",
@@ -54,49 +60,52 @@
         "to_date": "2014-02-28",
         "total": 3
       },
-      "time-elapsed": 0.2559652328491211
+      "time-elapsed": 0.002910614013671875
     },
     "03": {
       "items": [
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda y sin que se pueda hacer uso comercial",
+          "description": "Creative Commons License with attribution that does not permit commercial use",
           "id": "ccbync",
-          "name": "CC - Reconocimiento - NoComercial",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbync.svg",
+          "name": "CC - Attribution-NonCommercial",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbync.svg",
           "total-projects": 1,
           "total-rewards": 1,
-          "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.en"
         },
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial y a compartir en id\u00e9nticas condiciones",
+          "description": "Creative Commons License with attribution, that does not allow commercial use, and only allows sharing under identical licensing conditions",
           "id": "ccbyncsa",
-          "name": "CC - Reconocimiento - NoComercial - CompartirIgual",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncsa.svg",
+          "name": "CC - Attribution - NonCommercial - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncsa.svg",
           "total-projects": 2,
           "total-rewards": 2,
-          "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en"
         },
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial ni otras obras derivadas",
+          "description": "Creative Commons License with attribution, that does not allow commercial use nor derivative works",
           "id": "ccbyncnd",
-          "name": "CC - Reconocimiento - NoComercial - SinObraDerivada",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncnd.svg",
+          "name": "CC - Attribution  - NonCommercial - NoDerivs",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
           "total-projects": 1,
           "total-rewards": 1,
-          "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"
         },
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda y a compartir en id\u00e9nticas condiciones",
+          "description": "Creative Commons License with attribution that only allows sharing under identical licensing conditions",
           "id": "ccbysa",
-          "name": "CC - Reconocimiento - CompartirIgual",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbysa.svg",
+          "name": "CC - Attribution - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbysa.svg",
           "total-projects": 1,
           "total-rewards": 1,
-          "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.en"
         }
       ],
       "meta": {
         "from_date": "2014-03-01",
+        "lang": [
+          "en"
+        ],
         "location": {
           "latitude": "41.38879",
           "longitude": "2.15899",
@@ -105,31 +114,34 @@
         "to_date": "2014-03-31",
         "total": 4
       },
-      "time-elapsed": 0.2760765552520752
+      "time-elapsed": 0.0037157535552978516
     },
     "04": {
       "items": [
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial y a compartir en id\u00e9nticas condiciones",
+          "description": "Creative Commons License with attribution, that does not allow commercial use, and only allows sharing under identical licensing conditions",
           "id": "ccbyncsa",
-          "name": "CC - Reconocimiento - NoComercial - CompartirIgual",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncsa.svg",
+          "name": "CC - Attribution - NonCommercial - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncsa.svg",
           "total-projects": 2,
           "total-rewards": 4,
-          "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en"
         },
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial ni otras obras derivadas",
+          "description": "Creative Commons License with attribution, that does not allow commercial use nor derivative works",
           "id": "ccbyncnd",
-          "name": "CC - Reconocimiento - NoComercial - SinObraDerivada",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncnd.svg",
+          "name": "CC - Attribution  - NonCommercial - NoDerivs",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
           "total-projects": 2,
           "total-rewards": 3,
-          "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"
         }
       ],
       "meta": {
         "from_date": "2014-04-01",
+        "lang": [
+          "en"
+        ],
         "location": {
           "latitude": "41.38879",
           "longitude": "2.15899",
@@ -138,67 +150,70 @@
         "to_date": "2014-04-30",
         "total": 2
       },
-      "time-elapsed": 0.15303277969360352
+      "time-elapsed": 0.002125263214111328
     },
     "05": {
       "items": [
         {
-          "description": "Licencia P\u00fablica General de GNU para la libre distribuci\u00f3n, modificaci\u00f3n y uso de software",
+          "description": "GNU General Public License for the free distribution, modification, and use of software",
           "id": "gpl",
           "name": "General Public License",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/gpl.svg",
+          "svg-url": "https://goteo.org/api/svg/licenses/gpl.svg",
           "total-projects": 1,
           "total-rewards": 1,
           "url": "http://www.gnu.org/licenses/gpl.html"
         },
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda",
+          "description": "Creative Commons License with attribution",
           "id": "ccby",
-          "name": "CC - Reconocimiento",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccby.svg",
+          "name": "CC - Attribution",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccby.svg",
           "total-projects": 1,
           "total-rewards": 2,
-          "url": "http://creativecommons.org/licenses/by/4.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by/2.0/deed.en"
         },
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial y a compartir en id\u00e9nticas condiciones",
+          "description": "Creative Commons License with attribution, that does not allow commercial use, and only allows sharing under identical licensing conditions",
           "id": "ccbyncsa",
-          "name": "CC - Reconocimiento - NoComercial - CompartirIgual",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncsa.svg",
+          "name": "CC - Attribution - NonCommercial - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncsa.svg",
           "total-projects": 3,
           "total-rewards": 5,
-          "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en"
         },
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial ni otras obras derivadas",
+          "description": "Creative Commons License with attribution, that does not allow commercial use nor derivative works",
           "id": "ccbyncnd",
-          "name": "CC - Reconocimiento - NoComercial - SinObraDerivada",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncnd.svg",
+          "name": "CC - Attribution  - NonCommercial - NoDerivs",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
           "total-projects": 1,
           "total-rewards": 1,
-          "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"
         },
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda y a compartir en id\u00e9nticas condiciones",
+          "description": "Creative Commons License with attribution that only allows sharing under identical licensing conditions",
           "id": "ccbysa",
-          "name": "CC - Reconocimiento - CompartirIgual",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbysa.svg",
+          "name": "CC - Attribution - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbysa.svg",
           "total-projects": 1,
           "total-rewards": 1,
-          "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.en"
         },
         {
-          "description": "Licencia Creative Commons de obra dedicada al dominio p\u00fablico, mediante renuncia a todos los derechos de autor\u00eda sobre la misma",
+          "description": "Creative Commons License for works dedicated to the public domain, by which all intellectual property rights over a work are waived",
           "id": "cc0",
-          "name": "CC0 Universal (Dominio P\u00fablico)",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/cc0.svg",
+          "name": "CC0 Universal (Public Domain)",
+          "svg-url": "https://goteo.org/api/svg/licenses/cc0.svg",
           "total-projects": 1,
           "total-rewards": 1,
-          "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.es"
+          "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
         }
       ],
       "meta": {
         "from_date": "2014-05-01",
+        "lang": [
+          "en"
+        ],
         "location": {
           "latitude": "41.38879",
           "longitude": "2.15899",
@@ -207,22 +222,25 @@
         "to_date": "2014-05-31",
         "total": 6
       },
-      "time-elapsed": 0.3745274543762207
+      "time-elapsed": 0.005143880844116211
     },
     "06": {
       "items": [
         {
-          "description": "Licencia Creative Commons de obra dedicada al dominio p\u00fablico, mediante renuncia a todos los derechos de autor\u00eda sobre la misma",
+          "description": "Creative Commons License for works dedicated to the public domain, by which all intellectual property rights over a work are waived",
           "id": "cc0",
-          "name": "CC0 Universal (Dominio P\u00fablico)",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/cc0.svg",
+          "name": "CC0 Universal (Public Domain)",
+          "svg-url": "https://goteo.org/api/svg/licenses/cc0.svg",
           "total-projects": 1,
           "total-rewards": 1,
-          "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.es"
+          "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
         }
       ],
       "meta": {
         "from_date": "2014-06-01",
+        "lang": [
+          "en"
+        ],
         "location": {
           "latitude": "41.38879",
           "longitude": "2.15899",
@@ -231,12 +249,15 @@
         "to_date": "2014-06-30",
         "total": 1
       },
-      "time-elapsed": 0.10788178443908691
+      "time-elapsed": 0.0014486312866210938
     },
     "07": {
       "items": [],
       "meta": {
         "from_date": "2014-07-01",
+        "lang": [
+          "en"
+        ],
         "location": {
           "latitude": "41.38879",
           "longitude": "2.15899",
@@ -245,12 +266,15 @@
         "to_date": "2014-07-31",
         "total": 0
       },
-      "time-elapsed": 0.05835747718811035
+      "time-elapsed": 0.00061798095703125
     },
     "08": {
       "items": [],
       "meta": {
         "from_date": "2014-08-01",
+        "lang": [
+          "en"
+        ],
         "location": {
           "latitude": "41.38879",
           "longitude": "2.15899",
@@ -259,12 +283,15 @@
         "to_date": "2014-08-31",
         "total": 0
       },
-      "time-elapsed": 0.06146979331970215
+      "time-elapsed": 0.0006120204925537109
     },
     "09": {
       "items": [],
       "meta": {
         "from_date": "2014-09-01",
+        "lang": [
+          "en"
+        ],
         "location": {
           "latitude": "41.38879",
           "longitude": "2.15899",
@@ -273,12 +300,15 @@
         "to_date": "2014-09-30",
         "total": 0
       },
-      "time-elapsed": 0.053072452545166016
+      "time-elapsed": 0.0006778240203857422
     },
     "10": {
       "items": [],
       "meta": {
         "from_date": "2014-10-01",
+        "lang": [
+          "en"
+        ],
         "location": {
           "latitude": "41.38879",
           "longitude": "2.15899",
@@ -287,22 +317,25 @@
         "to_date": "2014-10-31",
         "total": 0
       },
-      "time-elapsed": 0.05556011199951172
+      "time-elapsed": 0.0006151199340820312
     },
     "11": {
       "items": [
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial ni otras obras derivadas",
+          "description": "Creative Commons License with attribution, that does not allow commercial use nor derivative works",
           "id": "ccbyncnd",
-          "name": "CC - Reconocimiento - NoComercial - SinObraDerivada",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncnd.svg",
+          "name": "CC - Attribution  - NonCommercial - NoDerivs",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
           "total-projects": 1,
           "total-rewards": 1,
-          "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"
         }
       ],
       "meta": {
         "from_date": "2014-11-01",
+        "lang": [
+          "en"
+        ],
         "location": {
           "latitude": "41.38879",
           "longitude": "2.15899",
@@ -311,22 +344,25 @@
         "to_date": "2014-11-30",
         "total": 1
       },
-      "time-elapsed": 0.10588717460632324
+      "time-elapsed": 0.0014033317565917969
     },
     "12": {
       "items": [
         {
-          "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial y a compartir en id\u00e9nticas condiciones",
+          "description": "Creative Commons License with attribution, that does not allow commercial use, and only allows sharing under identical licensing conditions",
           "id": "ccbyncsa",
-          "name": "CC - Reconocimiento - NoComercial - CompartirIgual",
-          "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncsa.svg",
+          "name": "CC - Attribution - NonCommercial - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncsa.svg",
           "total-projects": 1,
           "total-rewards": 1,
-          "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
+          "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en"
         }
       ],
       "meta": {
         "from_date": "2014-12-01",
+        "lang": [
+          "en"
+        ],
         "location": {
           "latitude": "41.38879",
           "longitude": "2.15899",
@@ -335,78 +371,81 @@
         "to_date": "2014-12-31",
         "total": 1
       },
-      "time-elapsed": 0.10219478607177734
+      "time-elapsed": 0.0013818740844726562
     }
   },
   "endpoint": "/licenses/",
   "global": {
     "items": [
       {
-        "description": "Licencia P\u00fablica General de GNU para la libre distribuci\u00f3n, modificaci\u00f3n y uso de software",
+        "description": "GNU General Public License for the free distribution, modification, and use of software",
         "id": "gpl",
         "name": "General Public License",
-        "svg-url": "https://goteoassets.org/api/svg/licenses/gpl.svg",
+        "svg-url": "https://goteo.org/api/svg/licenses/gpl.svg",
         "total-projects": 1,
         "total-rewards": 1,
         "url": "http://www.gnu.org/licenses/gpl.html"
       },
       {
-        "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda",
+        "description": "Creative Commons License with attribution",
         "id": "ccby",
-        "name": "CC - Reconocimiento",
-        "svg-url": "https://goteoassets.org/api/svg/licenses/ccby.svg",
+        "name": "CC - Attribution",
+        "svg-url": "https://goteo.org/api/svg/licenses/ccby.svg",
         "total-projects": 2,
         "total-rewards": 3,
-        "url": "http://creativecommons.org/licenses/by/4.0/deed.es_ES"
+        "url": "http://creativecommons.org/licenses/by/2.0/deed.en"
       },
       {
-        "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda y sin que se pueda hacer uso comercial",
+        "description": "Creative Commons License with attribution that does not permit commercial use",
         "id": "ccbync",
-        "name": "CC - Reconocimiento - NoComercial",
-        "svg-url": "https://goteoassets.org/api/svg/licenses/ccbync.svg",
+        "name": "CC - Attribution-NonCommercial",
+        "svg-url": "https://goteo.org/api/svg/licenses/ccbync.svg",
         "total-projects": 2,
         "total-rewards": 3,
-        "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.es_ES"
+        "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.en"
       },
       {
-        "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial y a compartir en id\u00e9nticas condiciones",
+        "description": "Creative Commons License with attribution, that does not allow commercial use, and only allows sharing under identical licensing conditions",
         "id": "ccbyncsa",
-        "name": "CC - Reconocimiento - NoComercial - CompartirIgual",
-        "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncsa.svg",
+        "name": "CC - Attribution - NonCommercial - ShareAlike",
+        "svg-url": "https://goteo.org/api/svg/licenses/ccbyncsa.svg",
         "total-projects": 8,
         "total-rewards": 12,
-        "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
+        "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en"
       },
       {
-        "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial ni otras obras derivadas",
+        "description": "Creative Commons License with attribution, that does not allow commercial use nor derivative works",
         "id": "ccbyncnd",
-        "name": "CC - Reconocimiento - NoComercial - SinObraDerivada",
-        "svg-url": "https://goteoassets.org/api/svg/licenses/ccbyncnd.svg",
+        "name": "CC - Attribution  - NonCommercial - NoDerivs",
+        "svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
         "total-projects": 5,
         "total-rewards": 6,
-        "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.es_ES"
+        "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"
       },
       {
-        "description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda y a compartir en id\u00e9nticas condiciones",
+        "description": "Creative Commons License with attribution that only allows sharing under identical licensing conditions",
         "id": "ccbysa",
-        "name": "CC - Reconocimiento - CompartirIgual",
-        "svg-url": "https://goteoassets.org/api/svg/licenses/ccbysa.svg",
+        "name": "CC - Attribution - ShareAlike",
+        "svg-url": "https://goteo.org/api/svg/licenses/ccbysa.svg",
         "total-projects": 3,
         "total-rewards": 3,
-        "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.es_ES"
+        "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.en"
       },
       {
-        "description": "Licencia Creative Commons de obra dedicada al dominio p\u00fablico, mediante renuncia a todos los derechos de autor\u00eda sobre la misma",
+        "description": "Creative Commons License for works dedicated to the public domain, by which all intellectual property rights over a work are waived",
         "id": "cc0",
-        "name": "CC0 Universal (Dominio P\u00fablico)",
-        "svg-url": "https://goteoassets.org/api/svg/licenses/cc0.svg",
+        "name": "CC0 Universal (Public Domain)",
+        "svg-url": "https://goteo.org/api/svg/licenses/cc0.svg",
         "total-projects": 2,
         "total-rewards": 2,
-        "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.es"
+        "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
       }
     ],
     "meta": {
       "from_date": "2014-01-01",
+      "lang": [
+        "en"
+      ],
       "location": {
         "latitude": "41.38879",
         "longitude": "2.15899",
@@ -415,14 +454,17 @@
       "to_date": "2014-12-31",
       "total": 7
     },
-    "time-elapsed": 0.4825758934020996
+    "time-elapsed": 0.0075223445892333984
   },
   "meta": {
+    "lang": [
+      "en"
+    ],
     "location": {
       "latitude": "41.38879",
       "longitude": "2.15899",
       "radius": 100
     }
   },
-  "time-elapsed": 2.141507387161255
+  "time-elapsed": 0.031380653381347656
 }
