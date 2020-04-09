@@ -24,10 +24,17 @@ The following image is a representation of Goteo's statistics, visualizing data 
 
 [![Goteo Visualization](https://developers.goteo.org/assets/images/app1.png)](http://stats.goteo.org)
 
+##Platoniq Labs
+
+This is an application that shows interconnections between the money raised by the Goteo Platform and the Democratic Online Platform [Decidim](https://decidim.barcelona) from the city of Barcelona.
+
+It uses the [Sustainable Development Goals](https://sustainabledevelopment.un.org/) to let the user play around projects and invests related with them. At the same time it mixes the relevant meeting places extracted from Decidim where citizen initiatives have been taken place.
+
+[![Platoniq labs](https://developers.goteo.org/assets/images/platoniq-labs.png)](https://labs.platoniq.net/)
+
 ##Matchfunding Visualizations
 
-
- These are widgets that can be shared across different websites that represent the impact of the projects in the territory around Matchfunding calls in Goteo. Every Matchfunding Call co-finance some projects alongside with the user final contributions. These visualizations show the relationshiop between the Matchfunding call, the projects and the final contributions.
+These are widgets that can be shared across different websites that represent the impact of the projects in the territory around Matchfunding calls in Goteo. Every Matchfunding Call co-finance some projects alongside with the user final contributions. These visualizations show the relationshiop between the Matchfunding call, the projects and the final contributions.
 
 [![Goteo Visualization](https://developers.goteo.org/assets/images/matchfunding-1.png)](https://matchfunding.goteo.org/)
 
@@ -53,3 +60,4 @@ The following map is a representation of Goteo's projects in Madrid.
 
 
 
+    
