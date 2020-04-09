@@ -5,7 +5,7 @@ group: apidoc
 permalink: /doc/index.html
 
 ---
-# GOTEO API v1.1
+# GOTEO API v1.2
 
 ## Introduction
 
