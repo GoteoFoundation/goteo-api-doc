@@ -1715,6 +1715,10 @@
           "description": "Minimum amount required for a invest to apply this reward",
           "type": "number"
         },
+        "available-units": {
+          "description": "Reward's item units that are still available to choose.",
+          "type": "integer"
+        },
         "description": {
           "description": "Reward's item description",
           "type": "string"
@@ -1754,6 +1758,10 @@
         "type": {
           "description": "Reward's item type (one of `social`, `individual`)",
           "type": "string"
+        },
+        "units": {
+          "description": "Total units for this reward",
+          "type": "integer"
         }
       }
     },

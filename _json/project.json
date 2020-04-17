@@ -156,6 +156,7 @@
   "rewards": [
     {
       "amount": 0,
+      "available-units": 0,
       "description": "Un gran racimo de sencillas, \u00fatiles y entretenidas p\u00edldoras audiovisuales con las que aprender-ense\u00f1ar a cultivar en cualquier pedazo de tierra que tengas disponible.",
       "icon-url": "https://goteo.org/api/svg/icons/file.svg",
       "id": 3437,
@@ -165,71 +166,88 @@
       "license-svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
       "license-url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.es_ES",
       "name": "V\u00eddeo tutoriales",
-      "type": "social"
+      "type": "social",
+      "units": 0
     },
     {
       "amount": 0,
+      "available-units": 0,
       "description": "A trav\u00e9s de los v\u00eddeos y sus secciones, de la web, el blog y las noticias relacionadas que difundimos procedentes de otras webs, blogs, redes sociales, etc. queremos, deseamos, intentamos,...aportar un granito de tierra al despertar de la conciencia terr\u00edcola, es decir, al sentimiento de agradecimiento y respeto a la Tierra.",
       "icon-url": "https://goteo.org/api/svg/icons/other.svg",
       "id": 3438,
       "name": "Despertar el ADN terr\u00edcola",
-      "type": "social"
+      "type": "social",
+      "units": 0
     },
     {
       "amount": 5,
+      "available-units": 0,
       "description": "Qui\u00e9nes colaboren con el proyecto aparecer\u00e1n en nuestra web como 'semillas honor\u00edficas' que ayudan al crecimiento y florecimiento de llevamealhuerto.com\r\n",
       "icon-url": "https://goteo.org/api/svg/icons/thanks.svg",
       "id": 3418,
       "name": "'Semilla honor\u00edfica'",
-      "type": "individual"
+      "type": "individual",
+      "units": 0
     },
     {
       "amount": 25,
+      "available-units": 0,
       "description": "Te mandaremos un DVD que recopile todos los v\u00eddeotutoriales que hayamos grabado hasta el momento (ya llevamos m\u00e1s de 60!) + Reconocimeinto",
       "icon-url": "https://goteo.org/api/svg/icons/product.svg",
       "id": 3496,
       "name": "DVD con todos los v\u00eddeotutoriales",
-      "type": "individual"
+      "type": "individual",
+      "units": 0
     },
     {
       "amount": 40,
+      "available-units": 8,
       "description": "Cesta mediana (2 personas) de verduras y hortalizas de temporada procedentes del caser\u00edo Burgobarri de Mungia, cultivadas por I\u00f1aki, nuestro presentador, a qui\u00e9n conocer\u00e1s personalmente cuando, el d\u00eda acordado, llame a tu puerta para entregarte en mano una cesta de productos del campo + el DVD recopilatorio de los v\u00eddeos emitidos en la Red + Reconocimiento. Las entregas s\u00f3lo se hacen en Bizkaia, pero si no vives por aqu\u00ed, seguro que tienes alguien a quien hacerle un buen regalo ;)",
       "icon-url": "https://goteo.org/api/svg/icons/product.svg",
       "id": 3495,
       "name": "Cesta de productos de temporada de nuestra tierra",
-      "type": "individual"
+      "type": "individual",
+      "units": 20
     },
     {
       "amount": 50,
+      "available-units": -6,
       "description": "Cesta familiar (5 personas) de verduras y hortalizas de temporada procedentes del caser\u00edo Burgobarri de Mungia, cultivadas por I\u00f1aki, nuestro presentador, a qui\u00e9n conocer\u00e1s personalmente cuando, el d\u00eda acordado, llame a tu puerta para entregarte en mano una cesta de productos del campo + el DVD recopilatorio de los v\u00eddeos emitidos en la Red + Reconocimiento. Las entregas s\u00f3lo se hacen en Bizkaia, pero si no vives por aqu\u00ed, seguro que tienes alguien a quien hacerle un buen regalo ;)",
       "icon-url": "https://goteo.org/api/svg/icons/product.svg",
       "id": 3422,
       "name": "Cesta familiar de productos de temporada de nuestra tierra",
-      "type": "individual"
+      "type": "individual",
+      "units": 20
     },
     {
       "amount": 150,
+      "available-units": 0,
       "description": "Una visita al lugar de cultivo (huerto, jard\u00edn, azotea, balc\u00f3n,..) m\u00e1s la elaboraci\u00f3n de un informe sobre los cultivos y materiales a emplear en funci\u00f3n del espacio, la orientaci\u00f3n, el clima y los gustos del usuario. Adem\u00e1s incluimos un dossier basado en los cursos formativos de I\u00f1aki destinado a ayudarte en el auto-cultivo. El precio incluye salida 40 kms a la redonda desde Bilbao y a partir de ah\u00ed un coste a\u00f1adido por kilometraje de  0,30\u20ac/km. Si est\u00e1s de acuerdo con el informe puedes encargarnos un segundo presupuesto en concepto de dise\u00f1o y materiales a emplear (jardineras, soportes, sustratos , plantas y semillas,...).\r\n+ DVD + Reconocimiento",
       "icon-url": "https://goteo.org/api/svg/icons/service.svg",
       "id": 3435,
       "name": "Dise\u00f1o de balc\u00f3n, huerta o jard\u00edn personalizado",
-      "type": "individual"
+      "type": "individual",
+      "units": 0
     },
     {
       "amount": 250,
+      "available-units": 0,
       "description": "Tu logo o marca aparecer\u00e1 al principio de nuestros v\u00eddeos, en un total de 4 cap\u00edtulos, adem\u00e1s de mantener tu ense\u00f1a en nuestra web durante un mes.",
       "icon-url": "https://goteo.org/api/svg/icons/service.svg",
       "id": 3424,
       "name": "Patrocinio de tu marca, producto o negocio",
-      "type": "individual"
+      "type": "individual",
+      "units": 0
     },
     {
       "amount": 800,
+      "available-units": 1,
       "description": "Cursos presenciales de 15 horas, a cargo de I\u00f1aki Melgosa, sobre agricultura sostenible, casera, adaptada al espacio y necesidades de las/los cultivadoras/es. El viaje y alojamiento de I\u00f1aki, si el curso se desarrolla muy lejos de Euskadi, correr\u00e1n a cargo de la organizaci\u00f3n, as\u00ed c\u00f3mo el local para impartirlo. \u00a1Aprovecha ahora esta oportunidad antes de que I\u00f1aki salte a la fama!",
       "icon-url": "https://goteo.org/api/svg/icons/service.svg",
       "id": 3425,
       "name": "Formaci\u00f3n presencial",
-      "type": "individual"
+      "type": "individual",
+      "units": 2
     }
   ],
   "scope": "global",
@@ -242,7 +260,7 @@
   "social-commitment-description": null,
   "social-commitment-id": null,
   "status": "funded",
-  "time-elapsed": 0.518524169921875,
+  "time-elapsed": 0.5719428062438965,
   "translations": {
     "eu": {
       "about": "llevamealhuerto.com se caracteriza por transmitir conocimientos de agricultura ecol\u00f3gica y sostenible, a trav\u00e9s de breves p\u00edldoras audiovisuales, de manera sencilla, cercana, f\u00e1cil y con buen humor. \r\n\r\nNos preocupamos de la calidad, tanto a nivel de contenidos como t\u00e9cnica, para conseguir llegar a la gente y resultarles de utilidad. Nuestro reto es convertirnos en un referente dentro del mundo de las huertas urbanas y alternativas, un espacio verde digital que se retroalimente de comentarios, experiencias de los/as propios/as hortelanos/as y otras noticias de inter\u00e9s.",

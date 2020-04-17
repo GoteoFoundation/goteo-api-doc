@@ -1,19 +1,19 @@
 {
-  "average-amount-successful": 7969.33,
-  "average-posts-successful": 9.46,
-  "failed": 314,
+  "average-amount-successful": 7952.00,
+  "average-posts-successful": 9.45,
+  "failed": 315,
   "meta": {
     "lang": [
       "en"
     ]
   },
-  "percentage-successful": 79.19,
-  "percentage-successful-completed": 79.01,
-  "published": 1531,
-  "received": 5864,
-  "successful": 1195,
-  "successful-completed": 1182,
-  "time-elapsed": 6.461673736572266,
+  "percentage-successful": 79.24,
+  "percentage-successful-completed": 78.99,
+  "published": 1537,
+  "received": 5904,
+  "successful": 1202,
+  "successful-completed": 1184,
+  "time-elapsed": 10.973978281021118,
   "top10-collaborations": [
     {
       "date-published": "Fri, 05 Jan 2018 00:00:00 +0100",
