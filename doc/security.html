@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Goteo API : Security</title>
+  <meta name="description" content="">
+
+
+  <link rel="stylesheet" href="/assets/assemble.css">
+  <link rel="stylesheet" href="/assets/github.css">
+  <link rel="stylesheet" href="/assets/goteo.css">
+  
+  <link rel="canonical" href="https://developers.goteo.org/doc/security.html">
+  
+
+  </head>
+
+  <body style="background: white;">
+  <div class="wrapper">
+
+  
+      <!-- Navbar component
+================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png"></a>
+<!--       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="/about-goteo">About Goteo</a></li>
+          <li><a href="/doc">API Docs</a></li>
+          <li><a href="/apps">Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+      <div class="col col-lg-3">
+        <div class="sidebar bs-sidebar">
+ 
+  <span class="nav-section-title">
+    API DOCS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/index.html">Introduction</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/responses.html">Responses</a></li>
+          
+        
+          
+          <li class="active"><a href="/doc/security.html">Security</a></li>
+          
+        
+          
+          <li><a href="/doc/filters.html">Filters</a></li>
+          
+        
+          
+          <li><a href="/doc/console.html">Live Console</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+          <li><a href="/doc/projects.html">Projects</a></li>
+          
+        
+          
+          <li><a href="/doc/users.html">Users</a></li>
+          
+        
+          
+          <li><a href="/doc/categories.html">Categories</a></li>
+          
+        
+          
+          <li><a href="/doc/footprints.html">Footprints</a></li>
+          
+        
+          
+          <li><a href="/doc/sdgs.html">Sustainable Development Goals</a></li>
+          
+        
+          
+          <li><a href="/doc/social_commitments.html">Social Commitments</a></li>
+          
+        
+          
+          <li><a href="/doc/licenses.html">Licenses</a></li>
+          
+        
+          
+          <li><a href="/doc/invests.html">Invests</a></li>
+          
+        
+          
+          <li><a href="/doc/calls.html">Matchfunding calls</a></li>
+          
+        
+          
+          <li><a href="/doc/matchers.html">Matchfunding matchers</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/reports.html">Reports</a></li>
+          
+        
+          
+          <li><a href="/doc/digests.html">Digests</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  
+
+  
+
+  
+
+</div>
+
+      </div>
+
+      <div class="col col-lg-9 panel-docs">
+        <h1>Authentication</h1>
+
+<p>This API requires authentication, currently we support 2 types: <em>Basic</em> and <em>OAuth implict</em></p>
+
+<p><a name="basic"></a></p>
+
+<h3>Basic authentication</h3>
+
+<p>Basic authentication is the first method we implemented in the API. It grants permissions to access public resources (such as minimal user data, published projects information, etc.)</p>
+
+<p>You will need (<strong>mandatory</strong>) an API USER/KEY to use this authentication method.</p>
+
+<blockquote><p>Get your <strong>user</strong> and <strong>key</strong> from your activity dashboard in the  <a href="http://goteo.org/dashboard/activity/apikey">Goteo platform</a></p></blockquote>
+
+<p>Then you are ready to make requests on the endpoints that supports this authentication method:</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/projects/
+</code></pre>
+
+<p>This authentication method is intended, mostly, for machines or scripts accessing the API.</p>
+
+<p><a name="oauth"></a></p>
+
+<h3>OAuth authentication</h3>
+
+<p>We have introduced a new authentication method to increase security whilst accessing the API. This method does not requires to send your <em>user</em> and <em>password</em> in every requests through Internet, you will authenticate using a special <em>login</em> endpoint to obtain a temporary <em>token</em> to be sent on your behalf instead.</p>
+
+<p>This method will allow the creation of more complex applications for the final user in the future.</p>
+
+<h4>OAuth implicit flow</h4>
+
+<ol>
+<li><p>The user makes a request by sending <em>user</em> and <em>password</em> to the login endpoint:</p>
+
+<p> <strong>Note that, in this case, an API KEY is not needed (although can be used as well), the regular user/password will get the job done</strong>:</p>
+
+<pre><code class="bash"> curl -i --basic --user "user:password" https://api.goteo.org/v1/login
+</code></pre>
+
+<p> <em>Alternatively:</em></p>
+
+<pre><code class="bash"> curl -i --basic --user "user:key" https://api.goteo.org/v1/login
+</code></pre>
+
+<p> Either way, if the authentication is successful will receive a proper <code>200 OK</code> response with the necessary token:</p>
+
+<pre><code class="`json"> {
+   "access_token": "eyJleHAiOjE0NjQyODg1NTgsImlhdCI6MTQ2NDI4Nzk1OCwiYWxnIjoiSFMyNTYifQ",
+   "expires_in": 600,
+   "token_type": "bearer"
+ }
+</code></pre>
+
+<p> If the authentication is not valid, you will receive a <code>401 Unauthorized</code> code with some error message in the JSON body.</p>
+
+<pre><code class="`json"> {
+   "error": 401,
+   "message": "Invalid access method or wrong credentials"
+ }
+</code></pre>
+
+<p> The token will expire in the number of seconds specified by the key <code>expires_in</code>, once the token is expired you will need to get a new one.</p></li>
+<li><p>Once the <em>token</em> is obtained, you are ready to make requests to any endpoint by sending it through the <code>Authorization</code> HTTP Header and specifying <code>Bearer</code> instead of <code>Basic</code>:</p>
+
+<pre><code class="bash"> curl -H "Authorization: Bearer eyJleHAiOjE0NjQyODg1NTgsImlhdCI6MTQ2NDI4Nzk1OCwiYWxnIjoiSFMyNTYifQ" https://api.goteo.org/v1/projects/
+</code></pre>
+
+<p> If the <em>token</em> is valid a proper <code>200 OK</code> with a JSON body will be returned.
+ If the <em>token</em> has expired or is not valid for any other reason the  <code>401 Unauthorized</code> response will be sent back.</p></li>
+</ol>
+
+
+<blockquote><p>Currently, all endpoints can be accessed with both authentication methods.
+This may not be necessarily true for future endpoints (which may only use the OAuth method)</p></blockquote>
+
+<p><a name="limits"></a></p>
+
+<h2>Rate limit</h2>
+
+<p>The API also implements and additional layer of security by limit the number of requests that can be made in a period of time. The frequency and the current status of this limits will be sent by using special custom HTTP headers:</p>
+
+<ol>
+<li><p><code>X-RateLimit-Remaining: XXX</code>
+Number of requests still available to the user for the current time window</p></li>
+<li><p><code>X-RateLimit-Limit: XXX</code>
+Maximum number of requests that can be made in a time window</p></li>
+<li><p><code>X-RateLimit-Reset: XXXXXXXXXXX</code>
+Date when the current time window will be reset. If the limit of requests has been reached, the user will not be allowed to make new petitions until this moment.</p>
+
+<p>This number is formated in Unix-time (number of seconds since Thursday, 1 January 1970)</p></li>
+</ol>
+
+
+<h3>Example:</h3>
+
+<p>This could be the headers returned in response to successful request:</p>
+
+<pre><code class="http">HTTP/1.1 200 OK
+Date: Wed, 30 Sep 2015 15:51:04 GMT
+Content-Type: application/json
+Content-Length: 6756
+Connection: keep-alive
+X-RateLimit-Remaining: 298
+X-RateLimit-Limit: 300
+X-RateLimit-Reset: 1443628800
+</code></pre>
+
+<p>This response indicates that the client still has 298 petitions available until the time window starts again (30 September 2015).</p>
+
+<p>In case of the limit is reached, a <code>429 Too many requests</code> response will be returned.</p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+ -->
+<script src="/assets/highlight.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62675757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+
+</html>

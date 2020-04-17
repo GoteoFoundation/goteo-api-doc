@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Goteo API : Introduction</title>
+  <meta name="description" content="">
+
+
+  <link rel="stylesheet" href="/assets/assemble.css">
+  <link rel="stylesheet" href="/assets/github.css">
+  <link rel="stylesheet" href="/assets/goteo.css">
+  
+  <link rel="canonical" href="https://developers.goteo.org/doc/">
+  
+
+  </head>
+
+  <body style="background: white;">
+  <div class="wrapper">
+
+  
+      <!-- Navbar component
+================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png"></a>
+<!--       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="/about-goteo">About Goteo</a></li>
+          <li><a href="/doc">API Docs</a></li>
+          <li><a href="/apps">Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+      <div class="col col-lg-3">
+        <div class="sidebar bs-sidebar">
+ 
+  <span class="nav-section-title">
+    API DOCS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="active"><a href="/doc/index.html">Introduction</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/responses.html">Responses</a></li>
+          
+        
+          
+          <li><a href="/doc/security.html">Security</a></li>
+          
+        
+          
+          <li><a href="/doc/filters.html">Filters</a></li>
+          
+        
+          
+          <li><a href="/doc/console.html">Live Console</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+          <li><a href="/doc/projects.html">Projects</a></li>
+          
+        
+          
+          <li><a href="/doc/users.html">Users</a></li>
+          
+        
+          
+          <li><a href="/doc/categories.html">Categories</a></li>
+          
+        
+          
+          <li><a href="/doc/footprints.html">Footprints</a></li>
+          
+        
+          
+          <li><a href="/doc/sdgs.html">Sustainable Development Goals</a></li>
+          
+        
+          
+          <li><a href="/doc/social_commitments.html">Social Commitments</a></li>
+          
+        
+          
+          <li><a href="/doc/licenses.html">Licenses</a></li>
+          
+        
+          
+          <li><a href="/doc/invests.html">Invests</a></li>
+          
+        
+          
+          <li><a href="/doc/calls.html">Matchfunding calls</a></li>
+          
+        
+          
+          <li><a href="/doc/matchers.html">Matchfunding matchers</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/reports.html">Reports</a></li>
+          
+        
+          
+          <li><a href="/doc/digests.html">Digests</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  
+
+  
+
+  
+
+</div>
+
+      </div>
+
+      <div class="col col-lg-9 panel-docs">
+        <h1>GOTEO API v1.2</h1>
+
+<h2>Introduction</h2>
+
+<p>Welcome to the API for the crowdfunding platform <a href="http://goteo.org">Goteo.org</a>.</p>
+
+<p>Fundación Goteo is pleased to present our open data API and to share our work with people interested in data, API and visualizations, specifically data on crowdfunding and our Goteo.org community. We offer you access to all of the activities and the impact of the Goteo platform. Our ultimate aim is to build new standards in the worlds of collective finance and collaborative economy, while also contributing to the open data commons.</p>
+
+<p>We want to share this new development and battery of open resources with developers and experts in analysis and data visualization, as well as general researchers. If you've got ideas about new applications and uses for the data we have been gathering since 2012, and crowdfunding in general, we're ready for you!</p>
+
+<p>We’re open to contributions in:</p>
+
+<ul>
+<li>Improving our API, along with the common good, in the aspect of open data.</li>
+<li>Creating new applications and visualizations</li>
+<li>Comparing and finding new hypotheses about the relationships emerging between resources, needs, people and open projects looking for funding.</li>
+</ul>
+
+
+<p>Please contact us with any questions or comments.</p>
+
+<h4>API URL: <a href="https://api.goteo.org/v1">https://api.goteo.org/v1</a></h4>
+
+<p>The API is compatible with the <a href="http://swagger.io/">Swagger</a> specification. Checkout the <a href="console.html">html console interface</a> for a live testing console or the <a href="https://api.goteo.org/v1/spec">json interface</a></p>
+
+<h2>Authentication</h2>
+
+<p>This API requires authentication, please referer to the <a href="security.html">Authentication section</a> for details.</p>
+
+<h2>Quick start: Basic usage</h2>
+
+<p>If you have a user/key, you can make petitions to some endpoints. Here are few examples:</p>
+
+<h3>CURL example from the command line:</h3>
+
+<pre><code class="bash">curl -i  --basic --user "user:key" https://api.goteo.org/v1/reports/money/
+curl -i  --basic --user "user:key" -X GET -d from_date="2014-01-01" https://api.goteo.org/v1/reports/money/
+curl -i  --basic --user "user:key" -X GET -d project="diagonal" https://api.goteo.org/v1/reports/money/
+curl -i  --basic --user "user:key" -X GET -d location="36.716667,-4.416667,100" https://api.goteo.org/v1/reports/projects/
+
+curl -i --basic --user "user:key" https://api.goteo.org/v1/users/ 
+</code></pre>
+
+<h3>JQuery example:</h3>
+
+<pre><code class="javascript">API_USER = 'you api user';
+API_KEY = 'you api key';
+
+//Sets the authorization headers for ajax calls (suc as $.get or $.post)
+$.ajaxSetup({
+    headers: { 'Authorization': "Basic " + btoa(API_USER + ':' + API_KEY)},
+});
+
+//Retrieve some user information:
+$.get('http://api.goteo.org/v1/users/ivan')
+    .done(function(data){
+        console.log(data);
+        alert('User name is: ' + data.name);
+    }).error(function(){
+        alert('User not found');
+    });
+</code></pre>
+
+<h2>Requests</h2>
+
+<p>The API is accessible through both HTTP and HTTPS protocols by any tool that can communicate using http basic user authentication.</p>
+
+<p>Currently, the API is in a read-only state so only GET, OPTIONS and HEAD methods are available at this point.</p>
+
+<table>
+<thead>
+<tr>
+<th>  Method </th>
+<th> Usage </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> GET     </td>
+<td> This is the method that should be used to retrieve any data from the Goteo platform. The response will be  returned to you as a JSON object.<br><br> Additionally, some endpoints accept parameters in the URL letting you filter the result in several ways.<br><br> All requests using the GET method are read-only.    </td>
+</tr>
+<tr>
+<td> OPTIONS </td>
+<td> This method is used mainly to retrieve the methods available (GET, OPTIONS, HEAD) in the API. It is also necessary to obtain information about whether CORS authorization is enabled.<br><br> Normally, this is used automatically by modern browsers before performing the requested GET petition.<br><br><strong>CORS</strong> is enabled for full access in this API. </td>
+</tr>
+<tr>
+<td> HEAD    </td>
+<td> To retrieve metadata information, the HEAD method returns the headers associated to a specific GET request.<br><br>Response headers contain some useful information about your API access and the results that are available for your request.<br><br>For instance, the headers contain your current rate-limit value and the amount of time available until the limit resets. It also contains metrics about the total number of objects found, pagination information, and the total content length.  </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Curl example:</h3>
+
+<p>Info about the users requests without the response:</p>
+
+<pre><code class="bash">curl --basic --user 'user:key' -i --head http://api.goteo.org/v1/users/
+</code></pre>
+
+<p>Headers returned:</p>
+
+<pre><code class="http">HTTP/1.0 200 OK
+Content-Type: application/json
+Content-Length: 2113
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: POST, OPTIONS, GET
+Access-Control-Allow-Headers: Authorization
+Access-Control-Max-Age: 1
+X-RateLimit-Remaining: 59
+X-RateLimit-Limit: 60
+X-RateLimit-Reset: 1424167620
+Date: Tue, 17 Feb 2015 10:06:37 GMT
+</code></pre>
+
+<h2>HTTP Statuses</h2>
+
+<p>Along with the HTTP methods that the API responds to, it will also return standard HTTP statuses, including error codes.</p>
+
+<p>In the event of a problem, the status will contain the error code, while the body of the response will usually contain additional information about the problem that was encountered.</p>
+
+<p>In general, if the status returned is in the 200 range, it indicates that the request was fulfilled successfully and that no error was encountered.</p>
+
+<p>Return codes in the 400 range typically indicate that there was an issue with the request that was sent. Among other things, this could mean that you did not authenticate correctly, that you are requesting an action that you do not have authorization for, that the object you are requesting does not exist, or that your request is malformed.</p>
+
+<p>If you receive a status in the 500 range, this generally indicates a server-side problem. This means that we are having an issue on our end and cannot fulfill your request currently.</p>
+
+<p><strong>Tipical responses returned by the API:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th> Code </th>
+<th> Error </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 200  </td>
+<td> None  </td>
+<td> request ok </td>
+</tr>
+<tr>
+<td> 401  </td>
+<td> yes, in request </td>
+<td> Resource requires authorization, authentication is needed or was unsuccessful </td>
+</tr>
+<tr>
+<td> 400  </td>
+<td> yes, in request </td>
+<td> Invalid parameters format, typically when data passed in the query string does not much the proper required format </td>
+</tr>
+<tr>
+<td> 404  </td>
+<td> yes, in request </td>
+<td> Resource not found, invalid endpoint or the OBJECT ID required does not exists </td>
+</tr>
+<tr>
+<td> 429  </td>
+<td> yes, in request </td>
+<td> Too many resources, no more requests can be made until a new time window starts </td>
+</tr>
+<tr>
+<td> 500  </td>
+<td> yes, in server </td>
+<td> Server error, that's on us! Please report and we will investigate. </td>
+</tr>
+</tbody>
+</table>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+ -->
+<script src="/assets/highlight.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62675757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+
+</html>

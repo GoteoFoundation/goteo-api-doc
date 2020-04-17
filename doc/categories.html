@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Goteo API : Categories</title>
+  <meta name="description" content="">
+
+
+  <link rel="stylesheet" href="/assets/assemble.css">
+  <link rel="stylesheet" href="/assets/github.css">
+  <link rel="stylesheet" href="/assets/goteo.css">
+  
+  <link rel="canonical" href="https://developers.goteo.org/doc/categories.html">
+  
+
+  </head>
+
+  <body style="background: white;">
+  <div class="wrapper">
+
+  
+      <!-- Navbar component
+================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png"></a>
+<!--       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="/about-goteo">About Goteo</a></li>
+          <li><a href="/doc">API Docs</a></li>
+          <li><a href="/apps">Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+      <div class="col col-lg-3">
+        <div class="sidebar bs-sidebar">
+ 
+  <span class="nav-section-title">
+    API DOCS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/index.html">Introduction</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/responses.html">Responses</a></li>
+          
+        
+          
+          <li><a href="/doc/security.html">Security</a></li>
+          
+        
+          
+          <li><a href="/doc/filters.html">Filters</a></li>
+          
+        
+          
+          <li><a href="/doc/console.html">Live Console</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+          <li><a href="/doc/projects.html">Projects</a></li>
+          
+        
+          
+          <li><a href="/doc/users.html">Users</a></li>
+          
+        
+          
+          <li class="active"><a href="/doc/categories.html">Categories</a></li>
+          
+        
+          
+          <li><a href="/doc/footprints.html">Footprints</a></li>
+          
+        
+          
+          <li><a href="/doc/sdgs.html">Sustainable Development Goals</a></li>
+          
+        
+          
+          <li><a href="/doc/social_commitments.html">Social Commitments</a></li>
+          
+        
+          
+          <li><a href="/doc/licenses.html">Licenses</a></li>
+          
+        
+          
+          <li><a href="/doc/invests.html">Invests</a></li>
+          
+        
+          
+          <li><a href="/doc/calls.html">Matchfunding calls</a></li>
+          
+        
+          
+          <li><a href="/doc/matchers.html">Matchfunding matchers</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/reports.html">Reports</a></li>
+          
+        
+          
+          <li><a href="/doc/digests.html">Digests</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  
+
+  
+
+  
+
+</div>
+
+      </div>
+
+      <div class="col col-lg-9 panel-docs">
+        <h1>Categories endpoint</h1>
+
+<p>This section gives you information about the categories used by projects or users in <a href="http://goteo.org">Goteo.org</a></p>
+
+<p><a name="categories"></a></p>
+
+<h2>/categories/</h2>
+
+<p>Obtains a list of categories.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/categories/
+</code></pre>
+
+<h3>Filters available:</h3>
+
+<p><strong>The <a href="filters.html">standard set of filters</a> applies to this endpoint with these particulars:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the categories used in projects assigned in that nodes </td>
+</tr>
+<tr>
+<td> call </td>
+<td> string </td>
+<td> Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Filter by individual project(s). Multiple projects can be specified. Restricts the list to the categories used in that projects </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Filter from date. Ex. "2013-01-01". Restricts the list to the categories used in projects created between that dates </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Filter until date.. Ex. "2014-01-01". Restricts the list to the categories used in projects created between that dates </td>
+</tr>
+<tr>
+<td> category </td>
+<td> integer </td>
+<td> Filter by category. Multiple categories can be specified. Restricts the list to the categories specified </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> integer </td>
+<td> Filter by social commitment. Multiple social commitments can be specified. Restricts the list to the categories matching with that social commitment(s) </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> integer </td>
+<td> Filter by Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the categories in that SDG(s) </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> integer </td>
+<td> Filter by footprint. Multiple footprints can be specified. Restricts the list to the categories in that footprint(s) </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Get results by specified lang. Multiple langs can be specified </td>
+</tr>
+<tr>
+<td> location </td>
+<td> number </td>
+<td> Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the categories used in projects geolocated in that area </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="ResponseCategory">ResponseCategory</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> items </td>
+<td> array </td>
+<td> ... &#9758; <a href="#Category">Category</a> </td>
+</tr>
+<tr>
+<td> meta </td>
+<td>  </td>
+<td> ... &#9758; <a href="#MetaCategory">MetaCategory</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Category">Category</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> description </td>
+<td> string </td>
+<td> Category short description </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> Category unique identifier </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Category name </td>
+</tr>
+<tr>
+<td> social-commitment </td>
+<td>  </td>
+<td> Non-economical detailed list of necessities &#9758; <a href="#SocialCommitment">SocialCommitment</a> </td>
+</tr>
+<tr>
+<td> total-projects </td>
+<td> integer </td>
+<td> Number of published projects in the category </td>
+</tr>
+<tr>
+<td> total-users </td>
+<td> integer </td>
+<td> Number of users interested in the category </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="MetaCategory">MetaCategory</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Only if filtering by from_date </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> array </td>
+<td> Only if filtering by lang </td>
+</tr>
+<tr>
+<td> location </td>
+<td> array </td>
+<td> Only if filtering by location </td>
+</tr>
+<tr>
+<td> node </td>
+<td> array </td>
+<td> Only if filtering by node </td>
+</tr>
+<tr>
+<td> project </td>
+<td> array </td>
+<td> Only if filtering by project </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Only if filtering by to_date </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Total elements available for the collection </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body</h3>
+
+<pre><code class="json">{
+  "items": [
+    {
+      "description": "Projects that promote social change, resolve problems with or strengthen human relationshiops in order to achieve better well-being.",
+      "id": 2,
+      "name": "Social",
+      "social-commitment": {
+        "description": "Solidario",
+        "icon_url": "https://goteo.org/img/medium/1-solidario-1.png",
+        "id": 1,
+        "name": "Solidario"
+      },
+      "total-projects": 691,
+      "total-users": 12699
+    },
+    {
+      "description": "Projects whose objective is to inform, denounce and/or communicate (for example, civic journalism, documentaries, blogs, radio programs).",
+      "id": 6,
+      "name": "Communications",
+      "social-commitment": {
+        "description": "Periodismo independiente",
+        "icon_url": "https://goteo.org/img/medium/5-periodismo-1.png",
+        "id": 5,
+        "name": "Periodismo independiente"
+      },
+      "total-projects": 286,
+      "total-users": 5043
+    },
+    {
+      "description": "Technical development of software, hardware, tools, etc in order to solve concrete problems or needs.",
+      "id": 7,
+      "name": "Technological",
+      "social-commitment": {
+        "description": "Software libre",
+        "icon_url": "https://goteo.org/img/medium/2-software-libre-1.png",
+        "id": 2,
+        "name": "Software libre"
+      },
+      "total-projects": 190,
+      "total-users": 5914
+    },
+    {
+      "description": "Projects that are business initiatives, and that hope to generate profits.",
+      "id": 9,
+      "name": "Commercial",
+      "social-commitment": {
+        "description": "Generar empleo",
+        "icon_url": "https://goteo.org/img/medium/4b-empleo.png",
+        "id": 3,
+        "name": "Generar empleo"
+      },
+      "total-projects": 153,
+      "total-users": 5504
+    },
+    {
+      "description": "Projects whose most important objective is formation or learning. ",
+      "id": 10,
+      "name": "Educational",
+      "social-commitment": {
+        "description": "Educativo",
+        "icon_url": "https://goteo.org/img/medium/6-educativo-1.png",
+        "id": 6,
+        "name": "Educativo"
+      },
+      "total-projects": 530,
+      "total-users": 9563
+    },
+    {
+      "description": "Projects with artistic or cultural objectives.",
+      "id": 11,
+      "name": "Cultural",
+      "social-commitment": {
+        "description": "Crear cultura",
+        "icon_url": "https://goteo.org/img/medium/7--crear-cultura-1.png",
+        "id": 7,
+        "name": "Crear cultura"
+      },
+      "total-projects": 552,
+      "total-users": 9393
+    },
+    {
+      "description": "Projects that are related to the care of the environment, sustainability, and/or biological diversity.\r\n",
+      "id": 13,
+      "name": "Ecological",
+      "social-commitment": {
+        "description": "Acci\u00f3n por el clima",
+        "icon_url": "https://goteo.org/img/medium/8-ecologico-1.png",
+        "id": 8,
+        "name": "Acci\u00f3n por el clima"
+      },
+      "total-projects": 330,
+      "total-users": 7970
+    },
+    {
+      "description": "Studies or research, projects that look for answers, solutions, new explanations.",
+      "id": 14,
+      "name": "Scientific",
+      "social-commitment": {
+        "description": null,
+        "icon_url": null,
+        "id": 0,
+        "name": null
+      },
+      "total-projects": 108,
+      "total-users": 4625
+    },
+    {
+      "description": null,
+      "id": 16,
+      "name": "Design",
+      "social-commitment": {
+        "description": null,
+        "icon_url": null,
+        "id": 0,
+        "name": null
+      },
+      "total-projects": 81,
+      "total-users": 885
+    }
+  ],
+  "meta": {
+    "lang": [
+      "en"
+    ],
+    "total": 9
+  },
+  "time-elapsed": 2.4537246227264404
+}
+</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+ -->
+<script src="/assets/highlight.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62675757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+
+</html>

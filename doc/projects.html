@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Goteo API : Projects</title>
+  <meta name="description" content="">
+
+
+  <link rel="stylesheet" href="/assets/assemble.css">
+  <link rel="stylesheet" href="/assets/github.css">
+  <link rel="stylesheet" href="/assets/goteo.css">
+  
+  <link rel="canonical" href="https://developers.goteo.org/doc/projects.html">
+  
+
+  </head>
+
+  <body style="background: white;">
+  <div class="wrapper">
+
+  
+      <!-- Navbar component
+================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png"></a>
+<!--       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="/about-goteo">About Goteo</a></li>
+          <li><a href="/doc">API Docs</a></li>
+          <li><a href="/apps">Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+      <div class="col col-lg-3">
+        <div class="sidebar bs-sidebar">
+ 
+  <span class="nav-section-title">
+    API DOCS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/index.html">Introduction</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/responses.html">Responses</a></li>
+          
+        
+          
+          <li><a href="/doc/security.html">Security</a></li>
+          
+        
+          
+          <li><a href="/doc/filters.html">Filters</a></li>
+          
+        
+          
+          <li><a href="/doc/console.html">Live Console</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+          <li class="active"><a href="/doc/projects.html">Projects</a></li>
+          
+        
+          
+          <li><a href="/doc/users.html">Users</a></li>
+          
+        
+          
+          <li><a href="/doc/categories.html">Categories</a></li>
+          
+        
+          
+          <li><a href="/doc/footprints.html">Footprints</a></li>
+          
+        
+          
+          <li><a href="/doc/sdgs.html">Sustainable Development Goals</a></li>
+          
+        
+          
+          <li><a href="/doc/social_commitments.html">Social Commitments</a></li>
+          
+        
+          
+          <li><a href="/doc/licenses.html">Licenses</a></li>
+          
+        
+          
+          <li><a href="/doc/invests.html">Invests</a></li>
+          
+        
+          
+          <li><a href="/doc/calls.html">Matchfunding calls</a></li>
+          
+        
+          
+          <li><a href="/doc/matchers.html">Matchfunding matchers</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/reports.html">Reports</a></li>
+          
+        
+          
+          <li><a href="/doc/digests.html">Digests</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  
+
+  
+
+  
+
+</div>
+
+      </div>
+
+      <div class="col col-lg-9 panel-docs">
+        <h1>Projects endpoint</h1>
+
+<p>This section gives you information about projects in <a href="http://goteo.org">Goteo.org</a></p>
+
+<p><a name="projects"></a></p>
+
+<h2>/projects/</h2>
+
+<p>Obtains a list of projects.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/projects/
+</code></pre>
+
+<h3>Filters available:</h3>
+
+<p><strong>The <a href="filters.html">standard set of filters</a> applies to this endpoint with these particulars:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the projects originally created in that node(s) </td>
+</tr>
+<tr>
+<td> call </td>
+<td> string </td>
+<td> Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s) </td>
+</tr>
+<tr>
+<td> matcher </td>
+<td> string </td>
+<td> Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Filter by individual project(s). Multiple projects can be specified </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Get results by specified lang. Multiple langs can be specified </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Filter from date. Ex. "2013-01-01". Restricts the list to the projects created in that range </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Filter until date.. Ex. "2014-01-01". Restricts the list to the projects created in that range </td>
+</tr>
+<tr>
+<td> category </td>
+<td> integer </td>
+<td> Filter by project category. Multiple categories can be specified. Restricts the list to the projects that have interests in that category(ies) </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> integer </td>
+<td> Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the projects with that social commitment(s) </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> integer </td>
+<td> Filter by project footprint. Multiple footprint can be specified. Restricts the list to the licenses used in rewards of projects with that footprint(s) </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> integer </td>
+<td> Filter by project Sustainable Development Goal. Multiple sdg can be specified. Restricts the list to the licenses used in rewards of projects with that sdg(s) </td>
+</tr>
+<tr>
+<td> location </td>
+<td> number </td>
+<td> Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the projects used in projects geolocated in that area </td>
+</tr>
+<tr>
+<td> page </td>
+<td> integer </td>
+<td> Page number (starting at 1) if the result can be paginated </td>
+</tr>
+<tr>
+<td> limit </td>
+<td> integer </td>
+<td> Page limit (maximum 50 results, defaults to 10) if the result can be paginated </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="ResponseProject">ResponseProject</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> items </td>
+<td> array </td>
+<td> ... &#9758; <a href="#Project">Project</a> </td>
+</tr>
+<tr>
+<td> meta </td>
+<td>  </td>
+<td> ... &#9758; <a href="#MetaProject">MetaProject</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Project">Project</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> amount </td>
+<td> number </td>
+<td> Currently achieved amount for the project </td>
+</tr>
+<tr>
+<td> date-created </td>
+<td> string </td>
+<td> Date when the project was created RFC822 format </td>
+</tr>
+<tr>
+<td> date-published </td>
+<td> string </td>
+<td> Date when the project was published RFC822 format </td>
+</tr>
+<tr>
+<td> description-short </td>
+<td> string </td>
+<td> Short description of the project </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> Project unique identifier </td>
+</tr>
+<tr>
+<td> image-url </td>
+<td> string </td>
+<td> URL with the main image of the project </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Main language of the project </td>
+</tr>
+<tr>
+<td> latitude </td>
+<td> number </td>
+<td> Latitude coordinate for the project (if available) </td>
+</tr>
+<tr>
+<td> longitude </td>
+<td> number </td>
+<td> Longitude coordinate for the project (if available) </td>
+</tr>
+<tr>
+<td> minimum </td>
+<td> number </td>
+<td> Minimum amount to achieve to consider the project succeeded </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the project </td>
+</tr>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Node where the project was created originally </td>
+</tr>
+<tr>
+<td> optimum </td>
+<td> number </td>
+<td> Optimum amount to achieve for the project to achieve all his goals </td>
+</tr>
+<tr>
+<td> owner </td>
+<td> string </td>
+<td> Project owner's user ID </td>
+</tr>
+<tr>
+<td> owner-name </td>
+<td> string </td>
+<td> Project owner's user name </td>
+</tr>
+<tr>
+<td> project-url </td>
+<td> string </td>
+<td> Project's original URL (crowd-funding web page) </td>
+</tr>
+<tr>
+<td> region </td>
+<td> string </td>
+<td> Region location for the project </td>
+</tr>
+<tr>
+<td> social-commitment-id </td>
+<td> string </td>
+<td> SocialCommitment unique identifier of the project </td>
+</tr>
+<tr>
+<td> status </td>
+<td> string </td>
+<td> Status of the project </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="MetaProject">MetaProject</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> category </td>
+<td> array </td>
+<td> Only if filtering by category </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> array </td>
+<td> Only if filtering by footprint </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Only if filtering by from_date </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> array </td>
+<td> Only if filtering by lang </td>
+</tr>
+<tr>
+<td> limit </td>
+<td> integer </td>
+<td> Limit of results per page when retrieving a collection </td>
+</tr>
+<tr>
+<td> location </td>
+<td> array </td>
+<td> Only if filtering by location </td>
+</tr>
+<tr>
+<td> node </td>
+<td> array </td>
+<td> Only if filtering by node </td>
+</tr>
+<tr>
+<td> page </td>
+<td> integer </td>
+<td> Current page, <code>0</code> based (first page is zero) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> array </td>
+<td> Only if filtering by project </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> array </td>
+<td> Only if filtering by Sustainable Development Goal </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> array </td>
+<td> Only if filtering by social_commitment </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Only if filtering by to_date </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Total elements available for the collection </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "items": [
+    {
+      "amount": 1744.0,
+      "date-created": "Fri, 13 May 2011 00:00:00 +0200",
+      "date-published": "Thu, 03 Nov 2011 00:00:00 +0100",
+      "description-short": "A travelling wifi connection unity for social movements and the public space.",
+      "id": "nodo-movil",
+      "image-url": "https://goteo.org/img/medium/esquema-3.png",
+      "lang": "es",
+      "latitude": null,
+      "longitude": null,
+      "minimum": 1250.0,
+      "name": "Nodo M\u00f3vil",
+      "node": "barcelona",
+      "optimum": 1750.0,
+      "owner": "efoglia",
+      "owner-name": "Efra\u00edn Foglia",
+      "project-url": "https://goteo.org/project/nodo-movil",
+      "region": null,
+      "social-commitment-id": null,
+      "status": "fulfilled"
+    },
+    {
+      "amount": 1100.0,
+      "date-created": "Fri, 13 May 2011 00:00:00 +0200",
+      "date-published": "Thu, 03 Nov 2011 00:00:00 +0100",
+      "description-short": "Sistema de identificaci\u00f3n y localizaci\u00f3n de iniciativas y movimientos para ayudarlos a crecer",
+      "id": "move-commons",
+      "image-url": "https://goteo.org/img/medium/mc-web-slide-4-big.png",
+      "lang": "es",
+      "latitude": null,
+      "longitude": null,
+      "minimum": 7200.0,
+      "name": "Move Commons",
+      "node": "goteo",
+      "optimum": 10000.0,
+      "owner": "acomunes",
+      "owner-name": "Asociaci\u00f3n Comunes",
+      "project-url": "https://goteo.org/project/move-commons",
+      "region": null,
+      "social-commitment-id": null,
+      "status": "unfunded"
+    },
+    {
+      "amount": 271.0,
+      "date-created": "Fri, 13 May 2011 00:00:00 +0200",
+      "date-published": "Thu, 03 Nov 2011 00:00:00 +0100",
+      "description-short": "Proceso de recopilaci\u00f3n, formaci\u00f3n e impresi\u00f3n personalizada con tipograf\u00eda m\u00f3vil",
+      "id": "todojunto-letterpress",
+      "image-url": "https://goteo.org/img/medium/todojuntoletterpress14.jpg",
+      "lang": "es",
+      "latitude": null,
+      "longitude": null,
+      "minimum": 1900.0,
+      "name": "Todojunto Letterpress",
+      "node": "goteo",
+      "optimum": 2500.0,
+      "owner": "todojunto",
+      "owner-name": "Todojunto",
+      "project-url": "https://goteo.org/project/todojunto-letterpress",
+      "region": null,
+      "social-commitment-id": null,
+      "status": "unfunded"
+    },
+    {
+      "amount": 2275.0,
+      "date-created": "Thu, 01 Sep 2011 00:00:00 +0200",
+      "date-published": "Thu, 03 Nov 2011 00:00:00 +0100",
+      "description-short": "Historias para aprender, construir y divertirse en torno a la cultura libre",
+      "id": "cuentojuegos-robocicla",
+      "image-url": "https://goteo.org/img/medium/trabajando_1.jpg",
+      "lang": "es",
+      "latitude": 37.38909240000000,
+      "longitude": -5.98445890000000,
+      "minimum": 3200.0,
+      "name": "CuentoJuegos Digitales Robocicla",
+      "node": "goteo",
+      "optimum": 4450.0,
+      "owner": "robocicla",
+      "owner-name": "Robocicla",
+      "project-url": "https://goteo.org/project/cuentojuegos-robocicla",
+      "region": "Andalusia",
+      "social-commitment-id": null,
+      "status": "unfunded"
+    },
+    {
+      "amount": 7641.0,
+      "date-created": "Fri, 09 Sep 2011 00:00:00 +0200",
+      "date-published": "Thu, 03 Nov 2011 00:00:00 +0100",
+      "description-short": "Biblioteca digital colaborativa de textos libres",
+      "id": "bookcamping",
+      "image-url": "https://goteo.org/img/medium/thepromo22-goteo.png",
+      "lang": "es",
+      "latitude": 40.41677540000000,
+      "longitude": -3.70379020000000,
+      "minimum": 5160.0,
+      "name": "bookcamping",
+      "node": "goteo",
+      "optimum": 10060.0,
+      "owner": "bookcamping",
+      "owner-name": "#bookcamping",
+      "project-url": "https://goteo.org/project/bookcamping",
+      "region": "Community of Madrid",
+      "social-commitment-id": null,
+      "status": "fulfilled"
+    },
+    {
+      "amount": 446.0,
+      "date-created": "Tue, 13 Sep 2011 00:00:00 +0200",
+      "date-published": "Thu, 03 Nov 2011 00:00:00 +0100",
+      "description-short": "Una aplicaci\u00f3n para denunciar y combatir los vertederos ilegales in situ",
+      "id": "trash-alert",
+      "image-url": "https://goteo.org/img/medium/trashalert-video-11.jpg",
+      "lang": "es",
+      "latitude": 38.15952660000000,
+      "longitude": -0.80202840000000,
+      "minimum": 3700.0,
+      "name": "Trash Alert!",
+      "node": "goteo",
+      "optimum": 5100.0,
+      "owner": "adamsan",
+      "owner-name": "Fred Adam",
+      "project-url": "https://goteo.org/project/trash-alert",
+      "region": "Comunidad Valenciana",
+      "social-commitment-id": null,
+      "status": "unfunded"
+    },
+    {
+      "amount": 6138.0,
+      "date-created": "Thu, 15 Sep 2011 00:00:00 +0200",
+      "date-published": "Thu, 03 Nov 2011 00:00:00 +0100",
+      "description-short": "Tool for accessing and creating information requests to Spanish public bodies",
+      "id": "tuderechoasaber.es",
+      "image-url": "https://goteo.org/img/medium/astheeu_1r.png",
+      "lang": "es",
+      "latitude": null,
+      "longitude": null,
+      "minimum": 4100.0,
+      "name": "tuderechoasaber.es",
+      "node": "goteo",
+      "optimum": 5700.0,
+      "owner": "davidcabo",
+      "owner-name": "David Cabo",
+      "project-url": "https://goteo.org/project/tuderechoasaber.es",
+      "region": null,
+      "social-commitment-id": "5",
+      "status": "fulfilled"
+    },
+    {
+      "amount": 8380.0,
+      "date-created": "Sat, 29 Oct 2011 00:00:00 +0200",
+      "date-published": "Wed, 07 Dec 2011 00:00:00 +0100",
+      "description-short": "Integral 2.0 system for smart gifts - Give love, not waste!",
+      "id": "infinit-loop",
+      "image-url": "https://goteo.org/img/medium/imatge2_1r.gif",
+      "lang": "es",
+      "latitude": null,
+      "longitude": null,
+      "minimum": 7600.0,
+      "name": "INFINIT Loop",
+      "node": "barcelona",
+      "optimum": 11100.0,
+      "owner": "tarpuna",
+      "owner-name": "Didacfb",
+      "project-url": "https://goteo.org/project/infinit-loop",
+      "region": null,
+      "social-commitment-id": null,
+      "status": "fulfilled"
+    },
+    {
+      "amount": 275.0,
+      "date-created": "Wed, 02 Nov 2011 00:00:00 +0100",
+      "date-published": "Tue, 13 Dec 2011 00:00:00 +0100",
+      "description-short": "Juegos de mesa liberados bajo licencia Creative Commons",
+      "id": "doce-meses-doce-juegos",
+      "image-url": "https://goteo.org/img/medium/goteo06r.png",
+      "lang": "es",
+      "latitude": null,
+      "longitude": null,
+      "minimum": 1400.0,
+      "name": "Doce meses, doce juegos",
+      "node": "goteo",
+      "optimum": 1900.0,
+      "owner": "eximeno",
+      "owner-name": "Santiago Eximeno",
+      "project-url": "https://goteo.org/project/doce-meses-doce-juegos",
+      "region": null,
+      "social-commitment-id": null,
+      "status": "unfunded"
+    },
+    {
+      "amount": 815.0,
+      "date-created": "Thu, 03 Nov 2011 00:00:00 +0100",
+      "date-published": "Mon, 19 Dec 2011 00:00:00 +0100",
+      "description-short": "Documental y tutoriales sobre estrategias creativas aplicadas al \u00e1mbito deportivo",
+      "id": "passiOn",
+      "image-url": "https://goteo.org/img/medium/videos-jugadasr.jpg",
+      "lang": "es",
+      "latitude": 38.73402940000000,
+      "longitude": -3.01157140000000,
+      "minimum": 5235.0,
+      "name": "Passi\u00f3n - Otro deporte es posible",
+      "node": "goteo",
+      "optimum": 10565.0,
+      "owner": "ki",
+      "owner-name": "fur alle falle",
+      "project-url": "https://goteo.org/project/passiOn",
+      "region": "Castilla-La Mancha",
+      "social-commitment-id": null,
+      "status": "unfunded"
+    }
+  ],
+  "meta": {
+    "lang": [
+      "en"
+    ],
+    "limit": 10,
+    "page": 0,
+    "total": 1537
+  },
+  "time-elapsed": 1.1025047302246094
+}
+</code></pre>
+
+<p><a name="project"></a></p>
+
+<h2>/projects/{PROJECT_ID}</h2>
+
+<p>Gets information about a single project.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/projects/llevamealhuerto
+</code></pre>
+
+<h3>Filters available:</h3>
+
+<ul>
+<li>No filters are available in this endpoint</li>
+<li><strong>{PROJECT_ID}</strong> must be the unique identifier of the project</li>
+</ul>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="ProjectFull">ProjectFull</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> about </td>
+<td> string </td>
+<td> About the project or his creators </td>
+</tr>
+<tr>
+<td> amount </td>
+<td> number </td>
+<td> Currently achieved amount for the project </td>
+</tr>
+<tr>
+<td> categories </td>
+<td> array </td>
+<td> Non-economical detailed list of necessities &#9758; <a href="#Category">Category</a> </td>
+</tr>
+<tr>
+<td> costs </td>
+<td> array </td>
+<td> Economical detailed list of necessities &#9758; <a href="#ProjectCost">ProjectCost</a> </td>
+</tr>
+<tr>
+<td> currency </td>
+<td> string </td>
+<td> Currency used in the project (ISO4217 Format) </td>
+</tr>
+<tr>
+<td> currency-rate </td>
+<td> number </td>
+<td> Currency rate when the project was created (if was not EUR) </td>
+</tr>
+<tr>
+<td> date-closed </td>
+<td> string </td>
+<td> Date when the project was closed (if was a failed project) RFC822 format </td>
+</tr>
+<tr>
+<td> date-created </td>
+<td> string </td>
+<td> Date when the project was created RFC822 format </td>
+</tr>
+<tr>
+<td> date-passed </td>
+<td> string </td>
+<td> Date when the project passed the first round (reached the minimum) RFC822 format </td>
+</tr>
+<tr>
+<td> date-published </td>
+<td> string </td>
+<td> Date when the project was published RFC822 format </td>
+</tr>
+<tr>
+<td> date-succeeded </td>
+<td> string </td>
+<td> Date when the project was succeeded RFC822 format </td>
+</tr>
+<tr>
+<td> date-updated </td>
+<td> string </td>
+<td> Date when the project was updated RFC822 format </td>
+</tr>
+<tr>
+<td> description </td>
+<td> string </td>
+<td> Full description of the project </td>
+</tr>
+<tr>
+<td> description-short </td>
+<td> string </td>
+<td> Short description of the project </td>
+</tr>
+<tr>
+<td> goal </td>
+<td> string </td>
+<td> Goal of the project </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> Project unique identifier </td>
+</tr>
+<tr>
+<td> image-gallery </td>
+<td> array </td>
+<td> List of images for the project &#9758; <a href="#ProjectGallery">ProjectGallery</a> </td>
+</tr>
+<tr>
+<td> image-url </td>
+<td> string </td>
+<td> URL with the main image of the project </td>
+</tr>
+<tr>
+<td> image-url-big </td>
+<td> string </td>
+<td> URL with the main image (big size) of the project </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Main language of the project </td>
+</tr>
+<tr>
+<td> location </td>
+<td> array </td>
+<td> Location of the project &#9758; <a href="#ProjectLocation">ProjectLocation</a> </td>
+</tr>
+<tr>
+<td> minimum </td>
+<td> number </td>
+<td> Minimum amount to achieve to consider the project succeeded </td>
+</tr>
+<tr>
+<td> motivation </td>
+<td> string </td>
+<td> Motivation text writen by the owner of the project </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the project </td>
+</tr>
+<tr>
+<td> needs </td>
+<td> array </td>
+<td> Non-economical detailed list of necessities &#9758; <a href="#ProjectNeed">ProjectNeed</a> </td>
+</tr>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Node where the project was created originally </td>
+</tr>
+<tr>
+<td> optimum </td>
+<td> number </td>
+<td> Optimum amount to achieve for the project to achieve all his goals </td>
+</tr>
+<tr>
+<td> owner </td>
+<td> string </td>
+<td> Project owner's user ID </td>
+</tr>
+<tr>
+<td> owner-name </td>
+<td> string </td>
+<td> Project owner's user name </td>
+</tr>
+<tr>
+<td> project-url </td>
+<td> string </td>
+<td> URL where for the project </td>
+</tr>
+<tr>
+<td> rewards </td>
+<td> array </td>
+<td> List of rewards for the project &#9758; <a href="#ProjectReward">ProjectReward</a> </td>
+</tr>
+<tr>
+<td> scope </td>
+<td> string </td>
+<td> Scope of the project </td>
+</tr>
+<tr>
+<td> social-commitment </td>
+<td> string </td>
+<td> SocialCommitment title for the project </td>
+</tr>
+<tr>
+<td> social-commitment-description </td>
+<td> string </td>
+<td> SocialCommitment description for the project </td>
+</tr>
+<tr>
+<td> social-commitment-id </td>
+<td> string </td>
+<td> SocialCommitment unique identifier of the project </td>
+</tr>
+<tr>
+<td> status </td>
+<td> string </td>
+<td> Status of the project </td>
+</tr>
+<tr>
+<td> translations </td>
+<td> array </td>
+<td> All available translations in a list indexed by language in <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1</a> format &#9758; <a href="#ProjectTranslation">ProjectTranslation</a> </td>
+</tr>
+<tr>
+<td> user </td>
+<td> string </td>
+<td> Project owner's user Object </td>
+</tr>
+<tr>
+<td> video-url </td>
+<td> string </td>
+<td> URL with the main video of the project </td>
+</tr>
+<tr>
+<td> widget-url </td>
+<td> string </td>
+<td> URL with the main widget (embed code) of the project </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Category">Category</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> description </td>
+<td> string </td>
+<td> Category short description </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> Category unique identifier </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Category name </td>
+</tr>
+<tr>
+<td> social-commitment </td>
+<td>  </td>
+<td> Non-economical detailed list of necessities &#9758; <a href="#SocialCommitment">SocialCommitment</a> </td>
+</tr>
+<tr>
+<td> total-projects </td>
+<td> integer </td>
+<td> Number of published projects in the category </td>
+</tr>
+<tr>
+<td> total-users </td>
+<td> integer </td>
+<td> Number of users interested in the category </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="ProjectCost">ProjectCost</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> amount </td>
+<td> number </td>
+<td> Cost's budget amount </td>
+</tr>
+<tr>
+<td> date-from </td>
+<td> string </td>
+<td> Date when to start the task associated with the cost (if any) </td>
+</tr>
+<tr>
+<td> date-to </td>
+<td> string </td>
+<td> Date when to finish the task associated with the cost (if any) </td>
+</tr>
+<tr>
+<td> description </td>
+<td> string </td>
+<td> Cost's description </td>
+</tr>
+<tr>
+<td> id </td>
+<td> integer </td>
+<td> Cost's unique identifier </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Cost's title </td>
+</tr>
+<tr>
+<td> required </td>
+<td> string </td>
+<td> Whether is an optional or not cost (optional costs count for the optimum project's amount) </td>
+</tr>
+<tr>
+<td> type </td>
+<td> string </td>
+<td> Cost's type (one of <code>task</code>, <code>structure</code>, <code>material</code>) </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="ProjectGallery">ProjectGallery</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> image-url </td>
+<td> string </td>
+<td> URL image gallery item </td>
+</tr>
+<tr>
+<td> resource-url </td>
+<td> string </td>
+<td> URL resource (link) associated with the gallery item (if any) </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="ProjectLocation">ProjectLocation</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> city </td>
+<td> string </td>
+<td> City location of the project (language may vary) </td>
+</tr>
+<tr>
+<td> country </td>
+<td> string </td>
+<td> Country name of the project (language may vary) </td>
+</tr>
+<tr>
+<td> country-code </td>
+<td> string </td>
+<td> Country code of the project in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1</a> format </td>
+</tr>
+<tr>
+<td> latitude </td>
+<td> number </td>
+<td> Project's location latitude coordinate </td>
+</tr>
+<tr>
+<td> longitude </td>
+<td> number </td>
+<td> Project's location longitude coordinate </td>
+</tr>
+<tr>
+<td> region </td>
+<td> string </td>
+<td> Region location of the project (language may vary) </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="ProjectNeed">ProjectNeed</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> description </td>
+<td> string </td>
+<td> Description for the non-economical desired project's contribution </td>
+</tr>
+<tr>
+<td> id </td>
+<td> integer </td>
+<td> Non-economical desired contribution unique identifier </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name for the non-economical desired project's contribution </td>
+</tr>
+<tr>
+<td> type </td>
+<td> string </td>
+<td> Type fot the non-economical necessity (one of <code>lend</code>, <code>task</code>) </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="ProjectReward">ProjectReward</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> amount </td>
+<td> number </td>
+<td> Minimum amount required for a invest to apply this reward </td>
+</tr>
+<tr>
+<td> available-units </td>
+<td> integer </td>
+<td> Reward's item units that are still available to choose. </td>
+</tr>
+<tr>
+<td> description </td>
+<td> string </td>
+<td> Reward's item description </td>
+</tr>
+<tr>
+<td> icon-url </td>
+<td> string </td>
+<td> Reward's item URL icon </td>
+</tr>
+<tr>
+<td> id </td>
+<td> integer </td>
+<td> Reward's unique identifier </td>
+</tr>
+<tr>
+<td> license </td>
+<td> string </td>
+<td> Reward's associated license ID (if any, only for <code>type=social</code>) </td>
+</tr>
+<tr>
+<td> license-description </td>
+<td> string </td>
+<td> Reward's associated license description (if any, only for <code>type=social</code>) </td>
+</tr>
+<tr>
+<td> license-name </td>
+<td> string </td>
+<td> Reward's associated license name (if any, only for <code>type=social</code>) </td>
+</tr>
+<tr>
+<td> license-svg-url </td>
+<td> string </td>
+<td> Reward's associated license SVG image URL resource (if any, only for <code>type=social</code>) </td>
+</tr>
+<tr>
+<td> license-url </td>
+<td> string </td>
+<td> Reward's associated license URL containing its terms (if any, only for <code>type=social</code>) </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Reward's item name </td>
+</tr>
+<tr>
+<td> type </td>
+<td> string </td>
+<td> Reward's item type (one of <code>social</code>, <code>individual</code>) </td>
+</tr>
+<tr>
+<td> units </td>
+<td> integer </td>
+<td> Total units for this reward </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="ProjectTranslation">ProjectTranslation</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <em>misc</em> </td>
+<td> string </td>
+<td> Every item of a translation will have the same structure as the parent object with the same fields (<strong>and those fields only</strong>) translated. Non translated items won't be displayed at all.<br><strong>costs</strong>, <strong>rewards</strong> and <strong>needs</strong> may be translated as well (in this case the translated array generated will use the ID as a key). </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "about": "llevamealhuerto.com se caracteriza por transmitir conocimientos de agricultura ecol\u00f3gica y sostenible, a trav\u00e9s de breves p\u00edldoras audiovisuales, de manera sencilla, cercana, f\u00e1cil y con buen humor. \r\n\r\nNos preocupamos de la calidad, tanto a nivel de contenidos como t\u00e9cnica, para conseguir llegar a la gente y resultarles de utilidad. Nuestro reto es convertirnos en un referente dentro del mundo de las huertas urbanas y alternativas, un espacio verde digital que se retroalimente de comentarios, experiencias de los/as propios/as hortelanos/as y otras noticias de inter\u00e9s.",
+  "amount": 5210.0,
+  "categories": [
+    {
+      "description": "Proyectos con el objetivo de informar, denunciar, comunicar (por ejemplo periodismo ciudadano, documentales, blogs, programas de radio).",
+      "id": 6,
+      "name": "Comunicativo"
+    },
+    {
+      "description": "Proyectos donde el objetivo primordial es la formaci\u00f3n o el aprendizaje. ",
+      "id": 10,
+      "name": "Educativo"
+    },
+    {
+      "description": "Proyectos con objetivos art\u00edsticos y culturales en un sentido amplio.",
+      "id": 11,
+      "name": "Cultural"
+    },
+    {
+      "description": "Proyectos relacionados con el cuidado del medio ambiente, la sostenibilidad y/o la diversidad biol\u00f3gica.",
+      "id": 13,
+      "name": "Ecol\u00f3gico"
+    }
+  ],
+  "costs": [
+    {
+      "amount": 2800.0,
+      "date-from": "Thu, 13 Sep 2012 00:00:00 +0200",
+      "date-to": "Thu, 13 Sep 2012 00:00:00 +0200",
+      "description": "Los videos son la esencia de este proyecto y creemos que por el hecho de emitirse en Internet  no hay que escatimar en calidad t\u00e9cnica, por ello nos hemos propuesto mejorar el equipo de grabaci\u00f3n con una c\u00e1mara profesional, un micro decente y tal vez alg\u00fan foco. ",
+      "id": 3054,
+      "name": "Equipo audiovisual ",
+      "required": "True",
+      "type": "material"
+    },
+    {
+      "amount": 2200.0,
+      "date-from": "Mon, 19 Nov 2012 00:00:00 +0100",
+      "date-to": "Mon, 14 Jan 2013 00:00:00 +0100",
+      "description": "Necesitamos un ordenador con un procesador m\u00e1s potente para manejar im\u00e1genes HD a la hora de editar.",
+      "id": 3085,
+      "name": "Equipo de edici\u00f3n",
+      "required": "False",
+      "type": "material"
+    },
+    {
+      "amount": 1000.0,
+      "date-from": "Mon, 19 Nov 2012 00:00:00 +0100",
+      "date-to": "Thu, 20 Dec 2012 00:00:00 +0100",
+      "description": "Queremos convertir nuestra web en un medio realmente eficiente e interactivo con nuestro p\u00fablico, creemos que necesita mejorar el dise\u00f1o para convertirla en una plataforma m\u00e1s atractiva, sencilla y que invite a intervenir y profesionalizar la programaci\u00f3n para lograr un mejor posicionamiento.",
+      "id": 3053,
+      "name": "Dise\u00f1o y programaci\u00f3n profesional de la web",
+      "required": "True",
+      "type": "task"
+    },
+    {
+      "amount": 1400.0,
+      "date-from": "Mon, 11 Mar 2013 00:00:00 +0100",
+      "date-to": "Mon, 10 Jun 2013 00:00:00 +0200",
+      "description": "\"Huertalizaci\u00f3n\" se trata de una nueva secci\u00f3n para mostrar, compartir y expandir las iniciativas de huertas urbanas, azoteas verdes, proyectos formativos en ciudades de todo el mundo. En el piloto queremos conocer las iniciativas de tres ciudades: Sevilla, Barcelona y Madrid a trav\u00e9s de una serie de reportajes que muestren sus experiencias en huertas urbanas y huertos compartidos, balcones comestibles y acciones sociales y formativas en torno al cultivo de la tierra.",
+      "id": 3083,
+      "name": "Programa piloto nueva secci\u00f3n \"Huertalizaci\u00f3n\"",
+      "required": "True",
+      "type": "task"
+    },
+    {
+      "amount": 1800.0,
+      "date-from": "Mon, 20 May 2013 00:00:00 +0200",
+      "date-to": "Mon, 14 Oct 2013 00:00:00 +0200",
+      "description": "Nos gustar\u00eda cubrir con nuestros reportajes algunas de las iniciativas que se est\u00e1n desarrollando en otros lugares de Europa en torno a las huertas urbanas, las azoteas verdes y los m\u00e9todos para cultivar en casa. Estamos pensando en Berlin, Londres y Par\u00eds que cuentan con iniciativas \"copiables\" en nuestras ciudades. ",
+      "id": 3086,
+      "name": "Dos pilotos m\u00e1s para la secci\u00f3n \"huertalizaci\u00f3n\"",
+      "required": "False",
+      "type": "task"
+    }
+  ],
+  "currency": "EUR",
+  "currency-rate": 1.0,
+  "date-closed": null,
+  "date-created": "Wed, 11 Jul 2012 00:00:00 +0200",
+  "date-passed": "Tue, 30 Oct 2012 00:00:00 +0100",
+  "date-published": "Thu, 20 Sep 2012 00:00:00 +0200",
+  "date-succeeded": "Sun, 09 Dec 2012 00:00:00 +0100",
+  "date-updated": null,
+  "description": "Un programa audiovisual on-line para aprender a cultivar en tu balc\u00f3n o en el huerto. Vivas d\u00f3nde vivas, en el campo, en la ciudad o en un pueblo, tanto si dispones de tierra propia, colectiva o solo de unas macetas, llevamealhuerto.com intenta transmitirte ese amor a la tierra, a comer rico, a implicarnos en el proceso de generar nuestra comida, eso s\u00ed \u00a1pas\u00e1ndonoslo bien!\r\n\r\nCada v\u00eddeo es una peque\u00f1a p\u00edldora pr\u00e1ctica, de la mano de I\u00f1aki Melgosa, un joven agricultor de Mung\u00eda, que nos cuenta sus trucos y consejos. Adem\u00e1s de esta secci\u00f3n llamada 'Balc\u00f3n comestible' el programa tiene otras dos: 'A pie de mata', donde recogemos iniciativas y proyectos alternativos relacionados con el primer sector y 'Baserritarrak', que pone en valor la sabidur\u00eda de nuestros mayores sobre la tierra y sus productos. \r\n\r\nLa difusi\u00f3n del programa es a trav\u00e9s de Internet, desde nuestra web y a trav\u00e9s de distintas redes sociales, lo que nos permite estar en contacto con todo un movimiento global de huertalizaci\u00f3n del mundo y de nuestras vidas.",
+  "description-short": "Programa audiovisual on-line para aprender a cultivar en el balc\u00f3n y/o huerto",
+  "goal": "Comenzamos a emitir llevamealhuerto.com hace s\u00f3lo unos meses -el pasado 14 de abril-, y ya llevamos producidos m\u00e1s de 60 v\u00eddeos. \r\n\r\nVemos que a la gente le interesa la iniciativa y por eso queremos dar un peque\u00f1o paso adelante: \r\n- Adquirir un equipo de producci\u00f3n audiovisual que nos permita poder trabajar con m\u00e1s autonom\u00eda. \r\n- Mejorar la arquitectura de la web.\r\n- Evolucionar toda la parte gr\u00e1fica.\r\n- Subtitular v\u00eddeos en otros idiomas.\r\n- Mejorar la comunicaci\u00f3n on-line y el posicionamiento.\r\n- As\u00ed como otras peque\u00f1as acciones que ayuden a mejorar la calidad del programa, el dinamismo, usabilidad e interactividad de la web, para as\u00ed llegar a m\u00e1s personas.\r\n\r\nAdem\u00e1s, queremos empezar una nueva secci\u00f3n: 'Huertalizaci\u00f3n' que sirva para divulgar experiencias de agricultura ecol\u00f3gica alternativa y proyectos sostenibles relacionados con la tierra y los espacios urbanos de todo el mundo.",
+  "id": "llevamealhuerto",
+  "image-gallery": [
+    {
+      "image-url": "https://goteo.org/img/big/img-2931.jpg",
+      "resource-url": null
+    },
+    {
+      "image-url": "https://goteo.org/img/big/img-2936.jpg",
+      "resource-url": null
+    },
+    {
+      "image-url": "https://goteo.org/img/big/img-3081.jpg",
+      "resource-url": null
+    },
+    {
+      "image-url": "https://goteo.org/img/big/inaki-y-senora.jpeg",
+      "resource-url": null
+    },
+    {
+      "image-url": "https://goteo.org/img/big/20120315-img-0143.jpg",
+      "resource-url": null
+    },
+    {
+      "image-url": "https://goteo.org/img/big/20120315-img-0150.jpg",
+      "resource-url": null
+    },
+    {
+      "image-url": "https://goteo.org/img/big/20120403-img-0331.jpg",
+      "resource-url": null
+    },
+    {
+      "image-url": "https://goteo.org/img/big/20120403-img-0338.jpg",
+      "resource-url": null
+    }
+  ],
+  "image-url": "https://goteo.org/img/medium/inaki-y-senora.jpeg",
+  "image-url-big": "https://goteo.org/img/big/inaki-y-senora.jpeg",
+  "lang": "es",
+  "location": null,
+  "minimum": 5200.0,
+  "motivation": "llevamealhuerto.com va dirigido a gente que quiera huertalizar su vida, gente joven o madura que se sienta atra\u00eda por la posibilidad de cultivar, ya sea en el balc\u00f3n o la terraza, participando en alguna iniciativa de huerto urbano en su barrio o sacando partido a ese peque\u00f1a parcela que ahora est\u00e1 llena de 'maleza' al lado de casa.  Por supuesto, es una iniciativa para los/as defensores/as de la soberan\u00eda alimenticia y los amantes de los sabores tradicionales. En definitiva, un proyecto dirigido a todas aquellas personas que hayan entendido la importancia de transformar lo cercano y cotidiano para cambiar algo tan grande como el mundo moderno. ",
+  "name": "llevamealhuerto.com",
+  "needs": [
+    {
+      "description": "Nos gustar\u00eda subtitular nuestros v\u00eddeos al euskera, al ingl\u00e9s y a otros idiomas, porque cuantos m\u00e1s seamos mejor.",
+      "id": 1129,
+      "name": "Subt\u00edtulos",
+      "type": "task"
+    },
+    {
+      "description": "Nos vendr\u00eda muy bien conocer aplicaciones, buenos h\u00e1bitos y estrategias para sacarle m\u00e1s rendimiento a las redes sociales y nuestra Web.",
+      "id": 1130,
+      "name": "Nociones avanzadas en manejo de redes y marketing on line",
+      "type": "task"
+    },
+    {
+      "description": "Si quieres ayudarnos a mejorar la web, su posicionamiento, su funcionalidad, su dise\u00f1o,...",
+      "id": 1132,
+      "name": "Dise\u00f1o de la web",
+      "type": "task"
+    }
+  ],
+  "node": "euskadi",
+  "optimum": 9200.0,
+  "owner": "julieta",
+  "owner-name": "Llevamealhuerto.com",
+  "project-url": "https://goteo.org/project/llevamealhuerto",
+  "rewards": [
+    {
+      "amount": 0,
+      "available-units": 0,
+      "description": "Un gran racimo de sencillas, \u00fatiles y entretenidas p\u00edldoras audiovisuales con las que aprender-ense\u00f1ar a cultivar en cualquier pedazo de tierra que tengas disponible.",
+      "icon-url": "https://goteo.org/api/svg/icons/file.svg",
+      "id": 3437,
+      "license": "ccbyncnd",
+      "license-description": "Licencia Creative Commons (bienes comunes creativos) con reconocimiento de autor\u00eda, sin que se pueda hacer uso comercial ni otras obras derivadas",
+      "license-name": "CC - Reconocimiento - NoComercial - SinObraDerivada",
+      "license-svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
+      "license-url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.es_ES",
+      "name": "V\u00eddeo tutoriales",
+      "type": "social",
+      "units": 0
+    },
+    {
+      "amount": 0,
+      "available-units": 0,
+      "description": "A trav\u00e9s de los v\u00eddeos y sus secciones, de la web, el blog y las noticias relacionadas que difundimos procedentes de otras webs, blogs, redes sociales, etc. queremos, deseamos, intentamos,...aportar un granito de tierra al despertar de la conciencia terr\u00edcola, es decir, al sentimiento de agradecimiento y respeto a la Tierra.",
+      "icon-url": "https://goteo.org/api/svg/icons/other.svg",
+      "id": 3438,
+      "name": "Despertar el ADN terr\u00edcola",
+      "type": "social",
+      "units": 0
+    },
+    {
+      "amount": 5,
+      "available-units": 0,
+      "description": "Qui\u00e9nes colaboren con el proyecto aparecer\u00e1n en nuestra web como 'semillas honor\u00edficas' que ayudan al crecimiento y florecimiento de llevamealhuerto.com\r\n",
+      "icon-url": "https://goteo.org/api/svg/icons/thanks.svg",
+      "id": 3418,
+      "name": "'Semilla honor\u00edfica'",
+      "type": "individual",
+      "units": 0
+    },
+    {
+      "amount": 25,
+      "available-units": 0,
+      "description": "Te mandaremos un DVD que recopile todos los v\u00eddeotutoriales que hayamos grabado hasta el momento (ya llevamos m\u00e1s de 60!) + Reconocimeinto",
+      "icon-url": "https://goteo.org/api/svg/icons/product.svg",
+      "id": 3496,
+      "name": "DVD con todos los v\u00eddeotutoriales",
+      "type": "individual",
+      "units": 0
+    },
+    {
+      "amount": 40,
+      "available-units": 8,
+      "description": "Cesta mediana (2 personas) de verduras y hortalizas de temporada procedentes del caser\u00edo Burgobarri de Mungia, cultivadas por I\u00f1aki, nuestro presentador, a qui\u00e9n conocer\u00e1s personalmente cuando, el d\u00eda acordado, llame a tu puerta para entregarte en mano una cesta de productos del campo + el DVD recopilatorio de los v\u00eddeos emitidos en la Red + Reconocimiento. Las entregas s\u00f3lo se hacen en Bizkaia, pero si no vives por aqu\u00ed, seguro que tienes alguien a quien hacerle un buen regalo ;)",
+      "icon-url": "https://goteo.org/api/svg/icons/product.svg",
+      "id": 3495,
+      "name": "Cesta de productos de temporada de nuestra tierra",
+      "type": "individual",
+      "units": 20
+    },
+    {
+      "amount": 50,
+      "available-units": -6,
+      "description": "Cesta familiar (5 personas) de verduras y hortalizas de temporada procedentes del caser\u00edo Burgobarri de Mungia, cultivadas por I\u00f1aki, nuestro presentador, a qui\u00e9n conocer\u00e1s personalmente cuando, el d\u00eda acordado, llame a tu puerta para entregarte en mano una cesta de productos del campo + el DVD recopilatorio de los v\u00eddeos emitidos en la Red + Reconocimiento. Las entregas s\u00f3lo se hacen en Bizkaia, pero si no vives por aqu\u00ed, seguro que tienes alguien a quien hacerle un buen regalo ;)",
+      "icon-url": "https://goteo.org/api/svg/icons/product.svg",
+      "id": 3422,
+      "name": "Cesta familiar de productos de temporada de nuestra tierra",
+      "type": "individual",
+      "units": 20
+    },
+    {
+      "amount": 150,
+      "available-units": 0,
+      "description": "Una visita al lugar de cultivo (huerto, jard\u00edn, azotea, balc\u00f3n,..) m\u00e1s la elaboraci\u00f3n de un informe sobre los cultivos y materiales a emplear en funci\u00f3n del espacio, la orientaci\u00f3n, el clima y los gustos del usuario. Adem\u00e1s incluimos un dossier basado en los cursos formativos de I\u00f1aki destinado a ayudarte en el auto-cultivo. El precio incluye salida 40 kms a la redonda desde Bilbao y a partir de ah\u00ed un coste a\u00f1adido por kilometraje de  0,30\u20ac/km. Si est\u00e1s de acuerdo con el informe puedes encargarnos un segundo presupuesto en concepto de dise\u00f1o y materiales a emplear (jardineras, soportes, sustratos , plantas y semillas,...).\r\n+ DVD + Reconocimiento",
+      "icon-url": "https://goteo.org/api/svg/icons/service.svg",
+      "id": 3435,
+      "name": "Dise\u00f1o de balc\u00f3n, huerta o jard\u00edn personalizado",
+      "type": "individual",
+      "units": 0
+    },
+    {
+      "amount": 250,
+      "available-units": 0,
+      "description": "Tu logo o marca aparecer\u00e1 al principio de nuestros v\u00eddeos, en un total de 4 cap\u00edtulos, adem\u00e1s de mantener tu ense\u00f1a en nuestra web durante un mes.",
+      "icon-url": "https://goteo.org/api/svg/icons/service.svg",
+      "id": 3424,
+      "name": "Patrocinio de tu marca, producto o negocio",
+      "type": "individual",
+      "units": 0
+    },
+    {
+      "amount": 800,
+      "available-units": 1,
+      "description": "Cursos presenciales de 15 horas, a cargo de I\u00f1aki Melgosa, sobre agricultura sostenible, casera, adaptada al espacio y necesidades de las/los cultivadoras/es. El viaje y alojamiento de I\u00f1aki, si el curso se desarrolla muy lejos de Euskadi, correr\u00e1n a cargo de la organizaci\u00f3n, as\u00ed c\u00f3mo el local para impartirlo. \u00a1Aprovecha ahora esta oportunidad antes de que I\u00f1aki salte a la fama!",
+      "icon-url": "https://goteo.org/api/svg/icons/service.svg",
+      "id": 3425,
+      "name": "Formaci\u00f3n presencial",
+      "type": "individual",
+      "units": 2
+    }
+  ],
+  "scope": "global",
+  "social-commitment": {
+    "description": null,
+    "icon-url": null,
+    "id": 0,
+    "name": null
+  },
+  "social-commitment-description": null,
+  "social-commitment-id": null,
+  "status": "funded",
+  "time-elapsed": 0.5719428062438965,
+  "translations": {
+    "eu": {
+      "about": "llevamealhuerto.com se caracteriza por transmitir conocimientos de agricultura ecol\u00f3gica y sostenible, a trav\u00e9s de breves p\u00edldoras audiovisuales, de manera sencilla, cercana, f\u00e1cil y con buen humor. \r\n\r\nNos preocupamos de la calidad, tanto a nivel de contenidos como t\u00e9cnica, para conseguir llegar a la gente y resultarles de utilidad. Nuestro reto es convertirnos en un referente dentro del mundo de las huertas urbanas y alternativas, un espacio verde digital que se retroalimente de comentarios, experiencias de los/as propios/as hortelanos/as y otras noticias de inter\u00e9s.",
+      "categories": {
+        "10": {
+          "description": "Formakuntza edo ikaskuntza helburu nagusia duten proiektuak. ",
+          "name": "Hezigarria"
+        },
+        "11": {
+          "description": "Zentzu zabalean helburu artistiko eta kulturalak dituzten proiektuak. ",
+          "name": "Kulturala"
+        },
+        "13": {
+          "description": "Ingurumenaren zainketa, jasangarritasun eta/edo aniztasun biologikoarekin harremanetan dauden proiektuak.",
+          "name": "Ekologikoa"
+        },
+        "6": {
+          "description": "Berri ematea, salaketa, komunikazio helburua duten proiektuak (adibidez herri kazetaritza, dokumentalak. blogak, irrati programak).",
+          "name": "Komunikatiboa"
+        }
+      },
+      "description": "Un programa audiovisual on-line para aprender a cultivar en tu balc\u00f3n o en el huerto. Vivas d\u00f3nde vivas, en el campo, en la ciudad o en un pueblo, tanto si dispones de tierra propia, colectiva o solo de unas macetas, llevamealhuerto.com intenta transmitirte ese amor a la tierra, a comer rico, a implicarnos en el proceso de generar nuestra comida, eso s\u00ed \u00a1pas\u00e1ndonoslo bien!\r\n\r\nCada v\u00eddeo es una peque\u00f1a p\u00edldora pr\u00e1ctica, de la mano de I\u00f1aki Melgosa, un joven agricultor de Mung\u00eda, que nos cuenta sus trucos y consejos. Adem\u00e1s de esta secci\u00f3n llamada 'Balc\u00f3n comestible' el programa tiene otras dos: 'A pie de mata', donde recogemos iniciativas y proyectos alternativos relacionados con el primer sector y 'Baserritarrak', que pone en valor la sabidur\u00eda de nuestros mayores sobre la tierra y sus productos. \r\n\r\nLa difusi\u00f3n del programa es a trav\u00e9s de Internet, desde nuestra web y a trav\u00e9s de distintas redes sociales, lo que nos permite estar en contacto con todo un movimiento global de huertalizaci\u00f3n del mundo y de nuestras vidas.",
+      "description-short": "Balkoian eta ortuan lantzen ikasteteko on-line ikus-entzunezko programa.",
+      "motivation": "llevamealhuerto.com va dirigido a gente que quiera huertalizar su vida, gente joven o madura que se sienta atra\u00eda por la posibilidad de cultivar, ya sea en el balc\u00f3n o la terraza, participando en alguna iniciativa de huerto urbano en su barrio o sacando partido a ese peque\u00f1a parcela que ahora est\u00e1 llena de 'maleza' al lado de casa.  Por supuesto, es una iniciativa para los/as defensores/as de la soberan\u00eda alimenticia y los amantes de los sabores tradicionales. En definitiva, un proyecto dirigido a todas aquellas personas que hayan entendido la importancia de transformar lo cercano y cotidiano para cambiar algo tan grande como el mundo moderno. ",
+      "social-commitment-description": null
+    }
+  },
+  "user": {
+    "date-created": "Wed, 11 Jul 2012 12:58:29 +0200",
+    "id": "julieta",
+    "name": "Llevamealhuerto.com",
+    "node": "euskadi",
+    "profile-image-url": "https://goteo.org/img/medium/logo-llah_1.png",
+    "profile-url": "https://goteo.org/user/profile/julieta"
+  },
+  "video-url": "http://youtu.be/jUOo7xMoPzI",
+  "widget-url": "https://goteo.org/widget/project/llevamealhuerto"
+}
+</code></pre>
+
+<p><a name="project"></a></p>
+
+<h2>/projects/{PROJECT_ID}/donors/</h2>
+
+<p>Lists all donors in a project</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/projects/llevamealhuerto/donors/
+</code></pre>
+
+<ul>
+<li><strong>{PROJECT_ID}</strong> must be the unique identifier of the project</li>
+</ul>
+
+
+<h3>Filters available:</h3>
+
+<p><strong>Some of the <a href="doc/filters.html">standard set of filters</a> can be applied here:</strong></p>
+
+<h3>Response values:</h3>
+
+<h5><a id="ResponseDonor">ResponseDonor</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> items </td>
+<td> array </td>
+<td> ... &#9758; <a href="#ProjectDonor">ProjectDonor</a> </td>
+</tr>
+<tr>
+<td> meta </td>
+<td>  </td>
+<td> ... &#9758; <a href="#MetaUser">MetaUser</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="ProjectDonor">ProjectDonor</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> anonymous </td>
+<td> boolean </td>
+<td> If the contributor is anonymous </td>
+</tr>
+<tr>
+<td> date-created </td>
+<td> string </td>
+<td> Date when the user was created RFC822 format </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> User unique identifier </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the user </td>
+</tr>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Node where the user was created originally </td>
+</tr>
+<tr>
+<td> profile-image-url </td>
+<td> string </td>
+<td> URL with the avatar (image) of the user </td>
+</tr>
+<tr>
+<td> profile-url </td>
+<td> string </td>
+<td> URL for the user profile </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="MetaUser">MetaUser</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> category </td>
+<td> array </td>
+<td> Only if filtering by category </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Only if filtering by from_date </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> array </td>
+<td> Only if filtering by lang </td>
+</tr>
+<tr>
+<td> limit </td>
+<td> integer </td>
+<td> Limit of results per page when retrieving a collection </td>
+</tr>
+<tr>
+<td> node </td>
+<td> array </td>
+<td> Only if filtering by node </td>
+</tr>
+<tr>
+<td> page </td>
+<td> integer </td>
+<td> Current page, <code>0</code> based (first page is zero) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> array </td>
+<td> Only if filtering by project </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Only if filtering by to_date </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Total elements available for the collection </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "id": "llevamealhuerto",
+  "items": [
+    {
+      "anonymous": false,
+      "date-created": "Wed, 28 Mar 2012 17:26:10 GMT",
+      "id": "achauton",
+      "name": "Adolfo Chaut\u00f3n P\u00e9rez",
+      "node": "goteo",
+      "profile-image-url": "https://goteo.org/img/medium/la-foto_20.jpg",
+      "profile-url": "https://goteo.org/user/profile/achauton"
+    },
+    {
+      "anonymous": false,
+      "date-created": "Fri, 05 Oct 2012 14:14:23 GMT",
+      "id": "adr-jataondo",
+      "name": "ADR Jata-Ondo",
+      "node": "euskadi",
+      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
+      "profile-url": "https://goteo.org/user/profile/adr-jataondo"
+    },
+    {
+      "anonymous": false,
+      "date-created": "Wed, 04 May 2011 00:00:00 GMT",
+      "id": "agallastegi",
+      "name": "Asier Gallastegi",
+      "node": "euskadi",
+      "profile-image-url": "https://goteo.org/img/medium/14344783-10209373787197828-5794167605490887725-n.j",
+      "profile-url": "https://goteo.org/user/profile/agallastegi"
+    },
+    {
+      "anonymous": false,
+      "date-created": "Mon, 07 Nov 2011 12:27:37 GMT",
+      "id": "aitoraloa",
+      "name": "Aitor Aloa",
+      "node": "euskadi",
+      "profile-image-url": "https://goteo.org/img/medium/180691-1747178875562-385278-n.jpg",
+      "profile-url": "https://goteo.org/user/profile/aitoraloa"
+    },
+    {
+      "anonymous": false,
+      "date-created": "Tue, 09 Oct 2012 14:02:11 GMT",
+      "id": "alejandro-bm",
+      "name": "Alejandro Bachiller",
+      "node": "goteo",
+      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
+      "profile-url": "https://goteo.org/user/profile/alejandro-bm"
+    },
+    {
+      "anonymous": true,
+      "date-created": "Wed, 24 Oct 2012 15:02:27 GMT",
+      "id": null,
+      "name": "Anonymous",
+      "node": "goteo",
+      "profile-image-url": null,
+      "profile-url": null
+    },
+    {
+      "anonymous": false,
+      "date-created": "Mon, 01 Oct 2012 19:52:09 GMT",
+      "id": "alexander",
+      "name": "Alexander Borde",
+      "node": "goteo",
+      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
+      "profile-url": "https://goteo.org/user/profile/alexander"
+    },
+    {
+      "anonymous": false,
+      "date-created": "Sat, 27 Oct 2012 13:04:49 GMT",
+      "id": "alfrealday",
+      "name": "alfrealday",
+      "node": "euskadi",
+      "profile-image-url": "https://goteo.org/img/medium/alfrealday-ok.jpg",
+      "profile-url": "https://goteo.org/user/profile/alfrealday"
+    },
+    {
+      "anonymous": false,
+      "date-created": "Sun, 20 Nov 2011 07:04:27 GMT",
+      "id": "alorza",
+      "name": "Alberto Ortiz de Zarate",
+      "node": "euskadi",
+      "profile-image-url": "https://goteo.org/img/medium/alorzar.jpg",
+      "profile-url": "https://goteo.org/user/profile/alorza"
+    },
+    {
+      "anonymous": false,
+      "date-created": "Thu, 27 Sep 2012 15:11:11 GMT",
+      "id": "ametsarte",
+      "name": "Ametsarte",
+      "node": "goteo",
+      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
+      "profile-url": "https://goteo.org/user/profile/ametsarte"
+    }
+  ],
+  "meta": {
+    "lang": [
+      "en"
+    ],
+    "limit": 10,
+    "page": 0,
+    "total": 80
+  },
+  "time-elapsed": 0.04423236846923828
+}
+</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+ -->
+<script src="/assets/highlight.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62675757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+
+</html>

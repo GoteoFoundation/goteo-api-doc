@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Goteo API : Matchfunding calls</title>
+  <meta name="description" content="">
+
+
+  <link rel="stylesheet" href="/assets/assemble.css">
+  <link rel="stylesheet" href="/assets/github.css">
+  <link rel="stylesheet" href="/assets/goteo.css">
+  
+  <link rel="canonical" href="https://developers.goteo.org/doc/calls.html">
+  
+
+  </head>
+
+  <body style="background: white;">
+  <div class="wrapper">
+
+  
+      <!-- Navbar component
+================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png"></a>
+<!--       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="/about-goteo">About Goteo</a></li>
+          <li><a href="/doc">API Docs</a></li>
+          <li><a href="/apps">Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+      <div class="col col-lg-3">
+        <div class="sidebar bs-sidebar">
+ 
+  <span class="nav-section-title">
+    API DOCS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/index.html">Introduction</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/responses.html">Responses</a></li>
+          
+        
+          
+          <li><a href="/doc/security.html">Security</a></li>
+          
+        
+          
+          <li><a href="/doc/filters.html">Filters</a></li>
+          
+        
+          
+          <li><a href="/doc/console.html">Live Console</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+          <li><a href="/doc/projects.html">Projects</a></li>
+          
+        
+          
+          <li><a href="/doc/users.html">Users</a></li>
+          
+        
+          
+          <li><a href="/doc/categories.html">Categories</a></li>
+          
+        
+          
+          <li><a href="/doc/footprints.html">Footprints</a></li>
+          
+        
+          
+          <li><a href="/doc/sdgs.html">Sustainable Development Goals</a></li>
+          
+        
+          
+          <li><a href="/doc/social_commitments.html">Social Commitments</a></li>
+          
+        
+          
+          <li><a href="/doc/licenses.html">Licenses</a></li>
+          
+        
+          
+          <li><a href="/doc/invests.html">Invests</a></li>
+          
+        
+          
+          <li class="active"><a href="/doc/calls.html">Matchfunding calls</a></li>
+          
+        
+          
+          <li><a href="/doc/matchers.html">Matchfunding matchers</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/reports.html">Reports</a></li>
+          
+        
+          
+          <li><a href="/doc/digests.html">Digests</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  
+
+  
+
+  
+
+</div>
+
+      </div>
+
+      <div class="col col-lg-9 panel-docs">
+        <h1>Matchfunding calls endpoint</h1>
+
+<p>This section gives you information about <a href="https://www.goteo.org/service/resources">matchfunding calls</a> in <a href="http://goteo.org">Goteo.org</a></p>
+
+<p>Since 2011, Goteo has been engaged in what we call our "Matchfunding", namely a pool of large donations from different types of public and private entities which make an annual commitment. These donations are allocated to specific projects through specific temporary calls tenders (using predesigned forms or ad hoc arrangements). This makes it possible to link up contributions from various kinds of entities, tailoring them to specific projects, certain thematic areas, geographical zones or types of returns and licenses.</p>
+
+<p>At Goteo we have created a social investment pool with contributions from public institutions, businesses, other private institutions and individuals. The aim is to bring about a multiplier effect and thus encourage co-responsible investment in projects that rely on the support of civil society.</p>
+
+<p><a name="calls"></a></p>
+
+<h2>/calls/</h2>
+
+<p>Obtains a list of matchfunding calls.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/calls/
+</code></pre>
+
+<h3>Filters available:</h3>
+
+<p><strong>The <a href="/doc/filters/">standard set of filters</a> applies to this endpoint with these particulars:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the calls originally created in that node(s) </td>
+</tr>
+<tr>
+<td> call </td>
+<td> string </td>
+<td> Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Filter by individual project(s). Multiple projects can be specified. Restricts the list to the calls that containing that projects </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Get results by specified lang. Multiple langs can be specified </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Filter from date. Ex. "2013-01-01". Restricts the list to the calls published in that range </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Filter until date.. Ex. "2014-01-01". Restricts the list to the calls published in that range </td>
+</tr>
+<tr>
+<td> category </td>
+<td> integer </td>
+<td> Filter by project category. Multiple categories can be specified. Restricts the list to the calls containing projects with interests in that category(ies) </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> integer </td>
+<td> Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the calls containing projects with that social commitment(s) </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> integer </td>
+<td> Filter by project Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the calls containing projects with that SDG(s) </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> integer </td>
+<td> Filter by project footprint. Multiple footprints can be specified. Restricts the list to the calls containing projects with that footprint(s) </td>
+</tr>
+<tr>
+<td> location </td>
+<td> number </td>
+<td> Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the calls with projects geolocated in that area </td>
+</tr>
+<tr>
+<td> page </td>
+<td> integer </td>
+<td> Page number (starting at 1) if the result can be paginated </td>
+</tr>
+<tr>
+<td> limit </td>
+<td> integer </td>
+<td> Page limit (maximum 50 results, defaults to 10) if the result can be paginated </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="ResponseCall">ResponseCall</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> items </td>
+<td> array </td>
+<td> ... &#9758; <a href="#Call">Call</a> </td>
+</tr>
+<tr>
+<td> meta </td>
+<td>  </td>
+<td> ... &#9758; <a href="#MetaProject">MetaProject</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Call">Call</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> amount-available </td>
+<td> number </td>
+<td> Available amount of cash to distribute among projects </td>
+</tr>
+<tr>
+<td> amount-committed </td>
+<td> number </td>
+<td> Maximum total amount of cash that was available to distribute among projects </td>
+</tr>
+<tr>
+<td> amount-peers </td>
+<td> number </td>
+<td> Amount of cash already distribute among projects </td>
+</tr>
+<tr>
+<td> amount-remaining </td>
+<td> number </td>
+<td> Amount of cash still available for distribute among projects </td>
+</tr>
+<tr>
+<td> call-location </td>
+<td> string </td>
+<td> Custom location value for the call </td>
+</tr>
+<tr>
+<td> call-url </td>
+<td> string </td>
+<td> URL where to visualize the matchfunding call </td>
+</tr>
+<tr>
+<td> date-opened </td>
+<td> string </td>
+<td> Date when the matchfunding call was opened </td>
+</tr>
+<tr>
+<td> date-published </td>
+<td> string </td>
+<td> Date when the matchfunding call was published </td>
+</tr>
+<tr>
+<td> date-succeeded </td>
+<td> string </td>
+<td> Date when the matchfunding call was succeeded </td>
+</tr>
+<tr>
+<td> description-short </td>
+<td> string </td>
+<td> Short description for the matchfunding call </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> Id of the matchfunding call </td>
+</tr>
+<tr>
+<td> image-url </td>
+<td> string </td>
+<td> URL for the main call's image </td>
+</tr>
+<tr>
+<td> latitude </td>
+<td> number </td>
+<td> Latitude coordinate for the call </td>
+</tr>
+<tr>
+<td> logo-url </td>
+<td> string </td>
+<td> URL for the call's logo </td>
+</tr>
+<tr>
+<td> longitude </td>
+<td> number </td>
+<td> Longitude coordinate for the call </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the matchfunding call </td>
+</tr>
+<tr>
+<td> owner </td>
+<td> string </td>
+<td> User ID of the call's owner </td>
+</tr>
+<tr>
+<td> owner-name </td>
+<td> string </td>
+<td> User name of the call's owner </td>
+</tr>
+<tr>
+<td> projects-active </td>
+<td> integer </td>
+<td> Active projects (still with a running campaign) in this matchfunding call </td>
+</tr>
+<tr>
+<td> projects-applied </td>
+<td> integer </td>
+<td> Total number of projects effectively applicating to this matchfunding call </td>
+</tr>
+<tr>
+<td> projects-succeeded </td>
+<td> integer </td>
+<td> Projects funded in this matchfunding call </td>
+</tr>
+<tr>
+<td> projects-total </td>
+<td> integer </td>
+<td> Total number of projects included into this matchfunding call </td>
+</tr>
+<tr>
+<td> radius </td>
+<td> number </td>
+<td> Radius (Km) of influence for the call (if any) </td>
+</tr>
+<tr>
+<td> region </td>
+<td> string </td>
+<td> Region location for the call </td>
+</tr>
+<tr>
+<td> sponsors </td>
+<td> array </td>
+<td> All available sponsors in a ordered list &#9758; <a href="#CallSponsor">CallSponsor</a> </td>
+</tr>
+<tr>
+<td> status </td>
+<td> string </td>
+<td> Status of the call, one of <code>pending</code>, <code>editing</code>, <code>reviewing</code>, <code>applying</code>, <code>published</code>, <code>succeeded</code>, <code>expired</code> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="MetaProject">MetaProject</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> category </td>
+<td> array </td>
+<td> Only if filtering by category </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> array </td>
+<td> Only if filtering by footprint </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Only if filtering by from_date </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> array </td>
+<td> Only if filtering by lang </td>
+</tr>
+<tr>
+<td> limit </td>
+<td> integer </td>
+<td> Limit of results per page when retrieving a collection </td>
+</tr>
+<tr>
+<td> location </td>
+<td> array </td>
+<td> Only if filtering by location </td>
+</tr>
+<tr>
+<td> node </td>
+<td> array </td>
+<td> Only if filtering by node </td>
+</tr>
+<tr>
+<td> page </td>
+<td> integer </td>
+<td> Current page, <code>0</code> based (first page is zero) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> array </td>
+<td> Only if filtering by project </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> array </td>
+<td> Only if filtering by Sustainable Development Goal </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> array </td>
+<td> Only if filtering by social_commitment </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Only if filtering by to_date </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Total elements available for the collection </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "items": [
+    {
+      "amount-available": 10000.0,
+      "amount-committed": 8000.0,
+      "amount-peers": 9446.0,
+      "amount-remaining": 2000.0,
+      "call-location": "Andaluc\u00eda",
+      "call-url": "https://goteo.org/call/unia-capital-riego",
+      "date-opened": "Wed, 27 Feb 2013 00:00:00 +0100",
+      "date-published": "Mon, 15 Apr 2013 00:00:00 +0200",
+      "date-succeeded": "Mon, 26 Aug 2013 00:00:00 +0200",
+      "description-short": "I Convocatoria #UNIACapitalRiego: Financiamos colectivamente proyectos de innovaci\u00f3n social y cultural. Reivindicamos el valor del procom\u00fan desde la Universidad, con procesos que cedan el protagonismo a la sociedad civil.",
+      "id": "unia-capital-riego",
+      "image-url": "https://goteo.org/img/medium/211x230-widget-uniacapitalriego-13-03r.jpg",
+      "latitude": 37.54427060000000,
+      "logo-url": "https://goteo.org/img/medium/250x124px-logo-uniacapitalriego-13-01.jpg",
+      "longitude": -4.72775279999996,
+      "name": "I Convocatoria #UNIACapitalRiego. Innovaci\u00f3n sociocultural",
+      "owner": "unia",
+      "owner-name": "UNIA",
+      "projects-active": 0,
+      "projects-applied": 38,
+      "projects-succeeded": 4,
+      "projects-total": 75,
+      "radius": 150,
+      "region": "Andaluc\u00eda",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/logo-unia-color-nuevo_2r.jpg",
+          "name": "UNIA",
+          "url": "http://www.unia.es/"
+        }
+      ],
+      "status": "succeeded"
+    },
+    {
+      "amount-available": 12000.0,
+      "amount-committed": 9337.0,
+      "amount-peers": 14080.0,
+      "amount-remaining": 2663.0,
+      "call-location": "Euskadi",
+      "call-url": "https://goteo.org/call/crowdsasuna",
+      "date-opened": "Sun, 02 Jun 2013 00:00:00 +0200",
+      "date-published": "Fri, 13 Sep 2013 00:00:00 +0200",
+      "date-succeeded": "Sun, 02 Mar 2014 00:00:00 +0100",
+      "description-short": "Explorando nuevas maneras de proponer, promover y financiar colectivamente iniciativas innovadoras en el campo de la salud y la vida saludable en Euskadi, que permitan la utilizaci\u00f3n y replicabilidad de los resultados de manera libre y abierta.",
+      "id": "crowdsasuna",
+      "image-url": "https://goteo.org/img/medium/crowdsasuna-widget-web_1r.png",
+      "latitude": 42.98962480000000,
+      "logo-url": "https://goteo.org/img/medium/crowdsasuna-logocampa-ad-web4r.png",
+      "longitude": -2.61892730000000,
+      "name": "Crowdasuna I. Health innovation",
+      "owner": "innobasque",
+      "owner-name": "CROWDSASUNA",
+      "projects-active": 0,
+      "projects-applied": 26,
+      "projects-succeeded": 3,
+      "projects-total": 39,
+      "radius": 50,
+      "region": "Pa\u00eds Vasco",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/euskera-castellano.jpg",
+          "name": "Innobasque",
+          "url": "http://www.innobasque.com/home.aspx?tabid=1562"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/obra-social-la-caixa-v-color-fons-blanc_1.jpg",
+          "name": "Obra Social \"la Caixa\"",
+          "url": "http://obrasocial.lacaixa.es/"
+        }
+      ],
+      "status": "succeeded"
+    },
+    {
+      "amount-available": 10000.0,
+      "amount-committed": 9440.0,
+      "amount-peers": 11782.0,
+      "amount-remaining": 560.0,
+      "call-location": "Andaluc\u00eda",
+      "call-url": "https://goteo.org/call/unia-cofinanciacion-innovacion-educativa",
+      "date-opened": "Sun, 01 Sep 2013 00:00:00 +0200",
+      "date-published": "Tue, 26 Nov 2013 00:00:00 +0100",
+      "date-succeeded": "Sun, 02 Mar 2014 00:00:00 +0100",
+      "description-short": "II Convocatoria #UNIACapitalRiego: Para proyectos de Innovaci\u00f3n educativa que contribuyan a \u201crepensar y expandir el conocimiento\u201d, reformulando los procesos de ense\u00f1anza y aprendizaje.",
+      "id": "unia-cofinanciacion-innovacion-educativa",
+      "image-url": "https://goteo.org/img/medium/211x230-widget-uniacapitalriego-13-01.jpg",
+      "latitude": 37.54427060000000,
+      "logo-url": "https://goteo.org/img/medium/logo-convo-unia-2.jpg",
+      "longitude": -4.72775279999996,
+      "name": "II Convocatoria #UNIACapitalRiego. Innovaci\u00f3n en educaci\u00f3n y conocimiento abierto",
+      "owner": "unia",
+      "owner-name": "UNIA",
+      "projects-active": 0,
+      "projects-applied": 16,
+      "projects-succeeded": 5,
+      "projects-total": 40,
+      "radius": 150,
+      "region": "Andaluc\u00eda",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/logo-unia-color-nuevo-2r-2.jpg",
+          "name": "UNIA",
+          "url": ""
+        }
+      ],
+      "status": "succeeded"
+    },
+    {
+      "amount-available": 20000.0,
+      "amount-committed": 11678.0,
+      "amount-peers": 13509.0,
+      "amount-remaining": 8322.0,
+      "call-location": "Eurorregi\u00f3n luso-extreme\u00f1a",
+      "call-url": "https://goteo.org/call/cofinancia-extremadura",
+      "date-opened": "Fri, 13 Sep 2013 00:00:00 +0200",
+      "date-published": "Sat, 12 Oct 2013 00:00:00 +0200",
+      "date-succeeded": "Sun, 02 Mar 2014 00:00:00 +0100",
+      "description-short": "Convocatoria del Gobierno de Extremadura para promover proyectos abiertos de emprendimiento empresarial a trav\u00e9s de crowdfunding. ",
+      "id": "cofinancia-extremadura",
+      "image-url": "https://goteo.org/img/medium/imagen-widget.png",
+      "latitude": 39.49373920000000,
+      "logo-url": "https://goteo.org/img/medium/logo-convo-2.jpg",
+      "longitude": -6.06791939999994,
+      "name": "#Cofinancia. Emprendimiento empresarial",
+      "owner": "gobext",
+      "owner-name": "Gobierno de Extremadura",
+      "projects-active": 0,
+      "projects-applied": 12,
+      "projects-succeeded": 5,
+      "projects-total": 39,
+      "radius": 120,
+      "region": "Extremadura",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/logo-gobex-sec-sponsor.jpg",
+          "name": "Gobierno de Extremadura",
+          "url": "http://www.gobex.es/gobex/view/main/index/index.php"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/imagen_7.png",
+          "name": "Cavatrans",
+          "url": "http://cavatrans.com/"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/imagen_8.png",
+          "name": "Programa de cooperaci\u00f3n transfronteriza Espa\u00f1a-Portugal",
+          "url": "http://www.poctep.eu/"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/imagen_9.png",
+          "name": "FEDER - Fondo Europeo de Desarrollo Regional",
+          "url": "http://europa.eu/legislation_summaries/agriculture/general_framework/g24234_es.htm"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/imagen_10.png",
+          "name": "EUROACE - Alentejo, Centro, Extremadura.",
+          "url": "http://www.euro-ace.eu/"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/logoavante-22.png",
+          "name": "Extremadura Avante",
+          "url": "http://www.extremaduraavante.es/"
+        }
+      ],
+      "status": "succeeded"
+    },
+    {
+      "amount-available": 10000.0,
+      "amount-committed": 7483.0,
+      "amount-peers": 12109.0,
+      "amount-remaining": 2517.0,
+      "call-location": "Andaluc\u00eda",
+      "call-url": "https://goteo.org/call/unia-cooperacion-infancia",
+      "date-opened": "Sun, 02 Mar 2014 00:00:00 +0100",
+      "date-published": "Mon, 19 May 2014 00:00:00 +0200",
+      "date-succeeded": "Tue, 03 Mar 2015 00:00:00 +0100",
+      "description-short": "III Convocatoria #UNIACapitalRiego: Para apoyar y promover proyectos de innovaci\u00f3n en el \u00e1mbito de la cooperaci\u00f3n que persigan la mejora del bienestar infantil.",
+      "id": "unia-cooperacion-infancia",
+      "image-url": "https://goteo.org/img/medium/211x230-widget-uniacapitalriego-14-03.jpg",
+      "latitude": 37.54427060000000,
+      "logo-url": "https://goteo.org/img/medium/logo-convo-unia-3.jpg",
+      "longitude": -4.72775279999996,
+      "name": "III Convocatoria #UNIACapitalRiego. Innovaci\u00f3n en cooperaci\u00f3n e infancia",
+      "owner": "unia",
+      "owner-name": "UNIA",
+      "projects-active": 0,
+      "projects-applied": 8,
+      "projects-succeeded": 4,
+      "projects-total": 30,
+      "radius": 900,
+      "region": "Andaluc\u00eda",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/logo-unia-color-nuevo.jpg",
+          "name": "UNIA",
+          "url": "http://www.unia.es/"
+        }
+      ],
+      "status": "succeeded"
+    },
+    {
+      "amount-available": 12000.0,
+      "amount-committed": 12000.0,
+      "amount-peers": 15552.0,
+      "amount-remaining": 0.0,
+      "call-location": "Euskadi",
+      "call-url": "https://goteo.org/call/crowdsasuna2014",
+      "date-opened": "Mon, 10 Mar 2014 00:00:00 +0100",
+      "date-published": "Tue, 20 May 2014 00:00:00 +0200",
+      "date-succeeded": "Tue, 03 Mar 2015 00:00:00 +0100",
+      "description-short": "II Convocatoria. Nuevas maneras de proponer, promover y financiar colectivamente iniciativas innovadoras en el campo de la salud y la vida saludable en Euskadi, que permitan la utilizaci\u00f3n y replicabilidad de los resultados de manera libre y abierta.",
+      "id": "crowdsasuna2014",
+      "image-url": "https://goteo.org/img/medium/crowdsasuna-widget-share-versionanchura230-web.png",
+      "latitude": 42.98962480000000,
+      "logo-url": "https://goteo.org/img/medium/logo-crowdsasuna-powered-inno_1.jpg",
+      "longitude": -2.61892730000000,
+      "name": "Crowdsasuna II. Innovaci\u00f3n en Salud",
+      "owner": "innobasque",
+      "owner-name": "CROWDSASUNA",
+      "projects-active": 0,
+      "projects-applied": 16,
+      "projects-succeeded": 5,
+      "projects-total": 28,
+      "radius": 50,
+      "region": "Pa\u00eds Vasco",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/euskera-castellano_1.jpg",
+          "name": "Innobasque",
+          "url": "http://www.innobasque.com/home.aspx?tabid=1"
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/obra-social-la-caixa-v-color-fons-blanc_2.jpg",
+          "name": "Obra Social \"la Caixa\"",
+          "url": "https://obrasocial.lacaixa.es/"
+        }
+      ],
+      "status": "succeeded"
+    },
+    {
+      "amount-available": 10000.0,
+      "amount-committed": 8936.0,
+      "amount-peers": 11918.0,
+      "amount-remaining": 1064.0,
+      "call-location": "Europa",
+      "call-url": "https://goteo.org/call/patrimonio-cultural-y-remezcla-digital",
+      "date-opened": "Mon, 02 Mar 2015 00:00:00 +0100",
+      "date-published": "Wed, 10 Jun 2015 00:00:00 +0200",
+      "date-succeeded": "Tue, 01 Sep 2015 00:00:00 +0200",
+      "description-short": "4th Call #UNIACapitalRiego: Innovative cultural projects that use open content and bring value to cultural heritage by way of digital remix",
+      "id": "patrimonio-cultural-y-remezcla-digital",
+      "image-url": "https://goteo.org/img/medium/211x230-widget-uniacapitalriego-15.jpg",
+      "latitude": 37.54427060000000,
+      "logo-url": "https://goteo.org/img/medium/logo-convo-unia-7.jpg",
+      "longitude": -4.72775279999996,
+      "name": "IV #UNIACapitalRiego Call. Cultural heritage and digital remix",
+      "owner": "unia",
+      "owner-name": "UNIA",
+      "projects-active": 5,
+      "projects-applied": 13,
+      "projects-succeeded": 4,
+      "projects-total": 29,
+      "radius": 150,
+      "region": "Andaluc\u00eda",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/escudo-mecd-peque.gif",
+          "name": "Iniciativa subvencionada por el Ministerio de Educaci\u00f3n, Cultura y Deporte",
+          "url": ""
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/logo-unia-color-nuevo-2r-3.jpg",
+          "name": "UNIA",
+          "url": ""
+        }
+      ],
+      "status": "succeeded"
+    },
+    {
+      "amount-available": 12000.0,
+      "amount-committed": 8515.0,
+      "amount-peers": 9459.0,
+      "amount-remaining": 3485.0,
+      "call-location": "Zaragoza, Espa\u00f1a",
+      "call-url": "https://goteo.org/call/crowdfunding-zgz",
+      "date-opened": "Wed, 08 Apr 2015 00:00:00 +0200",
+      "date-published": "Tue, 01 Sep 2015 00:00:00 +0200",
+      "date-succeeded": "Wed, 27 Apr 2016 00:00:00 +0200",
+      "description-short": "Conectando el talento local, la energ\u00eda emprendedora y la financiaci\u00f3n colaborativa al servicio de una mejor calidad de vida de l@s ciudadan@s",
+      "id": "crowdfunding-zgz",
+      "image-url": "https://goteo.org/img/medium/logofinal.jpg",
+      "latitude": 41.64882259999999,
+      "logo-url": "https://goteo.org/img/medium/logo-convo-1.jpg",
+      "longitude": -0.88908530000003,
+      "name": "Crowdfunding ZGZ 2016. Proyectos innovadores, c\u00edvicos y emprendedores",
+      "owner": "ayuntamientozaragoza",
+      "owner-name": "Ayuntamiento de Zaragoza",
+      "projects-active": 4,
+      "projects-applied": 17,
+      "projects-succeeded": 3,
+      "projects-total": 30,
+      "radius": 50,
+      "region": "Zaragoza",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/logo-zaragoza-2.png",
+          "name": "Ayuntamiento de Zaragoza",
+          "url": ""
+        },
+        {
+          "image-url": "https://goteo.org/img/medium/etopia.png",
+          "name": "Etopia",
+          "url": ""
+        }
+      ],
+      "status": "succeeded"
+    },
+    {
+      "amount-available": 70000.0,
+      "amount-committed": 66572.0,
+      "amount-peers": 74135.0,
+      "amount-remaining": 3428.0,
+      "call-location": "Gipuzkoa, Espa\u00f1a",
+      "call-url": "https://goteo.org/call/meta-gipuzkoa",
+      "date-opened": "Wed, 27 Apr 2016 00:00:00 +0200",
+      "date-published": "Thu, 15 Sep 2016 00:00:00 +0200",
+      "date-succeeded": "Tue, 13 Dec 2016 00:00:00 +0100",
+      "description-short": "\u00a116 proyectos culturales de Gipuzkoa est\u00e1n en campa\u00f1a buscando apoyo en #MetaKultura! \r\n\r\nHasta el 3 de Diciembre de 2016 puedes ayudarles a financiarse y, recuerda: por cada \u20ac que aportes, la Diputaci\u00f3n Foral de Gipuzkoa pone otro \u20ac m\u00e1s.\r\n\r\n\u00a1S\u00famate y ay\u00fadales a hacer #Meta!\r\n\r\n\r\n",
+      "id": "meta-gipuzkoa",
+      "image-url": "https://goteo.org/img/medium/imagenwidgetmeta-1.jpg",
+      "latitude": 43.07562990000000,
+      "logo-url": "https://goteo.org/img/medium/logoconvocatoriameta.jpg",
+      "longitude": -2.22366669999997,
+      "name": "Meta 2016. Proyectos culturales en Gipuzkoa",
+      "owner": "gfa-dfg",
+      "owner-name": "Diputaci\u00f3n Foral de Gipuzkoa",
+      "projects-active": 0,
+      "projects-applied": 37,
+      "projects-succeeded": 20,
+      "projects-total": 51,
+      "radius": 50,
+      "region": "Guip\u00fazcoa",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/gfa-albokoa1-beltzaperu-1.png",
+          "name": "Diputaci\u00f3n Foral de Gipuzkoa",
+          "url": "https://goteo.org/user/profile/gfa-dfg"
+        }
+      ],
+      "status": "succeeded"
+    },
+    {
+      "amount-available": 10000.0,
+      "amount-committed": 6491.0,
+      "amount-peers": 7346.0,
+      "amount-remaining": 3509.0,
+      "call-location": "The Hague, Pa\u00efsos Baixos",
+      "call-url": "https://goteo.org/call/europeana4education",
+      "date-opened": "Tue, 31 Jan 2017 00:00:00 +0100",
+      "date-published": "Wed, 26 Apr 2017 00:00:00 +0200",
+      "date-succeeded": "Thu, 07 Sep 2017 00:00:00 +0200",
+      "description-short": "3 innovative projects need your help to be funded at #Europeana4Education until June, 25. Remember: for every \u20ac you provide them, Europeana Foundation will contribute with another \u20ac. Let's strike together a match for Education!",
+      "id": "europeana4education",
+      "image-url": "https://goteo.org/img/medium/europeana-widget-goteo.jpg",
+      "latitude": 52.07049780000000,
+      "logo-url": "https://goteo.org/img/medium/logo-convocador-250x-125.jpg",
+      "longitude": 4.30069990000004,
+      "name": "Europeana. Strike a match for Education ",
+      "owner": "europeana",
+      "owner-name": "Europeana Foundation",
+      "projects-active": 0,
+      "projects-applied": 18,
+      "projects-succeeded": 2,
+      "projects-total": 25,
+      "radius": 2150,
+      "region": "La Haia",
+      "sponsors": [
+        {
+          "image-url": "https://goteo.org/img/medium/logo-convocador-250x-126.jpg",
+          "name": "Europeana Foundation",
+          "url": "https://www.goteo.org/user/profile/europeana"
+        }
+      ],
+      "status": "succeeded"
+    }
+  ],
+  "meta": {
+    "lang": [
+      "en"
+    ],
+    "limit": 10,
+    "page": 0,
+    "total": 16
+  },
+  "time-elapsed": 0.5122218132019043
+}
+</code></pre>
+
+<p><a name="project"></a></p>
+
+<h2>/calls/{CALL_ID}</h2>
+
+<p>Gets information about a single project.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/calls/unia-capital-riego
+</code></pre>
+
+<h3>Filters available:</h3>
+
+<ul>
+<li>No filters are available in this endpoint</li>
+<li><strong>{CALL_ID}</strong> must be the unique identifier of the project</li>
+</ul>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="CallFull">CallFull</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> amount-available </td>
+<td> number </td>
+<td> Available amount of cash to distribute among projects </td>
+</tr>
+<tr>
+<td> amount-committed </td>
+<td> number </td>
+<td> Maximum total amount of cash that was available to distribute among projects </td>
+</tr>
+<tr>
+<td> amount-peers </td>
+<td> number </td>
+<td> Amount of cash already distribute among projects </td>
+</tr>
+<tr>
+<td> amount-remaining </td>
+<td> number </td>
+<td> Amount of cash still available for distribute among projects </td>
+</tr>
+<tr>
+<td> applies </td>
+<td> string </td>
+<td> Text description about which kind of projects will be selected for the matchfunding call </td>
+</tr>
+<tr>
+<td> call-location </td>
+<td> string </td>
+<td> Custom location value for the call </td>
+</tr>
+<tr>
+<td> call-url </td>
+<td> string </td>
+<td> URL where to visualize the matchfunding call </td>
+</tr>
+<tr>
+<td> date-closed </td>
+<td> string </td>
+<td> Date when the matchfunding call was closed </td>
+</tr>
+<tr>
+<td> date-opened </td>
+<td> string </td>
+<td> Date when the matchfunding call was opened </td>
+</tr>
+<tr>
+<td> date-published </td>
+<td> string </td>
+<td> Date when the matchfunding call was published </td>
+</tr>
+<tr>
+<td> date-succeeded </td>
+<td> string </td>
+<td> Date when the matchfunding call was succeeded </td>
+</tr>
+<tr>
+<td> description </td>
+<td> string </td>
+<td> Full description for the matchfunding call </td>
+</tr>
+<tr>
+<td> description-short </td>
+<td> string </td>
+<td> Short description for the matchfunding call </td>
+</tr>
+<tr>
+<td> dossier </td>
+<td> string </td>
+<td> External links for the matchfunding call </td>
+</tr>
+<tr>
+<td> facebook-url </td>
+<td> string </td>
+<td> URL of the Facebook page for the matchfunding call </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> Id of the matchfunding call </td>
+</tr>
+<tr>
+<td> image-background-url </td>
+<td> string </td>
+<td> URL for the main call image </td>
+</tr>
+<tr>
+<td> image-url </td>
+<td> string </td>
+<td> URL for the main call image </td>
+</tr>
+<tr>
+<td> image-url-big </td>
+<td> string </td>
+<td> URL for the main call image (big size) </td>
+</tr>
+<tr>
+<td> legal </td>
+<td> string </td>
+<td> Some particular legal or conditions for the matchfunding call </td>
+</tr>
+<tr>
+<td> location </td>
+<td> array </td>
+<td> Location of the call &#9758; <a href="#CallLocation">CallLocation</a> </td>
+</tr>
+<tr>
+<td> logo-url </td>
+<td> string </td>
+<td> URL for the call's logo </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the matchfunding call </td>
+</tr>
+<tr>
+<td> owner </td>
+<td> string </td>
+<td> User ID of the call's owner </td>
+</tr>
+<tr>
+<td> owner-name </td>
+<td> string </td>
+<td> User name of the call's owner </td>
+</tr>
+<tr>
+<td> projects-active </td>
+<td> integer </td>
+<td> Active projects (still with a running campaign) in this matchfunding call </td>
+</tr>
+<tr>
+<td> projects-applied </td>
+<td> integer </td>
+<td> Total number of projects effectively applicating to this matchfunding call </td>
+</tr>
+<tr>
+<td> projects-succeeded </td>
+<td> integer </td>
+<td> Projects funded in this matchfunding call </td>
+</tr>
+<tr>
+<td> projects-total </td>
+<td> integer </td>
+<td> Total number of projects included into this matchfunding call </td>
+</tr>
+<tr>
+<td> resources </td>
+<td> string </td>
+<td> Text description of the available resources for the matchfunding call </td>
+</tr>
+<tr>
+<td> scope </td>
+<td> string </td>
+<td> Scope of the matchfunding call, one of <code>local</code>, <code>regional</code>, <code>national</code>, <code>global</code> (or <code>null</code>) </td>
+</tr>
+<tr>
+<td> sponsors </td>
+<td> array </td>
+<td> All available sponsors in a ordered list &#9758; <a href="#CallSponsor">CallSponsor</a> </td>
+</tr>
+<tr>
+<td> status </td>
+<td> string </td>
+<td> Status of the call, one of <code>pending</code>, <code>editing</code>, <code>reviewing</code>, <code>applying</code>, <code>published</code>, <code>succeeded</code>, <code>expired</code> </td>
+</tr>
+<tr>
+<td> translations </td>
+<td> array </td>
+<td> All available translations in a dictionary by language &#9758; <a href="#CallTranslation">CallTranslation</a> </td>
+</tr>
+<tr>
+<td> tweet </td>
+<td> string </td>
+<td> Text used to make an automatic tweet to share the the matchfunding call </td>
+</tr>
+<tr>
+<td> user </td>
+<td> string </td>
+<td> Call owner's user Object </td>
+</tr>
+<tr>
+<td> whom </td>
+<td> string </td>
+<td> Target of the matchfunding call </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="CallLocation">CallLocation</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> city </td>
+<td> string </td>
+<td> City location of the matchfunding call (language may vary) </td>
+</tr>
+<tr>
+<td> country </td>
+<td> string </td>
+<td> Country name of the matchfunding call (language may vary) </td>
+</tr>
+<tr>
+<td> country-code </td>
+<td> string </td>
+<td> Country code of the matchfunding call in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1</a> format </td>
+</tr>
+<tr>
+<td> latitude </td>
+<td> number </td>
+<td> Project's location latitude coordinate </td>
+</tr>
+<tr>
+<td> longitude </td>
+<td> number </td>
+<td> Project's location longitude coordinate </td>
+</tr>
+<tr>
+<td> radius </td>
+<td> number </td>
+<td> Radius (Km) of influence for the call (if any) </td>
+</tr>
+<tr>
+<td> region </td>
+<td> string </td>
+<td> Region location of the matchfunding call (language may vary) </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="CallSponsor">CallSponsor</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> image-url </td>
+<td> string </td>
+<td> URL for the image/logo of the sponsor </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the sponsor </td>
+</tr>
+<tr>
+<td> url </td>
+<td> string </td>
+<td> URL for the sponsor (if available) </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="CallTranslation">CallTranslation</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <em>misc</em> </td>
+<td> string </td>
+<td> Every item of a translation will have the same structure as the parent object with the same fields (<strong>and those fields only</strong>) translated. Non translated items won't be displayed at all </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "amount-available": 10000.0,
+  "amount-committed": 8000.0,
+  "amount-peers": 9446.0,
+  "amount-remaining": 2000.0,
+  "applies": "",
+  "call-location": "Andaluc\u00eda",
+  "call-url": "https://goteo.org/call/unia-capital-riego",
+  "date-closed": null,
+  "date-opened": "Wed, 27 Feb 2013 00:00:00 +0100",
+  "date-published": "Mon, 15 Apr 2013 00:00:00 +0200",
+  "date-succeeded": "Mon, 26 Aug 2013 00:00:00 +0200",
+  "description": "&lt;p&gt;\r\n\t&lt;strong&gt;&lt;a name=\"quees\"&gt;&lt;/a&gt;1. &amp;iquest;Qu&amp;eacute; es UNIA Capital Riego?&lt;/strong&gt;&lt;br /&gt;\r\n\tLa Universidad Internacional de Andaluc&amp;iacute;a (&lt;a href=\"http://www.unia.es\"&gt;unia.es&lt;/a&gt;) abre una convocatoria de financiaci&amp;oacute;n colectiva a trav&amp;eacute;s de Goteo para promover nuevas formas de gestionar la cultura desde la esfera p&amp;uacute;blica, dando el protagonismo a la sociedad civil para participar en el lanzamiento de proyectos culturales y de innovaci&amp;oacute;n social.&lt;br /&gt;\r\n\t\u2028&lt;br /&gt;\r\n\t&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;\r\n\t&lt;strong&gt;&lt;a name=\"aquien\"&gt;&lt;/a&gt;2. &amp;iquest;A qui&amp;eacute;n se dirige esta convocatoria?&lt;/strong&gt;&lt;/p&gt;\r\n&lt;p&gt;\r\n\tEl objetivo de esta convocatoria es potenciar de forma diferente algunas de las actividades que promueve la Universidad, y concretamente las organizadas desde el &amp;aacute;rea de Acci&amp;oacute;n Cultural, dando prevalencia a la iniciativa ciudadana a trav&amp;eacute;s de la transparencia, la gesti&amp;oacute;n participativa y colaborativa, &amp;nbsp;el procom&amp;uacute;n, &amp;nbsp;el copyleft y el conocimiento libre. Para ello invitamos a participar a todas aquellas personas, colectivos y agentes promotores de iniciativas y proyectos con incidencia en el territorio andaluz vinculados con la innovaci&amp;oacute;n social y cultural en un sentido amplio; propuestas pensadas en &amp;nbsp;clave de beneficios colectivos, conocimiento compartido y trabajo colaborativo.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t&lt;br /&gt;\r\n\t&lt;strong&gt;&lt;a name=\"como\"&gt;&lt;/a&gt;3. &amp;iquest;C&amp;oacute;mo se seleccionan los proyectos? Requisitos y criterios de valoraci&amp;oacute;n&lt;/strong&gt;&lt;br /&gt;\r\n\tA trav&amp;eacute;s de esta convocatoria se seleccionar&amp;aacute;n hasta cinco proyectos que, posteriormente, entrar&amp;aacute;n en una campa&amp;ntilde;a de crowdfunding en la que la UNIA y la sociedad civil sumar&amp;aacute;n sus esfuerzos para que alcancen sus objetivos de financiaci&amp;oacute;n: por cada aportaci&amp;oacute;n ciudadana, la UNIA realizar&amp;aacute; otra aportaci&amp;oacute;n (capital riego), dentro de los procedimientos y condiciones detallados en&amp;nbsp;&lt;a href=\"http://goteostatic.s3.amazonaws.com/bases_unia_1.pdf\"&gt;las bases&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;\r\n\tPor innovaci&amp;oacute;n social y cultural entendemos pr&amp;aacute;cticas sociales basadas en el desarrollo y/o &amp;nbsp;aprovechamiento de nuevas ideas que satisfagan objetivos culturales y sociales y que afecten positivamente al mayor n&amp;uacute;mero de personas. Proyectos compartidos que busquen el compromiso, la colaboraci&amp;oacute;n y la participaci&amp;oacute;n de la sociedad. Adem&amp;aacute;s, deber&amp;aacute;n ser capaces de generar retornos colectivos por la v&amp;iacute;a de las licencias abiertas, que fomentan el uso amplio y compartido por parte de la sociedad, de lo propiamente licenciado por ellas.&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;\r\n\tAl t&amp;eacute;rmino del plazo que se indica en esta convocatoria se seleccionar&amp;aacute;n entre los proyectos presentados un m&amp;aacute;ximo de 5 propuestas de campa&amp;ntilde;a, conforme a lo siguiente:&lt;/p&gt;\r\n&lt;p&gt;\r\n\tRequisitos:&amp;nbsp;&lt;br /&gt;\r\n\t- Proyectos de innovaci&amp;oacute;n social y cultural&lt;br /&gt;\r\n\t- Incidencia en Andaluc&amp;iacute;a&lt;br /&gt;\r\n\t- Centrado en los retornos colectivos&lt;/p&gt;\r\n&lt;p&gt;\r\n\tCriterios de valoraci&amp;oacute;n:&amp;nbsp;&lt;br /&gt;\r\n\t- Aporte de conocimientos, productos, servicios o valores deseables para la comunidad y que generen efectos positivos, transformadores en el entorno.&lt;br /&gt;\r\n\t- Promoci&amp;oacute;n de la gesti&amp;oacute;n participativa.&lt;br /&gt;\r\n\t- Ser socialmente responsables.&lt;br /&gt;\r\n\t- Viabilidad econ&amp;oacute;mica y transparencia en la gesti&amp;oacute;n.&lt;br /&gt;\r\n\t- Libertad en el uso de los resultados: c&amp;oacute;digo abierto, replicables, reutilizables por otros agentes.&lt;br /&gt;\r\n\t- Capacidad de crecimiento, que puedan ser escalables.&lt;br /&gt;\r\n\t- Capacidad para generar retornos colectivos que, adem&amp;aacute;s, reviertan en los recursos de la propia UNIA.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t&lt;br /&gt;\r\n\t&lt;strong&gt;&lt;a name=\"cuales\"&gt;&lt;/a&gt;4. &amp;iquest;Cu&amp;aacute;les son los plazos y fechas clave?&lt;/strong&gt;&lt;/p&gt;\r\n&lt;p&gt;\r\n\tHasta el 27 de marzo se abre un plazo para la preparaci&amp;oacute;n y el env&amp;iacute;o de propuestas para su valoraci&amp;oacute;n.&lt;/p&gt;\r\n&lt;p&gt;\r\n\tDesde el 27 de marzo hasta el 12 de abril de 2013, se iniciar&amp;aacute; una fase de evaluaci&amp;oacute;n, asesoramiento y selecci&amp;oacute;n de las propuestas por parte de un Comit&amp;eacute; Asesor que seleccionar&amp;aacute; hasta cinco proyectos para formar parte de esta convocatoria.&lt;/p&gt;\r\n&lt;p&gt;\r\n\tEl d&amp;iacute;a 15 de abril de 2013, comenzar&amp;aacute; el periodo de campa&amp;ntilde;a de financiaci&amp;oacute;n colectiva en Goteo para los proyectos seleccionados, que durar&amp;aacute;, como m&amp;aacute;ximo, 80 d&amp;iacute;as.&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;\r\n\t1) Env&amp;iacute;o, valoraci&amp;oacute;n y selecci&amp;oacute;n de propuestas:&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- Esta convocatoria est&amp;aacute; destinada a promover &amp;nbsp;proyectos de innovaci&amp;oacute;n social y cultural de todo el territorio nacional, que generen impacto en la regi&amp;oacute;n de Andaluc&amp;iacute;a.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- Una vez enviados, los proyectos ser&amp;aacute;n asesorados, evaluados y seleccionados por un Comit&amp;eacute; Asesor constituido a tal efecto, y formado por M&amp;ordf; del Rosario Garc&amp;iacute;a-Doncel, Isabel Ojeda, Florencio Cabello, Sof&amp;iacute;a Coca y Alicia Pinte&amp;ntilde;o.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- En un sentido general, los proyectos han de estar formulados desde la perspectiva de la generaci&amp;oacute;n de retornos para la sociedad, la promoci&amp;oacute;n del conocimiento libre y compartido, y el trabajo colaborativo.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- De forma espec&amp;iacute;fica, su valoraci&amp;oacute;n se ajustar&amp;aacute; a los criterios detallados en la secci&amp;oacute;n de criterios de valoraci&amp;oacute;n de proyectos y en el pliego de esta convocatoria (documento anexo en formato PDF).&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- Tras su env&amp;iacute;o a valoraci&amp;oacute;n, el Comit&amp;eacute; podr&amp;aacute; solicitar m&amp;aacute;s informaci&amp;oacute;n a los proyectos, as&amp;iacute; como ciertos ajustes en su formulaci&amp;oacute;n con el objetivo de optimizar sus posibilidades de cofinanciarse.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- Finalizado el plazo de recepci&amp;oacute;n de proyectos, el 27 de marzo de 2013, no podr&amp;aacute;n enviarse nuevas propuestas.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t2) Campa&amp;ntilde;a online de financiaci&amp;oacute;n colectiva mediante Goteo:&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- La publicaci&amp;oacute;n de los proyectos seleccionados se har&amp;aacute; efectiva el d&amp;iacute;a 12 de abril de 2013. Cada campa&amp;ntilde;a de crowdfunding se activar&amp;aacute; el d&amp;iacute;a 15 de abril de 2013 y se ajustar&amp;aacute; a las condiciones generales de la plataforma Goteo.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- El impulsor del proyecto que alcance el objetivo de financiaci&amp;oacute;n establecido firmar&amp;aacute; un contrato con la Fundaci&amp;oacute;n Fuentes Abiertas (impulsora de Goteo.org) para recibir la recaudaci&amp;oacute;n obtenida v&amp;iacute;a crowfounding. A su vez, suscribir&amp;aacute; un convenio con la UNIA en el que quedar&amp;aacute;n recogidas las condiciones a observar por cada una de las partes en el desarrollo del proyecto, y en especial, la asunci&amp;oacute;n de de los diferentes gastos por cada una de ellas.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- De acuerdo con el funcionamiento de Goteo, si en la primera ronda de 40 d&amp;iacute;as el proyecto no alcanzara la cantidad m&amp;iacute;nima de financiaci&amp;oacute;n determinada, no podr&amp;aacute; pasar a la segunda fase y, en consecuencia, no podr&amp;aacute; recibir el capital riego de la UNIA.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t3) L&amp;iacute;mites del capital riego aportado por UNIA:&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- El capital riego de la UNIA destinado a esta convocatoria es de 10.000 euros, a distribuir entre los proyectos seleccionados por el Comit&amp;eacute; Asesor. La cantidad total de capital riego UNIA que un proyecto puede recaudar en su campa&amp;ntilde;a nunca exceder&amp;aacute; el 50% de su presupuesto m&amp;iacute;nimo ni tampoco un importe superior a 2.000&amp;euro;.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- La UNIA no aportar&amp;aacute; m&amp;aacute;s de 50&amp;euro; por donaci&amp;oacute;n individual. Esto significa que el riego de la UNIA duplicar&amp;aacute; las aportaciones individuales de los usuarios y usuarias que no superen la cantidad de 50&amp;euro;. En el caso de que el proyecto reciba una donaci&amp;oacute;n individual superior a este importe, la aportaci&amp;oacute;n de la UNIA se limitar&amp;aacute; a 50&amp;euro;&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- La aportaci&amp;oacute;n de capital riego UNIA s&amp;oacute;lo se realizar&amp;aacute; una &amp;uacute;nica vez por ciudadano. Aunque un mismo ciudadano puede efectuar aportaciones al proyecto cuantas veces desee, s&amp;oacute;lo se sumar&amp;aacute; capital riego en su primera aportaci&amp;oacute;n.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- Puesto que la UNIA entiende que el objetivo final de la convocatoria no es la acumulaci&amp;oacute;n lucrativa, esta fase se cerrar&amp;aacute; una vez se haya alcanzado la cantidad &amp;oacute;ptima definida, aunque no hayan transcurrido los 40 d&amp;iacute;as para su consecuci&amp;oacute;n.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- Todo el capital riego UNIA que no se distribuya entre los proyectos seleccionados, por no haber conseguido alcanzar el m&amp;iacute;nimo o por los propios condicionantes del capital riego (m&amp;aacute;ximo 50% del presupuesto o m&amp;aacute;ximo 2.000&amp;euro; por proyecto), pasar&amp;aacute; a formar parte del fondo de capital riego de la siguiente convocatoria.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t- Una vez cofinanciado el proyecto, el pago se ejecutar&amp;aacute; por dos v&amp;iacute;as: por parte de Goteo, el impulsor recibir&amp;aacute; las aportaciones recibidas por los usuarios en los t&amp;eacute;rminos generales establecidos por la plataforma; por parte de la UNIA, &amp;nbsp;el pago se har&amp;aacute; efectivo bajo las condiciones establecidas en el convenio firmado entre UNIA y el impulsor del proyecto.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t&lt;br /&gt;\r\n\t&lt;strong&gt;&lt;a name=\"comofunciona\"&gt;&lt;/a&gt;5. &amp;iquest;C&amp;oacute;mo funciona el capital riego? Aportaciones y retornos colectivos&lt;/strong&gt;&lt;/p&gt;\r\n&lt;p&gt;\r\n\tLos proyectos deben incluir entre sus retornos colectivos aquellos que permitan visualizar la apuesta de la UNIA por este sistema de gesti&amp;oacute;n de los recursos p&amp;uacute;blicos m&amp;aacute;s participativo y transparente, que quedar&amp;aacute;n recogidos de forma expresa en el convenio que finalmente la UNIA suscriba con el impulsor: sea en forma de presentaci&amp;oacute;n de proyectos, contenidos que se puedan incorporar bajo licencias Creative Commons a alg&amp;uacute;n archivo digital UNIA, recursos educativos abiertos, campa&amp;ntilde;as de sensibilizaci&amp;oacute;n, etc.&lt;/p&gt;\r\n&lt;p&gt;\r\n\tEl capital riego de la UNIA pretende ir m&amp;aacute;s all&amp;aacute; de la financiaci&amp;oacute;n destinada en cada convocatoria a las diferentes propuestas. Se busca apoyar aquellas iniciativas que la sociedad considere valiosas e impulsar proyectos pensados desde la l&amp;oacute;gica de los retornos colectivos, difundiendo nuevas estrategias de trabajo en red, de colaboraci&amp;oacute;n distribuida y/o de conocimiento compartido.&lt;/p&gt;\r\n&lt;p&gt;\r\n\tDentro de esta estrategia de transparencia es importante poner el acento en el trabajo invisible de los creadores de ideas, del valor de los que se dedican a pensar, de incidir en la importancia del proceso, tanto o m&amp;aacute;s que en los resultados. Por eso es aconsejable incluir en los presupuestos el trabajo de pre-producci&amp;oacute;n. Esto es, el tiempo, a menudo invisible, que se dedica a dar forma a una idea para convertirla en proyecto.&lt;/p&gt;\r\n&lt;p&gt;\r\n\tLa UNIA &amp;nbsp;aportar&amp;aacute; en concepto de capital riego un total de 10.000&amp;euro; en esta primera convocatoria, a distribuir entre los cinco proyectos seleccionados y presentados en la plataforma durante sus respectivas campa&amp;ntilde;as de crowdfunding en Goteo. La aportaci&amp;oacute;n de capital riego a cada proyecto variar&amp;aacute;, por tanto, en funci&amp;oacute;n del apoyo recibido por la comunidad.&lt;/p&gt;\r\n&lt;p&gt;\r\n\tPor cada euro que aporte un ciudadano o ciudadana, la UNIA aportar&amp;aacute; un euro de su fondo de capital riego, con dos limitaciones: hasta cubrir en el transcurso de la campa&amp;ntilde;a un m&amp;aacute;ximo del 50% del presupuesto m&amp;iacute;nimo de cada proyecto, o bien hasta un m&amp;aacute;ximo de 2.000,00&amp;euro; por proyecto (seg&amp;uacute;n el criterio que se alcance antes). Al igual que el resto de campa&amp;ntilde;as de crowdfunding, para que este capital riego se active finalmente el proyecto debe alcanzar el objetivo de financiaci&amp;oacute;n colectiva para el presupuesto m&amp;iacute;nimo definido.&lt;/p&gt;\r\n&lt;p&gt;\r\n\tUna vez que el proyecto alcance el presupuesto m&amp;iacute;nimo, &amp;eacute;ste dejar&amp;aacute; de cofinanciarse por parte del capital riego de esta convocatoria (pese a que siga siendo posible por parte de los ciudadanos). Si alg&amp;uacute;n proyecto no consigue el apoyo necesario para llegar al m&amp;iacute;nimo, el capital riego de la UNIA destinado al mismo pasar&amp;aacute; a formar parte de la siguiente convocatoria.&lt;/p&gt;\r\n&lt;p&gt;\r\n\tUna vez finalizada la campa&amp;ntilde;a, habr&amp;aacute; un plazo de un a&amp;ntilde;o para ejecutar el proyecto y realizar el retorno colectivo espec&amp;iacute;fico de la UNIA. El impulsor del proyecto que consiga la financiaci&amp;oacute;n firmar&amp;aacute; un convenio con la UNIA en la que por parte de &amp;eacute;sta se acordar&amp;aacute; el pago de partidas concretas del proyecto, evalu&amp;aacute;ndose cada una de forma individualizada. Asimismo, el proyecto recibir&amp;aacute; las aportaciones individuales obtenidas en los t&amp;eacute;rminos que Goteo tiene establecidos.&lt;/p&gt;\r\n&lt;p&gt;\r\n\t&lt;strong&gt;&amp;nbsp;&lt;a name=\"masinformacion\"&gt;&lt;/a&gt;6. M&amp;aacute;s informaci&amp;oacute;n y contacto&lt;/strong&gt;&lt;br /&gt;\r\n\tPara consultas o m&amp;aacute;s informaci&amp;oacute;n sobre esta convocatoria: capitalriego@unia.es&lt;br /&gt;\r\n\t&amp;nbsp;&lt;/p&gt;\r\n",
+  "description-short": "I Convocatoria #UNIACapitalRiego: Financiamos colectivamente proyectos de innovaci\u00f3n social y cultural. Reivindicamos el valor del procom\u00fan desde la Universidad, con procesos que cedan el protagonismo a la sociedad civil.",
+  "dossier": "http://goteostatic.s3.amazonaws.com/bases_unia_1.pdf",
+  "facebook-url": "http://www.facebook.com/pages/UNIA-Pr\u00e1cticas-y-Culturas-Digitales/157743517578707",
+  "id": "unia-capital-riego",
+  "image-background-url": "https://goteo.org/img/big/la_gota.png",
+  "image-url": "https://goteo.org/img/medium/211x230-widget-uniacapitalriego-13-03r.jpg",
+  "image-url-big": "https://goteo.org/img/big/211x230-widget-uniacapitalriego-13-03r.jpg",
+  "legal": "",
+  "location": [
+    {
+      "city": "",
+      "country": "ES",
+      "country-code": "ES",
+      "latitude": 37.5442706,
+      "longitude": -4.72775279999996,
+      "radius": 150,
+      "region": "Andaluc\u00eda"
+    }
+  ],
+  "logo-url": "https://goteo.org/img/medium/250x124px-logo-uniacapitalriego-13-01.jpg",
+  "name": "I Convocatoria #UNIACapitalRiego. Innovaci\u00f3n sociocultural",
+  "owner": "unia",
+  "owner-name": "UNIA",
+  "projects-active": 0,
+  "projects-applied": 38,
+  "projects-succeeded": 4,
+  "projects-total": 75,
+  "resources": "",
+  "scope": "national",
+  "sponsors": [
+    {
+      "image-url": "https://goteo.org/img/medium/logo-unia-color-nuevo_2r.jpg",
+      "name": "UNIA",
+      "url": "http://www.unia.es/"
+    }
+  ],
+  "status": "succeeded",
+  "time-elapsed": 0.06353425979614258,
+  "translations": {},
+  "tweet": "\u00bfApoyamos juntas un proyecto sociocultural innovador? Multiplica tu crowdfunding con #UNIAcapitalRiego",
+  "user": {
+    "date-created": "Wed, 13 Feb 2013 16:46:03 +0100",
+    "id": "unia",
+    "name": "UNIA",
+    "node": "goteo",
+    "profile-image-url": "https://goteo.org/img/medium/logo-unia-color-nuevo-1.jpg",
+    "profile-url": "https://goteo.org/user/profile/unia"
+  },
+  "whom": ""
+}
+</code></pre>
+
+<p><a name="call"></a></p>
+
+<h2>/projects/{CALL_ID}/projects/</h2>
+
+<p>List all projects in a matchfunding call</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/calls/unia-capital-riego/projects/
+</code></pre>
+
+<ul>
+<li><strong>{CALL_ID}</strong> must be the unique identifier of the project</li>
+</ul>
+
+
+<h3>Filters available:</h3>
+
+<p><strong>The <a href="/doc/filters/">standard set of filters</a> applies to this endpoint with these particulars:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> call_id </td>
+<td> string </td>
+<td> Unique ID for the call </td>
+</tr>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the users originally created in that node(s) </td>
+</tr>
+<tr>
+<td> call </td>
+<td> string </td>
+<td> Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s) </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Get results by specified lang. Multiple langs can be specified </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Filter from date. Ex. "2013-01-01". Restricts the list to the users created in that range </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Filter until date.. Ex. "2014-01-01". Restricts the list to the users created in that range </td>
+</tr>
+<tr>
+<td> category </td>
+<td> integer </td>
+<td> Filter by call category. Multiple categories can be specified. Restricts the list to the users that have interests in that category(ies) </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> integer </td>
+<td> Filter by call social commitment. Multiple social commitments can be specified. Restricts the list to the users that have interests in that social commitment(s) </td>
+</tr>
+<tr>
+<td> page </td>
+<td> integer </td>
+<td> Page number (starting at 1) if the result can be paginated </td>
+</tr>
+<tr>
+<td> limit </td>
+<td> integer </td>
+<td> Page limit (maximum 50 results, defaults to 10) if the result can be paginated </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="ResponseProject">ResponseProject</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> items </td>
+<td> array </td>
+<td> ... &#9758; <a href="#Project">Project</a> </td>
+</tr>
+<tr>
+<td> meta </td>
+<td>  </td>
+<td> ... &#9758; <a href="#MetaProject">MetaProject</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Project">Project</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> amount </td>
+<td> number </td>
+<td> Currently achieved amount for the project </td>
+</tr>
+<tr>
+<td> date-created </td>
+<td> string </td>
+<td> Date when the project was created RFC822 format </td>
+</tr>
+<tr>
+<td> date-published </td>
+<td> string </td>
+<td> Date when the project was published RFC822 format </td>
+</tr>
+<tr>
+<td> description-short </td>
+<td> string </td>
+<td> Short description of the project </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> Project unique identifier </td>
+</tr>
+<tr>
+<td> image-url </td>
+<td> string </td>
+<td> URL with the main image of the project </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Main language of the project </td>
+</tr>
+<tr>
+<td> latitude </td>
+<td> number </td>
+<td> Latitude coordinate for the project (if available) </td>
+</tr>
+<tr>
+<td> longitude </td>
+<td> number </td>
+<td> Longitude coordinate for the project (if available) </td>
+</tr>
+<tr>
+<td> minimum </td>
+<td> number </td>
+<td> Minimum amount to achieve to consider the project succeeded </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the project </td>
+</tr>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Node where the project was created originally </td>
+</tr>
+<tr>
+<td> optimum </td>
+<td> number </td>
+<td> Optimum amount to achieve for the project to achieve all his goals </td>
+</tr>
+<tr>
+<td> owner </td>
+<td> string </td>
+<td> Project owner's user ID </td>
+</tr>
+<tr>
+<td> owner-name </td>
+<td> string </td>
+<td> Project owner's user name </td>
+</tr>
+<tr>
+<td> project-url </td>
+<td> string </td>
+<td> Project's original URL (crowd-funding web page) </td>
+</tr>
+<tr>
+<td> region </td>
+<td> string </td>
+<td> Region location for the project </td>
+</tr>
+<tr>
+<td> social-commitment-id </td>
+<td> string </td>
+<td> SocialCommitment unique identifier of the project </td>
+</tr>
+<tr>
+<td> status </td>
+<td> string </td>
+<td> Status of the project </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="MetaProject">MetaProject</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> category </td>
+<td> array </td>
+<td> Only if filtering by category </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> array </td>
+<td> Only if filtering by footprint </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Only if filtering by from_date </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> array </td>
+<td> Only if filtering by lang </td>
+</tr>
+<tr>
+<td> limit </td>
+<td> integer </td>
+<td> Limit of results per page when retrieving a collection </td>
+</tr>
+<tr>
+<td> location </td>
+<td> array </td>
+<td> Only if filtering by location </td>
+</tr>
+<tr>
+<td> node </td>
+<td> array </td>
+<td> Only if filtering by node </td>
+</tr>
+<tr>
+<td> page </td>
+<td> integer </td>
+<td> Current page, <code>0</code> based (first page is zero) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> array </td>
+<td> Only if filtering by project </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> array </td>
+<td> Only if filtering by Sustainable Development Goal </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> array </td>
+<td> Only if filtering by social_commitment </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Only if filtering by to_date </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Total elements available for the collection </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "id": "unia-capital-riego",
+  "items": [
+    {
+      "amount": 7283.0,
+      "amount-call": 2000.0,
+      "date-created": "Mon, 17 Dec 2012 00:00:00 +0100",
+      "date-published": "Mon, 15 Apr 2013 00:00:00 +0200",
+      "description-short": "Arquitecturas Colectivas is a network of individuals and collectives who share an interest in the participatory construction of the urban environment. We want to expand and improve the tools that give support to that network, so it can go further!",
+      "id": "arquitecturas-colectivas",
+      "image-url": "https://goteo.org/img/medium/encuentro-arquitecturas-colectivas-2011-valencia-j",
+      "lang": "es",
+      "latitude": 41.38506389999999,
+      "longitude": 2.17340349999995,
+      "minimum": 6100.0,
+      "name": "Arquitecturas Colectivas",
+      "node": "goteo",
+      "optimum": 9000.0,
+      "owner": "straddle3",
+      "owner-name": "Straddle3",
+      "project-url": "https://goteo.org/project/arquitecturas-colectivas",
+      "region": "Barcelona",
+      "social-commitment-id": null,
+      "status": "fulfilled"
+    },
+    {
+      "amount": 4400.0,
+      "amount-call": 2000.0,
+      "date-created": "Mon, 04 Mar 2013 00:00:00 +0100",
+      "date-published": "Mon, 15 Apr 2013 00:00:00 +0200",
+      "description-short": "Impresi\u00f3n 3D accesible para tod@s",
+      "id": "fab-movil-00",
+      "image-url": "https://goteo.org/img/medium/1-portadar.png",
+      "lang": "es",
+      "latitude": 37.38909240000000,
+      "longitude": -5.98445889999994,
+      "minimum": 3725.0,
+      "name": "Fab_movil 00",
+      "node": "goteo",
+      "optimum": 4775.0,
+      "owner": "commonfab",
+      "owner-name": "commonfab",
+      "project-url": "https://goteo.org/project/fab-movil-00",
+      "region": "Sevilla",
+      "social-commitment-id": null,
+      "status": "fulfilled"
+    },
+    {
+      "amount": 425.0,
+      "amount-call": 0.0,
+      "date-created": "Fri, 22 Mar 2013 00:00:00 +0100",
+      "date-published": "Mon, 15 Apr 2013 00:00:00 +0200",
+      "description-short": "Dance studios with a view",
+      "id": "picnic",
+      "image-url": "https://goteo.org/img/medium/01-galeria_1r.png",
+      "lang": "es",
+      "latitude": 37.35092299999999,
+      "longitude": -6.05203630000005,
+      "minimum": 3940.0,
+      "name": "Picnic",
+      "node": "goteo",
+      "optimum": 5840.0,
+      "owner": "culturadigital",
+      "owner-name": "Picnic",
+      "project-url": "https://goteo.org/project/picnic",
+      "region": "Sevilla",
+      "social-commitment-id": null,
+      "status": "unfunded"
+    },
+    {
+      "amount": 9660.0,
+      "amount-call": 2000.0,
+      "date-created": "Sat, 23 Mar 2013 00:00:00 +0100",
+      "date-published": "Mon, 15 Apr 2013 00:00:00 +0200",
+      "description-short": "Adtl\u00e1ntida.tv is a community and a free radio-television system with livestreaming service",
+      "id": "adtlantida-tv",
+      "image-url": "https://goteo.org/img/medium/adtlantida-multi-streaming-appr.jpg",
+      "lang": "es",
+      "latitude": 42.24059889999999,
+      "longitude": -8.72072679999997,
+      "minimum": 6500.0,
+      "name": "Adtlantida.tv",
+      "node": "goteo",
+      "optimum": 8900.0,
+      "owner": "adtlantida.tv",
+      "owner-name": "Adtlantida",
+      "project-url": "https://goteo.org/project/adtlantida-tv",
+      "region": "Pontevedra",
+      "social-commitment-id": null,
+      "status": "fulfilled"
+    },
+    {
+      "amount": 4220.0,
+      "amount-call": 2000.0,
+      "date-created": "Tue, 26 Mar 2013 00:00:00 +0100",
+      "date-published": "Mon, 15 Apr 2013 00:00:00 +0200",
+      "description-short": "Red de activaci\u00f3n ciudadana de azoteas culturales ",
+      "id": "redetejas",
+      "image-url": "https://goteo.org/img/medium/16-actividades-02_1r.jpg",
+      "lang": "es",
+      "latitude": 37.38909240000000,
+      "longitude": -5.98445889999994,
+      "minimum": 4000.0,
+      "name": "Redetejas",
+      "node": "goteo",
+      "optimum": 5000.0,
+      "owner": "lamatraka",
+      "owner-name": "lamatraka",
+      "project-url": "https://goteo.org/project/redetejas",
+      "region": "Sevilla",
+      "social-commitment-id": null,
+      "status": "fulfilled"
+    }
+  ],
+  "meta": {
+    "call": "unia-capital-riego",
+    "lang": [
+      "en"
+    ],
+    "limit": 10,
+    "page": 0,
+    "total": 5
+  },
+  "time-elapsed": 0.23531222343444824
+}
+</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+ -->
+<script src="/assets/highlight.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62675757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+
+</html>

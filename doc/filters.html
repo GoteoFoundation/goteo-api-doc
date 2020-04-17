@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Goteo API : Filters</title>
+  <meta name="description" content="">
+
+
+  <link rel="stylesheet" href="/assets/assemble.css">
+  <link rel="stylesheet" href="/assets/github.css">
+  <link rel="stylesheet" href="/assets/goteo.css">
+  
+  <link rel="canonical" href="https://developers.goteo.org/doc/filters.html">
+  
+
+  </head>
+
+  <body style="background: white;">
+  <div class="wrapper">
+
+  
+      <!-- Navbar component
+================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png"></a>
+<!--       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="/about-goteo">About Goteo</a></li>
+          <li><a href="/doc">API Docs</a></li>
+          <li><a href="/apps">Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+      <div class="col col-lg-3">
+        <div class="sidebar bs-sidebar">
+ 
+  <span class="nav-section-title">
+    API DOCS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/index.html">Introduction</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/responses.html">Responses</a></li>
+          
+        
+          
+          <li><a href="/doc/security.html">Security</a></li>
+          
+        
+          
+          <li class="active"><a href="/doc/filters.html">Filters</a></li>
+          
+        
+          
+          <li><a href="/doc/console.html">Live Console</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+          <li><a href="/doc/projects.html">Projects</a></li>
+          
+        
+          
+          <li><a href="/doc/users.html">Users</a></li>
+          
+        
+          
+          <li><a href="/doc/categories.html">Categories</a></li>
+          
+        
+          
+          <li><a href="/doc/footprints.html">Footprints</a></li>
+          
+        
+          
+          <li><a href="/doc/sdgs.html">Sustainable Development Goals</a></li>
+          
+        
+          
+          <li><a href="/doc/social_commitments.html">Social Commitments</a></li>
+          
+        
+          
+          <li><a href="/doc/licenses.html">Licenses</a></li>
+          
+        
+          
+          <li><a href="/doc/invests.html">Invests</a></li>
+          
+        
+          
+          <li><a href="/doc/calls.html">Matchfunding calls</a></li>
+          
+        
+          
+          <li><a href="/doc/matchers.html">Matchfunding matchers</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/reports.html">Reports</a></li>
+          
+        
+          
+          <li><a href="/doc/digests.html">Digests</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  
+
+  
+
+  
+
+</div>
+
+      </div>
+
+      <div class="col col-lg-9 panel-docs">
+        <h1>Filtering data in endpoints</h1>
+
+<p>The endpoints are designed to provide a easy interface to a complex data. Its possible to get information about users, projects, licenses, categories or advanced pre-calculated reports.</p>
+
+<p>A common set of filters may be available trough all the endpoints with slightly different meanings depending on the context.</p>
+
+<p>Some endpoints may have a reduced set of filters or have a bigger one. Check documentation for each of them.</p>
+
+<p><strong>Apply any filter by sending it in the request's query string</strong></p>
+
+<pre><code class="http">GET https://api.goteo.org/v1/users/?node=barcelona HTTP/1.1
+</code></pre>
+
+<p><a name="filters"></a></p>
+
+<h2>COMMON FILTERS:</h2>
+
+<table>
+<thead>
+<tr>
+<th> Parameter  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> page </td>
+<td> number </td>
+<td> Some endpoints are paginated, by appending <strong>?page=</strong> to the request you will obtain the specified page in the response. This parameter is zero-based, number <strong>0</strong> is the first page, <strong>1</strong> is the second and so on...</td>
+</tr>
+<tr>
+<td> limit </td>
+<td> number </td>
+<td> Also for the paginated endpoints you can specify the maximum number of items per page. The maximum items per page allowed is <strong>50</strong>.  </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string (*multiple) </td>
+<td> Some endpoints returns may return content in different languages. This parameter allows to specify one or two languages (<a href="http://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code) for the displayed content.<br><br>Note that not all content are available in all languages. Missing content will be displayed in the second specified language (if available) or in the platform default.<br><br>Currently, these languages are available:<br> <strong>es</strong> (Spanish, default), <strong>en</strong> (English), <strong>ca</strong> (Catalan), <strong>eu</strong> (Basque) <strong>gl</strong> (Galician), <strong>it</strong> (Italy), <strong>nl</strong> (Dutch) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string (*multiple) </td>
+<td> Providing a <strong>project-id</strong> here will restrict the results to the specified projects. </td>
+</tr>
+<tr>
+<td> category </td>
+<td> number (*multiple) </td>
+<td> Same as before, you can restrict the results to the specified categories.<br><br><strong>Note that the value expected here is the id of the category</strong>.<br>You can obtain this id from the <a href="categories.html">categories endpoint</a>. </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> number (*multiple) </td>
+<td> Like categories, you can restrict the results to the specified social commitments.<br><br><strong>Note that the value expected here is the id of the social_commitment</strong>.<br>You can obtain this id from the <a href="social_commitments.html">social commitments endpoint</a>. </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> number (*multiple) </td>
+<td> Sustainable Development Goals can also be used to restrict the results.<br><br><strong>Note that the value expected here is the id of the sdg</strong>.<br>You can obtain this id from the <a href="sdgs.html">SDGs endpoint</a>. </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> number (*multiple) </td>
+<td> Footprints is a meta-categorization scope, you can restrict results by this value too.<br><br><strong>Note that the value expected here is the id of the footprint</strong>.<br>You can obtain this id from the <a href="footprints.html">footprints endpoint</a>. </td>
+</tr>
+<tr>
+<td> node </td>
+<td> string (*multiple) </td>
+<td> This allows you to restrict the results to a single node (known as <em>channel</em> as well) of Goteo.<br><br>Currently, we don't have and endpoint for channels (yet), check out the active ones in the official website: <a href="https://goteo.org/channels">goteo.org/channels</a>, to exclude channels results use <strong>goteo</strong> as the general node </td>
+</tr>
+<tr>
+<td> call </td>
+<td> string (*multiple) </td>
+<td> This allows you to restrict the results to a single matchfunding call.<br><br>Check for existing calls in <a href="calls.html">Calls</a> </td>
+</tr>
+<tr>
+<td> matcher </td>
+<td> string (*multiple) </td>
+<td> This allows you to restrict the results to a single matchfunding matcher.<br><br>Check for existing matchers in <a href="matchers.html">Matchers</a> </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> date </td>
+<td> Results can be confined into a range of dates, use this parameter to specify the start date you want results for.<br><br>The date expected format is <strong>YYYY-MM-DD</strong> </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> date </td>
+<td> Same as <strong>from_date</strong>, sets the last date you want results for. </td>
+</tr>
+<tr>
+<td> location </td>
+<td> numbers (csv) </td>
+<td> This parameter allows you to restrict results to a certain geographic point and a radius around it. The point coordinates must be in <a href="http://en.wikipedia.org/wiki/Decimal_degrees">decimal degrees</a> (latitude, longitude) and the radius in Km (with a maximum of 500Km).<br><br>All 3 values must separated by a comma(<strong>,</strong>): <strong>longitude,latitude,radius</strong><br><br>For instance: <strong>?location=41.38879,2.15899,100</strong> will return results around the city of Barcelona in a radius of 100Km. </td>
+</tr>
+</tbody>
+</table>
+
+
+<blockquote><p><strong>*multiple</strong>: These parameters can be queried multiple times and all values will be included in the filter.</p>
+
+<p>For instance:</p>
+
+<p><strong>?node=barcelona&amp;node=euskadi</strong> appended to the request will return all the items related to this 2 nodes (barcelona and euskadi).</p>
+
+<p><strong>?lang=eu&amp;lang=en</strong> appended to the request will return the results localized in Basque language, English if Basque is not available or, finally, in the default language (Spanish) if none of them matches.</p></blockquote>
+
+<h2>Examples:</h2>
+
+<p>Obtaining a list of users created in Goteo around Barcelona in a radius of 50Km during the year 2014:</p>
+
+<pre><code class="bash">curl --basic --user "user:key" \
+"https://api.goteo.org/v1/users/?location=41.38879,2.15899,50&amp;from_date=2014-01-01&amp;to_date=2014-12-31"
+</code></pre>
+
+<p>Obtaining all the money statistics for the project a single project:</p>
+
+<pre><code class="bash">curl --basic --user "user:key" \
+"https://api.goteo.org/v1/reports/money/?project=crowdfundparato"
+</code></pre>
+
+<p>Obtaining all the community reports for the nodes of barcelona, euskadi an andalucia together:</p>
+
+<pre><code class="bash">curl --basic --user "user:key" \
+"https://api.goteo.org/v1/reports/community/?node=barcelona&amp;node=euskadi&amp;node=andalucia"
+</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+ -->
+<script src="/assets/highlight.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62675757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+
+</html>

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Goteo API : Licenses</title>
+  <meta name="description" content="">
+
+
+  <link rel="stylesheet" href="/assets/assemble.css">
+  <link rel="stylesheet" href="/assets/github.css">
+  <link rel="stylesheet" href="/assets/goteo.css">
+  
+  <link rel="canonical" href="https://developers.goteo.org/doc/licenses.html">
+  
+
+  </head>
+
+  <body style="background: white;">
+  <div class="wrapper">
+
+  
+      <!-- Navbar component
+================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png"></a>
+<!--       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="/about-goteo">About Goteo</a></li>
+          <li><a href="/doc">API Docs</a></li>
+          <li><a href="/apps">Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+      <div class="col col-lg-3">
+        <div class="sidebar bs-sidebar">
+ 
+  <span class="nav-section-title">
+    API DOCS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/index.html">Introduction</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/responses.html">Responses</a></li>
+          
+        
+          
+          <li><a href="/doc/security.html">Security</a></li>
+          
+        
+          
+          <li><a href="/doc/filters.html">Filters</a></li>
+          
+        
+          
+          <li><a href="/doc/console.html">Live Console</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+          <li><a href="/doc/projects.html">Projects</a></li>
+          
+        
+          
+          <li><a href="/doc/users.html">Users</a></li>
+          
+        
+          
+          <li><a href="/doc/categories.html">Categories</a></li>
+          
+        
+          
+          <li><a href="/doc/footprints.html">Footprints</a></li>
+          
+        
+          
+          <li><a href="/doc/sdgs.html">Sustainable Development Goals</a></li>
+          
+        
+          
+          <li><a href="/doc/social_commitments.html">Social Commitments</a></li>
+          
+        
+          
+          <li class="active"><a href="/doc/licenses.html">Licenses</a></li>
+          
+        
+          
+          <li><a href="/doc/invests.html">Invests</a></li>
+          
+        
+          
+          <li><a href="/doc/calls.html">Matchfunding calls</a></li>
+          
+        
+          
+          <li><a href="/doc/matchers.html">Matchfunding matchers</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/reports.html">Reports</a></li>
+          
+        
+          
+          <li><a href="/doc/digests.html">Digests</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  
+
+  
+
+  
+
+</div>
+
+      </div>
+
+      <div class="col col-lg-9 panel-docs">
+        <h1>Licenses endpoint</h1>
+
+<p>This section gives you information about the licenses used by project rewards in <a href="http://goteo.org">Goteo.org</a></p>
+
+<p><a name="licenses"></a></p>
+
+<h2>/licenses/</h2>
+
+<p>Obtains a list of licenses.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/licenses/
+</code></pre>
+
+<h3>Filters available:</h3>
+
+<p><strong>The <a href="filters.html">standard set of filters</a> applies to this endpoint with these particulars:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the licenses used in project rewards where the project is assigned in that nodes </td>
+</tr>
+<tr>
+<td> call </td>
+<td> string </td>
+<td> Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s) </td>
+</tr>
+<tr>
+<td> matcher </td>
+<td> string </td>
+<td> Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Filter by individual project(s). Multiple projects can be specified. Restricts the list to the licenses used in rewards for that projects </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Get results by specified lang. Multiple langs can be specified </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Filter from date. Ex. "2013-01-01". Restricts the list to the licenses used in the project rewards where the project was published after that date (included) </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Filter until date.. Ex. "2014-01-01". Restricts the list to the licenses used in the project rewards where the project was published before that date (included) </td>
+</tr>
+<tr>
+<td> category </td>
+<td> integer </td>
+<td> Filter by project category. Multiple categories can be specified. Restricts the list to the licenses used in rewards of projects with that category(ies) </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> integer </td>
+<td> Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the licenses used in rewards of projects with that social commitment(s) </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> integer </td>
+<td> Filter by project footprint. Multiple footprint can be specified. Restricts the list to the licenses used in rewards of projects with that footprint(s) </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> integer </td>
+<td> Filter by project Sustainable Development Goal. Multiple sdg can be specified. Restricts the list to the licenses used in rewards of projects with that sdg(s) </td>
+</tr>
+<tr>
+<td> location </td>
+<td> number </td>
+<td> Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the licenses used in project rewards where the project is geolocated in that area. </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="ResponseLicense">ResponseLicense</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> items </td>
+<td> array </td>
+<td> ... &#9758; <a href="#License">License</a> </td>
+</tr>
+<tr>
+<td> meta </td>
+<td>  </td>
+<td> ... &#9758; <a href="#MetaLicense">MetaLicense</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="License">License</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> description </td>
+<td> string </td>
+<td> License description </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> License unique identifier </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> License name </td>
+</tr>
+<tr>
+<td> svg-url </td>
+<td> string </td>
+<td> URL with the SVG logo of the license </td>
+</tr>
+<tr>
+<td> total-projects </td>
+<td> integer </td>
+<td> Number of rewards using the license for all published projects </td>
+</tr>
+<tr>
+<td> total-rewards </td>
+<td> integer </td>
+<td> Number of published projects using the license in some of its rewards </td>
+</tr>
+<tr>
+<td> url </td>
+<td> string </td>
+<td> URL where to find the license content terms </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="MetaLicense">MetaLicense</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> category </td>
+<td> array </td>
+<td> Only if filtering by category </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> array </td>
+<td> Only if filtering by footprint </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Only if filtering by from_date </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> array </td>
+<td> Only if filtering by lang </td>
+</tr>
+<tr>
+<td> location </td>
+<td> array </td>
+<td> Only if filtering by location </td>
+</tr>
+<tr>
+<td> node </td>
+<td> array </td>
+<td> Only if filtering by node </td>
+</tr>
+<tr>
+<td> project </td>
+<td> array </td>
+<td> Only if filtering by project </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> array </td>
+<td> Only if filtering by Sustainable Development Goal </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> array </td>
+<td> Only if filtering by social_commitment </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Only if filtering by to_date </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Total elements available for the collection </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body</h3>
+
+<pre><code class="json">{
+  "items": [
+    {
+      "description": "GNU General Public License for the free distribution, modification, and use of software",
+      "id": "gpl",
+      "name": "General Public License",
+      "svg-url": "https://goteo.org/api/svg/licenses/gpl.svg",
+      "total-projects": 48,
+      "total-rewards": 158,
+      "url": "http://www.gnu.org/licenses/gpl.html"
+    },
+    {
+      "description": "GNU General Public License for the free distribution, modification, and use of software",
+      "id": "gpl2",
+      "name": "General Public License (v.2)",
+      "svg-url": "https://goteo.org/api/svg/licenses/gpl2.svg",
+      "total-projects": 23,
+      "total-rewards": 57,
+      "url": "http://www.gnu.org/licenses/gpl-2.0.html"
+    },
+    {
+      "description": "Affero General Public License for open networked software",
+      "id": "agpl",
+      "name": "Affero General Public License",
+      "svg-url": "https://goteo.org/api/svg/licenses/agpl.svg",
+      "total-projects": 14,
+      "total-rewards": 37,
+      "url": "http://www.affero.org/oagf.html"
+    },
+    {
+      "description": "GNU Lesser General Public License for free software that can be used by a non-GPL program, which in turn can be free software or not. ",
+      "id": "lgpl",
+      "name": "Lesser General Public License",
+      "svg-url": "https://goteo.org/api/svg/licenses/lgpl.svg",
+      "total-projects": 0,
+      "total-rewards": 4,
+      "url": "http://www.gnu.org/copyleft/lesser.html"
+    },
+    {
+      "description": "GNU free documentation license, which can be copied, redistributed, modified and even sold, as long as the original terms of this same license are maintained.",
+      "id": "fdl",
+      "name": "Free Documentation License ",
+      "svg-url": "https://goteo.org/api/svg/licenses/fdl.svg",
+      "total-projects": 13,
+      "total-rewards": 57,
+      "url": "http://www.gnu.org/copyleft/fdl.html"
+    },
+    {
+      "description": "Permissive free software licenses, with few restrictions, that permit the use of source code in non-free software",
+      "id": "bsd",
+      "name": "Berkeley Software Distribution Licenses",
+      "svg-url": "https://goteo.org/api/svg/licenses/bsd.svg",
+      "total-projects": 0,
+      "total-rewards": 2,
+      "url": "http://en.wikipedia.org/wiki/BSD_licenses"
+    },
+    {
+      "description": "Free Documentation License for the FreeBSD operating system",
+      "id": "freebsd",
+      "name": "FreeBSD Documentation License",
+      "svg-url": "https://goteo.org/api/svg/licenses/freebsd.svg",
+      "total-projects": 1,
+      "total-rewards": 3,
+      "url": "http://www.freebsd.org/copyright/freebsd-doc-license.html"
+    },
+    {
+      "description": "Mozilla Public License for open software that makes possible the non-open reuse of software, without restricting the reuse of the code or the relicensing under the same license. ",
+      "id": "mpl",
+      "name": "Mozilla Public License",
+      "svg-url": "https://goteo.org/api/svg/licenses/mpl.svg",
+      "total-projects": 0,
+      "total-rewards": 2,
+      "url": "http://www.mozilla.org/MPL/"
+    },
+    {
+      "description": "License both for open and closed software, that allows changes made to the original program to be protected",
+      "id": "mit",
+      "name": "MIT / X11 License",
+      "svg-url": "https://goteo.org/api/svg/licenses/mit.svg",
+      "total-projects": 1,
+      "total-rewards": 4,
+      "url": "http://es.wikipedia.org/wiki/MIT_License"
+    },
+    {
+      "description": "License under which the PHP programming language is published",
+      "id": "php",
+      "name": "PHP License",
+      "svg-url": "https://goteo.org/api/svg/licenses/php.svg",
+      "total-projects": 1,
+      "total-rewards": 11,
+      "url": "http://www.php.net/license/"
+    },
+    {
+      "description": "Apache License for open software, that does not require that derivative works be distributed with the same license, or even as open software",
+      "id": "apache",
+      "name": "Apache License",
+      "svg-url": "https://goteo.org/api/svg/licenses/apache.svg",
+      "total-projects": 1,
+      "total-rewards": 3,
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "description": "Creative Commons License with attribution",
+      "id": "ccby",
+      "name": "CC - Attribution",
+      "svg-url": "https://goteo.org/api/svg/licenses/ccby.svg",
+      "total-projects": 91,
+      "total-rewards": 403,
+      "url": "http://creativecommons.org/licenses/by/2.0/deed.en"
+    },
+    {
+      "description": "Creative Commons License with attribution that does not permit commercial use",
+      "id": "ccbync",
+      "name": "CC - Attribution-NonCommercial",
+      "svg-url": "https://goteo.org/api/svg/licenses/ccbync.svg",
+      "total-projects": 142,
+      "total-rewards": 433,
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.en"
+    },
+    {
+      "description": "Creative Commons License with attribution, that does not allow commercial use, and only allows sharing under identical licensing conditions",
+      "id": "ccbyncsa",
+      "name": "CC - Attribution - NonCommercial - ShareAlike",
+      "svg-url": "https://goteo.org/api/svg/licenses/ccbyncsa.svg",
+      "total-projects": 325,
+      "total-rewards": 749,
+      "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en"
+    },
+    {
+      "description": "Creative Commons License with attribution, that does not allow commercial use nor derivative works",
+      "id": "ccbyncnd",
+      "name": "CC - Attribution  - NonCommercial - NoDerivs",
+      "svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
+      "total-projects": 135,
+      "total-rewards": 355,
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"
+    },
+    {
+      "description": "Creative Commons License with attribution that only allows sharing under identical licensing conditions",
+      "id": "ccbysa",
+      "name": "CC - Attribution - ShareAlike",
+      "svg-url": "https://goteo.org/api/svg/licenses/ccbysa.svg",
+      "total-projects": 116,
+      "total-rewards": 265,
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.en"
+    },
+    {
+      "description": "Creative Commons License with attribution that does not allow derivative works",
+      "id": "ccbynd",
+      "name": "CC - Attribution - NoDerivs",
+      "svg-url": "https://goteo.org/api/svg/licenses/ccbynd.svg",
+      "total-projects": 6,
+      "total-rewards": 33,
+      "url": "http://creativecommons.org/licenses/by-nd/2.0/deed.en"
+    },
+    {
+      "description": "TAPR Open Hardware License",
+      "id": "oshw",
+      "name": "TAPR Open Hardware License",
+      "svg-url": "https://goteo.org/api/svg/licenses/oshw.svg",
+      "total-projects": 7,
+      "total-rewards": 16,
+      "url": "http://www.tapr.org/OHL"
+    },
+    {
+      "description": "TAPR Noncommercial Hardware License",
+      "id": "tapr",
+      "name": "TAPR Noncommercial Hardware License",
+      "svg-url": "https://goteo.org/api/svg/licenses/tapr.svg",
+      "total-projects": 0,
+      "total-rewards": 1,
+      "url": "http://www.tapr.org/NCL.html"
+    },
+    {
+      "description": "License for open Balloon boards",
+      "id": "balloon",
+      "name": "Balloon Open Hardware License",
+      "svg-url": "https://goteo.org/api/svg/licenses/balloon.svg",
+      "total-projects": 0,
+      "total-rewards": 1,
+      "url": "http://balloonboard.org/licence.html"
+    },
+    {
+      "description": "License for an open, free, neutral network, as an agreement of interconnection among equals, promoted by Guifi.net ",
+      "id": "xoln",
+      "name": "XOLN Common Good License",
+      "svg-url": "https://goteo.org/api/svg/licenses/xoln.svg",
+      "total-projects": 1,
+      "total-rewards": 2,
+      "url": "http://guifi.net/es/ProcomunXOLN"
+    },
+    {
+      "description": "Open Database License that allows for sharing, modifying, and using databases in identical conditions",
+      "id": "odbl",
+      "name": "Open Database License ",
+      "svg-url": "https://goteo.org/api/svg/licenses/odbl.svg",
+      "total-projects": 7,
+      "total-rewards": 10,
+      "url": "http://www.opendatacommons.org/licenses/odbl/"
+    },
+    {
+      "description": "Open data license that allows for sharing, modifying and using data under identical conditions, as long as attribution is given for the original source",
+      "id": "odcby",
+      "name": "Open Data Commons Attribution License",
+      "svg-url": "https://goteo.org/api/svg/licenses/odcby.svg",
+      "total-projects": 2,
+      "total-rewards": 10,
+      "url": "http://www.opendatacommons.org/licenses/by/"
+    },
+    {
+      "description": "The work may be freely reproduced, distributed, transmitted, used, modified, edited, or subject to any other form of exploitation for any commerical or non-commercial use.",
+      "id": "pd",
+      "name": "Public Domain",
+      "svg-url": "https://goteo.org/api/svg/licenses/pd.svg",
+      "total-projects": 17,
+      "total-rewards": 80,
+      "url": "http://creativecommons.org/licenses/publicdomain/deed.en"
+    },
+    {
+      "description": "Creative Commons License for works dedicated to the public domain, by which all intellectual property rights over a work are waived",
+      "id": "cc0",
+      "name": "CC0 Universal (Public Domain)",
+      "svg-url": "https://goteo.org/api/svg/licenses/cc0.svg",
+      "total-projects": 45,
+      "total-rewards": 190,
+      "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+    },
+    {
+      "description": "The peer production license is an example of the Copyfarleft type of license, in which only other commoners, cooperatives and nonprofits can share and re-use the material, but not commercial entities intent on making profit through the commons without explicit reciprocity.",
+      "id": "ppl",
+      "name": "Peer Production License",
+      "svg-url": "https://goteo.org/api/svg/licenses/ppl.svg",
+      "total-projects": 9,
+      "total-rewards": 18,
+      "url": "http://p2pfoundation.net/Peer_Production_License"
+    },
+    {
+      "description": "Licenza sviluppata dal CERN - Laboratorio Europeo di Fisica della Particelle Elementari per progetti di Hardware",
+      "id": "cernohl",
+      "name": "CERN OHL Open Hardware Licence",
+      "svg-url": "https://goteo.org/api/svg/licenses/cernohl.svg",
+      "total-projects": 1,
+      "total-rewards": 8,
+      "url": "http://www.ohwr.org/projects/cernohl/wiki"
+    },
+    {
+      "description": "Free art license",
+      "id": "fal",
+      "name": "Free Art License",
+      "svg-url": "https://goteo.org/api/svg/licenses/fal.svg",
+      "total-projects": 16,
+      "total-rewards": 173,
+      "url": "http://artlibre.org/licence/lal/en"
+    }
+  ],
+  "meta": {
+    "lang": [
+      "en"
+    ],
+    "total": 28
+  },
+  "time-elapsed": 2.288625478744507
+}
+</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+ -->
+<script src="/assets/highlight.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62675757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+
+</html>

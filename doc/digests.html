@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Goteo API : Digests</title>
+  <meta name="description" content="">
+
+
+  <link rel="stylesheet" href="/assets/assemble.css">
+  <link rel="stylesheet" href="/assets/github.css">
+  <link rel="stylesheet" href="/assets/goteo.css">
+  
+  <link rel="canonical" href="https://developers.goteo.org/doc/digests.html">
+  
+
+  </head>
+
+  <body style="background: white;">
+  <div class="wrapper">
+
+  
+      <!-- Navbar component
+================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png"></a>
+<!--       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="/about-goteo">About Goteo</a></li>
+          <li><a href="/doc">API Docs</a></li>
+          <li><a href="/apps">Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+      <div class="col col-lg-3">
+        <div class="sidebar bs-sidebar">
+ 
+  <span class="nav-section-title">
+    API DOCS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/index.html">Introduction</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/responses.html">Responses</a></li>
+          
+        
+          
+          <li><a href="/doc/security.html">Security</a></li>
+          
+        
+          
+          <li><a href="/doc/filters.html">Filters</a></li>
+          
+        
+          
+          <li><a href="/doc/console.html">Live Console</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+          <li><a href="/doc/projects.html">Projects</a></li>
+          
+        
+          
+          <li><a href="/doc/users.html">Users</a></li>
+          
+        
+          
+          <li><a href="/doc/categories.html">Categories</a></li>
+          
+        
+          
+          <li><a href="/doc/footprints.html">Footprints</a></li>
+          
+        
+          
+          <li><a href="/doc/sdgs.html">Sustainable Development Goals</a></li>
+          
+        
+          
+          <li><a href="/doc/social_commitments.html">Social Commitments</a></li>
+          
+        
+          
+          <li><a href="/doc/licenses.html">Licenses</a></li>
+          
+        
+          
+          <li><a href="/doc/invests.html">Invests</a></li>
+          
+        
+          
+          <li><a href="/doc/calls.html">Matchfunding calls</a></li>
+          
+        
+          
+          <li><a href="/doc/matchers.html">Matchfunding matchers</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/reports.html">Reports</a></li>
+          
+        
+          
+          <li class="active"><a href="/doc/digests.html">Digests</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  
+
+  
+
+  
+
+</div>
+
+      </div>
+
+      <div class="col col-lg-9 panel-docs">
+        <h1>Digests endpoint</h1>
+
+<p>This section allows to automatically group the information provided from other endpoints in predefined intervals of dates.</p>
+
+<p>For example, you can retrieve all money reports given by the <a href="/doc/reports/#money">/reports/money/</a> endpoint in 13 different chunks, 12 corresponding to the 12 months of the year and the last one for whole year itself.</p>
+
+<p><a name="digests"></a></p>
+
+<h2>/digests/{ENDPOINT}</h2>
+
+<p>Retrieves the same information given by the endpoint specified in {ENDPOINT} divided in several periods of time.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/digests/reports/money/?year=2014
+</code></pre>
+
+<h3>Filters available</h3>
+
+<p><strong>Some of the <a href="filters.html">standard set of filters</a>) plues some more applies to this endpoint:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> endpoint </td>
+<td> string </td>
+<td> Endpoint to digest. Not all endpoints may be available to digest </td>
+</tr>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Filter by individual node(s). Multiple nodes can be specified </td>
+</tr>
+<tr>
+<td> call </td>
+<td> string </td>
+<td> Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s) </td>
+</tr>
+<tr>
+<td> matcher </td>
+<td> string </td>
+<td> Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Filter by individual project(s). Multiple projects can be specified </td>
+</tr>
+<tr>
+<td> category </td>
+<td> integer </td>
+<td> Filter by project category. Multiple categories can be specified </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> integer </td>
+<td> Filter by project social commitment. Multiple social commitments can be specified </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> integer </td>
+<td> Filter by project Sustainability Development Goal. Multiple SDGs can be specified </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> integer </td>
+<td> Filter by project footprint. Multiple footprints can be specified </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Get results by specified lang. Multiple langs can be specified </td>
+</tr>
+<tr>
+<td> location </td>
+<td> number </td>
+<td> Filter by project location (Latitude,longitude,Radius in Km) </td>
+</tr>
+<tr>
+<td> year </td>
+<td> integer </td>
+<td> Groups the buckets in 12 months for the specified year </td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li><strong>page</strong> and <strong>limit</strong> are not available in this endpoint</li>
+<li><strong>from_date</strong> and <strong>to_date</strong> are not available in this endpoint</li>
+<li>Parameter <strong>year</strong> allows to specify witch year you want the digest from. Data will return in 12 buckets, one for each month of the year.</li>
+<li>If the parameter <strong>year</strong> is not specified, then the information will be chunked in buckets of one year duration. Starting at the year 2011 (when the platform Goteo started).</li>
+</ul>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="Digest">Digest</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> buckets </td>
+<td> array </td>
+<td> An associative array where the key is an identifier of the period and the value is the content of the endpoint.<br>A digest generated for a whole year will return 12 buckets correspondig to each month of the year.<br>A digest generated without a year will return one buecket per each year of the Goteo's history &#9758; <a href="#Bucket">Bucket</a> </td>
+</tr>
+<tr>
+<td> endpoint </td>
+<td> string </td>
+<td> The name of the endpoint used to digest </td>
+</tr>
+<tr>
+<td> global </td>
+<td>  </td>
+<td> The content of the endpoint with the summarized data for all the buckets together &#9758; <a href="#Bucket">Bucket</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Bucket">Bucket</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <em>month/year</em> </td>
+<td>  </td>
+<td> The name of this field depends on the type of buckets generated, could be a month number or a year. The value will be the same object of the endpoint being requested </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Types of buckets:</h3>
+
+<p>Every item in the bucket array represents a particular period of time.</p>
+
+<p>If the parameter <strong>year</strong> is present then the period is a month in the specified year.</p>
+
+<p>If the parameter  <strong>year</strong> is not present, the period is a year in the history of Goteo. All years from the beginning (year 2011) will be returned.</p>
+
+<p>In any case, always and additional "global" item will be returned representing the sum of all the periods.</p>
+
+<h4>Response example without the "year" parameter:</h4>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/digests/{SOME-ENDPOINT}/
+</code></pre>
+
+<pre><code class="json">{
+  "buckets": {
+    "2011": {
+
+      ... endpoint data for the year 2011 ...
+
+      "meta": {
+        "from_date": "2011-01-01",
+        "to_date": "2011-12-31"
+      }
+    },
+    "2012": {
+
+      ... endpoint data for the year 2012 ...
+
+      "meta": {
+        "from_date": "2012-01-01",
+        "to_date": "2012-12-31"
+      }
+    },
+
+    ...
+
+  },
+  "endpoint": "reports/money",
+  "global": {
+
+    ... endpoint data for from the beginning of times...
+
+  }
+}
+</code></pre>
+
+<h4>Response example with the "year" set to 2014:</h4>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/digests/{SOME-ENDPOINT}/?year=2014
+</code></pre>
+
+<pre><code class="json">{
+  "buckets": {
+    "01": {
+
+      ... endpoint data for January 2014 ...
+
+      "meta": {
+        "from_date": "2014-01-01",
+        "to_date": "2014-01-31"
+      }
+    },
+    "02": {
+
+      ... endpoint data for February 2014 ...
+
+      "meta": {
+        "from_date": "2014-02-01",
+        "to_date": "2014-02-28"
+      }
+    },
+
+    ...
+
+  },
+  "endpoint": "reports/community",
+  "global": {
+
+    ... endpoint data for from the beginning of times...
+
+    "meta": {
+      "from_date": "2014-01-01",
+      "to_date": "2014-12-31"
+    },
+  }
+}
+</code></pre>
+
+<h3>Allowed endpoints to digest</h3>
+
+<p>Not all endpoints can be digested, these are the available ones:</p>
+
+<ul>
+<li><a href="/doc/reports#summary">reports/summary</a></li>
+<li><a href="/doc/reports#money">reports/money</a></li>
+<li><a href="/doc/reports#community">reports/community</a></li>
+<li><a href="/doc/reports#projects">reports/projects</a></li>
+<li><a href="/doc/reports#rewards">reports/rewards</a></li>
+<li><a href="/doc/categories">categories</a></li>
+<li><a href="/doc/licenses">licenses</a></li>
+</ul>
+
+
+<h3>Examples</h3>
+
+<h4>Digesting the money reports for the full history of Goteo:</h4>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/digests/reports/money/
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="json">{
+  "buckets": {
+    "2011": {
+      "average-donation": 35.13,
+      "average-donation-paypal": 29.56,
+      "average-failed": 1023.00,
+      "average-minimum": 3503.33,
+      "average-received": 5174.33,
+      "average-second-round": 445.33,
+      "cash-amount": 840,
+      "creditcard-amount": 22476,
+      "fee-amount": 940.4,
+      "matchfund-amount": 0,
+      "matchfundpledge-amount": 0,
+      "meta": {
+        "from_date": "2011-01-01",
+        "lang": [
+          "en"
+        ],
+        "to_date": "2011-12-31"
+      },
+      "paypal-amount": 5072,
+      "percentage-pledged-failed": 28.17,
+      "percentage-pledged-successful": 145.77,
+      "pledged": 28388,
+      "refunded": 4681,
+      "time-elapsed": 0.47659850120544434
+    },
+    "2012": {
+      "average-donation": 41.75,
+      "average-donation-paypal": 28.94,
+      "average-failed": 609.35,
+      "average-minimum": 4195.57,
+      "average-received": 5287.99,
+      "average-second-round": 534.72,
+      "cash-amount": 21012,
+      "creditcard-amount": 334851,
+      "fee-amount": 16364.52,
+      "matchfund-amount": 0,
+      "matchfundpledge-amount": 0,
+      "meta": {
+        "from_date": "2012-01-01",
+        "lang": [
+          "en"
+        ],
+        "to_date": "2012-12-31"
+      },
+      "paypal-amount": 83179,
+      "percentage-pledged-failed": 21.35,
+      "percentage-pledged-successful": 128.54,
+      "pledged": 439042,
+      "refunded": 25428,
+      "time-elapsed": 1.3759994506835938
+    },
+    "2013": {
+      "average-donation": 48.99,
+      "average-donation-paypal": 40.08,
+      "average-failed": 852.09,
+      "average-minimum": 4675.59,
+      "average-received": 6286.17,
+      "average-second-round": 763.67,
+      "cash-amount": 33676,
+      "creditcard-amount": 728601,
+      "fee-amount": 35656.08,
+      "matchfund-amount": 38375,
+      "matchfundpledge-amount": 52000,
+      "meta": {
+        "from_date": "2013-01-01",
+        "lang": [
+          "en"
+        ],
+        "to_date": "2013-12-31"
+      },
+      "paypal-amount": 141549,
+      "percentage-pledged-failed": 21.33,
+      "percentage-pledged-successful": 129.69,
+      "pledged": 942201,
+      "refunded": 49474,
+      "time-elapsed": 3.0721635818481445
+    },
+    "2014": {
+      "average-donation": 48.83,
+      "average-donation-paypal": 36.89,
+      "average-failed": 1241.93,
+      "average-minimum": 5534.67,
+      "average-received": 6796.65,
+      "average-second-round": 716.15,
+      "cash-amount": 72193,
+      "creditcard-amount": 611588,
+      "fee-amount": 29638.88,
+      "matchfund-amount": 19563,
+      "matchfundpledge-amount": 22000,
+      "meta": {
+        "from_date": "2014-01-01",
+        "lang": [
+          "en"
+        ],
+        "to_date": "2014-12-31"
+      },
+      "paypal-amount": 98045,
+      "percentage-pledged-failed": 25.55,
+      "percentage-pledged-successful": 123.74,
+      "pledged": 801389,
+      "refunded": 59378,
+      "time-elapsed": 1.7361507415771484
+    },
+    "2015": {
+      "average-donation": 53.00,
+      "average-donation-paypal": 37.46,
+      "average-failed": 1311.24,
+      "average-minimum": 5436.30,
+      "average-received": 6732.74,
+      "average-second-round": 682.05,
+      "cash-amount": 151812,
+      "creditcard-amount": 660338,
+      "fee-amount": 33607.36,
+      "matchfund-amount": 17451,
+      "matchfundpledge-amount": 22000,
+      "meta": {
+        "from_date": "2015-01-01",
+        "lang": [
+          "en"
+        ],
+        "to_date": "2015-12-31"
+      },
+      "paypal-amount": 65796,
+      "percentage-pledged-failed": 20.15,
+      "percentage-pledged-successful": 132.81,
+      "pledged": 895397,
+      "refunded": 51546,
+      "time-elapsed": 1.6127362251281738
+    },
+    "2016": {
+      "average-donation": 46.24,
+      "average-donation-paypal": 30.35,
+      "average-failed": 1194.29,
+      "average-minimum": 7068.39,
+      "average-received": 9660.35,
+      "average-second-round": 1685.56,
+      "cash-amount": 39859,
+      "creditcard-amount": 920726,
+      "fee-amount": 45271.44,
+      "matchfund-amount": 66572,
+      "matchfundpledge-amount": 70000,
+      "meta": {
+        "from_date": "2016-01-01",
+        "lang": [
+          "en"
+        ],
+        "to_date": "2016-12-31"
+      },
+      "paypal-amount": 146824,
+      "percentage-pledged-failed": 21.98,
+      "percentage-pledged-successful": 140.59,
+      "pledged": 1173981,
+      "refunded": 36674,
+      "time-elapsed": 3.19954252243042
+    },
+    "2017": {
+      "average-donation": 52.61,
+      "average-donation-paypal": 38.49,
+      "average-failed": 1351.00,
+      "average-minimum": 5839.66,
+      "average-received": 8004.96,
+      "average-second-round": 1280.15,
+      "cash-amount": 129516,
+      "creditcard-amount": 1001268,
+      "fee-amount": 47087.04,
+      "matchfund-amount": 95802,
+      "matchfundpledge-amount": 330000,
+      "meta": {
+        "from_date": "2017-01-01",
+        "lang": [
+          "en"
+        ],
+        "to_date": "2017-12-31"
+      },
+      "paypal-amount": 133563,
+      "percentage-pledged-failed": 16.22,
+      "percentage-pledged-successful": 145.84,
+      "pledged": 1360149,
+      "refunded": 61041,
+      "time-elapsed": 3.5454113483428955
+    },
+    "2018": {
+      "average-donation": 48.73,
+      "average-donation-paypal": 33.91,
+      "average-failed": 1444.84,
+      "average-minimum": 5875.09,
+      "average-received": 8947.85,
+      "average-second-round": 1361.47,
+      "cash-amount": 58144,
+      "creditcard-amount": 1509166,
+      "fee-amount": 79606.24,
+      "matchfund-amount": 181472,
+      "matchfundpledge-amount": 70000,
+      "meta": {
+        "from_date": "2018-01-01",
+        "lang": [
+          "en"
+        ],
+        "to_date": "2018-12-31"
+      },
+      "paypal-amount": 185156,
+      "percentage-pledged-failed": 32.28,
+      "percentage-pledged-successful": 164.91,
+      "pledged": 1933938,
+      "refunded": 37037,
+      "time-elapsed": 3.652007579803467
+    },
+    "2019": {
+      "average-donation": 50.63,
+      "average-donation-paypal": 33.72,
+      "average-failed": 1684.76,
+      "average-minimum": 6074.29,
+      "average-received": 8993.55,
+      "average-second-round": 1685.84,
+      "cash-amount": 58070,
+      "creditcard-amount": 1638179,
+      "fee-amount": 78283.12,
+      "matchfund-amount": 70100,
+      "matchfundpledge-amount": 70000,
+      "meta": {
+        "from_date": "2019-01-01",
+        "lang": [
+          "en"
+        ],
+        "to_date": "2019-12-31"
+      },
+      "paypal-amount": 217297,
+      "percentage-pledged-failed": 25.54,
+      "percentage-pledged-successful": 149.50,
+      "pledged": 1983646,
+      "refunded": 34807,
+      "time-elapsed": 3.852531671524048
+    },
+    "2020": {
+      "average-donation": 51.98,
+      "average-donation-paypal": 46.58,
+      "average-failed": 1763.86,
+      "average-minimum": 5052.97,
+      "average-received": 6924.30,
+      "average-second-round": 1010.56,
+      "cash-amount": 16500,
+      "creditcard-amount": 367928,
+      "fee-amount": 16721.6,
+      "matchfund-amount": 0,
+      "matchfundpledge-amount": 8000,
+      "meta": {
+        "from_date": "2020-01-01",
+        "lang": [
+          "en"
+        ],
+        "to_date": "2020-04-10"
+      },
+      "paypal-amount": 55227,
+      "percentage-pledged-failed": 30.25,
+      "percentage-pledged-successful": 158.64,
+      "pledged": 439655,
+      "refunded": 2755,
+      "time-elapsed": 1.3084406852722168
+    }
+  },
+  "endpoint": "/reports/money/",
+  "global": {
+    "average-donation": 50.21,
+    "average-donation-paypal": 35.23,
+    "average-failed": 1163.32,
+    "average-minimum": 5675.41,
+    "average-received": 7870.46,
+    "average-second-round": 1259.79,
+    "cash-amount": 581622,
+    "creditcard-amount": 7795121,
+    "fee-amount": 383176.68,
+    "matchfund-amount": 489335,
+    "matchfundpledge-amount": 644000,
+    "meta": {
+      "lang": [
+        "en"
+      ]
+    },
+    "paypal-amount": 1131708,
+    "percentage-pledged-failed": 22.28,
+    "percentage-pledged-successful": 143.40,
+    "pledged": 9997786,
+    "refunded": 362821,
+    "time-elapsed": 6.8925464153289795
+  },
+  "meta": {
+    "lang": [
+      "en"
+    ]
+  },
+  "time-elapsed": 30.726799249649048
+}
+</code></pre>
+
+<h4>Digesting the licenses used in the year 2014 in a radius of 100Km around Barcelona city:</h4>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/digests/licenses/?year=2014&amp;location=41.38879,2.15899,100
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="json">{
+  "buckets": {
+    "01": {
+      "items": [],
+      "meta": {
+        "from_date": "2014-01-01",
+        "lang": [
+          "en"
+        ],
+        "location": {
+          "latitude": "41.38879",
+          "longitude": "2.15899",
+          "radius": 100
+        },
+        "to_date": "2014-01-31",
+        "total": 0
+      },
+      "time-elapsed": 0.04291963577270508
+    },
+    "02": {
+      "items": [
+        {
+          "description": "Creative Commons License with attribution",
+          "id": "ccby",
+          "name": "CC - Attribution",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccby.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://creativecommons.org/licenses/by/2.0/deed.en"
+        },
+        {
+          "description": "Creative Commons License with attribution that does not permit commercial use",
+          "id": "ccbync",
+          "name": "CC - Attribution-NonCommercial",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbync.svg",
+          "total-projects": 1,
+          "total-rewards": 2,
+          "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.en"
+        },
+        {
+          "description": "Creative Commons License with attribution that only allows sharing under identical licensing conditions",
+          "id": "ccbysa",
+          "name": "CC - Attribution - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbysa.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.en"
+        }
+      ],
+      "meta": {
+        "from_date": "2014-02-01",
+        "lang": [
+          "en"
+        ],
+        "location": {
+          "latitude": "41.38879",
+          "longitude": "2.15899",
+          "radius": 100
+        },
+        "to_date": "2014-02-28",
+        "total": 3
+      },
+      "time-elapsed": 0.19290828704833984
+    },
+    "03": {
+      "items": [
+        {
+          "description": "Creative Commons License with attribution that does not permit commercial use",
+          "id": "ccbync",
+          "name": "CC - Attribution-NonCommercial",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbync.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.en"
+        },
+        {
+          "description": "Creative Commons License with attribution, that does not allow commercial use, and only allows sharing under identical licensing conditions",
+          "id": "ccbyncsa",
+          "name": "CC - Attribution - NonCommercial - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncsa.svg",
+          "total-projects": 2,
+          "total-rewards": 2,
+          "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en"
+        },
+        {
+          "description": "Creative Commons License with attribution, that does not allow commercial use nor derivative works",
+          "id": "ccbyncnd",
+          "name": "CC - Attribution  - NonCommercial - NoDerivs",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"
+        },
+        {
+          "description": "Creative Commons License with attribution that only allows sharing under identical licensing conditions",
+          "id": "ccbysa",
+          "name": "CC - Attribution - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbysa.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.en"
+        }
+      ],
+      "meta": {
+        "from_date": "2014-03-01",
+        "lang": [
+          "en"
+        ],
+        "location": {
+          "latitude": "41.38879",
+          "longitude": "2.15899",
+          "radius": 100
+        },
+        "to_date": "2014-03-31",
+        "total": 4
+      },
+      "time-elapsed": 0.21524786949157715
+    },
+    "04": {
+      "items": [
+        {
+          "description": "Creative Commons License with attribution, that does not allow commercial use, and only allows sharing under identical licensing conditions",
+          "id": "ccbyncsa",
+          "name": "CC - Attribution - NonCommercial - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncsa.svg",
+          "total-projects": 2,
+          "total-rewards": 4,
+          "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en"
+        },
+        {
+          "description": "Creative Commons License with attribution, that does not allow commercial use nor derivative works",
+          "id": "ccbyncnd",
+          "name": "CC - Attribution  - NonCommercial - NoDerivs",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
+          "total-projects": 2,
+          "total-rewards": 3,
+          "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"
+        }
+      ],
+      "meta": {
+        "from_date": "2014-04-01",
+        "lang": [
+          "en"
+        ],
+        "location": {
+          "latitude": "41.38879",
+          "longitude": "2.15899",
+          "radius": 100
+        },
+        "to_date": "2014-04-30",
+        "total": 2
+      },
+      "time-elapsed": 0.14721894264221191
+    },
+    "05": {
+      "items": [
+        {
+          "description": "GNU General Public License for the free distribution, modification, and use of software",
+          "id": "gpl",
+          "name": "General Public License",
+          "svg-url": "https://goteo.org/api/svg/licenses/gpl.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://www.gnu.org/licenses/gpl.html"
+        },
+        {
+          "description": "Creative Commons License with attribution",
+          "id": "ccby",
+          "name": "CC - Attribution",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccby.svg",
+          "total-projects": 1,
+          "total-rewards": 2,
+          "url": "http://creativecommons.org/licenses/by/2.0/deed.en"
+        },
+        {
+          "description": "Creative Commons License with attribution, that does not allow commercial use, and only allows sharing under identical licensing conditions",
+          "id": "ccbyncsa",
+          "name": "CC - Attribution - NonCommercial - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncsa.svg",
+          "total-projects": 3,
+          "total-rewards": 5,
+          "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en"
+        },
+        {
+          "description": "Creative Commons License with attribution, that does not allow commercial use nor derivative works",
+          "id": "ccbyncnd",
+          "name": "CC - Attribution  - NonCommercial - NoDerivs",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"
+        },
+        {
+          "description": "Creative Commons License with attribution that only allows sharing under identical licensing conditions",
+          "id": "ccbysa",
+          "name": "CC - Attribution - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbysa.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.en"
+        },
+        {
+          "description": "Creative Commons License for works dedicated to the public domain, by which all intellectual property rights over a work are waived",
+          "id": "cc0",
+          "name": "CC0 Universal (Public Domain)",
+          "svg-url": "https://goteo.org/api/svg/licenses/cc0.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+        }
+      ],
+      "meta": {
+        "from_date": "2014-05-01",
+        "lang": [
+          "en"
+        ],
+        "location": {
+          "latitude": "41.38879",
+          "longitude": "2.15899",
+          "radius": 100
+        },
+        "to_date": "2014-05-31",
+        "total": 6
+      },
+      "time-elapsed": 0.38561391830444336
+    },
+    "06": {
+      "items": [
+        {
+          "description": "Creative Commons License for works dedicated to the public domain, by which all intellectual property rights over a work are waived",
+          "id": "cc0",
+          "name": "CC0 Universal (Public Domain)",
+          "svg-url": "https://goteo.org/api/svg/licenses/cc0.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+        }
+      ],
+      "meta": {
+        "from_date": "2014-06-01",
+        "lang": [
+          "en"
+        ],
+        "location": {
+          "latitude": "41.38879",
+          "longitude": "2.15899",
+          "radius": 100
+        },
+        "to_date": "2014-06-30",
+        "total": 1
+      },
+      "time-elapsed": 0.08753705024719238
+    },
+    "07": {
+      "items": [],
+      "meta": {
+        "from_date": "2014-07-01",
+        "lang": [
+          "en"
+        ],
+        "location": {
+          "latitude": "41.38879",
+          "longitude": "2.15899",
+          "radius": 100
+        },
+        "to_date": "2014-07-31",
+        "total": 0
+      },
+      "time-elapsed": 0.04422950744628906
+    },
+    "08": {
+      "items": [],
+      "meta": {
+        "from_date": "2014-08-01",
+        "lang": [
+          "en"
+        ],
+        "location": {
+          "latitude": "41.38879",
+          "longitude": "2.15899",
+          "radius": 100
+        },
+        "to_date": "2014-08-31",
+        "total": 0
+      },
+      "time-elapsed": 0.046811580657958984
+    },
+    "09": {
+      "items": [],
+      "meta": {
+        "from_date": "2014-09-01",
+        "lang": [
+          "en"
+        ],
+        "location": {
+          "latitude": "41.38879",
+          "longitude": "2.15899",
+          "radius": 100
+        },
+        "to_date": "2014-09-30",
+        "total": 0
+      },
+      "time-elapsed": 0.04290485382080078
+    },
+    "10": {
+      "items": [],
+      "meta": {
+        "from_date": "2014-10-01",
+        "lang": [
+          "en"
+        ],
+        "location": {
+          "latitude": "41.38879",
+          "longitude": "2.15899",
+          "radius": 100
+        },
+        "to_date": "2014-10-31",
+        "total": 0
+      },
+      "time-elapsed": 0.04400801658630371
+    },
+    "11": {
+      "items": [
+        {
+          "description": "Creative Commons License with attribution, that does not allow commercial use nor derivative works",
+          "id": "ccbyncnd",
+          "name": "CC - Attribution  - NonCommercial - NoDerivs",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"
+        }
+      ],
+      "meta": {
+        "from_date": "2014-11-01",
+        "lang": [
+          "en"
+        ],
+        "location": {
+          "latitude": "41.38879",
+          "longitude": "2.15899",
+          "radius": 100
+        },
+        "to_date": "2014-11-30",
+        "total": 1
+      },
+      "time-elapsed": 0.11307907104492188
+    },
+    "12": {
+      "items": [
+        {
+          "description": "Creative Commons License with attribution, that does not allow commercial use, and only allows sharing under identical licensing conditions",
+          "id": "ccbyncsa",
+          "name": "CC - Attribution - NonCommercial - ShareAlike",
+          "svg-url": "https://goteo.org/api/svg/licenses/ccbyncsa.svg",
+          "total-projects": 1,
+          "total-rewards": 1,
+          "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en"
+        }
+      ],
+      "meta": {
+        "from_date": "2014-12-01",
+        "lang": [
+          "en"
+        ],
+        "location": {
+          "latitude": "41.38879",
+          "longitude": "2.15899",
+          "radius": 100
+        },
+        "to_date": "2014-12-31",
+        "total": 1
+      },
+      "time-elapsed": 0.0891110897064209
+    }
+  },
+  "endpoint": "/licenses/",
+  "global": {
+    "items": [
+      {
+        "description": "GNU General Public License for the free distribution, modification, and use of software",
+        "id": "gpl",
+        "name": "General Public License",
+        "svg-url": "https://goteo.org/api/svg/licenses/gpl.svg",
+        "total-projects": 1,
+        "total-rewards": 1,
+        "url": "http://www.gnu.org/licenses/gpl.html"
+      },
+      {
+        "description": "Creative Commons License with attribution",
+        "id": "ccby",
+        "name": "CC - Attribution",
+        "svg-url": "https://goteo.org/api/svg/licenses/ccby.svg",
+        "total-projects": 2,
+        "total-rewards": 3,
+        "url": "http://creativecommons.org/licenses/by/2.0/deed.en"
+      },
+      {
+        "description": "Creative Commons License with attribution that does not permit commercial use",
+        "id": "ccbync",
+        "name": "CC - Attribution-NonCommercial",
+        "svg-url": "https://goteo.org/api/svg/licenses/ccbync.svg",
+        "total-projects": 2,
+        "total-rewards": 3,
+        "url": "http://creativecommons.org/licenses/by-nc/2.0/deed.en"
+      },
+      {
+        "description": "Creative Commons License with attribution, that does not allow commercial use, and only allows sharing under identical licensing conditions",
+        "id": "ccbyncsa",
+        "name": "CC - Attribution - NonCommercial - ShareAlike",
+        "svg-url": "https://goteo.org/api/svg/licenses/ccbyncsa.svg",
+        "total-projects": 8,
+        "total-rewards": 12,
+        "url": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en"
+      },
+      {
+        "description": "Creative Commons License with attribution, that does not allow commercial use nor derivative works",
+        "id": "ccbyncnd",
+        "name": "CC - Attribution  - NonCommercial - NoDerivs",
+        "svg-url": "https://goteo.org/api/svg/licenses/ccbyncnd.svg",
+        "total-projects": 5,
+        "total-rewards": 6,
+        "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"
+      },
+      {
+        "description": "Creative Commons License with attribution that only allows sharing under identical licensing conditions",
+        "id": "ccbysa",
+        "name": "CC - Attribution - ShareAlike",
+        "svg-url": "https://goteo.org/api/svg/licenses/ccbysa.svg",
+        "total-projects": 3,
+        "total-rewards": 3,
+        "url": "http://creativecommons.org/licenses/by-sa/2.0/deed.en"
+      },
+      {
+        "description": "Creative Commons License for works dedicated to the public domain, by which all intellectual property rights over a work are waived",
+        "id": "cc0",
+        "name": "CC0 Universal (Public Domain)",
+        "svg-url": "https://goteo.org/api/svg/licenses/cc0.svg",
+        "total-projects": 2,
+        "total-rewards": 2,
+        "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    ],
+    "meta": {
+      "from_date": "2014-01-01",
+      "lang": [
+        "en"
+      ],
+      "location": {
+        "latitude": "41.38879",
+        "longitude": "2.15899",
+        "radius": 100
+      },
+      "to_date": "2014-12-31",
+      "total": 7
+    },
+    "time-elapsed": 0.4161674976348877
+  },
+  "meta": {
+    "lang": [
+      "en"
+    ],
+    "location": {
+      "latitude": "41.38879",
+      "longitude": "2.15899",
+      "radius": 100
+    }
+  },
+  "time-elapsed": 1.8697397708892822
+}
+</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+ -->
+<script src="/assets/highlight.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62675757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+
+</html>

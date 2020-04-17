@@ -1,0 +1,2555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Goteo API : Reports</title>
+  <meta name="description" content="">
+
+
+  <link rel="stylesheet" href="/assets/assemble.css">
+  <link rel="stylesheet" href="/assets/github.css">
+  <link rel="stylesheet" href="/assets/goteo.css">
+  
+  <link rel="canonical" href="https://developers.goteo.org/doc/reports.html">
+  
+
+  </head>
+
+  <body style="background: white;">
+  <div class="wrapper">
+
+  
+      <!-- Navbar component
+================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png"></a>
+<!--       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="/about-goteo">About Goteo</a></li>
+          <li><a href="/doc">API Docs</a></li>
+          <li><a href="/apps">Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+      <div class="col col-lg-3">
+        <div class="sidebar bs-sidebar">
+ 
+  <span class="nav-section-title">
+    API DOCS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/index.html">Introduction</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/responses.html">Responses</a></li>
+          
+        
+          
+          <li><a href="/doc/security.html">Security</a></li>
+          
+        
+          
+          <li><a href="/doc/filters.html">Filters</a></li>
+          
+        
+          
+          <li><a href="/doc/console.html">Live Console</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+          <li><a href="/doc/projects.html">Projects</a></li>
+          
+        
+          
+          <li><a href="/doc/users.html">Users</a></li>
+          
+        
+          
+          <li><a href="/doc/categories.html">Categories</a></li>
+          
+        
+          
+          <li><a href="/doc/footprints.html">Footprints</a></li>
+          
+        
+          
+          <li><a href="/doc/sdgs.html">Sustainable Development Goals</a></li>
+          
+        
+          
+          <li><a href="/doc/social_commitments.html">Social Commitments</a></li>
+          
+        
+          
+          <li><a href="/doc/licenses.html">Licenses</a></li>
+          
+        
+          
+          <li><a href="/doc/invests.html">Invests</a></li>
+          
+        
+          
+          <li><a href="/doc/calls.html">Matchfunding calls</a></li>
+          
+        
+          
+          <li><a href="/doc/matchers.html">Matchfunding matchers</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li class="active"><a href="/doc/reports.html">Reports</a></li>
+          
+        
+          
+          <li><a href="/doc/digests.html">Digests</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  
+
+  
+
+  
+
+</div>
+
+      </div>
+
+      <div class="col col-lg-9 panel-docs">
+        <h1>Reports endpoint</h1>
+
+<p>This section gives you information about average numbers in <a href="http://goteo.org">Goteo.org</a>.</p>
+
+<h2>Filters available</h2>
+
+<p><strong>The <a href="filters.html">standard set of filters</a> applies to all of these endpoints with these particulars:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Filter by individual node(s). Multiple nodes can be specified </td>
+</tr>
+<tr>
+<td> call </td>
+<td> string </td>
+<td> Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s) </td>
+</tr>
+<tr>
+<td> matcher </td>
+<td> string </td>
+<td> Filter by individual matchfunding matcher(s). Multiple matchers can be specified. Restricts the list to the projects originally created in that matcher(s) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Filter by individual project(s). Multiple projects can be specified </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Get results by specified lang. Multiple langs can be specified </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Filter from date. Ex. "2013-01-01" </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Filter until date.. Ex. "2014-01-01" </td>
+</tr>
+<tr>
+<td> category </td>
+<td> integer </td>
+<td> Filter by project category. Multiple categories can be specified </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> integer </td>
+<td> Filter by project social commitment. Multiple social commitments can be specified </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> integer </td>
+<td> Filter by project Sustainability Development Goal. Multiple SDGs can be specified </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> integer </td>
+<td> Filter by project footprint. Multiple footprints can be specified </td>
+</tr>
+<tr>
+<td> location </td>
+<td> number </td>
+<td> Filter by project location (Latitude,longitude,Radius in Km) </td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>Parameters <strong>page</strong> and <strong>limit</strong> are not available in none of these endpoints</li>
+<li>Parameter <strong>lang</strong> is available only in the /reports/community/ endpoint</li>
+</ul>
+
+
+<p><a name="summary"></a></p>
+
+<h2>/reports/summary/</h2>
+
+<p>Some of the data provided by the other <strong>/reports/*/</strong> endpoints is provided here as a summary. This allows to retrieve all the important data (choosen by the Goteo team) in one API call only.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/reports/summary/
+</code></pre>
+
+<h3>Response values:</h3>
+
+<h5><a id="Summary">Summary</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> average-donation </td>
+<td> number </td>
+<td> Average amount of money (€) given by a donor </td>
+</tr>
+<tr>
+<td> categories </td>
+<td> array </td>
+<td> Array of categories &#9758; <a href="#Category">Category</a> </td>
+</tr>
+<tr>
+<td> favorite-rewards </td>
+<td> array </td>
+<td> Reward type used in successful projects &#9758; <a href="#Favourite">Favourite</a> </td>
+</tr>
+<tr>
+<td> matchfund-amount </td>
+<td> integer </td>
+<td> Amount of money raised in calls (Capital riego distribuido + crowdfunding money) </td>
+</tr>
+<tr>
+<td> matchfundpledge-amount </td>
+<td> integer </td>
+<td> <em>Capital Riego de Goteo</em> (funds from institutions and companies added to the <a href="https://goteo.org/service/resources">Capital Riego</a>) </td>
+</tr>
+<tr>
+<td> pledged </td>
+<td> integer </td>
+<td> Total amount of money (€) raised by Goteo </td>
+</tr>
+<tr>
+<td> projects-failed </td>
+<td> integer </td>
+<td> Number of failed projects (unsuccessful crowdfunding campaigns) </td>
+</tr>
+<tr>
+<td> projects-published </td>
+<td> integer </td>
+<td> Number of published projects.<br><strong>Date filters</strong> here uses the date where the project started its campaign </td>
+</tr>
+<tr>
+<td> projects-received </td>
+<td> integer </td>
+<td> Number of received projects (accepted for review by Goteo administrators).<br><strong>Date filters</strong> here uses the date where the project was sent to revision </td>
+</tr>
+<tr>
+<td> projects-successful </td>
+<td> integer </td>
+<td> Number of successful projects (which have achieved the minimum required amount).<br><strong>Date filters</strong> here uses the date where the had achieved the minimum amount </td>
+</tr>
+<tr>
+<td> top10-collaborations </td>
+<td> array </td>
+<td> The 10 campaigns with the most collaborations &#9758; <a href="#ProjectContribution">ProjectContribution</a> </td>
+</tr>
+<tr>
+<td> top10-donations </td>
+<td> array </td>
+<td> The 10 campaigns with the most donors (individual contributions) &#9758; <a href="#ProjectContribution">ProjectContribution</a> </td>
+</tr>
+<tr>
+<td> users </td>
+<td> integer </td>
+<td> Total number of registered users </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Category">Category</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> id </td>
+<td> integer </td>
+<td> Category unique identifier </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Category name </td>
+</tr>
+<tr>
+<td> percentage-users </td>
+<td> number </td>
+<td> Percentage of users in this category over the total number of users </td>
+</tr>
+<tr>
+<td> users </td>
+<td> integer </td>
+<td> Total number of users interested in the category </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Favourite">Favourite</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> description </td>
+<td> string </td>
+<td> Reward's description </td>
+</tr>
+<tr>
+<td> icon </td>
+<td> string </td>
+<td> Identifier of the reward's icon </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Reward's name </td>
+</tr>
+<tr>
+<td> svg-url </td>
+<td> string </td>
+<td> URL where to find the reward's icon </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Number of uses of this reward in successful projects </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="ProjectContribution">ProjectContribution</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> date-published </td>
+<td> string </td>
+<td> Date when the project was published RFC822 format </td>
+</tr>
+<tr>
+<td> description-short </td>
+<td> string </td>
+<td> Short description of the project </td>
+</tr>
+<tr>
+<td> image-url </td>
+<td> string </td>
+<td> URL with the main image of the project </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the project </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Project's unique ID </td>
+</tr>
+<tr>
+<td> project-url </td>
+<td> string </td>
+<td> Project's original URL (crowd-funding web page) </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Total number contributions (or collaborations) </td>
+</tr>
+<tr>
+<td> video-url </td>
+<td> string </td>
+<td> URL with the main video of the project </td>
+</tr>
+</tbody>
+</table>
+
+
+<h4>* Array sub-fields:</h4>
+
+<p><strong>categories</strong> returns an array of the object specified in the <a href="/doc/reports#community">reports/community</a> response.</p>
+
+<p><strong>favorite-rewards</strong> returns an array of the object specified in the <a href="/doc/reports#rewards">reports/rewards</a> response.</p>
+
+<p><strong>top10-collaborations</strong> and <strong>top10-donations</strong> returns an array of the objects specified in the <a href="/doc/reports#projects">reports/projects</a> response.</p>
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "average-donation": 50.21,
+  "categories": [
+    {
+      "2": {
+        "id": 2,
+        "name": "Social",
+        "percentage-users": 6.86,
+        "users": 12953
+      }
+    },
+    {
+      "10": {
+        "id": 10,
+        "name": "Educational",
+        "percentage-users": 5.18,
+        "users": 9778
+      }
+    },
+    {
+      "11": {
+        "id": 11,
+        "name": "Cultural",
+        "percentage-users": 5.09,
+        "users": 9599
+      }
+    },
+    {
+      "13": {
+        "id": 13,
+        "name": "Ecological",
+        "percentage-users": 4.31,
+        "users": 8141
+      }
+    },
+    {
+      "7": {
+        "id": 7,
+        "name": "Technological",
+        "percentage-users": 3.22,
+        "users": 6085
+      }
+    },
+    {
+      "9": {
+        "id": 9,
+        "name": "Commercial",
+        "percentage-users": 2.97,
+        "users": 5614
+      }
+    },
+    {
+      "6": {
+        "id": 6,
+        "name": "Communications",
+        "percentage-users": 2.73,
+        "users": 5151
+      }
+    },
+    {
+      "14": {
+        "id": 14,
+        "name": "Scientific",
+        "percentage-users": 2.51,
+        "users": 4733
+      }
+    },
+    {
+      "16": {
+        "id": 16,
+        "name": "Design",
+        "percentage-users": 0.47,
+        "users": 893
+      }
+    }
+  ],
+  "favorite-rewards": [
+    {
+      "description": "Products can be limited editions or prototypes, or pieces or works derived from the original.",
+      "icon": "product",
+      "name": "Product",
+      "svg_url": "https://goteo.org/api/svg/icons/product.svg",
+      "total": 2810
+    },
+    {
+      "description": "Actions or sessions during a specific period of time which satisfy an individual or group need: education, technical assistance, advice, etc. ",
+      "icon": "service",
+      "name": "Services",
+      "svg_url": "https://goteo.org/api/svg/icons/service.svg",
+      "total": 1479
+    },
+    {
+      "description": "Digital files may be music, video, text documents, etc.",
+      "icon": "file",
+      "name": "Digital files",
+      "svg_url": "https://goteo.org/api/svg/icons/file.svg",
+      "total": 1100
+    },
+    {
+      "description": "Gratitude or acknowledgment",
+      "icon": "thanks",
+      "name": "Acknowledgment",
+      "svg_url": "https://goteo.org/api/svg/icons/thanks.svg",
+      "total": 978
+    },
+    {
+      "description": "Surprise us with this category, we're really interested!",
+      "icon": "other",
+      "name": "Other",
+      "svg_url": "https://goteo.org/api/svg/icons/other.svg",
+      "total": 506
+    },
+    {
+      "description": "Practical documentation that details step-by-step instructions, tutorials, business plans, how-to's, code cookbooks, etc. ",
+      "icon": "manual",
+      "name": "Manuals",
+      "svg_url": "https://goteo.org/api/svg/icons/manual.svg",
+      "total": 181
+    },
+    {
+      "description": "By source code, we mean programs and software in general.",
+      "icon": "code",
+      "name": "Source code",
+      "svg_url": "https://goteo.org/api/svg/icons/code.svg",
+      "total": 85
+    },
+    {
+      "description": "Designs can be drawings, patterns, sketches, rough drafts, flowcharts, etc.",
+      "icon": "design",
+      "name": "Design",
+      "svg_url": "https://goteo.org/api/svg/icons/design.svg",
+      "total": 56
+    },
+    {
+      "description": "Economic benefits that are proportional to the investment made, with details about quantity and also form of payment",
+      "icon": "money",
+      "name": "Money",
+      "svg_url": "https://goteo.org/api/svg/icons/money.svg",
+      "total": 55
+    }
+  ],
+  "matchfund-amount": 489335,
+  "matchfundpledge-amount": 644000,
+  "meta": {
+    "lang": [
+      "en"
+    ]
+  },
+  "pledged": 9997786,
+  "projects-failed": 314,
+  "projects-published": 1531,
+  "projects-received": 5864,
+  "projects-successful": 1195,
+  "time-elapsed": 10.944620370864868,
+  "top10-collaborations": [
+    {
+      "date-published": "Thu, 04 Jan 2018 23:00:00 GMT",
+      "date_published": "Fri, 05 Jan 2018 00:00:00 +0100",
+      "description-short": "\u00a1Esta es la pel\u00edcula sobre Juan Carlos I que algunos no quieren que veas!",
+      "description_short": "\u00a1Esta es la pel\u00edcula sobre Juan Carlos I que algunos no quieren que veas!",
+      "image-url": "https://goteo.org/img/medium/3-el-rey-1.jpg",
+      "image_url": "https://goteo.org/img/medium/3-el-rey-1.jpg",
+      "name": "EL REY, la peli",
+      "project": null,
+      "project-url": "https://goteo.org/project/el-rey-la-peli",
+      "project_url": "https://goteo.org/project/el-rey-la-peli",
+      "total": 864,
+      "video-url": "https://vimeo.com/300984355",
+      "video_url": "https://vimeo.com/300984355"
+    },
+    {
+      "date-published": "Sun, 01 Sep 2019 22:00:00 GMT",
+      "date_published": "Mon, 02 Sep 2019 00:00:00 +0200",
+      "description-short": "Ayudanos a grabar y editar el 4\u00ba disco de Freedonia",
+      "description_short": "Ayudanos a grabar y editar el 4\u00ba disco de Freedonia",
+      "image-url": "https://goteo.org/img/medium/16707615-10154098508925388-4891163837587556285-o.j",
+      "image_url": "https://goteo.org/img/medium/16707615-10154098508925388-4891163837587556285-o.j",
+      "name": "Nuevo Disco De Freedonia : Conciencia",
+      "project": null,
+      "project-url": "https://goteo.org/project/freedonia-conciencia",
+      "project_url": "https://goteo.org/project/freedonia-conciencia",
+      "total": 723,
+      "video-url": "https://youtu.be/bd7W3RjvHv8",
+      "video_url": "https://youtu.be/bd7W3RjvHv8"
+    },
+    {
+      "date-published": "Tue, 26 Feb 2019 23:00:00 GMT",
+      "date_published": "Wed, 27 Feb 2019 00:00:00 +0100",
+      "description-short": "We children want to know, we also want to help \u270a?\u270a?\u270a? Awareness raising campaign, with proceeds going to OPEN ARMS and OPEN CULTURAL CENTER.",
+      "description_short": "We children want to know, we also want to help \u270a?\u270a?\u270a? Awareness raising campaign, with proceeds going to OPEN ARMS and OPEN CULTURAL CENTER.",
+      "image-url": "https://goteo.org/img/medium/portada-video-7.jpg",
+      "image_url": "https://goteo.org/img/medium/portada-video-7.jpg",
+      "name": "Mediterranean Fragility",
+      "project": null,
+      "project-url": "https://goteo.org/project/mediterranean-fragility",
+      "project_url": "https://goteo.org/project/mediterranean-fragility",
+      "total": 456,
+      "video-url": "https://youtu.be/NMpPnAzzEg4",
+      "video_url": "https://youtu.be/NMpPnAzzEg4"
+    },
+    {
+      "date-published": "Sun, 11 Feb 2018 23:00:00 GMT",
+      "date_published": "Mon, 12 Feb 2018 00:00:00 +0100",
+      "description-short": "Popular cost for the creation of a monument in memory of the events of Sanfermines del 78 in Pamplona",
+      "description_short": "Popular cost for the creation of a monument in memory of the events of Sanfermines del 78 in Pamplona",
+      "image-url": "https://goteo.org/img/medium/campana-3.jpg",
+      "image_url": "https://goteo.org/img/medium/campana-3.jpg",
+      "name": "Gogoan (En la memoria)",
+      "project": null,
+      "project-url": "https://goteo.org/project/gogoan",
+      "project_url": "https://goteo.org/project/gogoan",
+      "total": 376,
+      "video-url": "https://youtu.be/TfKfpI-BaSo",
+      "video_url": "https://youtu.be/TfKfpI-BaSo"
+    },
+    {
+      "date-published": "Sun, 02 Jun 2019 22:00:00 GMT",
+      "date_published": "Mon, 03 Jun 2019 00:00:00 +0200",
+      "description-short": "La Quinta\u00b4l Texu School changes its location to have our Primary Education offer officially homologated.",
+      "description_short": "La Quinta\u00b4l Texu School changes its location to have our Primary Education offer officially homologated.",
+      "image-url": "https://goteo.org/img/medium/whatsapp-image-2019-05-16-at-18.02.-52.jpeg",
+      "image_url": "https://goteo.org/img/medium/whatsapp-image-2019-05-16-at-18.02.-52.jpeg",
+      "name": "Trasplantando el Texu",
+      "project": null,
+      "project-url": "https://goteo.org/project/trasplantando-el-texu",
+      "project_url": "https://goteo.org/project/trasplantando-el-texu",
+      "total": 359,
+      "video-url": "https://youtu.be/RE1M5PsfTyU",
+      "video_url": "https://youtu.be/RE1M5PsfTyU"
+    },
+    {
+      "date-published": "Tue, 15 May 2018 22:00:00 GMT",
+      "date_published": "Wed, 16 May 2018 00:00:00 +0200",
+      "description-short": "Queremos autoeditar un libro-cuento sobre la identificaci\u00f3n de las emociones y la empat\u00eda",
+      "description_short": "Queremos autoeditar un libro-cuento sobre la identificaci\u00f3n de las emociones y la empat\u00eda",
+      "image-url": "https://goteo.org/img/medium/nanuk-2.jpg",
+      "image_url": "https://goteo.org/img/medium/nanuk-2.jpg",
+      "name": "Libro-cuento \"Nanuk en el bosque de las emociones\"",
+      "project": null,
+      "project-url": "https://goteo.org/project/libro-cuento-nanuk-en-el-bosque-de-las-emociones",
+      "project_url": "https://goteo.org/project/libro-cuento-nanuk-en-el-bosque-de-las-emociones",
+      "total": 329,
+      "video-url": "https://youtu.be/TnVb0184DK8",
+      "video_url": "https://youtu.be/TnVb0184DK8"
+    },
+    {
+      "date-published": "Tue, 07 May 2019 22:00:00 GMT",
+      "date_published": "Wed, 08 May 2019 00:00:00 +0200",
+      "description-short": "Act\u00faa frente a la esclavitud del sector textil. \u00a1Apoya la Campa\u00f1a Ropa Limpia!",
+      "description_short": "Act\u00faa frente a la esclavitud del sector textil. \u00a1Apoya la Campa\u00f1a Ropa Limpia!",
+      "image-url": "https://goteo.org/img/medium/quienessomos-2.jpg",
+      "image_url": "https://goteo.org/img/medium/quienessomos-2.jpg",
+      "name": "#NecesitoRopaLimpia",
+      "project": null,
+      "project-url": "https://goteo.org/project/necesito-ropa-limpia",
+      "project_url": "https://goteo.org/project/necesito-ropa-limpia",
+      "total": 323,
+      "video-url": "https://youtu.be/bMED94d9nU4",
+      "video_url": "https://youtu.be/bMED94d9nU4"
+    },
+    {
+      "date-published": "Mon, 04 Nov 2019 23:00:00 GMT",
+      "date_published": "Tue, 05 Nov 2019 00:00:00 +0100",
+      "description-short": "Project of community agitation",
+      "description_short": "Project of community agitation",
+      "image-url": "https://goteo.org/img/medium/jordiborras-objvenus-4.jpg",
+      "image_url": "https://goteo.org/img/medium/jordiborras-objvenus-4.jpg",
+      "name": "Objetivo Venus",
+      "project": null,
+      "project-url": "https://goteo.org/project/objectiu-venus",
+      "project_url": "https://goteo.org/project/objectiu-venus",
+      "total": 322,
+      "video-url": "https://youtu.be/tlJWQSdfhRI",
+      "video_url": "https://youtu.be/tlJWQSdfhRI"
+    },
+    {
+      "date-published": "Mon, 09 Dec 2019 23:00:00 GMT",
+      "date_published": "Tue, 10 Dec 2019 00:00:00 +0100",
+      "description-short": "Activisme esc\u00e8nic",
+      "description_short": "Activisme esc\u00e8nic",
+      "image-url": "https://goteo.org/img/medium/comandas.jpg",
+      "image_url": "https://goteo.org/img/medium/comandas.jpg",
+      "name": "COMANDO SE\u00d1ORAS",
+      "project": null,
+      "project-url": "https://goteo.org/project/comando-senoras",
+      "project_url": "https://goteo.org/project/comando-senoras",
+      "total": 305,
+      "video-url": "https://www.youtube.com/watch?v=vso93-3fRYM",
+      "video_url": "https://www.youtube.com/watch?v=vso93-3fRYM"
+    },
+    {
+      "date-published": "Tue, 23 Apr 2019 22:00:00 GMT",
+      "date_published": "Wed, 24 Apr 2019 00:00:00 +0200",
+      "description-short": "Ara  amb +informaci\u00f3 +debat +comunit\u00e0ria +ecosist\u00e8mica +transversal i, amb el teu suport, aviat +sostenible",
+      "description_short": "Ara  amb +informaci\u00f3 +debat +comunit\u00e0ria +ecosist\u00e8mica +transversal i, amb el teu suport, aviat +sostenible",
+      "image-url": "https://goteo.org/img/medium/personas-bn6.png",
+      "image_url": "https://goteo.org/img/medium/personas-bn6.png",
+      "name": "Reactivem POLI\u00c8DRICA &gt; art \u00b7 educaci\u00f3 \u00b7 comunitat \u00b7 cultura",
+      "project": null,
+      "project-url": "https://goteo.org/project/poliedrica",
+      "project_url": "https://goteo.org/project/poliedrica",
+      "total": 302,
+      "video-url": "https://vimeo.com/326391808",
+      "video_url": "https://vimeo.com/326391808"
+    }
+  ],
+  "top10-donations": [
+    {
+      "date-published": "Sun, 24 Apr 2016 22:00:00 GMT",
+      "date_published": "Mon, 25 Apr 2016 00:00:00 +0200",
+      "description-short": "#weIBEXtigate with La Marea: we investigate, we inform, we transform",
+      "description_short": "#weIBEXtigate with La Marea: we investigate, we inform, we transform",
+      "image-url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
+      "image_url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
+      "name": "#YoIBEXtigo con La Marea ",
+      "project": null,
+      "project-url": "https://goteo.org/project/yoibextigo",
+      "project_url": "https://goteo.org/project/yoibextigo",
+      "total": 3543,
+      "video-url": "https://youtu.be/1aBtwciWKYM",
+      "video_url": "https://youtu.be/1aBtwciWKYM"
+    },
+    {
+      "date-published": "Tue, 09 Oct 2018 22:00:00 GMT",
+      "date_published": "Wed, 10 Oct 2018 00:00:00 +0200",
+      "description-short": "Periodismo contra la violencia machista",
+      "description_short": "Periodismo contra la violencia machista",
+      "image-url": "https://goteo.org/img/medium/portada-33.jpg",
+      "image_url": "https://goteo.org/img/medium/portada-33.jpg",
+      "name": "#PorTodas",
+      "project": null,
+      "project-url": "https://goteo.org/project/portodas",
+      "project_url": "https://goteo.org/project/portodas",
+      "total": 2921,
+      "video-url": "https://www.youtube.com/watch?v=5zy0-lzenJg&amp;feature=youtu.be",
+      "video_url": "https://www.youtube.com/watch?v=5zy0-lzenJg&amp;feature=youtu.be"
+    },
+    {
+      "date-published": "Sun, 11 Mar 2018 23:00:00 GMT",
+      "date_published": "Mon, 12 Mar 2018 00:00:00 +0100",
+      "description-short": "The  Trade Union of Street Vendors in Barcelona",
+      "description_short": "The  Trade Union of Street Vendors in Barcelona",
+      "image-url": "https://goteo.org/img/medium/01.caratula-video04.png",
+      "image_url": "https://goteo.org/img/medium/01.caratula-video04.png",
+      "name": "Top Manta \u00b7 Ropa legal hecha por gente ilegal",
+      "project": null,
+      "project-url": "https://goteo.org/project/top-manta-bcn",
+      "project_url": "https://goteo.org/project/top-manta-bcn",
+      "total": 2507,
+      "video-url": "https://vimeo.com/259331518",
+      "video_url": "https://vimeo.com/259331518"
+    },
+    {
+      "date-published": "Sat, 13 Feb 2016 23:00:00 GMT",
+      "date_published": "Sun, 14 Feb 2016 00:00:00 +0100",
+      "description-short": "We want to continue reporting freely, each week selecting the issues that we believe you should know about, echoing the voice of minorities, showing that there are alternatives to mainstream thinking. Become a CTXT patron",
+      "description_short": "We want to continue reporting freely, each week selecting the issues that we believe you should know about, echoing the voice of minorities, showing that there are alternatives to mainstream thinking. Become a CTXT patron",
+      "image-url": "https://goteo.org/img/medium/goteo-malagon.jpg",
+      "image_url": "https://goteo.org/img/medium/goteo-malagon.jpg",
+      "name": "#CTXT. El contexto lo es todo",
+      "project": null,
+      "project-url": "https://goteo.org/project/ctxt",
+      "project_url": "https://goteo.org/project/ctxt",
+      "total": 1835,
+      "video-url": "https://vimeo.com/155287296",
+      "video_url": "https://vimeo.com/155287296"
+    },
+    {
+      "date-published": "Tue, 20 Nov 2018 23:00:00 GMT",
+      "date_published": "Wed, 21 Nov 2018 00:00:00 +0100",
+      "description-short": "Es un momento clave en la lucha contra la mentira pol\u00edtica y los bulos. Juntos/as es m\u00e1s dif\u00edcil que nos la cuelen. Colabora, difunde y #FundaMaldita",
+      "description_short": "Es un momento clave en la lucha contra la mentira pol\u00edtica y los bulos. Juntos/as es m\u00e1s dif\u00edcil que nos la cuelen. Colabora, difunde y #FundaMaldita",
+      "image-url": "https://goteo.org/img/medium/aaa-copy.jpg",
+      "image_url": "https://goteo.org/img/medium/aaa-copy.jpg",
+      "name": "Maldita: periodismo para que no te la cuelen #FundaMaldita",
+      "project": null,
+      "project-url": "https://goteo.org/project/maldita",
+      "project_url": "https://goteo.org/project/maldita",
+      "total": 1672,
+      "video-url": "https://www.youtube.com/watch?v=QkTD1mVaY_w",
+      "video_url": "https://www.youtube.com/watch?v=QkTD1mVaY_w"
+    },
+    {
+      "date-published": "Mon, 14 Oct 2019 22:00:00 GMT",
+      "date_published": "Tue, 15 Oct 2019 00:00:00 +0200",
+      "description-short": "Torturas, guerra sucia, medallas, impunidad. Una historia por contar. Coproduce con CTXT y La Extra\u00f1a Zine el documental sobre Billy el Ni\u00f1o",
+      "description_short": "Torturas, guerra sucia, medallas, impunidad. Una historia por contar. Coproduce con CTXT y La Extra\u00f1a Zine el documental sobre Billy el Ni\u00f1o",
+      "image-url": "https://goteo.org/img/medium/31ca7e2a-0ca6-4ee7-86a2-9b9a5dd2572b.jpeg",
+      "image_url": "https://goteo.org/img/medium/31ca7e2a-0ca6-4ee7-86a2-9b9a5dd2572b.jpeg",
+      "name": "BILLY. EL DOCUMENTAL",
+      "project": null,
+      "project-url": "https://goteo.org/project/billy-el-documental",
+      "project_url": "https://goteo.org/project/billy-el-documental",
+      "total": 1634,
+      "video-url": "https://youtu.be/jTb3xJhdwic",
+      "video_url": "https://youtu.be/jTb3xJhdwic"
+    },
+    {
+      "date-published": "Fri, 05 Jul 2019 22:00:00 GMT",
+      "date_published": "Sat, 06 Jul 2019 00:00:00 +0200",
+      "description-short": "Let's revive the Ribera d'Ebre and the areas affected by one of the largest fires in recent decades",
+      "description_short": "Let's revive the Ribera d'Ebre and the areas affected by one of the largest fires in recent decades",
+      "image-url": "https://goteo.org/img/medium/1-141.png",
+      "image_url": "https://goteo.org/img/medium/1-141.png",
+      "name": "#Rebrotem",
+      "project": null,
+      "project-url": "https://goteo.org/project/rebrotem",
+      "project_url": "https://goteo.org/project/rebrotem",
+      "total": 1560,
+      "video-url": "https://www.youtube.com/watch?v=JphO_yJTTwM&amp;feature=youtu.be",
+      "video_url": "https://www.youtube.com/watch?v=JphO_yJTTwM&amp;feature=youtu.be"
+    },
+    {
+      "date-published": "Wed, 20 Nov 2013 23:00:00 GMT",
+      "date_published": "Thu, 21 Nov 2013 00:00:00 +0100",
+      "description-short": "Queremos seguir haciendo periodismo independiente y situado",
+      "description_short": "Queremos seguir haciendo periodismo independiente y situado",
+      "image-url": "https://goteo.org/img/medium/cabecera-fb_1.jpg",
+      "image_url": "https://goteo.org/img/medium/cabecera-fb_1.jpg",
+      "name": "S.O.S. Diagonal: Ahora o nunca",
+      "project": null,
+      "project-url": "https://goteo.org/project/diagonal",
+      "project_url": "https://goteo.org/project/diagonal",
+      "total": 1492,
+      "video-url": "https://vimeo.com/79968295",
+      "video_url": "https://vimeo.com/79968295"
+    },
+    {
+      "date-published": "Tue, 09 Apr 2019 22:00:00 GMT",
+      "date_published": "Wed, 10 Apr 2019 00:00:00 +0200",
+      "description-short": "Pantera no es s\u00f3lo una revista sobre naturaleza para ni\u00f1os y ni\u00f1as, es una comunidad que lucha contra el cambio clim\u00e1tico plantando \u00e1rboles.",
+      "description_short": "Pantera no es s\u00f3lo una revista sobre naturaleza para ni\u00f1os y ni\u00f1as, es una comunidad que lucha contra el cambio clim\u00e1tico plantando \u00e1rboles.",
+      "image-url": "https://goteo.org/img/medium/mockup-2-portadas.jpg",
+      "image_url": "https://goteo.org/img/medium/mockup-2-portadas.jpg",
+      "name": "PANTERA MAGAZINE, la revista para ni\u00f1os y ni\u00f1as que s\u00ed salvar\u00e1n el planeta",
+      "project": null,
+      "project-url": "https://goteo.org/project/pantera-magazine",
+      "project_url": "https://goteo.org/project/pantera-magazine",
+      "total": 1472,
+      "video-url": "https://www.youtube.com/watch?v=UkQR6w_NeBc",
+      "video_url": "https://www.youtube.com/watch?v=UkQR6w_NeBc"
+    },
+    {
+      "date-published": "Sun, 04 Nov 2018 23:00:00 GMT",
+      "date_published": "Mon, 05 Nov 2018 00:00:00 +0100",
+      "description-short": "Semente Trasancos first began as a Galician language immersion project for pre-school.",
+      "description_short": "Semente Trasancos first began as a Galician language immersion project for pre-school.",
+      "image-url": "https://goteo.org/img/medium/banersemente.png",
+      "image_url": "https://goteo.org/img/medium/banersemente.png",
+      "name": "Vamos polo Prim\u00e1rio!",
+      "project": null,
+      "project-url": "https://goteo.org/project/vamos-a-por-primario",
+      "project_url": "https://goteo.org/project/vamos-a-por-primario",
+      "total": 1325,
+      "video-url": "https://youtu.be/yTzyu7W3kz0",
+      "video_url": "https://youtu.be/yTzyu7W3kz0"
+    }
+  ],
+  "users": 188722
+}
+</code></pre>
+
+<p><a name="money"></a></p>
+
+<h2>/reports/money/</h2>
+
+<p>Statistics about the money collected</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/reports/money/
+</code></pre>
+
+<h3>Response values:</h3>
+
+<h5><a id="Money">Money</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> average-donation </td>
+<td> number </td>
+<td> Average amount of money (€) given by a donor </td>
+</tr>
+<tr>
+<td> average-donation-paypal </td>
+<td> number </td>
+<td> Average amount of money (€) given by a donor using Paypal </td>
+</tr>
+<tr>
+<td> average-failed </td>
+<td> number </td>
+<td> Average money raised for failed projects (which haven't reached the minimum required amount) </td>
+</tr>
+<tr>
+<td> average-minimum </td>
+<td> number </td>
+<td> Average minimum cost (€) for successful projects </td>
+</tr>
+<tr>
+<td> average-received </td>
+<td> number </td>
+<td> Average money raised (€) for successful projects (those which reached the minimum) </td>
+</tr>
+<tr>
+<td> average-second-round </td>
+<td> number </td>
+<td> Average money raised only in the second round (€) </td>
+</tr>
+<tr>
+<td> cash-amount </td>
+<td> integer </td>
+<td> Total amount of money (€) collected by direct bank transfer </td>
+</tr>
+<tr>
+<td> creditcard-amount </td>
+<td> integer </td>
+<td> Total amount of money (€) raised using Credit Card transactions </td>
+</tr>
+<tr>
+<td> fee-amount </td>
+<td> number </td>
+<td> Total fee keeped by Goteo </td>
+</tr>
+<tr>
+<td> matchfund-amount </td>
+<td> integer </td>
+<td> Amount of money raised in calls (<em>Capital riego distribuido</em> + crowdfunding money) </td>
+</tr>
+<tr>
+<td> matchfundpledge-amount </td>
+<td> integer </td>
+<td> <em>Capital Riego de Goteo</em> (funds from institutions and companies added to the <a href="https://goteo.org/service/resources">Capital Riego</a>) </td>
+</tr>
+<tr>
+<td> paypal-amount </td>
+<td> integer </td>
+<td> Total amount of money (€) raised using PayPal transactions </td>
+</tr>
+<tr>
+<td> percentage-pledged-failed </td>
+<td> number </td>
+<td> Percentage of money raised over the minimum on failed projects </td>
+</tr>
+<tr>
+<td> percentage-pledged-successful </td>
+<td> number </td>
+<td> Percentage of money raised over the minimum on successful projects </td>
+</tr>
+<tr>
+<td> pledged </td>
+<td> integer </td>
+<td> Total amount of money (€) raised by Goteo </td>
+</tr>
+<tr>
+<td> refunded </td>
+<td> integer </td>
+<td> Refunded money (€) on failed projects </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "average-donation": 50.21,
+  "average-donation-paypal": 35.23,
+  "average-failed": 1163.32,
+  "average-minimum": 5675.41,
+  "average-received": 7870.46,
+  "average-second-round": 1259.79,
+  "cash-amount": 581622,
+  "creditcard-amount": 7795121,
+  "fee-amount": 383176.68,
+  "matchfund-amount": 489335,
+  "matchfundpledge-amount": 644000,
+  "meta": {
+    "lang": [
+      "en"
+    ]
+  },
+  "paypal-amount": 1131708,
+  "percentage-pledged-failed": 22.28,
+  "percentage-pledged-successful": 143.40,
+  "pledged": 9997786,
+  "refunded": 362821,
+  "time-elapsed": 3.4903883934020996
+}
+</code></pre>
+
+<p><a name="projects"></a></p>
+
+<h2>/reports/projects/</h2>
+
+<p>Statistics around the projects</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/reports/projects/
+</code></pre>
+
+<h3>Response description:</h3>
+
+<h5><a id="Project">Project</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> average-amount-successful </td>
+<td> number </td>
+<td> Average amount (&euro;) of money raised in successful projects </td>
+</tr>
+<tr>
+<td> average-posts-successful </td>
+<td> number </td>
+<td> Average number of posts published by successful projects </td>
+</tr>
+<tr>
+<td> failed </td>
+<td> integer </td>
+<td> Number of failed projects (unsuccessful crowdfunding campaigns) </td>
+</tr>
+<tr>
+<td> percentage-successful </td>
+<td> integer </td>
+<td> Percentage of successful projects </td>
+</tr>
+<tr>
+<td> percentage-successful-completed </td>
+<td> number </td>
+<td> Percentage of successful projects with completed campaign (over the total projects: <em>100 * successful-complete / (successful-complete + failed)</em>  </td>
+</tr>
+<tr>
+<td> published </td>
+<td> integer </td>
+<td> Number of published projects.<br><strong>Date filters</strong> here uses the date where the project started its campaign </td>
+</tr>
+<tr>
+<td> received </td>
+<td> integer </td>
+<td> Number of received projects (accepted for review by Goteo administrators).<br><strong>Date filters</strong> here uses the date where the project was sent to revision </td>
+</tr>
+<tr>
+<td> successful </td>
+<td> integer </td>
+<td> Number of successful projects (which have achieved the minimum required amount)<br><strong>Date filters</strong> here uses the date where the had achieved the minimum amount </td>
+</tr>
+<tr>
+<td> successful-completed </td>
+<td> integer </td>
+<td> Number of successful projects with completed campaign.<br><strong>Date filters</strong> here uses the date where the project ended his campaign </td>
+</tr>
+<tr>
+<td> top10-collaborations </td>
+<td> array </td>
+<td> The 10 campaigns with the most collaborations &#9758; <a href="#ProjectContribution">ProjectContribution</a> </td>
+</tr>
+<tr>
+<td> top10-donations </td>
+<td> array </td>
+<td> The 10 campaigns with the most donors (individual contributions) &#9758; <a href="#ProjectContribution">ProjectContribution</a> </td>
+</tr>
+<tr>
+<td> top10-receipts </td>
+<td> array </td>
+<td> The 10 campaigns with the most money raised &#9758; <a href="#ProjectAmount">ProjectAmount</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="ProjectContribution">ProjectContribution</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> date-published </td>
+<td> string </td>
+<td> Date when the project was published RFC822 format </td>
+</tr>
+<tr>
+<td> description-short </td>
+<td> string </td>
+<td> Short description of the project </td>
+</tr>
+<tr>
+<td> image-url </td>
+<td> string </td>
+<td> URL with the main image of the project </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the project </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Project's unique ID </td>
+</tr>
+<tr>
+<td> project-url </td>
+<td> string </td>
+<td> Project's original URL (crowd-funding web page) </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Total number contributions (or collaborations) </td>
+</tr>
+<tr>
+<td> video-url </td>
+<td> string </td>
+<td> URL with the main video of the project </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="ProjectAmount">ProjectAmount</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> date-published </td>
+<td> string </td>
+<td> Date when the project was published RFC822 format </td>
+</tr>
+<tr>
+<td> description-short </td>
+<td> string </td>
+<td> Short description of the project </td>
+</tr>
+<tr>
+<td> image-url </td>
+<td> string </td>
+<td> URL with the main image of the project </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the project </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Project's unique ID </td>
+</tr>
+<tr>
+<td> project-url </td>
+<td> string </td>
+<td> Project's original URL (crowd-funding web page) </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Total amount (€) of money raised for the project </td>
+</tr>
+<tr>
+<td> video-url </td>
+<td> string </td>
+<td> URL with the main video of the project </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "average-amount-successful": 7952.00,
+  "average-posts-successful": 9.45,
+  "failed": 315,
+  "meta": {
+    "lang": [
+      "en"
+    ]
+  },
+  "percentage-successful": 79.24,
+  "percentage-successful-completed": 78.99,
+  "published": 1537,
+  "received": 5904,
+  "successful": 1202,
+  "successful-completed": 1184,
+  "time-elapsed": 10.973978281021118,
+  "top10-collaborations": [
+    {
+      "date-published": "Fri, 05 Jan 2018 00:00:00 +0100",
+      "description-short": "\u00a1Esta es la pel\u00edcula sobre Juan Carlos I que algunos no quieren que veas!",
+      "image-url": "https://goteo.org/img/medium/3-el-rey-1.jpg",
+      "name": "EL REY, la peli",
+      "project": "el-rey-la-peli",
+      "project-url": "https://goteo.org/project/el-rey-la-peli",
+      "status": "funded",
+      "total": 864,
+      "video-url": "https://vimeo.com/300984355"
+    },
+    {
+      "date-published": "Mon, 02 Sep 2019 00:00:00 +0200",
+      "description-short": "Ayudanos a grabar y editar el 4\u00ba disco de Freedonia",
+      "image-url": "https://goteo.org/img/medium/16707615-10154098508925388-4891163837587556285-o.j",
+      "name": "Nuevo Disco De Freedonia : Conciencia",
+      "project": "freedonia-conciencia",
+      "project-url": "https://goteo.org/project/freedonia-conciencia",
+      "status": "funded",
+      "total": 723,
+      "video-url": "https://youtu.be/bd7W3RjvHv8"
+    },
+    {
+      "date-published": "Wed, 27 Feb 2019 00:00:00 +0100",
+      "description-short": "We children want to know, we also want to help \u270a?\u270a?\u270a? Awareness raising campaign, with proceeds going to OPEN ARMS and OPEN CULTURAL CENTER.",
+      "image-url": "https://goteo.org/img/medium/portada-video-7.jpg",
+      "name": "Mediterranean Fragility",
+      "project": "mediterranean-fragility",
+      "project-url": "https://goteo.org/project/mediterranean-fragility",
+      "status": "funded",
+      "total": 456,
+      "video-url": "https://youtu.be/NMpPnAzzEg4"
+    },
+    {
+      "date-published": "Mon, 12 Feb 2018 00:00:00 +0100",
+      "description-short": "Popular cost for the creation of a monument in memory of the events of Sanfermines del 78 in Pamplona",
+      "image-url": "https://goteo.org/img/medium/campana-3.jpg",
+      "name": "Gogoan (En la memoria)",
+      "project": "gogoan",
+      "project-url": "https://goteo.org/project/gogoan",
+      "status": "fulfilled",
+      "total": 376,
+      "video-url": "https://youtu.be/TfKfpI-BaSo"
+    },
+    {
+      "date-published": "Mon, 03 Jun 2019 00:00:00 +0200",
+      "description-short": "La Quinta\u00b4l Texu School changes its location to have our Primary Education offer officially homologated.",
+      "image-url": "https://goteo.org/img/medium/whatsapp-image-2019-05-16-at-18.02.-52.jpeg",
+      "name": "Trasplantando el Texu",
+      "project": "trasplantando-el-texu",
+      "project-url": "https://goteo.org/project/trasplantando-el-texu",
+      "status": "funded",
+      "total": 359,
+      "video-url": "https://youtu.be/RE1M5PsfTyU"
+    },
+    {
+      "date-published": "Wed, 16 May 2018 00:00:00 +0200",
+      "description-short": "Queremos autoeditar un libro-cuento sobre la identificaci\u00f3n de las emociones y la empat\u00eda",
+      "image-url": "https://goteo.org/img/medium/nanuk-2.jpg",
+      "name": "Libro-cuento \"Nanuk en el bosque de las emociones\"",
+      "project": "libro-cuento-nanuk-en-el-bosque-de-las-emociones",
+      "project-url": "https://goteo.org/project/libro-cuento-nanuk-en-el-bosque-de-las-emociones",
+      "status": "funded",
+      "total": 329,
+      "video-url": "https://youtu.be/TnVb0184DK8"
+    },
+    {
+      "date-published": "Wed, 08 May 2019 00:00:00 +0200",
+      "description-short": "Act\u00faa frente a la esclavitud del sector textil. \u00a1Apoya la Campa\u00f1a Ropa Limpia!",
+      "image-url": "https://goteo.org/img/medium/quienessomos-2.jpg",
+      "name": "#NecesitoRopaLimpia",
+      "project": "necesito-ropa-limpia",
+      "project-url": "https://goteo.org/project/necesito-ropa-limpia",
+      "status": "funded",
+      "total": 323,
+      "video-url": "https://youtu.be/bMED94d9nU4"
+    },
+    {
+      "date-published": "Tue, 05 Nov 2019 00:00:00 +0100",
+      "description-short": "Project of community agitation",
+      "image-url": "https://goteo.org/img/medium/jordiborras-objvenus-4.jpg",
+      "name": "Objetivo Venus",
+      "project": "objectiu-venus",
+      "project-url": "https://goteo.org/project/objectiu-venus",
+      "status": "funded",
+      "total": 322,
+      "video-url": "https://youtu.be/tlJWQSdfhRI"
+    },
+    {
+      "date-published": "Tue, 10 Dec 2019 00:00:00 +0100",
+      "description-short": "Activisme esc\u00e8nic",
+      "image-url": "https://goteo.org/img/medium/comandas.jpg",
+      "name": "COMANDO SE\u00d1ORAS",
+      "project": "comando-senoras",
+      "project-url": "https://goteo.org/project/comando-senoras",
+      "status": "funded",
+      "total": 305,
+      "video-url": "https://www.youtube.com/watch?v=vso93-3fRYM"
+    },
+    {
+      "date-published": "Wed, 24 Apr 2019 00:00:00 +0200",
+      "description-short": "Ara  amb +informaci\u00f3 +debat +comunit\u00e0ria +ecosist\u00e8mica +transversal i, amb el teu suport, aviat +sostenible",
+      "image-url": "https://goteo.org/img/medium/personas-bn6.png",
+      "name": "Reactivem POLI\u00c8DRICA &gt; art \u00b7 educaci\u00f3 \u00b7 comunitat \u00b7 cultura",
+      "project": "poliedrica",
+      "project-url": "https://goteo.org/project/poliedrica",
+      "status": "funded",
+      "total": 302,
+      "video-url": "https://vimeo.com/326391808"
+    }
+  ],
+  "top10-donations": [
+    {
+      "date-published": "Mon, 25 Apr 2016 00:00:00 +0200",
+      "description-short": "#weIBEXtigate with La Marea: we investigate, we inform, we transform",
+      "image-url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
+      "name": "#YoIBEXtigo con La Marea ",
+      "project": "yoibextigo",
+      "project-url": "https://goteo.org/project/yoibextigo",
+      "status": "funded",
+      "total": 3543,
+      "video-url": "https://youtu.be/1aBtwciWKYM"
+    },
+    {
+      "date-published": "Wed, 10 Oct 2018 00:00:00 +0200",
+      "description-short": "Periodismo contra la violencia machista",
+      "image-url": "https://goteo.org/img/medium/portada-33.jpg",
+      "name": "#PorTodas",
+      "project": "portodas",
+      "project-url": "https://goteo.org/project/portodas",
+      "status": "funded",
+      "total": 2921,
+      "video-url": "https://www.youtube.com/watch?v=5zy0-lzenJg&amp;feature=youtu.be"
+    },
+    {
+      "date-published": "Mon, 12 Mar 2018 00:00:00 +0100",
+      "description-short": "The  Trade Union of Street Vendors in Barcelona",
+      "image-url": "https://goteo.org/img/medium/01.caratula-video04.png",
+      "name": "Top Manta \u00b7 Ropa legal hecha por gente ilegal",
+      "project": "top-manta-bcn",
+      "project-url": "https://goteo.org/project/top-manta-bcn",
+      "status": "funded",
+      "total": 2507,
+      "video-url": "https://vimeo.com/259331518"
+    },
+    {
+      "date-published": "Sun, 14 Feb 2016 00:00:00 +0100",
+      "description-short": "We want to continue reporting freely, each week selecting the issues that we believe you should know about, echoing the voice of minorities, showing that there are alternatives to mainstream thinking. Become a CTXT patron",
+      "image-url": "https://goteo.org/img/medium/goteo-malagon.jpg",
+      "name": "#CTXT. El contexto lo es todo",
+      "project": "ctxt",
+      "project-url": "https://goteo.org/project/ctxt",
+      "status": "funded",
+      "total": 1835,
+      "video-url": "https://vimeo.com/155287296"
+    },
+    {
+      "date-published": "Wed, 21 Nov 2018 00:00:00 +0100",
+      "description-short": "Es un momento clave en la lucha contra la mentira pol\u00edtica y los bulos. Juntos/as es m\u00e1s dif\u00edcil que nos la cuelen. Colabora, difunde y #FundaMaldita",
+      "image-url": "https://goteo.org/img/medium/aaa-copy.jpg",
+      "name": "Maldita: periodismo para que no te la cuelen #FundaMaldita",
+      "project": "maldita",
+      "project-url": "https://goteo.org/project/maldita",
+      "status": "funded",
+      "total": 1672,
+      "video-url": "https://www.youtube.com/watch?v=QkTD1mVaY_w"
+    },
+    {
+      "date-published": "Tue, 15 Oct 2019 00:00:00 +0200",
+      "description-short": "Torturas, guerra sucia, medallas, impunidad. Una historia por contar. Coproduce con CTXT y La Extra\u00f1a Zine el documental sobre Billy el Ni\u00f1o",
+      "image-url": "https://goteo.org/img/medium/31ca7e2a-0ca6-4ee7-86a2-9b9a5dd2572b.jpeg",
+      "name": "BILLY. EL DOCUMENTAL",
+      "project": "billy-el-documental",
+      "project-url": "https://goteo.org/project/billy-el-documental",
+      "status": "funded",
+      "total": 1634,
+      "video-url": "https://youtu.be/jTb3xJhdwic"
+    },
+    {
+      "date-published": "Sat, 06 Jul 2019 00:00:00 +0200",
+      "description-short": "Let's revive the Ribera d'Ebre and the areas affected by one of the largest fires in recent decades",
+      "image-url": "https://goteo.org/img/medium/1-141.png",
+      "name": "#Rebrotem",
+      "project": "rebrotem",
+      "project-url": "https://goteo.org/project/rebrotem",
+      "status": "funded",
+      "total": 1560,
+      "video-url": "https://www.youtube.com/watch?v=JphO_yJTTwM&amp;feature=youtu.be"
+    },
+    {
+      "date-published": "Thu, 21 Nov 2013 00:00:00 +0100",
+      "description-short": "Queremos seguir haciendo periodismo independiente y situado",
+      "image-url": "https://goteo.org/img/medium/cabecera-fb_1.jpg",
+      "name": "S.O.S. Diagonal: Ahora o nunca",
+      "project": "diagonal",
+      "project-url": "https://goteo.org/project/diagonal",
+      "status": "fulfilled",
+      "total": 1492,
+      "video-url": "https://vimeo.com/79968295"
+    },
+    {
+      "date-published": "Wed, 10 Apr 2019 00:00:00 +0200",
+      "description-short": "Pantera no es s\u00f3lo una revista sobre naturaleza para ni\u00f1os y ni\u00f1as, es una comunidad que lucha contra el cambio clim\u00e1tico plantando \u00e1rboles.",
+      "image-url": "https://goteo.org/img/medium/mockup-2-portadas.jpg",
+      "name": "PANTERA MAGAZINE, la revista para ni\u00f1os y ni\u00f1as que s\u00ed salvar\u00e1n el planeta",
+      "project": "pantera-magazine",
+      "project-url": "https://goteo.org/project/pantera-magazine",
+      "status": "funded",
+      "total": 1472,
+      "video-url": "https://www.youtube.com/watch?v=UkQR6w_NeBc"
+    },
+    {
+      "date-published": "Mon, 05 Nov 2018 00:00:00 +0100",
+      "description-short": "Semente Trasancos first began as a Galician language immersion project for pre-school.",
+      "image-url": "https://goteo.org/img/medium/banersemente.png",
+      "name": "Vamos polo Prim\u00e1rio!",
+      "project": "vamos-a-por-primario",
+      "project-url": "https://goteo.org/project/vamos-a-por-primario",
+      "status": "funded",
+      "total": 1325,
+      "video-url": "https://youtu.be/yTzyu7W3kz0"
+    }
+  ],
+  "top10-receipts": [
+    {
+      "amount": 128859.0,
+      "date-published": "Wed, 23 Dec 2015 00:00:00 +0100",
+      "description-short": "Un trajecte per la dignitat contra la precarietat",
+      "image-url": "https://goteo.org/img/medium/ebre.png",
+      "name": "CORRESCALES 2016",
+      "project": "correscales-2016",
+      "project-url": "https://goteo.org/project/correscales-2016",
+      "status": "funded",
+      "video-url": "https://vimeo.com/149844580"
+    },
+    {
+      "amount": 124253.0,
+      "date-published": "Tue, 03 Feb 2015 00:00:00 +0100",
+      "description-short": "Un drama social sobre los desahucios, con S\u00edlvia P\u00e9rez Cruz",
+      "image-url": "https://goteo.org/img/medium/cerca-de-tucasa-29-1b-1.jpg",
+      "name": "Cerca de tu casa",
+      "project": "cercadetucasa",
+      "project-url": "https://goteo.org/project/cercadetucasa",
+      "status": "funded",
+      "video-url": "https://youtu.be/rqGWOSy1Xx0"
+    },
+    {
+      "amount": 105322.0,
+      "date-published": "Sat, 06 Jul 2019 00:00:00 +0200",
+      "description-short": "Let's revive the Ribera d'Ebre and the areas affected by one of the largest fires in recent decades",
+      "image-url": "https://goteo.org/img/medium/1-141.png",
+      "name": "#Rebrotem",
+      "project": "rebrotem",
+      "project-url": "https://goteo.org/project/rebrotem",
+      "status": "funded",
+      "video-url": "https://www.youtube.com/watch?v=JphO_yJTTwM&amp;feature=youtu.be"
+    },
+    {
+      "amount": 98285.0,
+      "date-published": "Mon, 25 Apr 2016 00:00:00 +0200",
+      "description-short": "#weIBEXtigate with La Marea: we investigate, we inform, we transform",
+      "image-url": "https://goteo.org/img/medium/la-marea-logo-ibextigo-logo-ok.png",
+      "name": "#YoIBEXtigo con La Marea ",
+      "project": "yoibextigo",
+      "project-url": "https://goteo.org/project/yoibextigo",
+      "status": "funded",
+      "video-url": "https://youtu.be/1aBtwciWKYM"
+    },
+    {
+      "amount": 88948.0,
+      "date-published": "Wed, 10 Oct 2018 00:00:00 +0200",
+      "description-short": "Periodismo contra la violencia machista",
+      "image-url": "https://goteo.org/img/medium/portada-33.jpg",
+      "name": "#PorTodas",
+      "project": "portodas",
+      "project-url": "https://goteo.org/project/portodas",
+      "status": "funded",
+      "video-url": "https://www.youtube.com/watch?v=5zy0-lzenJg&amp;feature=youtu.be"
+    },
+    {
+      "amount": 77260.0,
+      "date-published": "Wed, 21 Nov 2018 00:00:00 +0100",
+      "description-short": "Es un momento clave en la lucha contra la mentira pol\u00edtica y los bulos. Juntos/as es m\u00e1s dif\u00edcil que nos la cuelen. Colabora, difunde y #FundaMaldita",
+      "image-url": "https://goteo.org/img/medium/aaa-copy.jpg",
+      "name": "Maldita: periodismo para que no te la cuelen #FundaMaldita",
+      "project": "maldita",
+      "project-url": "https://goteo.org/project/maldita",
+      "status": "funded",
+      "video-url": "https://www.youtube.com/watch?v=QkTD1mVaY_w"
+    },
+    {
+      "amount": 72883.0,
+      "date-published": "Sun, 14 Feb 2016 00:00:00 +0100",
+      "description-short": "We want to continue reporting freely, each week selecting the issues that we believe you should know about, echoing the voice of minorities, showing that there are alternatives to mainstream thinking. Become a CTXT patron",
+      "image-url": "https://goteo.org/img/medium/goteo-malagon.jpg",
+      "name": "#CTXT. El contexto lo es todo",
+      "project": "ctxt",
+      "project-url": "https://goteo.org/project/ctxt",
+      "status": "funded",
+      "video-url": "https://vimeo.com/155287296"
+    },
+    {
+      "amount": 70506.0,
+      "date-published": "Thu, 21 Nov 2013 00:00:00 +0100",
+      "description-short": "Queremos seguir haciendo periodismo independiente y situado",
+      "image-url": "https://goteo.org/img/medium/cabecera-fb_1.jpg",
+      "name": "S.O.S. Diagonal: Ahora o nunca",
+      "project": "diagonal",
+      "project-url": "https://goteo.org/project/diagonal",
+      "status": "fulfilled",
+      "video-url": "https://vimeo.com/79968295"
+    },
+    {
+      "amount": 67184.0,
+      "date-published": "Mon, 12 Mar 2018 00:00:00 +0100",
+      "description-short": "The  Trade Union of Street Vendors in Barcelona",
+      "image-url": "https://goteo.org/img/medium/01.caratula-video04.png",
+      "name": "Top Manta \u00b7 Ropa legal hecha por gente ilegal",
+      "project": "top-manta-bcn",
+      "project-url": "https://goteo.org/project/top-manta-bcn",
+      "status": "funded",
+      "video-url": "https://vimeo.com/259331518"
+    },
+    {
+      "amount": 64360.0,
+      "date-published": "Mon, 05 Nov 2018 00:00:00 +0100",
+      "description-short": "Semente Trasancos first began as a Galician language immersion project for pre-school.",
+      "image-url": "https://goteo.org/img/medium/banersemente.png",
+      "name": "Vamos polo Prim\u00e1rio!",
+      "project": "vamos-a-por-primario",
+      "project-url": "https://goteo.org/project/vamos-a-por-primario",
+      "status": "funded",
+      "video-url": "https://youtu.be/yTzyu7W3kz0"
+    }
+  ]
+}
+</code></pre>
+
+<p><a name="community"></a></p>
+
+<h2>/reports/community/</h2>
+
+<p>Statistics involving the community, creators and donors</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/reports/community/
+</code></pre>
+
+<h3>Response description:</h3>
+
+<h5><a id="Community">Community</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> average-collaborators </td>
+<td> integer </td>
+<td> Average number of collaborators per succesful  project </td>
+</tr>
+<tr>
+<td> average-donors </td>
+<td> integer </td>
+<td> Average number of donors per successful project </td>
+</tr>
+<tr>
+<td> cash-donors </td>
+<td> integer </td>
+<td> Number of donors donanting to projects off-line </td>
+</tr>
+<tr>
+<td> categories </td>
+<td> array </td>
+<td> Array of categories &#9758; <a href="#Category">Category</a> </td>
+</tr>
+<tr>
+<td> collaborators </td>
+<td> integer </td>
+<td> Number of collaborators </td>
+</tr>
+<tr>
+<td> creators-collaborators </td>
+<td> integer </td>
+<td> Number of creators collaborating with other  projects | </td>
+</tr>
+<tr>
+<td> creators-donors </td>
+<td> integer </td>
+<td> Number of creators funding other projects </td>
+</tr>
+<tr>
+<td> creditcard-donors </td>
+<td> integer </td>
+<td> Number of donors using a Credit Card </td>
+</tr>
+<tr>
+<td> donors </td>
+<td> integer </td>
+<td> Number of donors </td>
+</tr>
+<tr>
+<td> donors-collaborators </td>
+<td> integer </td>
+<td> Number of donors who collaborate with others creators </td>
+</tr>
+<tr>
+<td> leading-category </td>
+<td> integer </td>
+<td> Category with the highest number of interested users </td>
+</tr>
+<tr>
+<td> multidonors </td>
+<td> integer </td>
+<td> Number of donors who donate to more than 1 project </td>
+</tr>
+<tr>
+<td> paypal-donors </td>
+<td> integer </td>
+<td> Number of donors using PayPal </td>
+</tr>
+<tr>
+<td> percentage-donors-users </td>
+<td> number </td>
+<td> Percentage of registered users that are donors (<em>100 * donors / users</em>) </td>
+</tr>
+<tr>
+<td> percentage-multidonor-donors </td>
+<td> number </td>
+<td> Percentage of multidonors (over total donors: <em>100 * multidonors / donors</em>) </td>
+</tr>
+<tr>
+<td> percentage-multidonor-users </td>
+<td> number </td>
+<td> Percentage of multidonors (over total users: <em>100 * multidonors / users</em>) </td>
+</tr>
+<tr>
+<td> percentage-unsubscribed-users </td>
+<td> number </td>
+<td> Percentage of unsubscribed users (over the  total number of users) </td>
+</tr>
+<tr>
+<td> percentage-users-leading-category </td>
+<td> number </td>
+<td> Percentage of users in the leading category </td>
+</tr>
+<tr>
+<td> percentage-users-second-category </td>
+<td> number </td>
+<td> Percentage of users in this category </td>
+</tr>
+<tr>
+<td> second-category </td>
+<td> integer </td>
+<td> Second category with more users </td>
+</tr>
+<tr>
+<td> top10-collaborators </td>
+<td> array </td>
+<td> Top 10 talkers &#9758; <a href="#Collaboration">Collaboration</a> </td>
+</tr>
+<tr>
+<td> top10-donors </td>
+<td> array </td>
+<td> The top 10 donors who spend more money on projects (the most generous co-financiers) &#9758; <a href="#Donation">Donation</a> </td>
+</tr>
+<tr>
+<td> top10-multidonors </td>
+<td> array </td>
+<td> Top 10 multidonors who are contributed to more different projects (The most diversified co-financiers) &#9758; <a href="#Donation">Donation</a> </td>
+</tr>
+<tr>
+<td> users </td>
+<td> integer </td>
+<td> Total number of registered users </td>
+</tr>
+<tr>
+<td> users-leading-category </td>
+<td> integer </td>
+<td> Number of users in this category </td>
+</tr>
+<tr>
+<td> users-second-category </td>
+<td> integer </td>
+<td> Number of users in this category </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Category">Category</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> id </td>
+<td> integer </td>
+<td> Category unique identifier </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Category name </td>
+</tr>
+<tr>
+<td> percentage-users </td>
+<td> number </td>
+<td> Percentage of users in this category over the total number of users </td>
+</tr>
+<tr>
+<td> users </td>
+<td> integer </td>
+<td> Total number of users interested in the category </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Collaboration">Collaboration</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> interactions </td>
+<td> integer </td>
+<td> Karma number of the user collaborations </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the user </td>
+</tr>
+<tr>
+<td> profile-image-url </td>
+<td> string </td>
+<td> URL with the avatar (image) of the user </td>
+</tr>
+<tr>
+<td> profile-url </td>
+<td> string </td>
+<td> URL for the user profile </td>
+</tr>
+<tr>
+<td> user </td>
+<td> string </td>
+<td> User unique identifier </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Donation">Donation</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> amount </td>
+<td> number </td>
+<td> Total amount of money (€) spent by the user in projects </td>
+</tr>
+<tr>
+<td> contributions </td>
+<td> integer </td>
+<td> Total number of different projects the user has contributed to </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the user </td>
+</tr>
+<tr>
+<td> profile-image-url </td>
+<td> string </td>
+<td> URL with the avatar (image) of the user </td>
+</tr>
+<tr>
+<td> profile-url </td>
+<td> string </td>
+<td> URL for the user profile </td>
+</tr>
+<tr>
+<td> user </td>
+<td> string </td>
+<td> User unique identifier </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "average-collaborators": 6.1152,
+  "average-donors": 133.9585,
+  "cash-donors": 784,
+  "categories": [
+    {
+      "2": {
+        "id": 2,
+        "name": "Social",
+        "percentage-users": 6.86,
+        "users": 12953
+      }
+    },
+    {
+      "10": {
+        "id": 10,
+        "name": "Educational",
+        "percentage-users": 5.18,
+        "users": 9778
+      }
+    },
+    {
+      "11": {
+        "id": 11,
+        "name": "Cultural",
+        "percentage-users": 5.09,
+        "users": 9599
+      }
+    },
+    {
+      "13": {
+        "id": 13,
+        "name": "Ecological",
+        "percentage-users": 4.31,
+        "users": 8141
+      }
+    },
+    {
+      "7": {
+        "id": 7,
+        "name": "Technological",
+        "percentage-users": 3.22,
+        "users": 6085
+      }
+    },
+    {
+      "9": {
+        "id": 9,
+        "name": "Commercial",
+        "percentage-users": 2.97,
+        "users": 5614
+      }
+    },
+    {
+      "6": {
+        "id": 6,
+        "name": "Communications",
+        "percentage-users": 2.73,
+        "users": 5151
+      }
+    },
+    {
+      "14": {
+        "id": 14,
+        "name": "Scientific",
+        "percentage-users": 2.51,
+        "users": 4733
+      }
+    },
+    {
+      "16": {
+        "id": 16,
+        "name": "Design",
+        "percentage-users": 0.47,
+        "users": 893
+      }
+    }
+  ],
+  "collaborators": 4056,
+  "creators-collaborators": 49,
+  "creators-donors": 62,
+  "creditcard-donors": 112944,
+  "donors": 133856,
+  "donors-collaborators": 1484,
+  "leading-category": 2,
+  "meta": {
+    "lang": [
+      "en"
+    ]
+  },
+  "multidonors": 22968,
+  "paypal-donors": 24460,
+  "percentage-donors-users": 70.93,
+  "percentage-multidonor-donors": 17.16,
+  "percentage-multidonor-users": 12.17,
+  "percentage-unsubscribed-users": 2.77,
+  "percentage-users-leading-category": 6.86,
+  "percentage-users-second-category": 5.18,
+  "second-category": 10,
+  "time-elapsed": 10.725663900375366,
+  "top10-collaborators": [
+    {
+      "interactions": 855,
+      "name": "Teatro del Barrio, sociedad cooperativa madrile\u00f1a de consumo",
+      "profile-image-url": "https://goteo.org/img/medium/img-0126.jpg",
+      "profile-url": "https://goteo.org/user/profile/gerenciatdb",
+      "user": null
+    },
+    {
+      "interactions": 301,
+      "name": "Sanfermines 78 gogoan!",
+      "profile-image-url": "https://goteo.org/img/medium/avatar-twitter-1.jpg",
+      "profile-url": "https://goteo.org/user/profile/sanfermines-78",
+      "user": null
+    },
+    {
+      "interactions": 230,
+      "name": "Asociaci\u00f3n Cultural Freedonia Soul",
+      "profile-image-url": "https://goteo.org/img/medium/1385988-10151821557898425-1933888924-n.jpg",
+      "profile-url": "https://goteo.org/user/profile/freedonia",
+      "user": null
+    },
+    {
+      "interactions": 217,
+      "name": "Sinapsis",
+      "profile-image-url": "https://goteo.org/img/medium/mini-logo-sinapisi-1.jpg",
+      "profile-url": "https://goteo.org/user/profile/sinapsis",
+      "user": null
+    },
+    {
+      "interactions": 158,
+      "name": "Orquesta Escuela",
+      "profile-image-url": "https://goteo.org/img/medium/e489792a-8faa-4827-bb01-936f6798025d.jpeg",
+      "profile-url": "https://goteo.org/user/profile/akra",
+      "user": null
+    },
+    {
+      "interactions": 155,
+      "name": "T\u00edteres Sol y Tierra Sociedad Cooperativa Madrile\u00f1a",
+      "profile-image-url": "https://goteo.org/img/medium/",
+      "profile-url": "https://goteo.org/user/profile/victortorre",
+      "user": null
+    },
+    {
+      "interactions": 155,
+      "name": "Odisea Records",
+      "profile-image-url": "https://goteo.org/img/medium/sin-titulo-36.jpg",
+      "profile-url": "https://goteo.org/user/profile/odisearecords",
+      "user": null
+    },
+    {
+      "interactions": 137,
+      "name": "LaCol",
+      "profile-image-url": "https://goteo.org/img/medium/02-lacol-rgb-positiu.jpg",
+      "profile-url": "https://goteo.org/user/profile/lacol",
+      "user": null
+    },
+    {
+      "interactions": 135,
+      "name": "Sementevigo",
+      "profile-image-url": "https://goteo.org/img/medium/logotipo-2017-semente-vigo.jpg",
+      "profile-url": "https://goteo.org/user/profile/semente-vigo",
+      "user": null
+    },
+    {
+      "interactions": 132,
+      "name": "Alendar",
+      "profile-image-url": "https://goteo.org/img/medium/logoalendar.jpg",
+      "profile-url": "https://goteo.org/user/profile/alendar",
+      "user": null
+    }
+  ],
+  "top10-donors": [
+    {
+      "amount": 28370.0,
+      "contributions": 94,
+      "name": "carmen",
+      "profile-image-url": "https://goteo.org/img/medium/",
+      "profile-url": "https://goteo.org/user/profile/carmeliya",
+      "user": null
+    },
+    {
+      "amount": 26600.0,
+      "contributions": 1,
+      "name": "CANDIDATURES D'UNITAT POPULAR (CUP)",
+      "profile-image-url": "https://goteo.org/img/medium/",
+      "profile-url": "https://goteo.org/user/profile/cupcat",
+      "user": null
+    },
+    {
+      "amount": 25359.0,
+      "contributions": 11,
+      "name": "JULI\u00c1N MANUEL MORENO VERA",
+      "profile-image-url": "https://goteo.org/img/medium/",
+      "profile-url": "https://goteo.org/user/profile/julian-manuel-moreno-vera-participa",
+      "user": null
+    },
+    {
+      "amount": 23000.0,
+      "contributions": 1,
+      "name": "Piedad Martin Rivas",
+      "profile-image-url": "https://goteo.org/img/medium/",
+      "profile-url": "https://goteo.org/user/profile/piedad-martin",
+      "user": null
+    },
+    {
+      "amount": 17286.0,
+      "contributions": 8,
+      "name": "H\u00e9ctor Rojo Let\u00f3n (Participa Sevilla)",
+      "profile-image-url": "https://goteo.org/img/medium/img-20170531-wa0010.jpg",
+      "profile-url": "https://goteo.org/user/profile/participahrl",
+      "user": null
+    },
+    {
+      "amount": 14711.0,
+      "contributions": 1,
+      "name": "ASSEMBLEA DE DOCENTS DE LES ILLES BALEARS",
+      "profile-image-url": "https://goteo.org/img/medium/",
+      "profile-url": "https://goteo.org/user/profile/caixaderesistencia",
+      "user": null
+    },
+    {
+      "amount": 14500.0,
+      "contributions": 1,
+      "name": "Assemblea Pagesa",
+      "profile-image-url": "https://goteo.org/img/medium/logo_95.jpg",
+      "profile-url": "https://goteo.org/user/profile/assembleapagesa",
+      "user": null
+    },
+    {
+      "amount": 14418.0,
+      "contributions": 8,
+      "name": "Celia",
+      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
+      "profile-url": "https://goteo.org/user/profile/celiamayer",
+      "user": null
+    },
+    {
+      "amount": 14000.0,
+      "contributions": 1,
+      "name": "Takeabreath Consulting SA",
+      "profile-image-url": "https://goteo.org/img/medium/",
+      "profile-url": "https://goteo.org/user/profile/rsenenrinconmind.org",
+      "user": null
+    },
+    {
+      "amount": 11494.0,
+      "contributions": 4,
+      "name": "Susana Serrano (Participa Sevilla)",
+      "profile-image-url": "https://goteo.org/img/medium/ps-marca-01color.png",
+      "profile-url": "https://goteo.org/user/profile/susana-serrano-participa-sevilla",
+      "user": null
+    }
+  ],
+  "top10-multidonors": [
+    {
+      "amount": 233.0,
+      "contributions": 223,
+      "name": "carlosramiro",
+      "profile-image-url": "https://goteo.org/img/medium/23847292-1617506001621462-637272144223194596-o.jpg",
+      "profile-url": "https://goteo.org/user/profile/carlosramiro",
+      "user": null
+    },
+    {
+      "amount": 5322.0,
+      "contributions": 205,
+      "name": "Olivier",
+      "profile-image-url": "https://goteo.org/img/medium/ici-olivier-lift-losange.png",
+      "profile-url": "https://goteo.org/user/profile/olivier",
+      "user": null
+    },
+    {
+      "amount": 4775.0,
+      "contributions": 162,
+      "name": "esenabre",
+      "profile-image-url": "https://goteo.org/img/medium/me-thinking.jpg",
+      "profile-url": "https://goteo.org/user/profile/esenabre",
+      "user": null
+    },
+    {
+      "amount": 3674.0,
+      "contributions": 110,
+      "name": "Alvaro Moya",
+      "profile-image-url": "https://goteo.org/img/medium/img-20140227-wa0000.jpg",
+      "profile-url": "https://goteo.org/user/profile/amoya62",
+      "user": null
+    },
+    {
+      "amount": 28370.0,
+      "contributions": 94,
+      "name": "carmen",
+      "profile-image-url": "https://goteo.org/img/medium/",
+      "profile-url": "https://goteo.org/user/profile/carmeliya",
+      "user": null
+    },
+    {
+      "amount": 2314.0,
+      "contributions": 88,
+      "name": "merzzz",
+      "profile-image-url": "https://goteo.org/img/medium/mdemercemelbourner.png",
+      "profile-url": "https://goteo.org/user/profile/merxxx",
+      "user": null
+    },
+    {
+      "amount": 1185.0,
+      "contributions": 86,
+      "name": "lave",
+      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
+      "profile-url": "https://goteo.org/user/profile/lave76",
+      "user": null
+    },
+    {
+      "amount": 1972.0,
+      "contributions": 65,
+      "name": "ColaBoraBora",
+      "profile-image-url": "https://goteo.org/img/medium/logodibu-cbbnombrer.jpg",
+      "profile-url": "https://goteo.org/user/profile/colaborabora",
+      "user": null
+    },
+    {
+      "amount": 1812.0,
+      "contributions": 65,
+      "name": "M\u00aa Carmen Mart\u00ednez",
+      "profile-image-url": "https://goteo.org/img/medium/",
+      "profile-url": "https://goteo.org/user/profile/amama-hodei",
+      "user": null
+    },
+    {
+      "amount": 1316.0,
+      "contributions": 62,
+      "name": "Qu\u00e8txup",
+      "profile-image-url": "https://goteo.org/img/medium/",
+      "profile-url": "https://goteo.org/user/profile/pablo.checadejoz",
+      "user": null
+    }
+  ],
+  "users": 188722,
+  "users-leading-category": 12953,
+  "users-second-category": 9778
+}
+</code></pre>
+
+<p><a name="rewards"></a></p>
+
+<h2>/reports/rewards/</h2>
+
+<p>Statistics around the rewards and licenses</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/reports/rewards/
+</code></pre>
+
+<h3>Response values:</h3>
+
+<h5><a id="Reward">Reward</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> favorite-rewards </td>
+<td> array </td>
+<td> Reward type used in successful projects &#9758; <a href="#Favourite">Favourite</a> </td>
+</tr>
+<tr>
+<td> percentage-reward-refusal </td>
+<td> number </td>
+<td> Pertentage of co-financiers who renounce reward </td>
+</tr>
+<tr>
+<td> reward-refusal </td>
+<td> integer </td>
+<td> Number of co-financiers who renounce reward </td>
+</tr>
+<tr>
+<td> rewards-per-amount </td>
+<td> array </td>
+<td> Number of rewards picked by the users in steps &#9758; <a href="#PerAmount">PerAmount</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Favourite">Favourite</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> description </td>
+<td> string </td>
+<td> Reward's description </td>
+</tr>
+<tr>
+<td> icon </td>
+<td> string </td>
+<td> Identifier of the reward's icon </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Reward's name </td>
+</tr>
+<tr>
+<td> svg-url </td>
+<td> string </td>
+<td> URL where to find the reward's icon </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Number of uses of this reward in successful projects </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="PerAmount">PerAmount</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> rewards-between-100-400 </td>
+<td> integer </td>
+<td> Num. of users choosing rewards from 100 € to 400 € </td>
+</tr>
+<tr>
+<td> rewards-between-15-30 </td>
+<td> integer </td>
+<td> Num. of users choosing rewards from 15 € to 30 € </td>
+</tr>
+<tr>
+<td> rewards-between-30-100 </td>
+<td> integer </td>
+<td> Num. of users choosing rewards from 30 € to 100 € </td>
+</tr>
+<tr>
+<td> rewards-less-than-15 </td>
+<td> integer </td>
+<td> Num. of users choosing rewards cheaper than 15 € </td>
+</tr>
+<tr>
+<td> rewards-more-than-400 </td>
+<td> integer </td>
+<td> Num. of users choosing rewards more expensive than 400 € </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response Body</h3>
+
+<pre><code class="json">{
+  "favorite-rewards": [
+    {
+      "description": "Products can be limited editions or prototypes, or pieces or works derived from the original.",
+      "icon": "product",
+      "name": "Product",
+      "svg-url": "https://goteo.org/api/svg/icons/product.svg",
+      "total": 2810
+    },
+    {
+      "description": "Actions or sessions during a specific period of time which satisfy an individual or group need: education, technical assistance, advice, etc. ",
+      "icon": "service",
+      "name": "Services",
+      "svg-url": "https://goteo.org/api/svg/icons/service.svg",
+      "total": 1479
+    },
+    {
+      "description": "Digital files may be music, video, text documents, etc.",
+      "icon": "file",
+      "name": "Digital files",
+      "svg-url": "https://goteo.org/api/svg/icons/file.svg",
+      "total": 1100
+    },
+    {
+      "description": "Gratitude or acknowledgment",
+      "icon": "thanks",
+      "name": "Acknowledgment",
+      "svg-url": "https://goteo.org/api/svg/icons/thanks.svg",
+      "total": 978
+    },
+    {
+      "description": "Surprise us with this category, we're really interested!",
+      "icon": "other",
+      "name": "Other",
+      "svg-url": "https://goteo.org/api/svg/icons/other.svg",
+      "total": 506
+    },
+    {
+      "description": "Practical documentation that details step-by-step instructions, tutorials, business plans, how-to's, code cookbooks, etc. ",
+      "icon": "manual",
+      "name": "Manuals",
+      "svg-url": "https://goteo.org/api/svg/icons/manual.svg",
+      "total": 181
+    },
+    {
+      "description": "By source code, we mean programs and software in general.",
+      "icon": "code",
+      "name": "Source code",
+      "svg-url": "https://goteo.org/api/svg/icons/code.svg",
+      "total": 85
+    },
+    {
+      "description": "Designs can be drawings, patterns, sketches, rough drafts, flowcharts, etc.",
+      "icon": "design",
+      "name": "Design",
+      "svg-url": "https://goteo.org/api/svg/icons/design.svg",
+      "total": 56
+    },
+    {
+      "description": "Economic benefits that are proportional to the investment made, with details about quantity and also form of payment",
+      "icon": "money",
+      "name": "Money",
+      "svg-url": "https://goteo.org/api/svg/icons/money.svg",
+      "total": 55
+    }
+  ],
+  "meta": {
+    "lang": [
+      "en"
+    ]
+  },
+  "percentage-reward-refusal": 34.09,
+  "reward-refusal": 45634,
+  "rewards-per-amount": {
+    "rewards-between-100-400": 12241,
+    "rewards-between-15-30": 55003,
+    "rewards-between-30-100": 57904,
+    "rewards-less-than-15": 30879,
+    "rewards-more-than-400": 1004
+  },
+  "time-elapsed": 7.211138963699341
+}
+</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+ -->
+<script src="/assets/highlight.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62675757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+
+</html>

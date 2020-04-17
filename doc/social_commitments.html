@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Goteo API : Social Commitments</title>
+  <meta name="description" content="">
+
+
+  <link rel="stylesheet" href="/assets/assemble.css">
+  <link rel="stylesheet" href="/assets/github.css">
+  <link rel="stylesheet" href="/assets/goteo.css">
+  
+  <link rel="canonical" href="https://developers.goteo.org/doc/social_commitments.html">
+  
+
+  </head>
+
+  <body style="background: white;">
+  <div class="wrapper">
+
+  
+      <!-- Navbar component
+================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png"></a>
+<!--       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="/about-goteo">About Goteo</a></li>
+          <li><a href="/doc">API Docs</a></li>
+          <li><a href="/apps">Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+      <div class="col col-lg-3">
+        <div class="sidebar bs-sidebar">
+ 
+  <span class="nav-section-title">
+    API DOCS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/index.html">Introduction</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/responses.html">Responses</a></li>
+          
+        
+          
+          <li><a href="/doc/security.html">Security</a></li>
+          
+        
+          
+          <li><a href="/doc/filters.html">Filters</a></li>
+          
+        
+          
+          <li><a href="/doc/console.html">Live Console</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+          <li><a href="/doc/projects.html">Projects</a></li>
+          
+        
+          
+          <li><a href="/doc/users.html">Users</a></li>
+          
+        
+          
+          <li><a href="/doc/categories.html">Categories</a></li>
+          
+        
+          
+          <li><a href="/doc/footprints.html">Footprints</a></li>
+          
+        
+          
+          <li><a href="/doc/sdgs.html">Sustainable Development Goals</a></li>
+          
+        
+          
+          <li class="active"><a href="/doc/social_commitments.html">Social Commitments</a></li>
+          
+        
+          
+          <li><a href="/doc/licenses.html">Licenses</a></li>
+          
+        
+          
+          <li><a href="/doc/invests.html">Invests</a></li>
+          
+        
+          
+          <li><a href="/doc/calls.html">Matchfunding calls</a></li>
+          
+        
+          
+          <li><a href="/doc/matchers.html">Matchfunding matchers</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/reports.html">Reports</a></li>
+          
+        
+          
+          <li><a href="/doc/digests.html">Digests</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  
+
+  
+
+  
+
+</div>
+
+      </div>
+
+      <div class="col col-lg-9 panel-docs">
+        <h1>Social Commitments endpoint</h1>
+
+<p>This section gives you information about the social commitment used by projects in <a href="http://goteo.org">Goteo.org</a>.</p>
+
+<p>Social Commitments an alternative way of categorization for projects in Goteo.</p>
+
+<p>Each social commitment can belong to a one or more SDG (Sustainable Development Goals) and footprints.</p>
+
+<p><a name="socialcommitments"></a></p>
+
+<h2>/socialcommitments/</h2>
+
+<p>Obtains a list of socialcommitments.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/socialcommitments/
+</code></pre>
+
+<h3>Filters available:</h3>
+
+<p><strong>The <a href="filters.html">standard set of filters</a> applies to this endpoint with these particulars:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the socialcommitments used in projects assigned in that nodes </td>
+</tr>
+<tr>
+<td> call </td>
+<td> string </td>
+<td> Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Filter by individual project(s). Multiple projects can be specified. Restricts the list to the socialcommitments used in that projects </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Filter from date. Ex. "2013-01-01". Restricts the list to the socialcommitments used in projects created between that dates </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Filter until date.. Ex. "2014-01-01". Restricts the list to the socialcommitments used in projects created between that dates </td>
+</tr>
+<tr>
+<td> category </td>
+<td> integer </td>
+<td> Filter by category. Multiple categories can be specified. Restricts the list to the social commitments matching with that category(ies) </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> integer </td>
+<td> Filter by social commitment. Multiple social commitments can be specified. Restricts the list to the social commitments specified </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> integer </td>
+<td> Filter by project Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the social commitments matching that SDG(s) </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> integer </td>
+<td> Filter by project footprint. Multiple footprints can be specified. Restricts the list to social commitments with that footprint(s) </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Get results by specified lang. Multiple langs can be specified </td>
+</tr>
+<tr>
+<td> location </td>
+<td> number </td>
+<td> Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the socialcommitments used in projects geolocated in that area </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="ResponseSocialCommitment">ResponseSocialCommitment</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> items </td>
+<td> array </td>
+<td> ... &#9758; <a href="#SocialCommitment">SocialCommitment</a> </td>
+</tr>
+<tr>
+<td> meta </td>
+<td>  </td>
+<td> ... &#9758; <a href="#MetaSocialCommitment">MetaSocialCommitment</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="SocialCommitment">SocialCommitment</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> description </td>
+<td> string </td>
+<td> SocialCommitment short description </td>
+</tr>
+<tr>
+<td> icon-url </td>
+<td> string </td>
+<td> URL for the image resource associated with this social commitment </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> SocialCommitment unique identifier </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> SocialCommitment name </td>
+</tr>
+<tr>
+<td> total-projects </td>
+<td> integer </td>
+<td> Number of published projects in the SocialCommitment </td>
+</tr>
+<tr>
+<td> total-users </td>
+<td> integer </td>
+<td> Number of users interested in the SocialCommitment </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="MetaSocialCommitment">MetaSocialCommitment</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Only if filtering by from_date </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> array </td>
+<td> Only if filtering by lang </td>
+</tr>
+<tr>
+<td> location </td>
+<td> array </td>
+<td> Only if filtering by location </td>
+</tr>
+<tr>
+<td> node </td>
+<td> array </td>
+<td> Only if filtering by node </td>
+</tr>
+<tr>
+<td> project </td>
+<td> array </td>
+<td> Only if filtering by project </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Only if filtering by to_date </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Total elements available for the collection </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body</h3>
+
+<pre><code class="json">{
+  "items": [
+    {
+      "categories": [],
+      "description": "Solidary",
+      "icon-url": "https://goteo.org/img/medium/1-solidario-1.png",
+      "id": 1,
+      "name": "Solidary",
+      "sdgs": [
+        {
+          "description": "Poner fin al hambre, lograr la seguridad alimentaria y la mejora de la nutrici\u00f3n y promover la agricultura sostenible",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/2.png",
+          "id": 2,
+          "name": "Hambre cero"
+        },
+        {
+          "description": "Garantizar una vida sana y promover el bienestar para todos en todas las edades",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/3.png",
+          "id": 3,
+          "name": "Salud y bienestar"
+        },
+        {
+          "description": "Garantizar una educaci\u00f3n inclusiva, equitativa y de calidad y promover oportunidades de aprendizaje durante toda la vida para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/4.png",
+          "id": 4,
+          "name": "Educaci\u00f3n de calidad"
+        },
+        {
+          "description": "Promover el crecimiento econ\u00f3mico sostenido, inclusivo y sostenible, el empleo pleno y productivo y el trabajo decente para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/8.png",
+          "id": 8,
+          "name": "Trabajo decente y crecimiento econ\u00f3mico"
+        },
+        {
+          "description": "Las inversiones en infraestructura son cruciales para lograr un desarrollo sostenible.",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/9.png",
+          "id": 9,
+          "name": "Industria, innovaci\u00f3n e infraestructuras"
+        },
+        {
+          "description": "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/11.png",
+          "id": 11,
+          "name": "Ciudades y comunidades sostenibles"
+        }
+      ],
+      "total-projects": 138,
+      "total-users": 16280
+    },
+    {
+      "categories": [],
+      "description": "Free software",
+      "icon-url": "https://goteo.org/img/medium/2-software-libre-1.png",
+      "id": 2,
+      "name": "Free software",
+      "sdgs": [
+        {
+          "description": "Poner fin al hambre, lograr la seguridad alimentaria y la mejora de la nutrici\u00f3n y promover la agricultura sostenible",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/2.png",
+          "id": 2,
+          "name": "Hambre cero"
+        },
+        {
+          "description": "Garantizar una educaci\u00f3n inclusiva, equitativa y de calidad y promover oportunidades de aprendizaje durante toda la vida para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/4.png",
+          "id": 4,
+          "name": "Educaci\u00f3n de calidad"
+        },
+        {
+          "description": "Promover el crecimiento econ\u00f3mico sostenido, inclusivo y sostenible, el empleo pleno y productivo y el trabajo decente para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/8.png",
+          "id": 8,
+          "name": "Trabajo decente y crecimiento econ\u00f3mico"
+        },
+        {
+          "description": "Las inversiones en infraestructura son cruciales para lograr un desarrollo sostenible.",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/9.png",
+          "id": 9,
+          "name": "Industria, innovaci\u00f3n e infraestructuras"
+        },
+        {
+          "description": "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/11.png",
+          "id": 11,
+          "name": "Ciudades y comunidades sostenibles"
+        },
+        {
+          "description": "Promover sociedades, justas, pac\u00edficas e inclusivas",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/16.png",
+          "id": 16,
+          "name": "Paz, justicia e instituciones s\u00f3lidas"
+        }
+      ],
+      "total-projects": 2,
+      "total-users": 24
+    },
+    {
+      "categories": [],
+      "description": "Creating employment",
+      "icon-url": "https://goteo.org/img/medium/4b-empleo.png",
+      "id": 3,
+      "name": "Creating employment",
+      "sdgs": [
+        {
+          "description": "Poner fin al hambre, lograr la seguridad alimentaria y la mejora de la nutrici\u00f3n y promover la agricultura sostenible",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/2.png",
+          "id": 2,
+          "name": "Hambre cero"
+        },
+        {
+          "description": "Garantizar una vida sana y promover el bienestar para todos en todas las edades",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/3.png",
+          "id": 3,
+          "name": "Salud y bienestar"
+        },
+        {
+          "description": "Garantizar una educaci\u00f3n inclusiva, equitativa y de calidad y promover oportunidades de aprendizaje durante toda la vida para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/4.png",
+          "id": 4,
+          "name": "Educaci\u00f3n de calidad"
+        },
+        {
+          "description": "Lograr la igualdad entre los g\u00e9neros y empoderar a todas las mujeres y las ni\u00f1as",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/5.png",
+          "id": 5,
+          "name": "Igualdad de g\u00e9nero"
+        },
+        {
+          "description": "Promover el crecimiento econ\u00f3mico sostenido, inclusivo y sostenible, el empleo pleno y productivo y el trabajo decente para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/8.png",
+          "id": 8,
+          "name": "Trabajo decente y crecimiento econ\u00f3mico"
+        },
+        {
+          "description": "Las inversiones en infraestructura son cruciales para lograr un desarrollo sostenible.",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/9.png",
+          "id": 9,
+          "name": "Industria, innovaci\u00f3n e infraestructuras"
+        },
+        {
+          "description": "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/11.png",
+          "id": 11,
+          "name": "Ciudades y comunidades sostenibles"
+        }
+      ],
+      "total-projects": 24,
+      "total-users": 2440
+    },
+    {
+      "categories": [],
+      "description": "Independent journalism",
+      "icon-url": "https://goteo.org/img/medium/5-periodismo-1.png",
+      "id": 5,
+      "name": "Independent journalism",
+      "sdgs": [
+        {
+          "description": "Lograr la igualdad entre los g\u00e9neros y empoderar a todas las mujeres y las ni\u00f1as",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/5.png",
+          "id": 5,
+          "name": "Igualdad de g\u00e9nero"
+        },
+        {
+          "description": "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/11.png",
+          "id": 11,
+          "name": "Ciudades y comunidades sostenibles"
+        },
+        {
+          "description": "Promover sociedades, justas, pac\u00edficas e inclusivas",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/16.png",
+          "id": 16,
+          "name": "Paz, justicia e instituciones s\u00f3lidas"
+        }
+      ],
+      "total-projects": 38,
+      "total-users": 14898
+    },
+    {
+      "categories": [],
+      "description": "Educational",
+      "icon-url": "https://goteo.org/img/medium/6-educativo-1.png",
+      "id": 6,
+      "name": "Educational",
+      "sdgs": [
+        {
+          "description": "Poner fin al hambre, lograr la seguridad alimentaria y la mejora de la nutrici\u00f3n y promover la agricultura sostenible",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/2.png",
+          "id": 2,
+          "name": "Hambre cero"
+        },
+        {
+          "description": "Garantizar una vida sana y promover el bienestar para todos en todas las edades",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/3.png",
+          "id": 3,
+          "name": "Salud y bienestar"
+        },
+        {
+          "description": "Garantizar una educaci\u00f3n inclusiva, equitativa y de calidad y promover oportunidades de aprendizaje durante toda la vida para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/4.png",
+          "id": 4,
+          "name": "Educaci\u00f3n de calidad"
+        },
+        {
+          "description": "Promover el crecimiento econ\u00f3mico sostenido, inclusivo y sostenible, el empleo pleno y productivo y el trabajo decente para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/8.png",
+          "id": 8,
+          "name": "Trabajo decente y crecimiento econ\u00f3mico"
+        },
+        {
+          "description": "Las inversiones en infraestructura son cruciales para lograr un desarrollo sostenible.",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/9.png",
+          "id": 9,
+          "name": "Industria, innovaci\u00f3n e infraestructuras"
+        },
+        {
+          "description": "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/11.png",
+          "id": 11,
+          "name": "Ciudades y comunidades sostenibles"
+        }
+      ],
+      "total-projects": 120,
+      "total-users": 9755
+    },
+    {
+      "categories": [],
+      "description": "Creating culture",
+      "icon-url": "https://goteo.org/img/medium/7--crear-cultura-1.png",
+      "id": 7,
+      "name": "Creating culture",
+      "sdgs": [
+        {
+          "description": "Poner fin al hambre, lograr la seguridad alimentaria y la mejora de la nutrici\u00f3n y promover la agricultura sostenible",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/2.png",
+          "id": 2,
+          "name": "Hambre cero"
+        },
+        {
+          "description": "Garantizar una vida sana y promover el bienestar para todos en todas las edades",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/3.png",
+          "id": 3,
+          "name": "Salud y bienestar"
+        },
+        {
+          "description": "Garantizar una educaci\u00f3n inclusiva, equitativa y de calidad y promover oportunidades de aprendizaje durante toda la vida para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/4.png",
+          "id": 4,
+          "name": "Educaci\u00f3n de calidad"
+        },
+        {
+          "description": "Lograr la igualdad entre los g\u00e9neros y empoderar a todas las mujeres y las ni\u00f1as",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/5.png",
+          "id": 5,
+          "name": "Igualdad de g\u00e9nero"
+        },
+        {
+          "description": "Promover el crecimiento econ\u00f3mico sostenido, inclusivo y sostenible, el empleo pleno y productivo y el trabajo decente para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/8.png",
+          "id": 8,
+          "name": "Trabajo decente y crecimiento econ\u00f3mico"
+        },
+        {
+          "description": "Las inversiones en infraestructura son cruciales para lograr un desarrollo sostenible.",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/9.png",
+          "id": 9,
+          "name": "Industria, innovaci\u00f3n e infraestructuras"
+        },
+        {
+          "description": "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/11.png",
+          "id": 11,
+          "name": "Ciudades y comunidades sostenibles"
+        },
+        {
+          "description": "Promover sociedades, justas, pac\u00edficas e inclusivas",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/16.png",
+          "id": 16,
+          "name": "Paz, justicia e instituciones s\u00f3lidas"
+        }
+      ],
+      "total-projects": 157,
+      "total-users": 16617
+    },
+    {
+      "categories": [],
+      "description": "Ecological",
+      "icon-url": "https://goteo.org/img/medium/8-ecologico-1.png",
+      "id": 8,
+      "name": "Climate action",
+      "sdgs": [
+        {
+          "description": "Garantizar el acceso a una energ\u00eda asequible, segura, sostenible y moderna para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/7.png",
+          "id": 7,
+          "name": "Energ\u00eda asequible y no contaminante"
+        },
+        {
+          "description": "Garantizar modalidades de consumo y producci\u00f3n sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/12.png",
+          "id": 12,
+          "name": "Producci\u00f3n y consumo responsables"
+        },
+        {
+          "description": "Conservar y utilizar en forma sostenible los oc\u00e9anos, los mares y los recursos marinos para el desarrollo sostenible",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/14.png",
+          "id": 14,
+          "name": "Vida submarina"
+        },
+        {
+          "description": "Gestionar sosteniblemente los bosques, luchar contra la desertificaci\u00f3n, detener e invertir la degradaci\u00f3n de las tierras y detener la p\u00e9rdida de biodiversidad",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/15.png",
+          "id": 15,
+          "name": "Vida de ecosistemas terrestres"
+        }
+      ],
+      "total-projects": 90,
+      "total-users": 10245
+    },
+    {
+      "categories": [],
+      "description": "Open data",
+      "icon-url": "https://goteo.org/img/medium/10-datos-abiertos-1.png",
+      "id": 10,
+      "name": "Open data",
+      "sdgs": [
+        {
+          "description": "Lograr la igualdad entre los g\u00e9neros y empoderar a todas las mujeres y las ni\u00f1as",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/5.png",
+          "id": 5,
+          "name": "Igualdad de g\u00e9nero"
+        },
+        {
+          "description": "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/11.png",
+          "id": 11,
+          "name": "Ciudades y comunidades sostenibles"
+        },
+        {
+          "description": "Promover sociedades, justas, pac\u00edficas e inclusivas",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/16.png",
+          "id": 16,
+          "name": "Paz, justicia e instituciones s\u00f3lidas"
+        }
+      ],
+      "total-projects": 7,
+      "total-users": 451
+    },
+    {
+      "categories": [],
+      "description": "To strengthen democratic values",
+      "icon-url": "https://goteo.org/img/medium/11--reforzar-valores-democra-ticos.png",
+      "id": 11,
+      "name": "To strengthen democratic values",
+      "sdgs": [
+        {
+          "description": "Lograr la igualdad entre los g\u00e9neros y empoderar a todas las mujeres y las ni\u00f1as",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/5.png",
+          "id": 5,
+          "name": "Igualdad de g\u00e9nero"
+        },
+        {
+          "description": "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/11.png",
+          "id": 11,
+          "name": "Ciudades y comunidades sostenibles"
+        },
+        {
+          "description": "Promover sociedades, justas, pac\u00edficas e inclusivas",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/16.png",
+          "id": 16,
+          "name": "Paz, justicia e instituciones s\u00f3lidas"
+        }
+      ],
+      "total-projects": 35,
+      "total-users": 5809
+    },
+    {
+      "categories": [],
+      "description": "Citizen participation",
+      "icon-url": "https://goteo.org/img/medium/12-participacion-ciudadana-1.png",
+      "id": 12,
+      "name": "Citizen participation",
+      "sdgs": [
+        {
+          "description": "Lograr la igualdad entre los g\u00e9neros y empoderar a todas las mujeres y las ni\u00f1as",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/5.png",
+          "id": 5,
+          "name": "Igualdad de g\u00e9nero"
+        },
+        {
+          "description": "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/11.png",
+          "id": 11,
+          "name": "Ciudades y comunidades sostenibles"
+        },
+        {
+          "description": "Promover sociedades, justas, pac\u00edficas e inclusivas",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/16.png",
+          "id": 16,
+          "name": "Paz, justicia e instituciones s\u00f3lidas"
+        }
+      ],
+      "total-projects": 57,
+      "total-users": 8109
+    },
+    {
+      "categories": [],
+      "description": "Genre",
+      "icon-url": "https://goteo.org/img/medium/iconos-transgenero-26-60x60.png",
+      "id": 13,
+      "name": "Genre",
+      "sdgs": [
+        {
+          "description": "Lograr la igualdad entre los g\u00e9neros y empoderar a todas las mujeres y las ni\u00f1as",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/5.png",
+          "id": 5,
+          "name": "Igualdad de g\u00e9nero"
+        },
+        {
+          "description": "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/11.png",
+          "id": 11,
+          "name": "Ciudades y comunidades sostenibles"
+        },
+        {
+          "description": "Promover sociedades, justas, pac\u00edficas e inclusivas",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/16.png",
+          "id": 16,
+          "name": "Paz, justicia e instituciones s\u00f3lidas"
+        }
+      ],
+      "total-projects": 33,
+      "total-users": 3971
+    },
+    {
+      "categories": [],
+      "description": null,
+      "icon-url": "https://goteo.org/img/medium/5b-cuidados.png",
+      "id": 14,
+      "name": "Health and care",
+      "sdgs": [
+        {
+          "description": "Poner fin al hambre, lograr la seguridad alimentaria y la mejora de la nutrici\u00f3n y promover la agricultura sostenible",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/2.png",
+          "id": 2,
+          "name": "Hambre cero"
+        },
+        {
+          "description": "Garantizar una vida sana y promover el bienestar para todos en todas las edades",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/3.png",
+          "id": 3,
+          "name": "Salud y bienestar"
+        },
+        {
+          "description": "Garantizar la disponibilidad de agua y su gesti\u00f3n sostenible y el saneamiento para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/6.png",
+          "id": 6,
+          "name": "Agua limpia y saneamiento"
+        }
+      ],
+      "total-projects": 31,
+      "total-users": 2544
+    },
+    {
+      "categories": [],
+      "description": null,
+      "icon-url": "https://goteo.org/img/medium/1b-energia.png",
+      "id": 15,
+      "name": "Energy and sustainability",
+      "sdgs": [
+        {
+          "description": "Garantizar el acceso a una energ\u00eda asequible, segura, sostenible y moderna para todos",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/7.png",
+          "id": 7,
+          "name": "Energ\u00eda asequible y no contaminante"
+        },
+        {
+          "description": "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/11.png",
+          "id": 11,
+          "name": "Ciudades y comunidades sostenibles"
+        },
+        {
+          "description": "Garantizar modalidades de consumo y producci\u00f3n sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/12.png",
+          "id": 12,
+          "name": "Producci\u00f3n y consumo responsables"
+        }
+      ],
+      "total-projects": 1,
+      "total-users": 24
+    },
+    {
+      "categories": [],
+      "description": null,
+      "icon-url": "https://goteo.org/img/medium/3b-rural.png",
+      "id": 16,
+      "name": "Agrorural development",
+      "sdgs": [
+        {
+          "description": "Garantizar modalidades de consumo y producci\u00f3n sostenibles",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/12.png",
+          "id": 12,
+          "name": "Producci\u00f3n y consumo responsables"
+        },
+        {
+          "description": "Gestionar sosteniblemente los bosques, luchar contra la desertificaci\u00f3n, detener e invertir la degradaci\u00f3n de las tierras y detener la p\u00e9rdida de biodiversidad",
+          "icon_url": "https://goteo.org/assets/img/sdg/square/15.png",
+          "id": 15,
+          "name": "Vida de ecosistemas terrestres"
+        }
+      ],
+      "total-projects": 6,
+      "total-users": 946
+    }
+  ],
+  "meta": {
+    "lang": [
+      "en"
+    ],
+    "total": 14
+  },
+  "time-elapsed": 42.41797184944153
+}
+</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+ -->
+<script src="/assets/highlight.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62675757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Goteo API : Users</title>
+  <meta name="description" content="">
+
+
+  <link rel="stylesheet" href="/assets/assemble.css">
+  <link rel="stylesheet" href="/assets/github.css">
+  <link rel="stylesheet" href="/assets/goteo.css">
+  
+  <link rel="canonical" href="https://developers.goteo.org/doc/users.html">
+  
+
+  </head>
+
+  <body style="background: white;">
+  <div class="wrapper">
+
+  
+      <!-- Navbar component
+================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png"></a>
+<!--       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="/about-goteo">About Goteo</a></li>
+          <li><a href="/doc">API Docs</a></li>
+          <li><a href="/apps">Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+      <div class="col col-lg-3">
+        <div class="sidebar bs-sidebar">
+ 
+  <span class="nav-section-title">
+    API DOCS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/index.html">Introduction</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/responses.html">Responses</a></li>
+          
+        
+          
+          <li><a href="/doc/security.html">Security</a></li>
+          
+        
+          
+          <li><a href="/doc/filters.html">Filters</a></li>
+          
+        
+          
+          <li><a href="/doc/console.html">Live Console</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+          <li><a href="/doc/projects.html">Projects</a></li>
+          
+        
+          
+          <li class="active"><a href="/doc/users.html">Users</a></li>
+          
+        
+          
+          <li><a href="/doc/categories.html">Categories</a></li>
+          
+        
+          
+          <li><a href="/doc/footprints.html">Footprints</a></li>
+          
+        
+          
+          <li><a href="/doc/sdgs.html">Sustainable Development Goals</a></li>
+          
+        
+          
+          <li><a href="/doc/social_commitments.html">Social Commitments</a></li>
+          
+        
+          
+          <li><a href="/doc/licenses.html">Licenses</a></li>
+          
+        
+          
+          <li><a href="/doc/invests.html">Invests</a></li>
+          
+        
+          
+          <li><a href="/doc/calls.html">Matchfunding calls</a></li>
+          
+        
+          
+          <li><a href="/doc/matchers.html">Matchfunding matchers</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/reports.html">Reports</a></li>
+          
+        
+          
+          <li><a href="/doc/digests.html">Digests</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  
+
+  
+
+  
+
+</div>
+
+      </div>
+
+      <div class="col col-lg-9 panel-docs">
+        <h1>Users endpoint</h1>
+
+<p>This section gives you information about users in <a href="http://goteo.org">Goteo.org</a></p>
+
+<p><a name="users"></a></p>
+
+<h2>/users/</h2>
+
+<p>Obtains a list of users.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/users/
+</code></pre>
+
+<h3>Filters available:</h3>
+
+<p><strong>The <a href="filters.html">standard set of filters</a> applies to this endpoint with these particulars:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the users originally created in that node(s) </td>
+</tr>
+<tr>
+<td> call </td>
+<td> string </td>
+<td> Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Filter by individual project(s). Multiple projects can be specified. Restricts the list to the users that have either collaborate or contributed (financially) to that project(s). </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Get results by specified lang. Multiple langs can be specified </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Filter from date. Ex. "2013-01-01". Restricts the list to the users created in that range </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Filter until date.. Ex. "2014-01-01". Restricts the list to the users created in that range </td>
+</tr>
+<tr>
+<td> category </td>
+<td> integer </td>
+<td> Filter by user categories. Multiple categories can be specified. Restricts the list to the users that have interests in that category(ies) </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> integer </td>
+<td> Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the users that have invested in projects with that social commitment(s) </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> integer </td>
+<td> Filter by project Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the users that have invested in projects with that SDG(s) </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> integer </td>
+<td> Filter by project footprint. Multiple footprints can be specified. Restricts the list to the users that have invested in projects with that footprint(s) </td>
+</tr>
+<tr>
+<td> page </td>
+<td> integer </td>
+<td> Page number (starting at 1) if the result can be paginated </td>
+</tr>
+<tr>
+<td> limit </td>
+<td> integer </td>
+<td> Page limit (maximum 50 results, defaults to 10) if the result can be paginated </td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li><strong>location</strong> does not applies to this endpoint.</li>
+<li><strong>lang</strong> does not applies in this endpoint</li>
+</ul>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="ResponseUser">ResponseUser</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> items </td>
+<td> array </td>
+<td> ... &#9758; <a href="#User">User</a> </td>
+</tr>
+<tr>
+<td> meta </td>
+<td>  </td>
+<td> ... &#9758; <a href="#MetaUser">MetaUser</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="User">User</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> date-created </td>
+<td> string </td>
+<td> Date when the user was created RFC822 format </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> User unique identifier </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the user </td>
+</tr>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Node where the user was created originally </td>
+</tr>
+<tr>
+<td> profile-image-url </td>
+<td> string </td>
+<td> URL with the avatar (image) of the user </td>
+</tr>
+<tr>
+<td> profile-url </td>
+<td> string </td>
+<td> URL for the user profile </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="MetaUser">MetaUser</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> category </td>
+<td> array </td>
+<td> Only if filtering by category </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Only if filtering by from_date </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> array </td>
+<td> Only if filtering by lang </td>
+</tr>
+<tr>
+<td> limit </td>
+<td> integer </td>
+<td> Limit of results per page when retrieving a collection </td>
+</tr>
+<tr>
+<td> node </td>
+<td> array </td>
+<td> Only if filtering by node </td>
+</tr>
+<tr>
+<td> page </td>
+<td> integer </td>
+<td> Current page, <code>0</code> based (first page is zero) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> array </td>
+<td> Only if filtering by project </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Only if filtering by to_date </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Total elements available for the collection </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "items": [
+    {
+      "date-created": "Mon, 05 Sep 2016 15:47:52 +0200",
+      "id": "",
+      "name": "rober",
+      "node": "goteo",
+      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
+      "profile-url": "https://goteo.org/user/profile/"
+    },
+    {
+      "date-created": "Tue, 05 Jun 2012 09:04:38 +0200",
+      "id": "-angellg",
+      "name": "Angel Lopez",
+      "node": "goteo",
+      "profile-image-url": "https://goteo.org/img/medium/signs-26.jpg",
+      "profile-url": "https://goteo.org/user/profile/-angellg"
+    },
+    {
+      "date-created": "Tue, 05 Jun 2012 09:56:19 +0200",
+      "id": "-aserrano",
+      "name": "Antonio",
+      "node": "andalucia",
+      "profile-image-url": "https://goteo.org/img/medium/sin-ti-tulo.jpg",
+      "profile-url": "https://goteo.org/user/profile/-aserrano"
+    },
+    {
+      "date-created": "Sun, 20 Nov 2011 13:09:06 +0100",
+      "id": "-blank",
+      "name": "_blank",
+      "node": "goteo",
+      "profile-image-url": "https://goteo.org/img/medium/",
+      "profile-url": "https://goteo.org/user/profile/-blank"
+    },
+    {
+      "date-created": "Fri, 01 Jun 2012 19:11:44 +0200",
+      "id": "-cafeambllet",
+      "name": "caf\u00e8ambllet",
+      "node": "goteo",
+      "profile-image-url": "https://goteo.org/img/medium/entradacafer.jpg",
+      "profile-url": "https://goteo.org/user/profile/-cafeambllet"
+    },
+    {
+      "date-created": "Tue, 05 Jun 2012 09:34:01 +0200",
+      "id": "-enlared",
+      "name": "\u20acSPANISH DR\u20acAM",
+      "node": "barcelona",
+      "profile-image-url": "https://goteo.org/img/medium/-d2.jpg",
+      "profile-url": "https://goteo.org/user/profile/-enlared"
+    },
+    {
+      "date-created": "Wed, 08 Feb 2012 23:36:27 +0100",
+      "id": "-erasehead-",
+      "name": "Elisa",
+      "node": "goteo",
+      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
+      "profile-url": "https://goteo.org/user/profile/-erasehead-"
+    },
+    {
+      "date-created": "Sat, 05 Jan 2013 11:27:57 +0100",
+      "id": "-leticia-",
+      "name": "Leticia",
+      "node": "goteo",
+      "profile-image-url": "https://goteo.org/img/medium/wonderwoman.jpg",
+      "profile-url": "https://goteo.org/user/profile/-leticia-"
+    },
+    {
+      "date-created": "Wed, 06 Jun 2012 01:29:49 +0200",
+      "id": "-manrike",
+      "name": "_Manrike",
+      "node": "goteo",
+      "profile-image-url": "https://goteo.org/img/medium/la_gota.png",
+      "profile-url": "https://goteo.org/user/profile/-manrike"
+    },
+    {
+      "date-created": "Mon, 15 Oct 2012 19:24:17 +0200",
+      "id": "-mtiago",
+      "name": "Mamen \u267a",
+      "node": "goteo",
+      "profile-image-url": "https://goteo.org/img/medium/1504985-498184073669699-8765612512546226104-n.jpg",
+      "profile-url": "https://goteo.org/user/profile/-mtiago"
+    }
+  ],
+  "meta": {
+    "lang": [
+      "en"
+    ],
+    "limit": 10,
+    "page": 0,
+    "total": 188722
+  },
+  "time-elapsed": 6.725291728973389
+}
+</code></pre>
+
+<p><a name="user"></a></p>
+
+<h2>/users/{USER_ID}</h2>
+
+<p>Gets information about a single user.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/users/goteo
+</code></pre>
+
+<h3>Filters available:</h3>
+
+<ul>
+<li>No filters are available in this endpoint</li>
+<li><strong>{USER_ID}</strong> must be the unique identifier of the user</li>
+</ul>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="UserFull">UserFull</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> about </td>
+<td> string </td>
+<td> User's about text </td>
+</tr>
+<tr>
+<td> amount-public-invested </td>
+<td> number </td>
+<td> Amount of money invested in any project (excluding anonymous investions) </td>
+</tr>
+<tr>
+<td> date-created </td>
+<td> string </td>
+<td> Date when the user was created RFC822 format </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> User unique identifier </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Language for the user's texts description </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the user </td>
+</tr>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Node where the user was created originally </td>
+</tr>
+<tr>
+<td> profile-image-url </td>
+<td> string </td>
+<td> URL with the avatar (image) of the user </td>
+</tr>
+<tr>
+<td> profile-url </td>
+<td> string </td>
+<td> URL for the user profile </td>
+</tr>
+<tr>
+<td> projects-collaborated </td>
+<td> number </td>
+<td> Number of project the user has interacted </td>
+</tr>
+<tr>
+<td> projects-public-invested </td>
+<td> number </td>
+<td> Number of projects where the user has invested (excluding anonymous investions) </td>
+</tr>
+<tr>
+<td> projects-published </td>
+<td> number </td>
+<td> Number of project the user has created and published </td>
+</tr>
+<tr>
+<td> translations </td>
+<td> array </td>
+<td> All available translations in a list indexed by language in <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1</a> format &#9758; <a href="#UserTranslation">UserTranslation</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="UserTranslation">UserTranslation</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> about </td>
+<td> string </td>
+<td> User's about text translated (if any) </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the user translated (if any) </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "about": "Este perfil representa al equipo que administra la plataforma Goteo, desde el que nos comunicamos con todos los usuarios y usuarias. Si quieres contactar con nosotras escribe desde la secci\u00f3n de \"Contacto\" (en el pie de la p\u00e1gina) o bien v\u00eda Twitter (@gteofunding)",
+  "amount-public-invested": 0.0,
+  "date-created": "Sat, 20 Aug 2011 13:57:14 +0200",
+  "id": "goteo",
+  "lang": "es",
+  "name": "Goteo",
+  "node": "goteo",
+  "profile-image-url": "https://goteo.org/img/medium/goteo-twitter7r.png",
+  "profile-url": "https://goteo.org/user/profile/goteo",
+  "projects-collaborated": 7,
+  "projects-public-invested": 0,
+  "projects-published": 0,
+  "time-elapsed": 0.05135011672973633,
+  "translations": {
+    "fr": {
+      "name": null
+    }
+  }
+}
+</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+ -->
+<script src="/assets/highlight.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62675757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+
+</html>

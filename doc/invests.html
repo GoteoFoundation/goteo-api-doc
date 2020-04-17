@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Goteo API : Invests</title>
+  <meta name="description" content="">
+
+
+  <link rel="stylesheet" href="/assets/assemble.css">
+  <link rel="stylesheet" href="/assets/github.css">
+  <link rel="stylesheet" href="/assets/goteo.css">
+  
+  <link rel="canonical" href="https://developers.goteo.org/doc/invests.html">
+  
+
+  </head>
+
+  <body style="background: white;">
+  <div class="wrapper">
+
+  
+      <!-- Navbar component
+================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png"></a>
+<!--       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="/about-goteo">About Goteo</a></li>
+          <li><a href="/doc">API Docs</a></li>
+          <li><a href="/apps">Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <!-- Page content
+    ============================================== -->
+    <div class="container">
+      <div class="col col-lg-3">
+        <div class="sidebar bs-sidebar">
+ 
+  <span class="nav-section-title">
+    API DOCS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/index.html">Introduction</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/responses.html">Responses</a></li>
+          
+        
+          
+          <li><a href="/doc/security.html">Security</a></li>
+          
+        
+          
+          <li><a href="/doc/filters.html">Filters</a></li>
+          
+        
+          
+          <li><a href="/doc/console.html">Live Console</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  <span class="nav-section-title">
+    ENDPOINTS
+  </span>
+  <ul class="nav nav-pills nav-stacked">
+          
+          
+        
+          
+          <li><a href="/doc/projects.html">Projects</a></li>
+          
+        
+          
+          <li><a href="/doc/users.html">Users</a></li>
+          
+        
+          
+          <li><a href="/doc/categories.html">Categories</a></li>
+          
+        
+          
+          <li><a href="/doc/footprints.html">Footprints</a></li>
+          
+        
+          
+          <li><a href="/doc/sdgs.html">Sustainable Development Goals</a></li>
+          
+        
+          
+          <li><a href="/doc/social_commitments.html">Social Commitments</a></li>
+          
+        
+          
+          <li><a href="/doc/licenses.html">Licenses</a></li>
+          
+        
+          
+          <li class="active"><a href="/doc/invests.html">Invests</a></li>
+          
+        
+          
+          <li><a href="/doc/calls.html">Matchfunding calls</a></li>
+          
+        
+          
+          <li><a href="/doc/matchers.html">Matchfunding matchers</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a href="/doc/reports.html">Reports</a></li>
+          
+        
+          
+          <li><a href="/doc/digests.html">Digests</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+  </ul>
+  
+
+  
+
+  
+
+</div>
+
+      </div>
+
+      <div class="col col-lg-9 panel-docs">
+        <h1>Invests endpoint</h1>
+
+<p>This section gives you information about invests in <a href="http://goteo.org">Goteo.org</a></p>
+
+<p><a name="invests"></a></p>
+
+<h2>/invests/</h2>
+
+<p>Obtains a list of invests.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/invests/
+</code></pre>
+
+<h3>Filters available:</h3>
+
+<p><strong>The <a href="filters.html">standard set of filters</a> applies to this endpoint with these particulars:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Filter by individual node(s). Multiple nodes can be specified. Restricts the list to the invests originally created in that node(s) </td>
+</tr>
+<tr>
+<td> call </td>
+<td> string </td>
+<td> Filter by individual matchfunding call(s). Multiple calls can be specified. Restricts the list to the projects originally created in that call(s) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Filter by individual project(s). Multiple projects can be specified. Restricts the list to the invests that have either collaborate or contributed (financially) to that project(s). </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Filter from date. Ex. "2013-01-01". Restricts the list to the invests created in that range </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Filter until date.. Ex. "2014-01-01". Restricts the list to the invests created in that range </td>
+</tr>
+<tr>
+<td> category </td>
+<td> integer </td>
+<td> Filter by project category. Multiple categories can be specified. Restricts the list to the invests of projects with that category(ies) </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> integer </td>
+<td> Filter by project social commitment. Multiple social commitments can be specified. Restricts the list to the invests of projects with that social commitment(s) </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> integer </td>
+<td> Filter by project Sustainable Development Goal. Multiple SDGs can be specified. Restricts the list to the invests of projects with that SDG(s) </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> integer </td>
+<td> Filter by project footprint. Multiple footprints can be specified. Restricts the list to the invests of projects with that footprint(s) </td>
+</tr>
+<tr>
+<td> location </td>
+<td> number </td>
+<td> Filter by project location (Latitude,longitude,Radius in Km). Restricts the list to the invests used in projects geolocated in that area </td>
+</tr>
+<tr>
+<td> page </td>
+<td> integer </td>
+<td> Page number (starting at 1) if the result can be paginated </td>
+</tr>
+<tr>
+<td> limit </td>
+<td> integer </td>
+<td> Page limit (maximum 50 results, defaults to 10) if the result can be paginated </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="ResponseInvest">ResponseInvest</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> extra </td>
+<td>  </td>
+<td> ... &#9758; <a href="#ExtraInvest">ExtraInvest</a> </td>
+</tr>
+<tr>
+<td> items </td>
+<td> array </td>
+<td> ... &#9758; <a href="#Invest">Invest</a> </td>
+</tr>
+<tr>
+<td> meta </td>
+<td>  </td>
+<td> ... &#9758; <a href="#MetaProject">MetaProject</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="ExtraInvest">ExtraInvest</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> calls </td>
+<td> integer </td>
+<td> Number of matchfunding calls applying in the current query </td>
+</tr>
+<tr>
+<td> pledged </td>
+<td> number </td>
+<td> Total sum pledged amount for the current query </td>
+</tr>
+<tr>
+<td> projects </td>
+<td> integer </td>
+<td> Total sum of projects applying in the current query </td>
+</tr>
+<tr>
+<td> refunded </td>
+<td> number </td>
+<td> Total sum of refunded amount for the current query </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="Invest">Invest</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> amount </td>
+<td> number </td>
+<td> Amount of the contribution </td>
+</tr>
+<tr>
+<td> call-id </td>
+<td> string </td>
+<td> Id of the matchfunding call if this invest belongs to a invest in selected </td>
+</tr>
+<tr>
+<td> conversion-ratio </td>
+<td> number </td>
+<td> Currency rate at the moment of the payment (relative to EUR) </td>
+</tr>
+<tr>
+<td> currency </td>
+<td> string </td>
+<td> Currency of the contribution (currently one of <code>EUR</code>, <code>GBP</code>, <code>USD</code>) in <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a> format </td>
+</tr>
+<tr>
+<td> date-charged </td>
+<td> string </td>
+<td> Date-only when the invest was charged in RFC822 format </td>
+</tr>
+<tr>
+<td> date-created </td>
+<td> string </td>
+<td> Date-only when the invest was created in RFC822 format </td>
+</tr>
+<tr>
+<td> date-returned </td>
+<td> string </td>
+<td> Date-only when the invest was returned (if applicable) in RFC822 format </td>
+</tr>
+<tr>
+<td> date-updated </td>
+<td> string </td>
+<td> Date &amp; Time when the invest was last updated in RFC822 format </td>
+</tr>
+<tr>
+<td> id </td>
+<td> integer </td>
+<td> Invest unique identifier </td>
+</tr>
+<tr>
+<td> latitude </td>
+<td> number </td>
+<td> Latitude coordinate for the invest </td>
+</tr>
+<tr>
+<td> longitude </td>
+<td> number </td>
+<td> Longitude coordinate for the invest </td>
+</tr>
+<tr>
+<td> matcher-id </td>
+<td> string </td>
+<td> Id of the matchfunding matcher if this invest belongs to a invest in selected </td>
+</tr>
+<tr>
+<td> project </td>
+<td> string </td>
+<td> Id of the invest where applies the invests </td>
+</tr>
+<tr>
+<td> region </td>
+<td> string </td>
+<td> Region location for the invest </td>
+</tr>
+<tr>
+<td> resign </td>
+<td> boolean </td>
+<td> True if the user does not want any reward in exchango of the contribution </td>
+</tr>
+<tr>
+<td> status </td>
+<td> string </td>
+<td> Status of the payment, one of <code>processing</code>, <code>pending</code>, <code>charged</code>, <code>cancelled</code>, <code>paid</code>, <code>returned</code>, <code>relocated</code>, <code>pool-returned</code> </td>
+</tr>
+<tr>
+<td> type </td>
+<td> string </td>
+<td> Type of the payment, one of <code>payment</code>, <code>drop</code>, <code>pool</code> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="MetaProject">MetaProject</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> category </td>
+<td> array </td>
+<td> Only if filtering by category </td>
+</tr>
+<tr>
+<td> footprint </td>
+<td> array </td>
+<td> Only if filtering by footprint </td>
+</tr>
+<tr>
+<td> from_date </td>
+<td> string </td>
+<td> Only if filtering by from_date </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> array </td>
+<td> Only if filtering by lang </td>
+</tr>
+<tr>
+<td> limit </td>
+<td> integer </td>
+<td> Limit of results per page when retrieving a collection </td>
+</tr>
+<tr>
+<td> location </td>
+<td> array </td>
+<td> Only if filtering by location </td>
+</tr>
+<tr>
+<td> node </td>
+<td> array </td>
+<td> Only if filtering by node </td>
+</tr>
+<tr>
+<td> page </td>
+<td> integer </td>
+<td> Current page, <code>0</code> based (first page is zero) </td>
+</tr>
+<tr>
+<td> project </td>
+<td> array </td>
+<td> Only if filtering by project </td>
+</tr>
+<tr>
+<td> sdg </td>
+<td> array </td>
+<td> Only if filtering by Sustainable Development Goal </td>
+</tr>
+<tr>
+<td> social_commitment </td>
+<td> array </td>
+<td> Only if filtering by social_commitment </td>
+</tr>
+<tr>
+<td> to_date </td>
+<td> string </td>
+<td> Only if filtering by to_date </td>
+</tr>
+<tr>
+<td> total </td>
+<td> integer </td>
+<td> Total elements available for the collection </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "extra": {
+    "calls": 16,
+    "matchers": 1,
+    "pledged": 9997786.0,
+    "projects": 1522,
+    "refunded": 362821.0
+  },
+  "items": [
+    {
+      "amount": 20.0,
+      "call-id": null,
+      "conversion-ratio": 1.0,
+      "currency": "EUR",
+      "date-charged": "Fri, 10 Apr 2020 00:00:00 +0200",
+      "date-created": "Fri, 10 Apr 2020 00:00:00 +0200",
+      "date-returned": null,
+      "date-updated": "Fri, 10 Apr 2020 00:07:00 +0200",
+      "id": 257438,
+      "latitude": 40.54750000000000,
+      "longitude": -3.64200000000000,
+      "matcher-id": null,
+      "project": "sembrando-semillas-de-cambio",
+      "region": "Madrid",
+      "resign": false,
+      "status": "charged",
+      "type": "payment"
+    },
+    {
+      "amount": 20.0,
+      "call-id": null,
+      "conversion-ratio": 1.0,
+      "currency": "EUR",
+      "date-charged": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-created": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-returned": null,
+      "date-updated": "Thu, 09 Apr 2020 23:55:31 +0200",
+      "id": 257437,
+      "latitude": 41.61759079999999,
+      "longitude": 0.62227630000000,
+      "matcher-id": null,
+      "project": "libreguard",
+      "region": "Lleida",
+      "resign": false,
+      "status": "charged",
+      "type": "payment"
+    },
+    {
+      "amount": 15.0,
+      "call-id": null,
+      "conversion-ratio": 1.0,
+      "currency": "EUR",
+      "date-charged": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-created": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-returned": null,
+      "date-updated": "Thu, 09 Apr 2020 23:42:37 +0200",
+      "id": 257436,
+      "latitude": null,
+      "longitude": null,
+      "matcher-id": null,
+      "project": "abriendoventanas",
+      "region": null,
+      "resign": false,
+      "status": "charged",
+      "type": "payment"
+    },
+    {
+      "amount": 30.0,
+      "call-id": null,
+      "conversion-ratio": 1.0,
+      "currency": "EUR",
+      "date-charged": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-created": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-returned": null,
+      "date-updated": "Thu, 09 Apr 2020 23:34:10 +0200",
+      "id": 257435,
+      "latitude": 42.27180710000000,
+      "longitude": 2.52853150000000,
+      "matcher-id": null,
+      "project": "la-porta-del-mon-cooperativa-restaurant",
+      "region": "Girona",
+      "resign": false,
+      "status": "charged",
+      "type": "payment"
+    },
+    {
+      "amount": 30.0,
+      "call-id": null,
+      "conversion-ratio": 1.0,
+      "currency": "EUR",
+      "date-charged": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-created": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-returned": null,
+      "date-updated": "Thu, 09 Apr 2020 23:22:12 +0200",
+      "id": 257434,
+      "latitude": 40.41650000000000,
+      "longitude": -3.70260000000000,
+      "matcher-id": null,
+      "project": "viseras-sanitarias-contra-el-covid-19",
+      "region": "Madrid",
+      "resign": false,
+      "status": "charged",
+      "type": "payment"
+    },
+    {
+      "amount": 60.0,
+      "call-id": null,
+      "conversion-ratio": 1.0,
+      "currency": "EUR",
+      "date-charged": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-created": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-returned": null,
+      "date-updated": "Thu, 09 Apr 2020 23:21:00 +0200",
+      "id": 257433,
+      "latitude": 39.01780000000000,
+      "longitude": -3.75100000000000,
+      "matcher-id": null,
+      "project": "viseras-sanitarias-contra-el-covid-19",
+      "region": "Ciudad Real",
+      "resign": true,
+      "status": "charged",
+      "type": "payment"
+    },
+    {
+      "amount": 20.0,
+      "call-id": null,
+      "conversion-ratio": 1.0,
+      "currency": "EUR",
+      "date-charged": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-created": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-returned": null,
+      "date-updated": "Thu, 09 Apr 2020 23:00:00 +0200",
+      "id": 257432,
+      "latitude": 41.53330000000000,
+      "longitude": 1.76670000000000,
+      "matcher-id": null,
+      "project": "emergencia-social-en-el-barrio-del-cementerio",
+      "region": "Barcelona",
+      "resign": false,
+      "status": "charged",
+      "type": "payment"
+    },
+    {
+      "amount": 30.0,
+      "call-id": null,
+      "conversion-ratio": 1.0,
+      "currency": "EUR",
+      "date-charged": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-created": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-returned": null,
+      "date-updated": "Thu, 09 Apr 2020 22:48:22 +0200",
+      "id": 257429,
+      "latitude": 43.01380000000000,
+      "longitude": -7.55850000000000,
+      "matcher-id": null,
+      "project": "viseras-sanitarias-contra-el-covid-19",
+      "region": "Lugo",
+      "resign": false,
+      "status": "charged",
+      "type": "payment"
+    },
+    {
+      "amount": 100.0,
+      "call-id": null,
+      "conversion-ratio": 1.0,
+      "currency": "EUR",
+      "date-charged": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-created": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-returned": null,
+      "date-updated": "Thu, 09 Apr 2020 22:28:28 +0200",
+      "id": 257427,
+      "latitude": 44.43330000000000,
+      "longitude": 26.10000000000000,
+      "matcher-id": null,
+      "project": "necesidades-basicas-para-la-infancia-y-sus-familia",
+      "region": "Bucuresti",
+      "resign": true,
+      "status": "charged",
+      "type": "payment"
+    },
+    {
+      "amount": 20.0,
+      "call-id": null,
+      "conversion-ratio": 1.0,
+      "currency": "EUR",
+      "date-charged": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-created": "Thu, 09 Apr 2020 00:00:00 +0200",
+      "date-returned": null,
+      "date-updated": "Thu, 09 Apr 2020 22:21:00 +0200",
+      "id": 257426,
+      "latitude": 41.91080000000000,
+      "longitude": 0.19410000000000,
+      "matcher-id": null,
+      "project": "i-love-cine-de-poble",
+      "region": "Huesca",
+      "resign": false,
+      "status": "charged",
+      "type": "payment"
+    }
+  ],
+  "meta": {
+    "lang": [
+      "en"
+    ],
+    "limit": 10,
+    "page": 0,
+    "total": 194404
+  },
+  "time-elapsed": 2.352069616317749
+}
+</code></pre>
+
+<p><a name="user"></a></p>
+
+<h2>/invests/{INVEST_ID}</h2>
+
+<p>Gets information about a single user.</p>
+
+<pre><code class="bash">curl -i --basic --user "user:key" https://api.goteo.org/v1/invests/1000
+</code></pre>
+
+<h3>Filters available:</h3>
+
+<ul>
+<li>No filters are available in this endpoint</li>
+<li><strong>{INVEST_ID}</strong> must be the unique identifier of the user</li>
+</ul>
+
+
+<h3>Response values:</h3>
+
+<h5><a id="UserFull">UserFull</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> about </td>
+<td> string </td>
+<td> User's about text </td>
+</tr>
+<tr>
+<td> amount-public-invested </td>
+<td> number </td>
+<td> Amount of money invested in any project (excluding anonymous investions) </td>
+</tr>
+<tr>
+<td> date-created </td>
+<td> string </td>
+<td> Date when the user was created RFC822 format </td>
+</tr>
+<tr>
+<td> id </td>
+<td> string </td>
+<td> User unique identifier </td>
+</tr>
+<tr>
+<td> lang </td>
+<td> string </td>
+<td> Language for the user's texts description </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the user </td>
+</tr>
+<tr>
+<td> node </td>
+<td> string </td>
+<td> Node where the user was created originally </td>
+</tr>
+<tr>
+<td> profile-image-url </td>
+<td> string </td>
+<td> URL with the avatar (image) of the user </td>
+</tr>
+<tr>
+<td> profile-url </td>
+<td> string </td>
+<td> URL for the user profile </td>
+</tr>
+<tr>
+<td> projects-collaborated </td>
+<td> number </td>
+<td> Number of project the user has interacted </td>
+</tr>
+<tr>
+<td> projects-public-invested </td>
+<td> number </td>
+<td> Number of projects where the user has invested (excluding anonymous investions) </td>
+</tr>
+<tr>
+<td> projects-published </td>
+<td> number </td>
+<td> Number of project the user has created and published </td>
+</tr>
+<tr>
+<td> translations </td>
+<td> array </td>
+<td> All available translations in a list indexed by language in <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1</a> format &#9758; <a href="#UserTranslation">UserTranslation</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+<h5><a id="UserTranslation">UserTranslation</a></h5>
+
+<table>
+<thead>
+<tr>
+<th> Attribute  </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> about </td>
+<td> string </td>
+<td> User's about text translated (if any) </td>
+</tr>
+<tr>
+<td> name </td>
+<td> string </td>
+<td> Name of the user translated (if any) </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Response body:</h3>
+
+<pre><code class="json">{
+  "about": "Este perfil representa al equipo que administra la plataforma Goteo, desde el que nos comunicamos con todos los usuarios y usuarias. Si quieres contactar con nosotras escribe desde la secci\u00f3n de \"Contacto\" (en el pie de la p\u00e1gina) o bien v\u00eda Twitter (@gteofunding)",
+  "amount-public-invested": 0.0,
+  "date-created": "Sat, 20 Aug 2011 13:57:14 +0200",
+  "id": "goteo",
+  "lang": "es",
+  "name": "Goteo",
+  "node": "goteo",
+  "profile-image-url": "https://goteo.org/img/medium/goteo-twitter7r.png",
+  "profile-url": "https://goteo.org/user/profile/goteo",
+  "projects-collaborated": 7,
+  "projects-public-invested": 0,
+  "projects-published": 0,
+  "time-elapsed": 0.05135011672973633,
+  "translations": {
+    "fr": {
+      "name": null
+    }
+  }
+}
+</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+ -->
+<script src="/assets/highlight.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62675757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+
+</html>
